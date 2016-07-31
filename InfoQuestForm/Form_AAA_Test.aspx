@@ -28,7 +28,6 @@
 </head>
 <body id="Body_AAA_Test" runat="server" style="margin: 0;">
   <form id="form_AAA_Test" runat="server">
-    TEST
     <%--<Controls_Navigation:Navigation ID="NavigationMenu_Page" runat="server" />
     <div>
       <Ajax:ToolkitScriptManager ID="ToolkitScriptManager_AAA_Test" runat="server" CombineScripts="false">
