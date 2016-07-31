@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_PharmacyClinicalMetrics_PharmacistTime" targetNamespace="http://tempuri.org/DataSet_Form_PharmacyClinicalMetrics_PharmacistTime.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_PharmacyClinicalMetrics_PharmacistTime.xsd" xmlns="http://tempuri.org/DataSet_Form_PharmacyClinicalMetrics_PharmacistTime.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vForm_PharmacyClinicalMetrics_PharmacistTimeTableAdapter" GeneratorDataComponentClassName="vForm_PharmacyClinicalMetrics_PharmacistTimeTableAdapter" Name="vForm_PharmacyClinicalMetrics_PharmacistTime" UserDataComponentName="vForm_PharmacyClinicalMetrics_PharmacistTimeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vForm_PharmacyClinicalMetrics_PharmacistTime" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT		*
+FROM			vForm_PharmacyClinicalMetrics_PharmacistTime
+WHERE			PCM_PT_Id = 1
+ORDER BY	PCM_PT_ReportNumber DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PCM_PT_Id" DataSetColumn="PCM_PT_Id" />
+              <Mapping SourceColumn="PCM_Intervention_Id" DataSetColumn="PCM_Intervention_Id" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facility_FacilityName" DataSetColumn="Facility_FacilityName" />
+              <Mapping SourceColumn="Facility_FacilityCode" DataSetColumn="Facility_FacilityCode" />
+              <Mapping SourceColumn="Facility_FacilityDisplayName" DataSetColumn="Facility_FacilityDisplayName" />
+              <Mapping SourceColumn="PCM_Intervention_Date" DataSetColumn="PCM_Intervention_Date" />
+              <Mapping SourceColumn="PCM_Intervention_Intervention_List" DataSetColumn="PCM_Intervention_Intervention_List" />
+              <Mapping SourceColumn="PCM_Intervention_Intervention_Name" DataSetColumn="PCM_Intervention_Intervention_Name" />
+              <Mapping SourceColumn="PCM_Intervention_VisitNumber" DataSetColumn="PCM_Intervention_VisitNumber" />
+              <Mapping SourceColumn="PCM_VisitInformation_Id" DataSetColumn="PCM_VisitInformation_Id" />
+              <Mapping SourceColumn="PatientInformation_Id" DataSetColumn="PatientInformation_Id" />
+              <Mapping SourceColumn="PatientInformation_LifeCountry" DataSetColumn="PatientInformation_LifeCountry" />
+              <Mapping SourceColumn="PatientInformation_LifeNumber" DataSetColumn="PatientInformation_LifeNumber" />
+              <Mapping SourceColumn="PatientInformation_Name" DataSetColumn="PatientInformation_Name" />
+              <Mapping SourceColumn="PatientInformation_Surname" DataSetColumn="PatientInformation_Surname" />
+              <Mapping SourceColumn="PatientInformation_IDNumber" DataSetColumn="PatientInformation_IDNumber" />
+              <Mapping SourceColumn="PatientInformation_DateOfBirth" DataSetColumn="PatientInformation_DateOfBirth" />
+              <Mapping SourceColumn="PatientInformation_Gender" DataSetColumn="PatientInformation_Gender" />
+              <Mapping SourceColumn="PatientInformation_Email" DataSetColumn="PatientInformation_Email" />
+              <Mapping SourceColumn="PatientInformation_ContactNumber" DataSetColumn="PatientInformation_ContactNumber" />
+              <Mapping SourceColumn="PCM_VisitInformation_PatientAge" DataSetColumn="PCM_VisitInformation_PatientAge" />
+              <Mapping SourceColumn="PCM_VisitInformation_DateOfAdmission" DataSetColumn="PCM_VisitInformation_DateOfAdmission" />
+              <Mapping SourceColumn="PCM_VisitInformation_DateOfDischarge" DataSetColumn="PCM_VisitInformation_DateOfDischarge" />
+              <Mapping SourceColumn="PCM_Intervention_Archived" DataSetColumn="PCM_Intervention_Archived" />
+              <Mapping SourceColumn="PCM_PT_ReportNumber" DataSetColumn="PCM_PT_ReportNumber" />
+              <Mapping SourceColumn="PCM_PT_InterventionBy" DataSetColumn="PCM_PT_InterventionBy" />
+              <Mapping SourceColumn="PCM_PT_Unit" DataSetColumn="PCM_PT_Unit" />
+              <Mapping SourceColumn="Unit_Name" DataSetColumn="Unit_Name" />
+              <Mapping SourceColumn="PCM_PT_Patient_File" DataSetColumn="PCM_PT_Patient_File" />
+              <Mapping SourceColumn="PCM_PT_Patient_LabResults" DataSetColumn="PCM_PT_Patient_LabResults" />
+              <Mapping SourceColumn="PCM_PT_Patient_Prescription" DataSetColumn="PCM_PT_Patient_Prescription" />
+              <Mapping SourceColumn="PCM_PT_Patient_TotalTime" DataSetColumn="PCM_PT_Patient_TotalTime" />
+              <Mapping SourceColumn="PCM_PT_Patient_Amount" DataSetColumn="PCM_PT_Patient_Amount" />
+              <Mapping SourceColumn="PCM_PT_Patient_Comments" DataSetColumn="PCM_PT_Patient_Comments" />
+              <Mapping SourceColumn="PCM_PT_Medication" DataSetColumn="PCM_PT_Medication" />
+              <Mapping SourceColumn="PCM_PT_Medication_Time" DataSetColumn="PCM_PT_Medication_Time" />
+              <Mapping SourceColumn="PCM_PT_Medication_Comment" DataSetColumn="PCM_PT_Medication_Comment" />
+              <Mapping SourceColumn="PCM_PT_Research" DataSetColumn="PCM_PT_Research" />
+              <Mapping SourceColumn="PCM_PT_Research_Time" DataSetColumn="PCM_PT_Research_Time" />
+              <Mapping SourceColumn="PCM_PT_Research_Comment" DataSetColumn="PCM_PT_Research_Comment" />
+              <Mapping SourceColumn="PCM_PT_Rounds" DataSetColumn="PCM_PT_Rounds" />
+              <Mapping SourceColumn="PCM_PT_Rounds_Time" DataSetColumn="PCM_PT_Rounds_Time" />
+              <Mapping SourceColumn="PCM_PT_Rounds_Comment" DataSetColumn="PCM_PT_Rounds_Comment" />
+              <Mapping SourceColumn="PCM_PT_Counselling" DataSetColumn="PCM_PT_Counselling" />
+              <Mapping SourceColumn="PCM_PT_Counselling_Time" DataSetColumn="PCM_PT_Counselling_Time" />
+              <Mapping SourceColumn="PCM_PT_Counselling_Comment" DataSetColumn="PCM_PT_Counselling_Comment" />
+              <Mapping SourceColumn="PCM_PT_Training" DataSetColumn="PCM_PT_Training" />
+              <Mapping SourceColumn="PCM_PT_Training_Time" DataSetColumn="PCM_PT_Training_Time" />
+              <Mapping SourceColumn="PCM_PT_Training_Comment" DataSetColumn="PCM_PT_Training_Comment" />
+              <Mapping SourceColumn="PCM_PT_Reporting" DataSetColumn="PCM_PT_Reporting" />
+              <Mapping SourceColumn="PCM_PT_Reporting_Time" DataSetColumn="PCM_PT_Reporting_Time" />
+              <Mapping SourceColumn="PCM_PT_Reporting_Comment" DataSetColumn="PCM_PT_Reporting_Comment" />
+              <Mapping SourceColumn="PCM_PT_Calculations" DataSetColumn="PCM_PT_Calculations" />
+              <Mapping SourceColumn="PCM_PT_Calculations_Time" DataSetColumn="PCM_PT_Calculations_Time" />
+              <Mapping SourceColumn="PCM_PT_Calculations_Comment" DataSetColumn="PCM_PT_Calculations_Comment" />
+              <Mapping SourceColumn="PCM_PT_AdviceDoctor" DataSetColumn="PCM_PT_AdviceDoctor" />
+              <Mapping SourceColumn="PCM_PT_AdviceDoctor_Time" DataSetColumn="PCM_PT_AdviceDoctor_Time" />
+              <Mapping SourceColumn="PCM_PT_AdviceDoctor_Comment" DataSetColumn="PCM_PT_AdviceDoctor_Comment" />
+              <Mapping SourceColumn="PCM_PT_AdviceNurse" DataSetColumn="PCM_PT_AdviceNurse" />
+              <Mapping SourceColumn="PCM_PT_AdviceNurse_Time" DataSetColumn="PCM_PT_AdviceNurse_Time" />
+              <Mapping SourceColumn="PCM_PT_AdviceNurse_Comment" DataSetColumn="PCM_PT_AdviceNurse_Comment" />
+              <Mapping SourceColumn="PCM_PT_MedicalHistory" DataSetColumn="PCM_PT_MedicalHistory" />
+              <Mapping SourceColumn="PCM_PT_MedicalHistory_Time" DataSetColumn="PCM_PT_MedicalHistory_Time" />
+              <Mapping SourceColumn="PCM_PT_MedicalHistory_Comment" DataSetColumn="PCM_PT_MedicalHistory_Comment" />
+              <Mapping SourceColumn="PCM_PT_Statistics" DataSetColumn="PCM_PT_Statistics" />
+              <Mapping SourceColumn="PCM_PT_Statistics_Time" DataSetColumn="PCM_PT_Statistics_Time" />
+              <Mapping SourceColumn="PCM_PT_Statistics_Comment" DataSetColumn="PCM_PT_Statistics_Comment" />
+              <Mapping SourceColumn="PCM_PT_CreatedDate" DataSetColumn="PCM_PT_CreatedDate" />
+              <Mapping SourceColumn="PCM_PT_CreatedBy" DataSetColumn="PCM_PT_CreatedBy" />
+              <Mapping SourceColumn="PCM_PT_ModifiedDate" DataSetColumn="PCM_PT_ModifiedDate" />
+              <Mapping SourceColumn="PCM_PT_ModifiedBy" DataSetColumn="PCM_PT_ModifiedBy" />
+              <Mapping SourceColumn="PCM_PT_History" DataSetColumn="PCM_PT_History" />
+              <Mapping SourceColumn="PCM_PT_IsActive" DataSetColumn="PCM_PT_IsActive" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_PharmacyClinicalMetrics_PharmacistTime" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_Form_PharmacyClinicalMetrics_PharmacistTime" msprop:Generator_UserDSName="DataSet_Form_PharmacyClinicalMetrics_PharmacistTime">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vForm_PharmacyClinicalMetrics_PharmacistTime" msprop:Generator_TableClassName="vForm_PharmacyClinicalMetrics_PharmacistTimeDataTable" msprop:Generator_TableVarName="tablevForm_PharmacyClinicalMetrics_PharmacistTime" msprop:Generator_TablePropName="vForm_PharmacyClinicalMetrics_PharmacistTime" msprop:Generator_RowDeletingName="vForm_PharmacyClinicalMetrics_PharmacistTimeRowDeleting" msprop:Generator_RowChangingName="vForm_PharmacyClinicalMetrics_PharmacistTimeRowChanging" msprop:Generator_RowEvHandlerName="vForm_PharmacyClinicalMetrics_PharmacistTimeRowChangeEventHandler" msprop:Generator_RowDeletedName="vForm_PharmacyClinicalMetrics_PharmacistTimeRowDeleted" msprop:Generator_UserTableName="vForm_PharmacyClinicalMetrics_PharmacistTime" msprop:Generator_RowChangedName="vForm_PharmacyClinicalMetrics_PharmacistTimeRowChanged" msprop:Generator_RowEvArgName="vForm_PharmacyClinicalMetrics_PharmacistTimeRowChangeEvent" msprop:Generator_RowClassName="vForm_PharmacyClinicalMetrics_PharmacistTimeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PCM_PT_Id" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Id" msprop:Generator_ColumnPropNameInRow="PCM_PT_Id" msprop:Generator_ColumnPropNameInTable="PCM_PT_IdColumn" msprop:Generator_UserColumnName="PCM_PT_Id" type="xs:int" />
+              <xs:element name="PCM_Intervention_Id" msprop:Generator_ColumnVarNameInTable="columnPCM_Intervention_Id" msprop:Generator_ColumnPropNameInRow="PCM_Intervention_Id" msprop:Generator_ColumnPropNameInTable="PCM_Intervention_IdColumn" msprop:Generator_UserColumnName="PCM_Intervention_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facility_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityNameColumn" msprop:Generator_UserColumnName="Facility_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facility_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facility_FacilityCodeColumn" msprop:Generator_UserColumnName="Facility_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityDisplayName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityDisplayNameColumn" msprop:Generator_UserColumnName="Facility_FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_Intervention_Date" msprop:Generator_ColumnVarNameInTable="columnPCM_Intervention_Date" msprop:Generator_ColumnPropNameInRow="PCM_Intervention_Date" msprop:Generator_ColumnPropNameInTable="PCM_Intervention_DateColumn" msprop:Generator_UserColumnName="PCM_Intervention_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PCM_Intervention_Intervention_List" msprop:Generator_ColumnVarNameInTable="columnPCM_Intervention_Intervention_List" msprop:Generator_ColumnPropNameInRow="PCM_Intervention_Intervention_List" msprop:Generator_ColumnPropNameInTable="PCM_Intervention_Intervention_ListColumn" msprop:Generator_UserColumnName="PCM_Intervention_Intervention_List" type="xs:int" minOccurs="0" />
+              <xs:element name="PCM_Intervention_Intervention_Name" msprop:Generator_ColumnVarNameInTable="columnPCM_Intervention_Intervention_Name" msprop:Generator_ColumnPropNameInRow="PCM_Intervention_Intervention_Name" msprop:Generator_ColumnPropNameInTable="PCM_Intervention_Intervention_NameColumn" msprop:Generator_UserColumnName="PCM_Intervention_Intervention_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_Intervention_VisitNumber" msprop:Generator_ColumnVarNameInTable="columnPCM_Intervention_VisitNumber" msprop:Generator_ColumnPropNameInRow="PCM_Intervention_VisitNumber" msprop:Generator_ColumnPropNameInTable="PCM_Intervention_VisitNumberColumn" msprop:Generator_UserColumnName="PCM_Intervention_VisitNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_VisitInformation_Id" msprop:Generator_ColumnVarNameInTable="columnPCM_VisitInformation_Id" msprop:Generator_ColumnPropNameInRow="PCM_VisitInformation_Id" msprop:Generator_ColumnPropNameInTable="PCM_VisitInformation_IdColumn" msprop:Generator_UserColumnName="PCM_VisitInformation_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="PatientInformation_Id" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Id" msprop:Generator_ColumnPropNameInRow="PatientInformation_Id" msprop:Generator_ColumnPropNameInTable="PatientInformation_IdColumn" msprop:Generator_UserColumnName="PatientInformation_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="PatientInformation_LifeCountry" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_LifeCountry" msprop:Generator_ColumnPropNameInRow="PatientInformation_LifeCountry" msprop:Generator_ColumnPropNameInTable="PatientInformation_LifeCountryColumn" msprop:Generator_UserColumnName="PatientInformation_LifeCountry" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_LifeNumber" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_LifeNumber" msprop:Generator_ColumnPropNameInRow="PatientInformation_LifeNumber" msprop:Generator_ColumnPropNameInTable="PatientInformation_LifeNumberColumn" msprop:Generator_UserColumnName="PatientInformation_LifeNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Name" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Name" msprop:Generator_ColumnPropNameInRow="PatientInformation_Name" msprop:Generator_ColumnPropNameInTable="PatientInformation_NameColumn" msprop:Generator_UserColumnName="PatientInformation_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Surname" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Surname" msprop:Generator_ColumnPropNameInRow="PatientInformation_Surname" msprop:Generator_ColumnPropNameInTable="PatientInformation_SurnameColumn" msprop:Generator_UserColumnName="PatientInformation_Surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_IDNumber" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_IDNumber" msprop:Generator_ColumnPropNameInRow="PatientInformation_IDNumber" msprop:Generator_ColumnPropNameInTable="PatientInformation_IDNumberColumn" msprop:Generator_UserColumnName="PatientInformation_IDNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_DateOfBirth" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_DateOfBirth" msprop:Generator_ColumnPropNameInRow="PatientInformation_DateOfBirth" msprop:Generator_ColumnPropNameInTable="PatientInformation_DateOfBirthColumn" msprop:Generator_UserColumnName="PatientInformation_DateOfBirth" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Gender" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Gender" msprop:Generator_ColumnPropNameInRow="PatientInformation_Gender" msprop:Generator_ColumnPropNameInTable="PatientInformation_GenderColumn" msprop:Generator_UserColumnName="PatientInformation_Gender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Email" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Email" msprop:Generator_ColumnPropNameInRow="PatientInformation_Email" msprop:Generator_ColumnPropNameInTable="PatientInformation_EmailColumn" msprop:Generator_UserColumnName="PatientInformation_Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_ContactNumber" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_ContactNumber" msprop:Generator_ColumnPropNameInRow="PatientInformation_ContactNumber" msprop:Generator_ColumnPropNameInTable="PatientInformation_ContactNumberColumn" msprop:Generator_UserColumnName="PatientInformation_ContactNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_VisitInformation_PatientAge" msprop:Generator_ColumnVarNameInTable="columnPCM_VisitInformation_PatientAge" msprop:Generator_ColumnPropNameInRow="PCM_VisitInformation_PatientAge" msprop:Generator_ColumnPropNameInTable="PCM_VisitInformation_PatientAgeColumn" msprop:Generator_UserColumnName="PCM_VisitInformation_PatientAge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_VisitInformation_DateOfAdmission" msprop:Generator_ColumnVarNameInTable="columnPCM_VisitInformation_DateOfAdmission" msprop:Generator_ColumnPropNameInRow="PCM_VisitInformation_DateOfAdmission" msprop:Generator_ColumnPropNameInTable="PCM_VisitInformation_DateOfAdmissionColumn" msprop:Generator_UserColumnName="PCM_VisitInformation_DateOfAdmission" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_VisitInformation_DateOfDischarge" msprop:Generator_ColumnVarNameInTable="columnPCM_VisitInformation_DateOfDischarge" msprop:Generator_ColumnPropNameInRow="PCM_VisitInformation_DateOfDischarge" msprop:Generator_ColumnPropNameInTable="PCM_VisitInformation_DateOfDischargeColumn" msprop:Generator_UserColumnName="PCM_VisitInformation_DateOfDischarge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_Intervention_Archived" msprop:Generator_ColumnVarNameInTable="columnPCM_Intervention_Archived" msprop:Generator_ColumnPropNameInRow="PCM_Intervention_Archived" msprop:Generator_ColumnPropNameInTable="PCM_Intervention_ArchivedColumn" msprop:Generator_UserColumnName="PCM_Intervention_Archived" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PCM_PT_ReportNumber" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_ReportNumber" msprop:Generator_ColumnPropNameInRow="PCM_PT_ReportNumber" msprop:Generator_ColumnPropNameInTable="PCM_PT_ReportNumberColumn" msprop:Generator_UserColumnName="PCM_PT_ReportNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_InterventionBy" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_InterventionBy" msprop:Generator_ColumnPropNameInRow="PCM_PT_InterventionBy" msprop:Generator_ColumnPropNameInTable="PCM_PT_InterventionByColumn" msprop:Generator_UserColumnName="PCM_PT_InterventionBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Unit" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Unit" msprop:Generator_ColumnPropNameInRow="PCM_PT_Unit" msprop:Generator_ColumnPropNameInTable="PCM_PT_UnitColumn" msprop:Generator_UserColumnName="PCM_PT_Unit" type="xs:int" minOccurs="0" />
+              <xs:element name="Unit_Name" msprop:Generator_ColumnVarNameInTable="columnUnit_Name" msprop:Generator_ColumnPropNameInRow="Unit_Name" msprop:Generator_ColumnPropNameInTable="Unit_NameColumn" msprop:Generator_UserColumnName="Unit_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Patient_File" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Patient_File" msprop:Generator_ColumnPropNameInRow="PCM_PT_Patient_File" msprop:Generator_ColumnPropNameInTable="PCM_PT_Patient_FileColumn" msprop:Generator_UserColumnName="PCM_PT_Patient_File" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PCM_PT_Patient_LabResults" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Patient_LabResults" msprop:Generator_ColumnPropNameInRow="PCM_PT_Patient_LabResults" msprop:Generator_ColumnPropNameInTable="PCM_PT_Patient_LabResultsColumn" msprop:Generator_UserColumnName="PCM_PT_Patient_LabResults" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PCM_PT_Patient_Prescription" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Patient_Prescription" msprop:Generator_ColumnPropNameInRow="PCM_PT_Patient_Prescription" msprop:Generator_ColumnPropNameInTable="PCM_PT_Patient_PrescriptionColumn" msprop:Generator_UserColumnName="PCM_PT_Patient_Prescription" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PCM_PT_Patient_TotalTime" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Patient_TotalTime" msprop:Generator_ColumnPropNameInRow="PCM_PT_Patient_TotalTime" msprop:Generator_ColumnPropNameInTable="PCM_PT_Patient_TotalTimeColumn" msprop:Generator_UserColumnName="PCM_PT_Patient_TotalTime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Patient_Amount" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Patient_Amount" msprop:Generator_ColumnPropNameInRow="PCM_PT_Patient_Amount" msprop:Generator_ColumnPropNameInTable="PCM_PT_Patient_AmountColumn" msprop:Generator_UserColumnName="PCM_PT_Patient_Amount" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Patient_Comments" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Patient_Comments" msprop:Generator_ColumnPropNameInRow="PCM_PT_Patient_Comments" msprop:Generator_ColumnPropNameInTable="PCM_PT_Patient_CommentsColumn" msprop:Generator_UserColumnName="PCM_PT_Patient_Comments" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Medication" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Medication" msprop:Generator_ColumnPropNameInRow="PCM_PT_Medication" msprop:Generator_ColumnPropNameInTable="PCM_PT_MedicationColumn" msprop:Generator_UserColumnName="PCM_PT_Medication" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PCM_PT_Medication_Time" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Medication_Time" msprop:Generator_ColumnPropNameInRow="PCM_PT_Medication_Time" msprop:Generator_ColumnPropNameInTable="PCM_PT_Medication_TimeColumn" msprop:Generator_UserColumnName="PCM_PT_Medication_Time" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Medication_Comment" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Medication_Comment" msprop:Generator_ColumnPropNameInRow="PCM_PT_Medication_Comment" msprop:Generator_ColumnPropNameInTable="PCM_PT_Medication_CommentColumn" msprop:Generator_UserColumnName="PCM_PT_Medication_Comment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Research" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Research" msprop:Generator_ColumnPropNameInRow="PCM_PT_Research" msprop:Generator_ColumnPropNameInTable="PCM_PT_ResearchColumn" msprop:Generator_UserColumnName="PCM_PT_Research" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PCM_PT_Research_Time" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Research_Time" msprop:Generator_ColumnPropNameInRow="PCM_PT_Research_Time" msprop:Generator_ColumnPropNameInTable="PCM_PT_Research_TimeColumn" msprop:Generator_UserColumnName="PCM_PT_Research_Time" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Research_Comment" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Research_Comment" msprop:Generator_ColumnPropNameInRow="PCM_PT_Research_Comment" msprop:Generator_ColumnPropNameInTable="PCM_PT_Research_CommentColumn" msprop:Generator_UserColumnName="PCM_PT_Research_Comment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Rounds" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Rounds" msprop:Generator_ColumnPropNameInRow="PCM_PT_Rounds" msprop:Generator_ColumnPropNameInTable="PCM_PT_RoundsColumn" msprop:Generator_UserColumnName="PCM_PT_Rounds" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PCM_PT_Rounds_Time" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Rounds_Time" msprop:Generator_ColumnPropNameInRow="PCM_PT_Rounds_Time" msprop:Generator_ColumnPropNameInTable="PCM_PT_Rounds_TimeColumn" msprop:Generator_UserColumnName="PCM_PT_Rounds_Time" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Rounds_Comment" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Rounds_Comment" msprop:Generator_ColumnPropNameInRow="PCM_PT_Rounds_Comment" msprop:Generator_ColumnPropNameInTable="PCM_PT_Rounds_CommentColumn" msprop:Generator_UserColumnName="PCM_PT_Rounds_Comment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Counselling" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Counselling" msprop:Generator_ColumnPropNameInRow="PCM_PT_Counselling" msprop:Generator_ColumnPropNameInTable="PCM_PT_CounsellingColumn" msprop:Generator_UserColumnName="PCM_PT_Counselling" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PCM_PT_Counselling_Time" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Counselling_Time" msprop:Generator_ColumnPropNameInRow="PCM_PT_Counselling_Time" msprop:Generator_ColumnPropNameInTable="PCM_PT_Counselling_TimeColumn" msprop:Generator_UserColumnName="PCM_PT_Counselling_Time" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Counselling_Comment" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Counselling_Comment" msprop:Generator_ColumnPropNameInRow="PCM_PT_Counselling_Comment" msprop:Generator_ColumnPropNameInTable="PCM_PT_Counselling_CommentColumn" msprop:Generator_UserColumnName="PCM_PT_Counselling_Comment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Training" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Training" msprop:Generator_ColumnPropNameInRow="PCM_PT_Training" msprop:Generator_ColumnPropNameInTable="PCM_PT_TrainingColumn" msprop:Generator_UserColumnName="PCM_PT_Training" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PCM_PT_Training_Time" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Training_Time" msprop:Generator_ColumnPropNameInRow="PCM_PT_Training_Time" msprop:Generator_ColumnPropNameInTable="PCM_PT_Training_TimeColumn" msprop:Generator_UserColumnName="PCM_PT_Training_Time" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Training_Comment" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Training_Comment" msprop:Generator_ColumnPropNameInRow="PCM_PT_Training_Comment" msprop:Generator_ColumnPropNameInTable="PCM_PT_Training_CommentColumn" msprop:Generator_UserColumnName="PCM_PT_Training_Comment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Reporting" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Reporting" msprop:Generator_ColumnPropNameInRow="PCM_PT_Reporting" msprop:Generator_ColumnPropNameInTable="PCM_PT_ReportingColumn" msprop:Generator_UserColumnName="PCM_PT_Reporting" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PCM_PT_Reporting_Time" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Reporting_Time" msprop:Generator_ColumnPropNameInRow="PCM_PT_Reporting_Time" msprop:Generator_ColumnPropNameInTable="PCM_PT_Reporting_TimeColumn" msprop:Generator_UserColumnName="PCM_PT_Reporting_Time" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Reporting_Comment" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Reporting_Comment" msprop:Generator_ColumnPropNameInRow="PCM_PT_Reporting_Comment" msprop:Generator_ColumnPropNameInTable="PCM_PT_Reporting_CommentColumn" msprop:Generator_UserColumnName="PCM_PT_Reporting_Comment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Calculations" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Calculations" msprop:Generator_ColumnPropNameInRow="PCM_PT_Calculations" msprop:Generator_ColumnPropNameInTable="PCM_PT_CalculationsColumn" msprop:Generator_UserColumnName="PCM_PT_Calculations" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PCM_PT_Calculations_Time" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Calculations_Time" msprop:Generator_ColumnPropNameInRow="PCM_PT_Calculations_Time" msprop:Generator_ColumnPropNameInTable="PCM_PT_Calculations_TimeColumn" msprop:Generator_UserColumnName="PCM_PT_Calculations_Time" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Calculations_Comment" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Calculations_Comment" msprop:Generator_ColumnPropNameInRow="PCM_PT_Calculations_Comment" msprop:Generator_ColumnPropNameInTable="PCM_PT_Calculations_CommentColumn" msprop:Generator_UserColumnName="PCM_PT_Calculations_Comment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_AdviceDoctor" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_AdviceDoctor" msprop:Generator_ColumnPropNameInRow="PCM_PT_AdviceDoctor" msprop:Generator_ColumnPropNameInTable="PCM_PT_AdviceDoctorColumn" msprop:Generator_UserColumnName="PCM_PT_AdviceDoctor" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PCM_PT_AdviceDoctor_Time" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_AdviceDoctor_Time" msprop:Generator_ColumnPropNameInRow="PCM_PT_AdviceDoctor_Time" msprop:Generator_ColumnPropNameInTable="PCM_PT_AdviceDoctor_TimeColumn" msprop:Generator_UserColumnName="PCM_PT_AdviceDoctor_Time" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_AdviceDoctor_Comment" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_AdviceDoctor_Comment" msprop:Generator_ColumnPropNameInRow="PCM_PT_AdviceDoctor_Comment" msprop:Generator_ColumnPropNameInTable="PCM_PT_AdviceDoctor_CommentColumn" msprop:Generator_UserColumnName="PCM_PT_AdviceDoctor_Comment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_AdviceNurse" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_AdviceNurse" msprop:Generator_ColumnPropNameInRow="PCM_PT_AdviceNurse" msprop:Generator_ColumnPropNameInTable="PCM_PT_AdviceNurseColumn" msprop:Generator_UserColumnName="PCM_PT_AdviceNurse" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PCM_PT_AdviceNurse_Time" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_AdviceNurse_Time" msprop:Generator_ColumnPropNameInRow="PCM_PT_AdviceNurse_Time" msprop:Generator_ColumnPropNameInTable="PCM_PT_AdviceNurse_TimeColumn" msprop:Generator_UserColumnName="PCM_PT_AdviceNurse_Time" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_AdviceNurse_Comment" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_AdviceNurse_Comment" msprop:Generator_ColumnPropNameInRow="PCM_PT_AdviceNurse_Comment" msprop:Generator_ColumnPropNameInTable="PCM_PT_AdviceNurse_CommentColumn" msprop:Generator_UserColumnName="PCM_PT_AdviceNurse_Comment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_MedicalHistory" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_MedicalHistory" msprop:Generator_ColumnPropNameInRow="PCM_PT_MedicalHistory" msprop:Generator_ColumnPropNameInTable="PCM_PT_MedicalHistoryColumn" msprop:Generator_UserColumnName="PCM_PT_MedicalHistory" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PCM_PT_MedicalHistory_Time" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_MedicalHistory_Time" msprop:Generator_ColumnPropNameInRow="PCM_PT_MedicalHistory_Time" msprop:Generator_ColumnPropNameInTable="PCM_PT_MedicalHistory_TimeColumn" msprop:Generator_UserColumnName="PCM_PT_MedicalHistory_Time" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_MedicalHistory_Comment" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_MedicalHistory_Comment" msprop:Generator_ColumnPropNameInRow="PCM_PT_MedicalHistory_Comment" msprop:Generator_ColumnPropNameInTable="PCM_PT_MedicalHistory_CommentColumn" msprop:Generator_UserColumnName="PCM_PT_MedicalHistory_Comment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Statistics" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Statistics" msprop:Generator_ColumnPropNameInRow="PCM_PT_Statistics" msprop:Generator_ColumnPropNameInTable="PCM_PT_StatisticsColumn" msprop:Generator_UserColumnName="PCM_PT_Statistics" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PCM_PT_Statistics_Time" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Statistics_Time" msprop:Generator_ColumnPropNameInRow="PCM_PT_Statistics_Time" msprop:Generator_ColumnPropNameInTable="PCM_PT_Statistics_TimeColumn" msprop:Generator_UserColumnName="PCM_PT_Statistics_Time" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_Statistics_Comment" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_Statistics_Comment" msprop:Generator_ColumnPropNameInRow="PCM_PT_Statistics_Comment" msprop:Generator_ColumnPropNameInTable="PCM_PT_Statistics_CommentColumn" msprop:Generator_UserColumnName="PCM_PT_Statistics_Comment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_CreatedDate" msprop:Generator_ColumnPropNameInRow="PCM_PT_CreatedDate" msprop:Generator_ColumnPropNameInTable="PCM_PT_CreatedDateColumn" msprop:Generator_UserColumnName="PCM_PT_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PCM_PT_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_CreatedBy" msprop:Generator_ColumnPropNameInRow="PCM_PT_CreatedBy" msprop:Generator_ColumnPropNameInTable="PCM_PT_CreatedByColumn" msprop:Generator_UserColumnName="PCM_PT_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_ModifiedDate" msprop:Generator_ColumnPropNameInRow="PCM_PT_ModifiedDate" msprop:Generator_ColumnPropNameInTable="PCM_PT_ModifiedDateColumn" msprop:Generator_UserColumnName="PCM_PT_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PCM_PT_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_ModifiedBy" msprop:Generator_ColumnPropNameInRow="PCM_PT_ModifiedBy" msprop:Generator_ColumnPropNameInTable="PCM_PT_ModifiedByColumn" msprop:Generator_UserColumnName="PCM_PT_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_History" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_History" msprop:Generator_ColumnPropNameInRow="PCM_PT_History" msprop:Generator_ColumnPropNameInTable="PCM_PT_HistoryColumn" msprop:Generator_UserColumnName="PCM_PT_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCM_PT_IsActive" msprop:Generator_ColumnVarNameInTable="columnPCM_PT_IsActive" msprop:Generator_ColumnPropNameInRow="PCM_PT_IsActive" msprop:Generator_ColumnPropNameInTable="PCM_PT_IsActiveColumn" msprop:Generator_UserColumnName="PCM_PT_IsActive" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vForm_PharmacyClinicalMetrics_PharmacistTime" />
+      <xs:field xpath="mstns:PCM_PT_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,828 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_ECM" targetNamespace="http://tempuri.org/DataSet_Form_ECM.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_ECM.xsd" xmlns="http://tempuri.org/DataSet_Form_ECM.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vInfoQuest_Form_ECMTableAdapter" GeneratorDataComponentClassName="vInfoQuest_Form_ECMTableAdapter" Name="vInfoQuest_Form_ECM" UserDataComponentName="vInfoQuest_Form_ECMTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vInfoQuest_Form_ECM" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT *
+FROM vInfoQuest_Form_ECM
+WHERE ECM_Id = 1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ECM_Id" DataSetColumn="ECM_Id" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facilities_FacilityName" DataSetColumn="Facilities_FacilityName" />
+              <Mapping SourceColumn="Facilities_FacilityCode" DataSetColumn="Facilities_FacilityCode" />
+              <Mapping SourceColumn="FacilityDisplayName" DataSetColumn="FacilityDisplayName" />
+              <Mapping SourceColumn="ECM_Period" DataSetColumn="ECM_Period" />
+              <Mapping SourceColumn="ECM_FYPeriod" DataSetColumn="ECM_FYPeriod" />
+              <Mapping SourceColumn="ECM_BedsActive" DataSetColumn="ECM_BedsActive" />
+              <Mapping SourceColumn="ECM_PPD" DataSetColumn="ECM_PPD" />
+              <Mapping SourceColumn="ECM_TheatreTime" DataSetColumn="ECM_TheatreTime" />
+              <Mapping SourceColumn="BeingModified" DataSetColumn="BeingModified" />
+              <Mapping SourceColumn="BeingModifiedDate" DataSetColumn="BeingModifiedDate" />
+              <Mapping SourceColumn="BeingModifiedBy" DataSetColumn="BeingModifiedBy" />
+              <Mapping SourceColumn="Link" DataSetColumn="Link" />
+              <Mapping SourceColumn="Closed" DataSetColumn="Closed" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vInfoQuest_Form_ECM_DieselTableAdapter" GeneratorDataComponentClassName="vInfoQuest_Form_ECM_DieselTableAdapter" Name="vInfoQuest_Form_ECM_Diesel" UserDataComponentName="vInfoQuest_Form_ECM_DieselTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vInfoQuest_Form_ECM_Diesel" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM vInfoQuest_Form_ECM_Diesel WHERE ECM_Id = 1 AND ECM_Diesel_IsActive = 1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ECM_Diesel_Id" DataSetColumn="ECM_Diesel_Id" />
+              <Mapping SourceColumn="ECM_Id" DataSetColumn="ECM_Id" />
+              <Mapping SourceColumn="ECM_Diesel_Generator" DataSetColumn="ECM_Diesel_Generator" />
+              <Mapping SourceColumn="ECM_Diesel_Description" DataSetColumn="ECM_Diesel_Description" />
+              <Mapping SourceColumn="ECM_Diesel_kVA" DataSetColumn="ECM_Diesel_kVA" />
+              <Mapping SourceColumn="ECM_Diesel_Litres" DataSetColumn="ECM_Diesel_Litres" />
+              <Mapping SourceColumn="ECM_Diesel_hrs_PreviousMonth" DataSetColumn="ECM_Diesel_hrs_PreviousMonth" />
+              <Mapping SourceColumn="ECM_Diesel_min_PreviousMonth" DataSetColumn="ECM_Diesel_min_PreviousMonth" />
+              <Mapping SourceColumn="ECM_Diesel_hrs_CurrentMonth" DataSetColumn="ECM_Diesel_hrs_CurrentMonth" />
+              <Mapping SourceColumn="ECM_Diesel_min_CurrentMonth" DataSetColumn="ECM_Diesel_min_CurrentMonth" />
+              <Mapping SourceColumn="ECM_Diesel_hrs_Difference" DataSetColumn="ECM_Diesel_hrs_Difference" />
+              <Mapping SourceColumn="ECM_Diesel_min_Difference" DataSetColumn="ECM_Diesel_min_Difference" />
+              <Mapping SourceColumn="ECM_Diesel_CreatedDate" DataSetColumn="ECM_Diesel_CreatedDate" />
+              <Mapping SourceColumn="ECM_Diesel_CreatedBy" DataSetColumn="ECM_Diesel_CreatedBy" />
+              <Mapping SourceColumn="ECM_Diesel_ModifiedDate" DataSetColumn="ECM_Diesel_ModifiedDate" />
+              <Mapping SourceColumn="ECM_Diesel_ModifiedBy" DataSetColumn="ECM_Diesel_ModifiedBy" />
+              <Mapping SourceColumn="ECM_Diesel_History" DataSetColumn="ECM_Diesel_History" />
+              <Mapping SourceColumn="ECM_Diesel_IsActive" DataSetColumn="ECM_Diesel_IsActive" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facilities_FacilityName" DataSetColumn="Facilities_FacilityName" />
+              <Mapping SourceColumn="Facilities_FacilityCode" DataSetColumn="Facilities_FacilityCode" />
+              <Mapping SourceColumn="FacilityDisplayName" DataSetColumn="FacilityDisplayName" />
+              <Mapping SourceColumn="ECM_Period" DataSetColumn="ECM_Period" />
+              <Mapping SourceColumn="ECM_FYPeriod" DataSetColumn="ECM_FYPeriod" />
+              <Mapping SourceColumn="ECM_BedsActive" DataSetColumn="ECM_BedsActive" />
+              <Mapping SourceColumn="ECM_PPD" DataSetColumn="ECM_PPD" />
+              <Mapping SourceColumn="ECM_TheatreTime" DataSetColumn="ECM_TheatreTime" />
+              <Mapping SourceColumn="BeingModified" DataSetColumn="BeingModified" />
+              <Mapping SourceColumn="BeingModifiedDate" DataSetColumn="BeingModifiedDate" />
+              <Mapping SourceColumn="BeingModifiedBy" DataSetColumn="BeingModifiedBy" />
+              <Mapping SourceColumn="Link" DataSetColumn="Link" />
+              <Mapping SourceColumn="Closed" DataSetColumn="Closed" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vInfoQuest_Form_ECM_ElectricityTableAdapter" GeneratorDataComponentClassName="vInfoQuest_Form_ECM_ElectricityTableAdapter" Name="vInfoQuest_Form_ECM_Electricity" UserDataComponentName="vInfoQuest_Form_ECM_ElectricityTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vInfoQuest_Form_ECM_Electricity" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM vInfoQuest_Form_ECM_Electricity WHERE ECM_Id = 1 AND ECM_Electricity_IsActive = 1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ECM_Electricity_Id" DataSetColumn="ECM_Electricity_Id" />
+              <Mapping SourceColumn="ECM_Id" DataSetColumn="ECM_Id" />
+              <Mapping SourceColumn="ECM_Electricity_Meter" DataSetColumn="ECM_Electricity_Meter" />
+              <Mapping SourceColumn="ECM_Electricity_Description" DataSetColumn="ECM_Electricity_Description" />
+              <Mapping SourceColumn="ECM_Electricity_kVAMaxDemAllowed" DataSetColumn="ECM_Electricity_kVAMaxDemAllowed" />
+              <Mapping SourceColumn="ECM_Electricity_kVAMaxDemCurrentMonth" DataSetColumn="ECM_Electricity_kVAMaxDemCurrentMonth" />
+              <Mapping SourceColumn="ECM_Electricity_PowerFactor" DataSetColumn="ECM_Electricity_PowerFactor" />
+              <Mapping SourceColumn="ECM_Electricity_kWh_PreviousMonth" DataSetColumn="ECM_Electricity_kWh_PreviousMonth" />
+              <Mapping SourceColumn="ECM_Electricity_kWh_CurrentMonth" DataSetColumn="ECM_Electricity_kWh_CurrentMonth" />
+              <Mapping SourceColumn="ECM_Electricity_kWh_Difference" DataSetColumn="ECM_Electricity_kWh_Difference" />
+              <Mapping SourceColumn="ECM_Electricity_CreatedDate" DataSetColumn="ECM_Electricity_CreatedDate" />
+              <Mapping SourceColumn="ECM_Electricity_CreatedBy" DataSetColumn="ECM_Electricity_CreatedBy" />
+              <Mapping SourceColumn="ECM_Electricity_ModifiedDate" DataSetColumn="ECM_Electricity_ModifiedDate" />
+              <Mapping SourceColumn="ECM_Electricity_ModifiedBy" DataSetColumn="ECM_Electricity_ModifiedBy" />
+              <Mapping SourceColumn="ECM_Electricity_History" DataSetColumn="ECM_Electricity_History" />
+              <Mapping SourceColumn="ECM_Electricity_IsActive" DataSetColumn="ECM_Electricity_IsActive" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facilities_FacilityName" DataSetColumn="Facilities_FacilityName" />
+              <Mapping SourceColumn="Facilities_FacilityCode" DataSetColumn="Facilities_FacilityCode" />
+              <Mapping SourceColumn="FacilityDisplayName" DataSetColumn="FacilityDisplayName" />
+              <Mapping SourceColumn="ECM_Period" DataSetColumn="ECM_Period" />
+              <Mapping SourceColumn="ECM_FYPeriod" DataSetColumn="ECM_FYPeriod" />
+              <Mapping SourceColumn="ECM_BedsActive" DataSetColumn="ECM_BedsActive" />
+              <Mapping SourceColumn="ECM_PPD" DataSetColumn="ECM_PPD" />
+              <Mapping SourceColumn="ECM_TheatreTime" DataSetColumn="ECM_TheatreTime" />
+              <Mapping SourceColumn="BeingModified" DataSetColumn="BeingModified" />
+              <Mapping SourceColumn="BeingModifiedDate" DataSetColumn="BeingModifiedDate" />
+              <Mapping SourceColumn="BeingModifiedBy" DataSetColumn="BeingModifiedBy" />
+              <Mapping SourceColumn="Link" DataSetColumn="Link" />
+              <Mapping SourceColumn="Closed" DataSetColumn="Closed" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vInfoQuest_Form_ECM_PurchasedTableAdapter" GeneratorDataComponentClassName="vInfoQuest_Form_ECM_PurchasedTableAdapter" Name="vInfoQuest_Form_ECM_Purchased" UserDataComponentName="vInfoQuest_Form_ECM_PurchasedTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vInfoQuest_Form_ECM_Purchased" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM vInfoQuest_Form_ECM_Purchased WHERE ECM_Id = 1 AND ECM_Purchased_IsActive = 1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ECM_Purchased_Id" DataSetColumn="ECM_Purchased_Id" />
+              <Mapping SourceColumn="ECM_Id" DataSetColumn="ECM_Id" />
+              <Mapping SourceColumn="ECM_Purchased_Item" DataSetColumn="ECM_Purchased_Item" />
+              <Mapping SourceColumn="ECM_Purchased_Type_List" DataSetColumn="ECM_Purchased_Type_List" />
+              <Mapping SourceColumn="ECM_Purchased_Type_Name" DataSetColumn="ECM_Purchased_Type_Name" />
+              <Mapping SourceColumn="ECM_Purchased_Description" DataSetColumn="ECM_Purchased_Description" />
+              <Mapping SourceColumn="ECM_Purchased_Unit_List" DataSetColumn="ECM_Purchased_Unit_List" />
+              <Mapping SourceColumn="ECM_Purchased_Unit_Name" DataSetColumn="ECM_Purchased_Unit_Name" />
+              <Mapping SourceColumn="ECM_Purchased_PurchasedUtilised_List" DataSetColumn="ECM_Purchased_PurchasedUtilised_List" />
+              <Mapping SourceColumn="ECM_Purchased_PurchasedUtilised_Name" DataSetColumn="ECM_Purchased_PurchasedUtilised_Name" />
+              <Mapping SourceColumn="ECM_Purchased_Amount" DataSetColumn="ECM_Purchased_Amount" />
+              <Mapping SourceColumn="ECM_Purchased_CreatedDate" DataSetColumn="ECM_Purchased_CreatedDate" />
+              <Mapping SourceColumn="ECM_Purchased_CreatedBy" DataSetColumn="ECM_Purchased_CreatedBy" />
+              <Mapping SourceColumn="ECM_Purchased_ModifiedDate" DataSetColumn="ECM_Purchased_ModifiedDate" />
+              <Mapping SourceColumn="ECM_Purchased_ModifiedBy" DataSetColumn="ECM_Purchased_ModifiedBy" />
+              <Mapping SourceColumn="ECM_Purchased_History" DataSetColumn="ECM_Purchased_History" />
+              <Mapping SourceColumn="ECM_Purchased_IsActive" DataSetColumn="ECM_Purchased_IsActive" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facilities_FacilityName" DataSetColumn="Facilities_FacilityName" />
+              <Mapping SourceColumn="Facilities_FacilityCode" DataSetColumn="Facilities_FacilityCode" />
+              <Mapping SourceColumn="FacilityDisplayName" DataSetColumn="FacilityDisplayName" />
+              <Mapping SourceColumn="ECM_Period" DataSetColumn="ECM_Period" />
+              <Mapping SourceColumn="ECM_FYPeriod" DataSetColumn="ECM_FYPeriod" />
+              <Mapping SourceColumn="ECM_BedsActive" DataSetColumn="ECM_BedsActive" />
+              <Mapping SourceColumn="ECM_PPD" DataSetColumn="ECM_PPD" />
+              <Mapping SourceColumn="ECM_TheatreTime" DataSetColumn="ECM_TheatreTime" />
+              <Mapping SourceColumn="BeingModified" DataSetColumn="BeingModified" />
+              <Mapping SourceColumn="BeingModifiedDate" DataSetColumn="BeingModifiedDate" />
+              <Mapping SourceColumn="BeingModifiedBy" DataSetColumn="BeingModifiedBy" />
+              <Mapping SourceColumn="Link" DataSetColumn="Link" />
+              <Mapping SourceColumn="Closed" DataSetColumn="Closed" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vInfoQuest_Form_ECM_WaterTableAdapter" GeneratorDataComponentClassName="vInfoQuest_Form_ECM_WaterTableAdapter" Name="vInfoQuest_Form_ECM_Water" UserDataComponentName="vInfoQuest_Form_ECM_WaterTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vInfoQuest_Form_ECM_Water" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM vInfoQuest_Form_ECM_Water WHERE ECM_Id = 1 AND ECM_Water_IsActive = 1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ECM_Water_Id" DataSetColumn="ECM_Water_Id" />
+              <Mapping SourceColumn="ECM_Id" DataSetColumn="ECM_Id" />
+              <Mapping SourceColumn="ECM_Water_Meter" DataSetColumn="ECM_Water_Meter" />
+              <Mapping SourceColumn="ECM_Water_Description" DataSetColumn="ECM_Water_Description" />
+              <Mapping SourceColumn="ECM_Water_TankCapacity" DataSetColumn="ECM_Water_TankCapacity" />
+              <Mapping SourceColumn="ECM_Water_L_PreviousMonth" DataSetColumn="ECM_Water_L_PreviousMonth" />
+              <Mapping SourceColumn="ECM_Water_L_CurrentMonth" DataSetColumn="ECM_Water_L_CurrentMonth" />
+              <Mapping SourceColumn="ECM_Water_L_Difference" DataSetColumn="ECM_Water_L_Difference" />
+              <Mapping SourceColumn="ECM_Water_CreatedDate" DataSetColumn="ECM_Water_CreatedDate" />
+              <Mapping SourceColumn="ECM_Water_CreatedBy" DataSetColumn="ECM_Water_CreatedBy" />
+              <Mapping SourceColumn="ECM_Water_ModifiedDate" DataSetColumn="ECM_Water_ModifiedDate" />
+              <Mapping SourceColumn="ECM_Water_ModifiedBy" DataSetColumn="ECM_Water_ModifiedBy" />
+              <Mapping SourceColumn="ECM_Water_History" DataSetColumn="ECM_Water_History" />
+              <Mapping SourceColumn="ECM_Water_IsActive" DataSetColumn="ECM_Water_IsActive" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facilities_FacilityName" DataSetColumn="Facilities_FacilityName" />
+              <Mapping SourceColumn="Facilities_FacilityCode" DataSetColumn="Facilities_FacilityCode" />
+              <Mapping SourceColumn="FacilityDisplayName" DataSetColumn="FacilityDisplayName" />
+              <Mapping SourceColumn="ECM_Period" DataSetColumn="ECM_Period" />
+              <Mapping SourceColumn="ECM_FYPeriod" DataSetColumn="ECM_FYPeriod" />
+              <Mapping SourceColumn="ECM_BedsActive" DataSetColumn="ECM_BedsActive" />
+              <Mapping SourceColumn="ECM_PPD" DataSetColumn="ECM_PPD" />
+              <Mapping SourceColumn="ECM_TheatreTime" DataSetColumn="ECM_TheatreTime" />
+              <Mapping SourceColumn="BeingModified" DataSetColumn="BeingModified" />
+              <Mapping SourceColumn="BeingModifiedDate" DataSetColumn="BeingModifiedDate" />
+              <Mapping SourceColumn="BeingModifiedBy" DataSetColumn="BeingModifiedBy" />
+              <Mapping SourceColumn="Link" DataSetColumn="Link" />
+              <Mapping SourceColumn="Closed" DataSetColumn="Closed" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_ECM" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet_Form_ECM" msprop:Generator_DataSetName="DataSet_Form_ECM">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vInfoQuest_Form_ECM" msprop:Generator_TableClassName="vInfoQuest_Form_ECMDataTable" msprop:Generator_TableVarName="tablevInfoQuest_Form_ECM" msprop:Generator_TablePropName="vInfoQuest_Form_ECM" msprop:Generator_RowDeletingName="vInfoQuest_Form_ECMRowDeleting" msprop:Generator_UserTableName="vInfoQuest_Form_ECM" msprop:Generator_RowChangingName="vInfoQuest_Form_ECMRowChanging" msprop:Generator_RowEvHandlerName="vInfoQuest_Form_ECMRowChangeEventHandler" msprop:Generator_RowDeletedName="vInfoQuest_Form_ECMRowDeleted" msprop:Generator_RowEvArgName="vInfoQuest_Form_ECMRowChangeEvent" msprop:Generator_RowChangedName="vInfoQuest_Form_ECMRowChanged" msprop:Generator_RowClassName="vInfoQuest_Form_ECMRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ECM_Id" msprop:Generator_ColumnVarNameInTable="columnECM_Id" msprop:Generator_ColumnPropNameInRow="ECM_Id" msprop:Generator_ColumnPropNameInTable="ECM_IdColumn" msprop:Generator_UserColumnName="ECM_Id" type="xs:int" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facilities_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityName" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityName" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityNameColumn" msprop:Generator_UserColumnName="Facilities_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facilities_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityCodeColumn" msprop:Generator_UserColumnName="Facilities_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacilityDisplayName" msprop:Generator_ColumnPropNameInRow="FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="FacilityDisplayNameColumn" msprop:Generator_UserColumnName="FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="253" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Period" msprop:Generator_ColumnVarNameInTable="columnECM_Period" msprop:Generator_ColumnPropNameInRow="ECM_Period" msprop:Generator_ColumnPropNameInTable="ECM_PeriodColumn" msprop:Generator_UserColumnName="ECM_Period" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_FYPeriod" msprop:Generator_ColumnVarNameInTable="columnECM_FYPeriod" msprop:Generator_ColumnPropNameInRow="ECM_FYPeriod" msprop:Generator_ColumnPropNameInTable="ECM_FYPeriodColumn" msprop:Generator_UserColumnName="ECM_FYPeriod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_BedsActive" msprop:Generator_ColumnVarNameInTable="columnECM_BedsActive" msprop:Generator_ColumnPropNameInRow="ECM_BedsActive" msprop:Generator_ColumnPropNameInTable="ECM_BedsActiveColumn" msprop:Generator_UserColumnName="ECM_BedsActive" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_PPD" msprop:Generator_ColumnVarNameInTable="columnECM_PPD" msprop:Generator_ColumnPropNameInRow="ECM_PPD" msprop:Generator_ColumnPropNameInTable="ECM_PPDColumn" msprop:Generator_UserColumnName="ECM_PPD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_TheatreTime" msprop:Generator_ColumnVarNameInTable="columnECM_TheatreTime" msprop:Generator_ColumnPropNameInRow="ECM_TheatreTime" msprop:Generator_ColumnPropNameInTable="ECM_TheatreTimeColumn" msprop:Generator_UserColumnName="ECM_TheatreTime" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BeingModified" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBeingModified" msprop:Generator_ColumnPropNameInRow="BeingModified" msprop:Generator_ColumnPropNameInTable="BeingModifiedColumn" msprop:Generator_UserColumnName="BeingModified" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="49" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BeingModifiedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBeingModifiedDate" msprop:Generator_ColumnPropNameInRow="BeingModifiedDate" msprop:Generator_ColumnPropNameInTable="BeingModifiedDateColumn" msprop:Generator_UserColumnName="BeingModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BeingModifiedBy" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBeingModifiedBy" msprop:Generator_ColumnPropNameInRow="BeingModifiedBy" msprop:Generator_ColumnPropNameInTable="BeingModifiedByColumn" msprop:Generator_UserColumnName="BeingModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Link" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLink" msprop:Generator_ColumnPropNameInRow="Link" msprop:Generator_ColumnPropNameInTable="LinkColumn" msprop:Generator_UserColumnName="Link" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Closed" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnClosed" msprop:Generator_ColumnPropNameInRow="Closed" msprop:Generator_ColumnPropNameInTable="ClosedColumn" msprop:Generator_UserColumnName="Closed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="49" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vInfoQuest_Form_ECM_Diesel" msprop:Generator_TableClassName="vInfoQuest_Form_ECM_DieselDataTable" msprop:Generator_TableVarName="tablevInfoQuest_Form_ECM_Diesel" msprop:Generator_TablePropName="vInfoQuest_Form_ECM_Diesel" msprop:Generator_RowDeletingName="vInfoQuest_Form_ECM_DieselRowDeleting" msprop:Generator_UserTableName="vInfoQuest_Form_ECM_Diesel" msprop:Generator_RowChangingName="vInfoQuest_Form_ECM_DieselRowChanging" msprop:Generator_RowEvHandlerName="vInfoQuest_Form_ECM_DieselRowChangeEventHandler" msprop:Generator_RowDeletedName="vInfoQuest_Form_ECM_DieselRowDeleted" msprop:Generator_RowEvArgName="vInfoQuest_Form_ECM_DieselRowChangeEvent" msprop:Generator_RowChangedName="vInfoQuest_Form_ECM_DieselRowChanged" msprop:Generator_RowClassName="vInfoQuest_Form_ECM_DieselRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ECM_Diesel_Id" msprop:Generator_ColumnVarNameInTable="columnECM_Diesel_Id" msprop:Generator_ColumnPropNameInRow="ECM_Diesel_Id" msprop:Generator_ColumnPropNameInTable="ECM_Diesel_IdColumn" msprop:Generator_UserColumnName="ECM_Diesel_Id" type="xs:int" />
+              <xs:element name="ECM_Id" msprop:Generator_ColumnVarNameInTable="columnECM_Id" msprop:Generator_ColumnPropNameInRow="ECM_Id" msprop:Generator_ColumnPropNameInTable="ECM_IdColumn" msprop:Generator_UserColumnName="ECM_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="ECM_Diesel_Generator" msprop:Generator_ColumnVarNameInTable="columnECM_Diesel_Generator" msprop:Generator_ColumnPropNameInRow="ECM_Diesel_Generator" msprop:Generator_ColumnPropNameInTable="ECM_Diesel_GeneratorColumn" msprop:Generator_UserColumnName="ECM_Diesel_Generator" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Diesel_Description" msprop:Generator_ColumnVarNameInTable="columnECM_Diesel_Description" msprop:Generator_ColumnPropNameInRow="ECM_Diesel_Description" msprop:Generator_ColumnPropNameInTable="ECM_Diesel_DescriptionColumn" msprop:Generator_UserColumnName="ECM_Diesel_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Diesel_kVA" msprop:Generator_ColumnVarNameInTable="columnECM_Diesel_kVA" msprop:Generator_ColumnPropNameInRow="ECM_Diesel_kVA" msprop:Generator_ColumnPropNameInTable="ECM_Diesel_kVAColumn" msprop:Generator_UserColumnName="ECM_Diesel_kVA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_Diesel_Litres" msprop:Generator_ColumnVarNameInTable="columnECM_Diesel_Litres" msprop:Generator_ColumnPropNameInRow="ECM_Diesel_Litres" msprop:Generator_ColumnPropNameInTable="ECM_Diesel_LitresColumn" msprop:Generator_UserColumnName="ECM_Diesel_Litres" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_Diesel_hrs_PreviousMonth" msprop:Generator_ColumnVarNameInTable="columnECM_Diesel_hrs_PreviousMonth" msprop:Generator_ColumnPropNameInRow="ECM_Diesel_hrs_PreviousMonth" msprop:Generator_ColumnPropNameInTable="ECM_Diesel_hrs_PreviousMonthColumn" msprop:Generator_UserColumnName="ECM_Diesel_hrs_PreviousMonth" type="xs:int" minOccurs="0" />
+              <xs:element name="ECM_Diesel_min_PreviousMonth" msprop:Generator_ColumnVarNameInTable="columnECM_Diesel_min_PreviousMonth" msprop:Generator_ColumnPropNameInRow="ECM_Diesel_min_PreviousMonth" msprop:Generator_ColumnPropNameInTable="ECM_Diesel_min_PreviousMonthColumn" msprop:Generator_UserColumnName="ECM_Diesel_min_PreviousMonth" type="xs:int" minOccurs="0" />
+              <xs:element name="ECM_Diesel_hrs_CurrentMonth" msprop:Generator_ColumnVarNameInTable="columnECM_Diesel_hrs_CurrentMonth" msprop:Generator_ColumnPropNameInRow="ECM_Diesel_hrs_CurrentMonth" msprop:Generator_ColumnPropNameInTable="ECM_Diesel_hrs_CurrentMonthColumn" msprop:Generator_UserColumnName="ECM_Diesel_hrs_CurrentMonth" type="xs:int" minOccurs="0" />
+              <xs:element name="ECM_Diesel_min_CurrentMonth" msprop:Generator_ColumnVarNameInTable="columnECM_Diesel_min_CurrentMonth" msprop:Generator_ColumnPropNameInRow="ECM_Diesel_min_CurrentMonth" msprop:Generator_ColumnPropNameInTable="ECM_Diesel_min_CurrentMonthColumn" msprop:Generator_UserColumnName="ECM_Diesel_min_CurrentMonth" type="xs:int" minOccurs="0" />
+              <xs:element name="ECM_Diesel_hrs_Difference" msprop:Generator_ColumnVarNameInTable="columnECM_Diesel_hrs_Difference" msprop:Generator_ColumnPropNameInRow="ECM_Diesel_hrs_Difference" msprop:Generator_ColumnPropNameInTable="ECM_Diesel_hrs_DifferenceColumn" msprop:Generator_UserColumnName="ECM_Diesel_hrs_Difference" type="xs:int" minOccurs="0" />
+              <xs:element name="ECM_Diesel_min_Difference" msprop:Generator_ColumnVarNameInTable="columnECM_Diesel_min_Difference" msprop:Generator_ColumnPropNameInRow="ECM_Diesel_min_Difference" msprop:Generator_ColumnPropNameInTable="ECM_Diesel_min_DifferenceColumn" msprop:Generator_UserColumnName="ECM_Diesel_min_Difference" type="xs:int" minOccurs="0" />
+              <xs:element name="ECM_Diesel_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnECM_Diesel_CreatedDate" msprop:Generator_ColumnPropNameInRow="ECM_Diesel_CreatedDate" msprop:Generator_ColumnPropNameInTable="ECM_Diesel_CreatedDateColumn" msprop:Generator_UserColumnName="ECM_Diesel_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ECM_Diesel_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnECM_Diesel_CreatedBy" msprop:Generator_ColumnPropNameInRow="ECM_Diesel_CreatedBy" msprop:Generator_ColumnPropNameInTable="ECM_Diesel_CreatedByColumn" msprop:Generator_UserColumnName="ECM_Diesel_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Diesel_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnECM_Diesel_ModifiedDate" msprop:Generator_ColumnPropNameInRow="ECM_Diesel_ModifiedDate" msprop:Generator_ColumnPropNameInTable="ECM_Diesel_ModifiedDateColumn" msprop:Generator_UserColumnName="ECM_Diesel_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ECM_Diesel_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnECM_Diesel_ModifiedBy" msprop:Generator_ColumnPropNameInRow="ECM_Diesel_ModifiedBy" msprop:Generator_ColumnPropNameInTable="ECM_Diesel_ModifiedByColumn" msprop:Generator_UserColumnName="ECM_Diesel_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Diesel_History" msprop:Generator_ColumnVarNameInTable="columnECM_Diesel_History" msprop:Generator_ColumnPropNameInRow="ECM_Diesel_History" msprop:Generator_ColumnPropNameInTable="ECM_Diesel_HistoryColumn" msprop:Generator_UserColumnName="ECM_Diesel_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Diesel_IsActive" msprop:Generator_ColumnVarNameInTable="columnECM_Diesel_IsActive" msprop:Generator_ColumnPropNameInRow="ECM_Diesel_IsActive" msprop:Generator_ColumnPropNameInTable="ECM_Diesel_IsActiveColumn" msprop:Generator_UserColumnName="ECM_Diesel_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facilities_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityName" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityName" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityNameColumn" msprop:Generator_UserColumnName="Facilities_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facilities_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityCodeColumn" msprop:Generator_UserColumnName="Facilities_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacilityDisplayName" msprop:Generator_ColumnPropNameInRow="FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="FacilityDisplayNameColumn" msprop:Generator_UserColumnName="FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="253" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Period" msprop:Generator_ColumnVarNameInTable="columnECM_Period" msprop:Generator_ColumnPropNameInRow="ECM_Period" msprop:Generator_ColumnPropNameInTable="ECM_PeriodColumn" msprop:Generator_UserColumnName="ECM_Period" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_FYPeriod" msprop:Generator_ColumnVarNameInTable="columnECM_FYPeriod" msprop:Generator_ColumnPropNameInRow="ECM_FYPeriod" msprop:Generator_ColumnPropNameInTable="ECM_FYPeriodColumn" msprop:Generator_UserColumnName="ECM_FYPeriod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_BedsActive" msprop:Generator_ColumnVarNameInTable="columnECM_BedsActive" msprop:Generator_ColumnPropNameInRow="ECM_BedsActive" msprop:Generator_ColumnPropNameInTable="ECM_BedsActiveColumn" msprop:Generator_UserColumnName="ECM_BedsActive" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_PPD" msprop:Generator_ColumnVarNameInTable="columnECM_PPD" msprop:Generator_ColumnPropNameInRow="ECM_PPD" msprop:Generator_ColumnPropNameInTable="ECM_PPDColumn" msprop:Generator_UserColumnName="ECM_PPD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_TheatreTime" msprop:Generator_ColumnVarNameInTable="columnECM_TheatreTime" msprop:Generator_ColumnPropNameInRow="ECM_TheatreTime" msprop:Generator_ColumnPropNameInTable="ECM_TheatreTimeColumn" msprop:Generator_UserColumnName="ECM_TheatreTime" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BeingModified" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBeingModified" msprop:Generator_ColumnPropNameInRow="BeingModified" msprop:Generator_ColumnPropNameInTable="BeingModifiedColumn" msprop:Generator_UserColumnName="BeingModified" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="49" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BeingModifiedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBeingModifiedDate" msprop:Generator_ColumnPropNameInRow="BeingModifiedDate" msprop:Generator_ColumnPropNameInTable="BeingModifiedDateColumn" msprop:Generator_UserColumnName="BeingModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BeingModifiedBy" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBeingModifiedBy" msprop:Generator_ColumnPropNameInRow="BeingModifiedBy" msprop:Generator_ColumnPropNameInTable="BeingModifiedByColumn" msprop:Generator_UserColumnName="BeingModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Link" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLink" msprop:Generator_ColumnPropNameInRow="Link" msprop:Generator_ColumnPropNameInTable="LinkColumn" msprop:Generator_UserColumnName="Link" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Closed" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnClosed" msprop:Generator_ColumnPropNameInRow="Closed" msprop:Generator_ColumnPropNameInTable="ClosedColumn" msprop:Generator_UserColumnName="Closed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="49" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vInfoQuest_Form_ECM_Electricity" msprop:Generator_TableClassName="vInfoQuest_Form_ECM_ElectricityDataTable" msprop:Generator_TableVarName="tablevInfoQuest_Form_ECM_Electricity" msprop:Generator_TablePropName="vInfoQuest_Form_ECM_Electricity" msprop:Generator_RowDeletingName="vInfoQuest_Form_ECM_ElectricityRowDeleting" msprop:Generator_UserTableName="vInfoQuest_Form_ECM_Electricity" msprop:Generator_RowChangingName="vInfoQuest_Form_ECM_ElectricityRowChanging" msprop:Generator_RowEvHandlerName="vInfoQuest_Form_ECM_ElectricityRowChangeEventHandler" msprop:Generator_RowDeletedName="vInfoQuest_Form_ECM_ElectricityRowDeleted" msprop:Generator_RowEvArgName="vInfoQuest_Form_ECM_ElectricityRowChangeEvent" msprop:Generator_RowChangedName="vInfoQuest_Form_ECM_ElectricityRowChanged" msprop:Generator_RowClassName="vInfoQuest_Form_ECM_ElectricityRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ECM_Electricity_Id" msprop:Generator_ColumnVarNameInTable="columnECM_Electricity_Id" msprop:Generator_ColumnPropNameInRow="ECM_Electricity_Id" msprop:Generator_ColumnPropNameInTable="ECM_Electricity_IdColumn" msprop:Generator_UserColumnName="ECM_Electricity_Id" type="xs:int" />
+              <xs:element name="ECM_Id" msprop:Generator_ColumnVarNameInTable="columnECM_Id" msprop:Generator_ColumnPropNameInRow="ECM_Id" msprop:Generator_ColumnPropNameInTable="ECM_IdColumn" msprop:Generator_UserColumnName="ECM_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="ECM_Electricity_Meter" msprop:Generator_ColumnVarNameInTable="columnECM_Electricity_Meter" msprop:Generator_ColumnPropNameInRow="ECM_Electricity_Meter" msprop:Generator_ColumnPropNameInTable="ECM_Electricity_MeterColumn" msprop:Generator_UserColumnName="ECM_Electricity_Meter" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Electricity_Description" msprop:Generator_ColumnVarNameInTable="columnECM_Electricity_Description" msprop:Generator_ColumnPropNameInRow="ECM_Electricity_Description" msprop:Generator_ColumnPropNameInTable="ECM_Electricity_DescriptionColumn" msprop:Generator_UserColumnName="ECM_Electricity_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Electricity_kVAMaxDemAllowed" msprop:Generator_ColumnVarNameInTable="columnECM_Electricity_kVAMaxDemAllowed" msprop:Generator_ColumnPropNameInRow="ECM_Electricity_kVAMaxDemAllowed" msprop:Generator_ColumnPropNameInTable="ECM_Electricity_kVAMaxDemAllowedColumn" msprop:Generator_UserColumnName="ECM_Electricity_kVAMaxDemAllowed" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_Electricity_kVAMaxDemCurrentMonth" msprop:Generator_ColumnVarNameInTable="columnECM_Electricity_kVAMaxDemCurrentMonth" msprop:Generator_ColumnPropNameInRow="ECM_Electricity_kVAMaxDemCurrentMonth" msprop:Generator_ColumnPropNameInTable="ECM_Electricity_kVAMaxDemCurrentMonthColumn" msprop:Generator_UserColumnName="ECM_Electricity_kVAMaxDemCurrentMonth" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_Electricity_PowerFactor" msprop:Generator_ColumnVarNameInTable="columnECM_Electricity_PowerFactor" msprop:Generator_ColumnPropNameInRow="ECM_Electricity_PowerFactor" msprop:Generator_ColumnPropNameInTable="ECM_Electricity_PowerFactorColumn" msprop:Generator_UserColumnName="ECM_Electricity_PowerFactor" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_Electricity_kWh_PreviousMonth" msprop:Generator_ColumnVarNameInTable="columnECM_Electricity_kWh_PreviousMonth" msprop:Generator_ColumnPropNameInRow="ECM_Electricity_kWh_PreviousMonth" msprop:Generator_ColumnPropNameInTable="ECM_Electricity_kWh_PreviousMonthColumn" msprop:Generator_UserColumnName="ECM_Electricity_kWh_PreviousMonth" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_Electricity_kWh_CurrentMonth" msprop:Generator_ColumnVarNameInTable="columnECM_Electricity_kWh_CurrentMonth" msprop:Generator_ColumnPropNameInRow="ECM_Electricity_kWh_CurrentMonth" msprop:Generator_ColumnPropNameInTable="ECM_Electricity_kWh_CurrentMonthColumn" msprop:Generator_UserColumnName="ECM_Electricity_kWh_CurrentMonth" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_Electricity_kWh_Difference" msprop:Generator_ColumnVarNameInTable="columnECM_Electricity_kWh_Difference" msprop:Generator_ColumnPropNameInRow="ECM_Electricity_kWh_Difference" msprop:Generator_ColumnPropNameInTable="ECM_Electricity_kWh_DifferenceColumn" msprop:Generator_UserColumnName="ECM_Electricity_kWh_Difference" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_Electricity_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnECM_Electricity_CreatedDate" msprop:Generator_ColumnPropNameInRow="ECM_Electricity_CreatedDate" msprop:Generator_ColumnPropNameInTable="ECM_Electricity_CreatedDateColumn" msprop:Generator_UserColumnName="ECM_Electricity_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ECM_Electricity_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnECM_Electricity_CreatedBy" msprop:Generator_ColumnPropNameInRow="ECM_Electricity_CreatedBy" msprop:Generator_ColumnPropNameInTable="ECM_Electricity_CreatedByColumn" msprop:Generator_UserColumnName="ECM_Electricity_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Electricity_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnECM_Electricity_ModifiedDate" msprop:Generator_ColumnPropNameInRow="ECM_Electricity_ModifiedDate" msprop:Generator_ColumnPropNameInTable="ECM_Electricity_ModifiedDateColumn" msprop:Generator_UserColumnName="ECM_Electricity_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ECM_Electricity_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnECM_Electricity_ModifiedBy" msprop:Generator_ColumnPropNameInRow="ECM_Electricity_ModifiedBy" msprop:Generator_ColumnPropNameInTable="ECM_Electricity_ModifiedByColumn" msprop:Generator_UserColumnName="ECM_Electricity_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Electricity_History" msprop:Generator_ColumnVarNameInTable="columnECM_Electricity_History" msprop:Generator_ColumnPropNameInRow="ECM_Electricity_History" msprop:Generator_ColumnPropNameInTable="ECM_Electricity_HistoryColumn" msprop:Generator_UserColumnName="ECM_Electricity_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Electricity_IsActive" msprop:Generator_ColumnVarNameInTable="columnECM_Electricity_IsActive" msprop:Generator_ColumnPropNameInRow="ECM_Electricity_IsActive" msprop:Generator_ColumnPropNameInTable="ECM_Electricity_IsActiveColumn" msprop:Generator_UserColumnName="ECM_Electricity_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facilities_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityName" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityName" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityNameColumn" msprop:Generator_UserColumnName="Facilities_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facilities_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityCodeColumn" msprop:Generator_UserColumnName="Facilities_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacilityDisplayName" msprop:Generator_ColumnPropNameInRow="FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="FacilityDisplayNameColumn" msprop:Generator_UserColumnName="FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="253" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Period" msprop:Generator_ColumnVarNameInTable="columnECM_Period" msprop:Generator_ColumnPropNameInRow="ECM_Period" msprop:Generator_ColumnPropNameInTable="ECM_PeriodColumn" msprop:Generator_UserColumnName="ECM_Period" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_FYPeriod" msprop:Generator_ColumnVarNameInTable="columnECM_FYPeriod" msprop:Generator_ColumnPropNameInRow="ECM_FYPeriod" msprop:Generator_ColumnPropNameInTable="ECM_FYPeriodColumn" msprop:Generator_UserColumnName="ECM_FYPeriod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_BedsActive" msprop:Generator_ColumnVarNameInTable="columnECM_BedsActive" msprop:Generator_ColumnPropNameInRow="ECM_BedsActive" msprop:Generator_ColumnPropNameInTable="ECM_BedsActiveColumn" msprop:Generator_UserColumnName="ECM_BedsActive" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_PPD" msprop:Generator_ColumnVarNameInTable="columnECM_PPD" msprop:Generator_ColumnPropNameInRow="ECM_PPD" msprop:Generator_ColumnPropNameInTable="ECM_PPDColumn" msprop:Generator_UserColumnName="ECM_PPD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_TheatreTime" msprop:Generator_ColumnVarNameInTable="columnECM_TheatreTime" msprop:Generator_ColumnPropNameInRow="ECM_TheatreTime" msprop:Generator_ColumnPropNameInTable="ECM_TheatreTimeColumn" msprop:Generator_UserColumnName="ECM_TheatreTime" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BeingModified" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBeingModified" msprop:Generator_ColumnPropNameInRow="BeingModified" msprop:Generator_ColumnPropNameInTable="BeingModifiedColumn" msprop:Generator_UserColumnName="BeingModified" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="49" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BeingModifiedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBeingModifiedDate" msprop:Generator_ColumnPropNameInRow="BeingModifiedDate" msprop:Generator_ColumnPropNameInTable="BeingModifiedDateColumn" msprop:Generator_UserColumnName="BeingModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BeingModifiedBy" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBeingModifiedBy" msprop:Generator_ColumnPropNameInRow="BeingModifiedBy" msprop:Generator_ColumnPropNameInTable="BeingModifiedByColumn" msprop:Generator_UserColumnName="BeingModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Link" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLink" msprop:Generator_ColumnPropNameInRow="Link" msprop:Generator_ColumnPropNameInTable="LinkColumn" msprop:Generator_UserColumnName="Link" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Closed" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnClosed" msprop:Generator_ColumnPropNameInRow="Closed" msprop:Generator_ColumnPropNameInTable="ClosedColumn" msprop:Generator_UserColumnName="Closed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="49" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vInfoQuest_Form_ECM_Purchased" msprop:Generator_TableClassName="vInfoQuest_Form_ECM_PurchasedDataTable" msprop:Generator_TableVarName="tablevInfoQuest_Form_ECM_Purchased" msprop:Generator_TablePropName="vInfoQuest_Form_ECM_Purchased" msprop:Generator_RowDeletingName="vInfoQuest_Form_ECM_PurchasedRowDeleting" msprop:Generator_UserTableName="vInfoQuest_Form_ECM_Purchased" msprop:Generator_RowChangingName="vInfoQuest_Form_ECM_PurchasedRowChanging" msprop:Generator_RowEvHandlerName="vInfoQuest_Form_ECM_PurchasedRowChangeEventHandler" msprop:Generator_RowDeletedName="vInfoQuest_Form_ECM_PurchasedRowDeleted" msprop:Generator_RowEvArgName="vInfoQuest_Form_ECM_PurchasedRowChangeEvent" msprop:Generator_RowChangedName="vInfoQuest_Form_ECM_PurchasedRowChanged" msprop:Generator_RowClassName="vInfoQuest_Form_ECM_PurchasedRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ECM_Purchased_Id" msprop:Generator_ColumnVarNameInTable="columnECM_Purchased_Id" msprop:Generator_ColumnPropNameInRow="ECM_Purchased_Id" msprop:Generator_ColumnPropNameInTable="ECM_Purchased_IdColumn" msprop:Generator_UserColumnName="ECM_Purchased_Id" type="xs:int" />
+              <xs:element name="ECM_Id" msprop:Generator_ColumnVarNameInTable="columnECM_Id" msprop:Generator_ColumnPropNameInRow="ECM_Id" msprop:Generator_ColumnPropNameInTable="ECM_IdColumn" msprop:Generator_UserColumnName="ECM_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="ECM_Purchased_Item" msprop:Generator_ColumnVarNameInTable="columnECM_Purchased_Item" msprop:Generator_ColumnPropNameInRow="ECM_Purchased_Item" msprop:Generator_ColumnPropNameInTable="ECM_Purchased_ItemColumn" msprop:Generator_UserColumnName="ECM_Purchased_Item" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Purchased_Type_List" msprop:Generator_ColumnVarNameInTable="columnECM_Purchased_Type_List" msprop:Generator_ColumnPropNameInRow="ECM_Purchased_Type_List" msprop:Generator_ColumnPropNameInTable="ECM_Purchased_Type_ListColumn" msprop:Generator_UserColumnName="ECM_Purchased_Type_List" type="xs:int" minOccurs="0" />
+              <xs:element name="ECM_Purchased_Type_Name" msprop:Generator_ColumnVarNameInTable="columnECM_Purchased_Type_Name" msprop:Generator_ColumnPropNameInRow="ECM_Purchased_Type_Name" msprop:Generator_ColumnPropNameInTable="ECM_Purchased_Type_NameColumn" msprop:Generator_UserColumnName="ECM_Purchased_Type_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Purchased_Description" msprop:Generator_ColumnVarNameInTable="columnECM_Purchased_Description" msprop:Generator_ColumnPropNameInRow="ECM_Purchased_Description" msprop:Generator_ColumnPropNameInTable="ECM_Purchased_DescriptionColumn" msprop:Generator_UserColumnName="ECM_Purchased_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Purchased_Unit_List" msprop:Generator_ColumnVarNameInTable="columnECM_Purchased_Unit_List" msprop:Generator_ColumnPropNameInRow="ECM_Purchased_Unit_List" msprop:Generator_ColumnPropNameInTable="ECM_Purchased_Unit_ListColumn" msprop:Generator_UserColumnName="ECM_Purchased_Unit_List" type="xs:int" minOccurs="0" />
+              <xs:element name="ECM_Purchased_Unit_Name" msprop:Generator_ColumnVarNameInTable="columnECM_Purchased_Unit_Name" msprop:Generator_ColumnPropNameInRow="ECM_Purchased_Unit_Name" msprop:Generator_ColumnPropNameInTable="ECM_Purchased_Unit_NameColumn" msprop:Generator_UserColumnName="ECM_Purchased_Unit_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Purchased_PurchasedUtilised_List" msprop:Generator_ColumnVarNameInTable="columnECM_Purchased_PurchasedUtilised_List" msprop:Generator_ColumnPropNameInRow="ECM_Purchased_PurchasedUtilised_List" msprop:Generator_ColumnPropNameInTable="ECM_Purchased_PurchasedUtilised_ListColumn" msprop:Generator_UserColumnName="ECM_Purchased_PurchasedUtilised_List" type="xs:int" minOccurs="0" />
+              <xs:element name="ECM_Purchased_PurchasedUtilised_Name" msprop:Generator_ColumnVarNameInTable="columnECM_Purchased_PurchasedUtilised_Name" msprop:Generator_ColumnPropNameInRow="ECM_Purchased_PurchasedUtilised_Name" msprop:Generator_ColumnPropNameInTable="ECM_Purchased_PurchasedUtilised_NameColumn" msprop:Generator_UserColumnName="ECM_Purchased_PurchasedUtilised_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Purchased_Amount" msprop:Generator_ColumnVarNameInTable="columnECM_Purchased_Amount" msprop:Generator_ColumnPropNameInRow="ECM_Purchased_Amount" msprop:Generator_ColumnPropNameInTable="ECM_Purchased_AmountColumn" msprop:Generator_UserColumnName="ECM_Purchased_Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_Purchased_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnECM_Purchased_CreatedDate" msprop:Generator_ColumnPropNameInRow="ECM_Purchased_CreatedDate" msprop:Generator_ColumnPropNameInTable="ECM_Purchased_CreatedDateColumn" msprop:Generator_UserColumnName="ECM_Purchased_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ECM_Purchased_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnECM_Purchased_CreatedBy" msprop:Generator_ColumnPropNameInRow="ECM_Purchased_CreatedBy" msprop:Generator_ColumnPropNameInTable="ECM_Purchased_CreatedByColumn" msprop:Generator_UserColumnName="ECM_Purchased_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Purchased_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnECM_Purchased_ModifiedDate" msprop:Generator_ColumnPropNameInRow="ECM_Purchased_ModifiedDate" msprop:Generator_ColumnPropNameInTable="ECM_Purchased_ModifiedDateColumn" msprop:Generator_UserColumnName="ECM_Purchased_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ECM_Purchased_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnECM_Purchased_ModifiedBy" msprop:Generator_ColumnPropNameInRow="ECM_Purchased_ModifiedBy" msprop:Generator_ColumnPropNameInTable="ECM_Purchased_ModifiedByColumn" msprop:Generator_UserColumnName="ECM_Purchased_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Purchased_History" msprop:Generator_ColumnVarNameInTable="columnECM_Purchased_History" msprop:Generator_ColumnPropNameInRow="ECM_Purchased_History" msprop:Generator_ColumnPropNameInTable="ECM_Purchased_HistoryColumn" msprop:Generator_UserColumnName="ECM_Purchased_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Purchased_IsActive" msprop:Generator_ColumnVarNameInTable="columnECM_Purchased_IsActive" msprop:Generator_ColumnPropNameInRow="ECM_Purchased_IsActive" msprop:Generator_ColumnPropNameInTable="ECM_Purchased_IsActiveColumn" msprop:Generator_UserColumnName="ECM_Purchased_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facilities_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityName" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityName" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityNameColumn" msprop:Generator_UserColumnName="Facilities_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facilities_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityCodeColumn" msprop:Generator_UserColumnName="Facilities_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacilityDisplayName" msprop:Generator_ColumnPropNameInRow="FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="FacilityDisplayNameColumn" msprop:Generator_UserColumnName="FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="253" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Period" msprop:Generator_ColumnVarNameInTable="columnECM_Period" msprop:Generator_ColumnPropNameInRow="ECM_Period" msprop:Generator_ColumnPropNameInTable="ECM_PeriodColumn" msprop:Generator_UserColumnName="ECM_Period" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_FYPeriod" msprop:Generator_ColumnVarNameInTable="columnECM_FYPeriod" msprop:Generator_ColumnPropNameInRow="ECM_FYPeriod" msprop:Generator_ColumnPropNameInTable="ECM_FYPeriodColumn" msprop:Generator_UserColumnName="ECM_FYPeriod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_BedsActive" msprop:Generator_ColumnVarNameInTable="columnECM_BedsActive" msprop:Generator_ColumnPropNameInRow="ECM_BedsActive" msprop:Generator_ColumnPropNameInTable="ECM_BedsActiveColumn" msprop:Generator_UserColumnName="ECM_BedsActive" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_PPD" msprop:Generator_ColumnVarNameInTable="columnECM_PPD" msprop:Generator_ColumnPropNameInRow="ECM_PPD" msprop:Generator_ColumnPropNameInTable="ECM_PPDColumn" msprop:Generator_UserColumnName="ECM_PPD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_TheatreTime" msprop:Generator_ColumnVarNameInTable="columnECM_TheatreTime" msprop:Generator_ColumnPropNameInRow="ECM_TheatreTime" msprop:Generator_ColumnPropNameInTable="ECM_TheatreTimeColumn" msprop:Generator_UserColumnName="ECM_TheatreTime" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BeingModified" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBeingModified" msprop:Generator_ColumnPropNameInRow="BeingModified" msprop:Generator_ColumnPropNameInTable="BeingModifiedColumn" msprop:Generator_UserColumnName="BeingModified" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="49" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BeingModifiedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBeingModifiedDate" msprop:Generator_ColumnPropNameInRow="BeingModifiedDate" msprop:Generator_ColumnPropNameInTable="BeingModifiedDateColumn" msprop:Generator_UserColumnName="BeingModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BeingModifiedBy" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBeingModifiedBy" msprop:Generator_ColumnPropNameInRow="BeingModifiedBy" msprop:Generator_ColumnPropNameInTable="BeingModifiedByColumn" msprop:Generator_UserColumnName="BeingModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Link" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLink" msprop:Generator_ColumnPropNameInRow="Link" msprop:Generator_ColumnPropNameInTable="LinkColumn" msprop:Generator_UserColumnName="Link" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Closed" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnClosed" msprop:Generator_ColumnPropNameInRow="Closed" msprop:Generator_ColumnPropNameInTable="ClosedColumn" msprop:Generator_UserColumnName="Closed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="49" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vInfoQuest_Form_ECM_Water" msprop:Generator_TableClassName="vInfoQuest_Form_ECM_WaterDataTable" msprop:Generator_TableVarName="tablevInfoQuest_Form_ECM_Water" msprop:Generator_TablePropName="vInfoQuest_Form_ECM_Water" msprop:Generator_RowDeletingName="vInfoQuest_Form_ECM_WaterRowDeleting" msprop:Generator_UserTableName="vInfoQuest_Form_ECM_Water" msprop:Generator_RowChangingName="vInfoQuest_Form_ECM_WaterRowChanging" msprop:Generator_RowEvHandlerName="vInfoQuest_Form_ECM_WaterRowChangeEventHandler" msprop:Generator_RowDeletedName="vInfoQuest_Form_ECM_WaterRowDeleted" msprop:Generator_RowEvArgName="vInfoQuest_Form_ECM_WaterRowChangeEvent" msprop:Generator_RowChangedName="vInfoQuest_Form_ECM_WaterRowChanged" msprop:Generator_RowClassName="vInfoQuest_Form_ECM_WaterRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ECM_Water_Id" msprop:Generator_ColumnVarNameInTable="columnECM_Water_Id" msprop:Generator_ColumnPropNameInRow="ECM_Water_Id" msprop:Generator_ColumnPropNameInTable="ECM_Water_IdColumn" msprop:Generator_UserColumnName="ECM_Water_Id" type="xs:int" />
+              <xs:element name="ECM_Id" msprop:Generator_ColumnVarNameInTable="columnECM_Id" msprop:Generator_ColumnPropNameInRow="ECM_Id" msprop:Generator_ColumnPropNameInTable="ECM_IdColumn" msprop:Generator_UserColumnName="ECM_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="ECM_Water_Meter" msprop:Generator_ColumnVarNameInTable="columnECM_Water_Meter" msprop:Generator_ColumnPropNameInRow="ECM_Water_Meter" msprop:Generator_ColumnPropNameInTable="ECM_Water_MeterColumn" msprop:Generator_UserColumnName="ECM_Water_Meter" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Water_Description" msprop:Generator_ColumnVarNameInTable="columnECM_Water_Description" msprop:Generator_ColumnPropNameInRow="ECM_Water_Description" msprop:Generator_ColumnPropNameInTable="ECM_Water_DescriptionColumn" msprop:Generator_UserColumnName="ECM_Water_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Water_TankCapacity" msprop:Generator_ColumnVarNameInTable="columnECM_Water_TankCapacity" msprop:Generator_ColumnPropNameInRow="ECM_Water_TankCapacity" msprop:Generator_ColumnPropNameInTable="ECM_Water_TankCapacityColumn" msprop:Generator_UserColumnName="ECM_Water_TankCapacity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_Water_L_PreviousMonth" msprop:Generator_ColumnVarNameInTable="columnECM_Water_L_PreviousMonth" msprop:Generator_ColumnPropNameInRow="ECM_Water_L_PreviousMonth" msprop:Generator_ColumnPropNameInTable="ECM_Water_L_PreviousMonthColumn" msprop:Generator_UserColumnName="ECM_Water_L_PreviousMonth" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_Water_L_CurrentMonth" msprop:Generator_ColumnVarNameInTable="columnECM_Water_L_CurrentMonth" msprop:Generator_ColumnPropNameInRow="ECM_Water_L_CurrentMonth" msprop:Generator_ColumnPropNameInTable="ECM_Water_L_CurrentMonthColumn" msprop:Generator_UserColumnName="ECM_Water_L_CurrentMonth" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_Water_L_Difference" msprop:Generator_ColumnVarNameInTable="columnECM_Water_L_Difference" msprop:Generator_ColumnPropNameInRow="ECM_Water_L_Difference" msprop:Generator_ColumnPropNameInTable="ECM_Water_L_DifferenceColumn" msprop:Generator_UserColumnName="ECM_Water_L_Difference" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_Water_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnECM_Water_CreatedDate" msprop:Generator_ColumnPropNameInRow="ECM_Water_CreatedDate" msprop:Generator_ColumnPropNameInTable="ECM_Water_CreatedDateColumn" msprop:Generator_UserColumnName="ECM_Water_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ECM_Water_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnECM_Water_CreatedBy" msprop:Generator_ColumnPropNameInRow="ECM_Water_CreatedBy" msprop:Generator_ColumnPropNameInTable="ECM_Water_CreatedByColumn" msprop:Generator_UserColumnName="ECM_Water_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Water_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnECM_Water_ModifiedDate" msprop:Generator_ColumnPropNameInRow="ECM_Water_ModifiedDate" msprop:Generator_ColumnPropNameInTable="ECM_Water_ModifiedDateColumn" msprop:Generator_UserColumnName="ECM_Water_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ECM_Water_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnECM_Water_ModifiedBy" msprop:Generator_ColumnPropNameInRow="ECM_Water_ModifiedBy" msprop:Generator_ColumnPropNameInTable="ECM_Water_ModifiedByColumn" msprop:Generator_UserColumnName="ECM_Water_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Water_History" msprop:Generator_ColumnVarNameInTable="columnECM_Water_History" msprop:Generator_ColumnPropNameInRow="ECM_Water_History" msprop:Generator_ColumnPropNameInTable="ECM_Water_HistoryColumn" msprop:Generator_UserColumnName="ECM_Water_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Water_IsActive" msprop:Generator_ColumnVarNameInTable="columnECM_Water_IsActive" msprop:Generator_ColumnPropNameInRow="ECM_Water_IsActive" msprop:Generator_ColumnPropNameInTable="ECM_Water_IsActiveColumn" msprop:Generator_UserColumnName="ECM_Water_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facilities_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityName" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityName" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityNameColumn" msprop:Generator_UserColumnName="Facilities_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facilities_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityCodeColumn" msprop:Generator_UserColumnName="Facilities_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacilityDisplayName" msprop:Generator_ColumnPropNameInRow="FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="FacilityDisplayNameColumn" msprop:Generator_UserColumnName="FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="253" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_Period" msprop:Generator_ColumnVarNameInTable="columnECM_Period" msprop:Generator_ColumnPropNameInRow="ECM_Period" msprop:Generator_ColumnPropNameInTable="ECM_PeriodColumn" msprop:Generator_UserColumnName="ECM_Period" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_FYPeriod" msprop:Generator_ColumnVarNameInTable="columnECM_FYPeriod" msprop:Generator_ColumnPropNameInRow="ECM_FYPeriod" msprop:Generator_ColumnPropNameInTable="ECM_FYPeriodColumn" msprop:Generator_UserColumnName="ECM_FYPeriod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECM_BedsActive" msprop:Generator_ColumnVarNameInTable="columnECM_BedsActive" msprop:Generator_ColumnPropNameInRow="ECM_BedsActive" msprop:Generator_ColumnPropNameInTable="ECM_BedsActiveColumn" msprop:Generator_UserColumnName="ECM_BedsActive" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_PPD" msprop:Generator_ColumnVarNameInTable="columnECM_PPD" msprop:Generator_ColumnPropNameInRow="ECM_PPD" msprop:Generator_ColumnPropNameInTable="ECM_PPDColumn" msprop:Generator_UserColumnName="ECM_PPD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECM_TheatreTime" msprop:Generator_ColumnVarNameInTable="columnECM_TheatreTime" msprop:Generator_ColumnPropNameInRow="ECM_TheatreTime" msprop:Generator_ColumnPropNameInTable="ECM_TheatreTimeColumn" msprop:Generator_UserColumnName="ECM_TheatreTime" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BeingModified" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBeingModified" msprop:Generator_ColumnPropNameInRow="BeingModified" msprop:Generator_ColumnPropNameInTable="BeingModifiedColumn" msprop:Generator_UserColumnName="BeingModified" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="49" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BeingModifiedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBeingModifiedDate" msprop:Generator_ColumnPropNameInRow="BeingModifiedDate" msprop:Generator_ColumnPropNameInTable="BeingModifiedDateColumn" msprop:Generator_UserColumnName="BeingModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BeingModifiedBy" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBeingModifiedBy" msprop:Generator_ColumnPropNameInRow="BeingModifiedBy" msprop:Generator_ColumnPropNameInTable="BeingModifiedByColumn" msprop:Generator_UserColumnName="BeingModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Link" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLink" msprop:Generator_ColumnPropNameInRow="Link" msprop:Generator_ColumnPropNameInTable="LinkColumn" msprop:Generator_UserColumnName="Link" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Closed" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnClosed" msprop:Generator_ColumnPropNameInRow="Closed" msprop:Generator_ColumnPropNameInTable="ClosedColumn" msprop:Generator_UserColumnName="Closed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="49" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vInfoQuest_Form_ECM" />
+      <xs:field xpath="mstns:ECM_Id" />
+    </xs:unique>
+    <xs:unique name="vInfoQuest_Form_ECM_Diesel_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vInfoQuest_Form_ECM_Diesel" />
+      <xs:field xpath="mstns:ECM_Diesel_Id" />
+    </xs:unique>
+    <xs:unique name="vInfoQuest_Form_ECM_Electricity_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vInfoQuest_Form_ECM_Electricity" />
+      <xs:field xpath="mstns:ECM_Electricity_Id" />
+    </xs:unique>
+    <xs:unique name="vInfoQuest_Form_ECM_Purchased_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vInfoQuest_Form_ECM_Purchased" />
+      <xs:field xpath="mstns:ECM_Purchased_Id" />
+    </xs:unique>
+    <xs:unique name="vInfoQuest_Form_ECM_Water_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vInfoQuest_Form_ECM_Water" />
+      <xs:field xpath="mstns:ECM_Water_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

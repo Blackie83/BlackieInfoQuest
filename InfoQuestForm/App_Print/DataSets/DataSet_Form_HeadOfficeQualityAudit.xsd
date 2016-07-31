@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_HeadOfficeQualityAudit" targetNamespace="http://tempuri.org/DataSet_Form_HeadOfficeQualityAudit.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_HeadOfficeQualityAudit.xsd" xmlns="http://tempuri.org/DataSet_Form_HeadOfficeQualityAudit.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vForm_HeadOfficeQualityAudit_FindingTableAdapter" GeneratorDataComponentClassName="vForm_HeadOfficeQualityAudit_FindingTableAdapter" Name="vForm_HeadOfficeQualityAudit_Finding" UserDataComponentName="vForm_HeadOfficeQualityAudit_FindingTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vForm_HeadOfficeQualityAudit_Finding" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT *
+FROM vForm_HeadOfficeQualityAudit_Finding
+WHERE HQA_Finding_Id = 4</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="HQA_Finding_Id" DataSetColumn="HQA_Finding_Id" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facility_FacilityName" DataSetColumn="Facility_FacilityName" />
+              <Mapping SourceColumn="Facility_FacilityCode" DataSetColumn="Facility_FacilityCode" />
+              <Mapping SourceColumn="Facility_FacilityDisplayName" DataSetColumn="Facility_FacilityDisplayName" />
+              <Mapping SourceColumn="HQA_Finding_Function_List" DataSetColumn="HQA_Finding_Function_List" />
+              <Mapping SourceColumn="HQA_Finding_Function_Name" DataSetColumn="HQA_Finding_Function_Name" />
+              <Mapping SourceColumn="HQA_Finding_FindingNo" DataSetColumn="HQA_Finding_FindingNo" />
+              <Mapping SourceColumn="HQA_Finding_FindingDate" DataSetColumn="HQA_Finding_FindingDate" />
+              <Mapping SourceColumn="HQA_Finding_FinancialYear" DataSetColumn="HQA_Finding_FinancialYear" />
+              <Mapping SourceColumn="HQA_Finding_Auditor" DataSetColumn="HQA_Finding_Auditor" />
+              <Mapping SourceColumn="HQA_Finding_Criteria_List" DataSetColumn="HQA_Finding_Criteria_List" />
+              <Mapping SourceColumn="HQA_Finding_Criteria_Name" DataSetColumn="HQA_Finding_Criteria_Name" />
+              <Mapping SourceColumn="HQA_Finding_Classification_List" DataSetColumn="HQA_Finding_Classification_List" />
+              <Mapping SourceColumn="HQA_Finding_Classification_Name" DataSetColumn="HQA_Finding_Classification_Name" />
+              <Mapping SourceColumn="HQA_Finding_Description" DataSetColumn="HQA_Finding_Description" />
+              <Mapping SourceColumn="HQA_Finding_ImmediateAction" DataSetColumn="HQA_Finding_ImmediateAction" />
+              <Mapping SourceColumn="HQA_Finding_RootCause" DataSetColumn="HQA_Finding_RootCause" />
+              <Mapping SourceColumn="HQA_Finding_CorrectiveAction" DataSetColumn="HQA_Finding_CorrectiveAction" />
+              <Mapping SourceColumn="HQA_Finding_Evaluation" DataSetColumn="HQA_Finding_Evaluation" />
+              <Mapping SourceColumn="HQA_Finding_Tracking_List" DataSetColumn="HQA_Finding_Tracking_List" />
+              <Mapping SourceColumn="HQA_Finding_Tracking_Name" DataSetColumn="HQA_Finding_Tracking_Name" />
+              <Mapping SourceColumn="HQA_Finding_TrackingDate" DataSetColumn="HQA_Finding_TrackingDate" />
+              <Mapping SourceColumn="HQA_Finding_LateCloseOut_List" DataSetColumn="HQA_Finding_LateCloseOut_List" />
+              <Mapping SourceColumn="HQA_Finding_LateCloseOut_Name" DataSetColumn="HQA_Finding_LateCloseOut_Name" />
+              <Mapping SourceColumn="HQA_Finding_LateCloseOut_List_Other" DataSetColumn="HQA_Finding_LateCloseOut_List_Other" />
+              <Mapping SourceColumn="HQA_Finding_CreatedDate" DataSetColumn="HQA_Finding_CreatedDate" />
+              <Mapping SourceColumn="HQA_Finding_CreatedBy" DataSetColumn="HQA_Finding_CreatedBy" />
+              <Mapping SourceColumn="HQA_Finding_ModifiedDate" DataSetColumn="HQA_Finding_ModifiedDate" />
+              <Mapping SourceColumn="HQA_Finding_ModifiedBy" DataSetColumn="HQA_Finding_ModifiedBy" />
+              <Mapping SourceColumn="HQA_Finding_History" DataSetColumn="HQA_Finding_History" />
+              <Mapping SourceColumn="HQA_Finding_IsActive" DataSetColumn="HQA_Finding_IsActive" />
+              <Mapping SourceColumn="HQA_Finding_Archived" DataSetColumn="HQA_Finding_Archived" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_HeadOfficeQualityAudit" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_Form_HeadOfficeQualityAudit" msprop:Generator_UserDSName="DataSet_Form_HeadOfficeQualityAudit">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vForm_HeadOfficeQualityAudit_Finding" msprop:Generator_TableClassName="vForm_HeadOfficeQualityAudit_FindingDataTable" msprop:Generator_TableVarName="tablevForm_HeadOfficeQualityAudit_Finding" msprop:Generator_TablePropName="vForm_HeadOfficeQualityAudit_Finding" msprop:Generator_RowDeletingName="vForm_HeadOfficeQualityAudit_FindingRowDeleting" msprop:Generator_RowChangingName="vForm_HeadOfficeQualityAudit_FindingRowChanging" msprop:Generator_RowEvHandlerName="vForm_HeadOfficeQualityAudit_FindingRowChangeEventHandler" msprop:Generator_RowDeletedName="vForm_HeadOfficeQualityAudit_FindingRowDeleted" msprop:Generator_UserTableName="vForm_HeadOfficeQualityAudit_Finding" msprop:Generator_RowChangedName="vForm_HeadOfficeQualityAudit_FindingRowChanged" msprop:Generator_RowEvArgName="vForm_HeadOfficeQualityAudit_FindingRowChangeEvent" msprop:Generator_RowClassName="vForm_HeadOfficeQualityAudit_FindingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HQA_Finding_Id" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_Id" msprop:Generator_ColumnPropNameInRow="HQA_Finding_Id" msprop:Generator_ColumnPropNameInTable="HQA_Finding_IdColumn" msprop:Generator_UserColumnName="HQA_Finding_Id" type="xs:int" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facility_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityNameColumn" msprop:Generator_UserColumnName="Facility_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facility_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facility_FacilityCodeColumn" msprop:Generator_UserColumnName="Facility_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityDisplayName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityDisplayNameColumn" msprop:Generator_UserColumnName="Facility_FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HQA_Finding_Function_List" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_Function_List" msprop:Generator_ColumnPropNameInRow="HQA_Finding_Function_List" msprop:Generator_ColumnPropNameInTable="HQA_Finding_Function_ListColumn" msprop:Generator_UserColumnName="HQA_Finding_Function_List" type="xs:int" minOccurs="0" />
+              <xs:element name="HQA_Finding_Function_Name" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_Function_Name" msprop:Generator_ColumnPropNameInRow="HQA_Finding_Function_Name" msprop:Generator_ColumnPropNameInTable="HQA_Finding_Function_NameColumn" msprop:Generator_UserColumnName="HQA_Finding_Function_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HQA_Finding_FindingNo" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_FindingNo" msprop:Generator_ColumnPropNameInRow="HQA_Finding_FindingNo" msprop:Generator_ColumnPropNameInTable="HQA_Finding_FindingNoColumn" msprop:Generator_UserColumnName="HQA_Finding_FindingNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HQA_Finding_FindingDate" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_FindingDate" msprop:Generator_ColumnPropNameInRow="HQA_Finding_FindingDate" msprop:Generator_ColumnPropNameInTable="HQA_Finding_FindingDateColumn" msprop:Generator_UserColumnName="HQA_Finding_FindingDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HQA_Finding_FinancialYear" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_FinancialYear" msprop:Generator_ColumnPropNameInRow="HQA_Finding_FinancialYear" msprop:Generator_ColumnPropNameInTable="HQA_Finding_FinancialYearColumn" msprop:Generator_UserColumnName="HQA_Finding_FinancialYear" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HQA_Finding_Auditor" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_Auditor" msprop:Generator_ColumnPropNameInRow="HQA_Finding_Auditor" msprop:Generator_ColumnPropNameInTable="HQA_Finding_AuditorColumn" msprop:Generator_UserColumnName="HQA_Finding_Auditor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HQA_Finding_Criteria_List" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_Criteria_List" msprop:Generator_ColumnPropNameInRow="HQA_Finding_Criteria_List" msprop:Generator_ColumnPropNameInTable="HQA_Finding_Criteria_ListColumn" msprop:Generator_UserColumnName="HQA_Finding_Criteria_List" type="xs:int" minOccurs="0" />
+              <xs:element name="HQA_Finding_Criteria_Name" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_Criteria_Name" msprop:Generator_ColumnPropNameInRow="HQA_Finding_Criteria_Name" msprop:Generator_ColumnPropNameInTable="HQA_Finding_Criteria_NameColumn" msprop:Generator_UserColumnName="HQA_Finding_Criteria_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HQA_Finding_Classification_List" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_Classification_List" msprop:Generator_ColumnPropNameInRow="HQA_Finding_Classification_List" msprop:Generator_ColumnPropNameInTable="HQA_Finding_Classification_ListColumn" msprop:Generator_UserColumnName="HQA_Finding_Classification_List" type="xs:int" minOccurs="0" />
+              <xs:element name="HQA_Finding_Classification_Name" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_Classification_Name" msprop:Generator_ColumnPropNameInRow="HQA_Finding_Classification_Name" msprop:Generator_ColumnPropNameInTable="HQA_Finding_Classification_NameColumn" msprop:Generator_UserColumnName="HQA_Finding_Classification_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HQA_Finding_Description" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_Description" msprop:Generator_ColumnPropNameInRow="HQA_Finding_Description" msprop:Generator_ColumnPropNameInTable="HQA_Finding_DescriptionColumn" msprop:Generator_UserColumnName="HQA_Finding_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HQA_Finding_ImmediateAction" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_ImmediateAction" msprop:Generator_ColumnPropNameInRow="HQA_Finding_ImmediateAction" msprop:Generator_ColumnPropNameInTable="HQA_Finding_ImmediateActionColumn" msprop:Generator_UserColumnName="HQA_Finding_ImmediateAction" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HQA_Finding_RootCause" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_RootCause" msprop:Generator_ColumnPropNameInRow="HQA_Finding_RootCause" msprop:Generator_ColumnPropNameInTable="HQA_Finding_RootCauseColumn" msprop:Generator_UserColumnName="HQA_Finding_RootCause" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HQA_Finding_CorrectiveAction" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_CorrectiveAction" msprop:Generator_ColumnPropNameInRow="HQA_Finding_CorrectiveAction" msprop:Generator_ColumnPropNameInTable="HQA_Finding_CorrectiveActionColumn" msprop:Generator_UserColumnName="HQA_Finding_CorrectiveAction" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HQA_Finding_Evaluation" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_Evaluation" msprop:Generator_ColumnPropNameInRow="HQA_Finding_Evaluation" msprop:Generator_ColumnPropNameInTable="HQA_Finding_EvaluationColumn" msprop:Generator_UserColumnName="HQA_Finding_Evaluation" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HQA_Finding_Tracking_List" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_Tracking_List" msprop:Generator_ColumnPropNameInRow="HQA_Finding_Tracking_List" msprop:Generator_ColumnPropNameInTable="HQA_Finding_Tracking_ListColumn" msprop:Generator_UserColumnName="HQA_Finding_Tracking_List" type="xs:int" minOccurs="0" />
+              <xs:element name="HQA_Finding_Tracking_Name" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_Tracking_Name" msprop:Generator_ColumnPropNameInRow="HQA_Finding_Tracking_Name" msprop:Generator_ColumnPropNameInTable="HQA_Finding_Tracking_NameColumn" msprop:Generator_UserColumnName="HQA_Finding_Tracking_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HQA_Finding_TrackingDate" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_TrackingDate" msprop:Generator_ColumnPropNameInRow="HQA_Finding_TrackingDate" msprop:Generator_ColumnPropNameInTable="HQA_Finding_TrackingDateColumn" msprop:Generator_UserColumnName="HQA_Finding_TrackingDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HQA_Finding_LateCloseOut_List" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_LateCloseOut_List" msprop:Generator_ColumnPropNameInRow="HQA_Finding_LateCloseOut_List" msprop:Generator_ColumnPropNameInTable="HQA_Finding_LateCloseOut_ListColumn" msprop:Generator_UserColumnName="HQA_Finding_LateCloseOut_List" type="xs:int" minOccurs="0" />
+              <xs:element name="HQA_Finding_LateCloseOut_Name" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_LateCloseOut_Name" msprop:Generator_ColumnPropNameInRow="HQA_Finding_LateCloseOut_Name" msprop:Generator_ColumnPropNameInTable="HQA_Finding_LateCloseOut_NameColumn" msprop:Generator_UserColumnName="HQA_Finding_LateCloseOut_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HQA_Finding_LateCloseOut_List_Other" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_LateCloseOut_List_Other" msprop:Generator_ColumnPropNameInRow="HQA_Finding_LateCloseOut_List_Other" msprop:Generator_ColumnPropNameInTable="HQA_Finding_LateCloseOut_List_OtherColumn" msprop:Generator_UserColumnName="HQA_Finding_LateCloseOut_List_Other" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HQA_Finding_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_CreatedDate" msprop:Generator_ColumnPropNameInRow="HQA_Finding_CreatedDate" msprop:Generator_ColumnPropNameInTable="HQA_Finding_CreatedDateColumn" msprop:Generator_UserColumnName="HQA_Finding_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HQA_Finding_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_CreatedBy" msprop:Generator_ColumnPropNameInRow="HQA_Finding_CreatedBy" msprop:Generator_ColumnPropNameInTable="HQA_Finding_CreatedByColumn" msprop:Generator_UserColumnName="HQA_Finding_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HQA_Finding_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_ModifiedDate" msprop:Generator_ColumnPropNameInRow="HQA_Finding_ModifiedDate" msprop:Generator_ColumnPropNameInTable="HQA_Finding_ModifiedDateColumn" msprop:Generator_UserColumnName="HQA_Finding_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HQA_Finding_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_ModifiedBy" msprop:Generator_ColumnPropNameInRow="HQA_Finding_ModifiedBy" msprop:Generator_ColumnPropNameInTable="HQA_Finding_ModifiedByColumn" msprop:Generator_UserColumnName="HQA_Finding_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HQA_Finding_History" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_History" msprop:Generator_ColumnPropNameInRow="HQA_Finding_History" msprop:Generator_ColumnPropNameInTable="HQA_Finding_HistoryColumn" msprop:Generator_UserColumnName="HQA_Finding_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HQA_Finding_IsActive" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_IsActive" msprop:Generator_ColumnPropNameInRow="HQA_Finding_IsActive" msprop:Generator_ColumnPropNameInTable="HQA_Finding_IsActiveColumn" msprop:Generator_UserColumnName="HQA_Finding_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="HQA_Finding_Archived" msprop:Generator_ColumnVarNameInTable="columnHQA_Finding_Archived" msprop:Generator_ColumnPropNameInRow="HQA_Finding_Archived" msprop:Generator_ColumnPropNameInTable="HQA_Finding_ArchivedColumn" msprop:Generator_UserColumnName="HQA_Finding_Archived" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vForm_HeadOfficeQualityAudit_Finding" />
+      <xs:field xpath="mstns:HQA_Finding_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

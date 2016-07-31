@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_MonthlyOccupationalHealthStatistics" targetNamespace="http://tempuri.org/DataSet_Form_MonthlyOccupationalHealthStatistics.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_MonthlyOccupationalHealthStatistics.xsd" xmlns="http://tempuri.org/DataSet_Form_MonthlyOccupationalHealthStatistics.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vForm_MonthlyOccupationalHealthStatisticsTableAdapter" GeneratorDataComponentClassName="vForm_MonthlyOccupationalHealthStatisticsTableAdapter" Name="vForm_MonthlyOccupationalHealthStatistics" UserDataComponentName="vForm_MonthlyOccupationalHealthStatisticsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vForm_MonthlyOccupationalHealthStatistics" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM vForm_MonthlyOccupationalHealthStatistics WHERE MOHS_Id = 1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MOHS_Id" DataSetColumn="MOHS_Id" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facility_FacilityName" DataSetColumn="Facility_FacilityName" />
+              <Mapping SourceColumn="Facility_FacilityCode" DataSetColumn="Facility_FacilityCode" />
+              <Mapping SourceColumn="Facility_FacilityDisplayName" DataSetColumn="Facility_FacilityDisplayName" />
+              <Mapping SourceColumn="Unit_Id" DataSetColumn="Unit_Id" />
+              <Mapping SourceColumn="Unit_Name" DataSetColumn="Unit_Name" />
+              <Mapping SourceColumn="MOHS_Period" DataSetColumn="MOHS_Period" />
+              <Mapping SourceColumn="MOHS_FYPeriod" DataSetColumn="MOHS_FYPeriod" />
+              <Mapping SourceColumn="MOHS_OH_ClinicVisits" DataSetColumn="MOHS_OH_ClinicVisits" />
+              <Mapping SourceColumn="MOHS_OH_LabourHours" DataSetColumn="MOHS_OH_LabourHours" />
+              <Mapping SourceColumn="MOHS_OH_PatientSatisfactionScore" DataSetColumn="MOHS_OH_PatientSatisfactionScore" />
+              <Mapping SourceColumn="MOHS_OH_PatientSatisfactionResponseRate" DataSetColumn="MOHS_OH_PatientSatisfactionResponseRate" />
+              <Mapping SourceColumn="MOHS_CC_CCNReceivedPositive" DataSetColumn="MOHS_CC_CCNReceivedPositive" />
+              <Mapping SourceColumn="MOHS_CC_CCNReceivedPositive_Published" DataSetColumn="MOHS_CC_CCNReceivedPositive_Published" />
+              <Mapping SourceColumn="MOHS_CC_CCNReceivedPositive_Calculated" DataSetColumn="MOHS_CC_CCNReceivedPositive_Calculated" />
+              <Mapping SourceColumn="MOHS_CC_CCNReceivedSuggestions" DataSetColumn="MOHS_CC_CCNReceivedSuggestions" />
+              <Mapping SourceColumn="MOHS_CC_CCNReceivedSuggestions_Published" DataSetColumn="MOHS_CC_CCNReceivedSuggestions_Published" />
+              <Mapping SourceColumn="MOHS_CC_CCNReceivedSuggestions_Calculated" DataSetColumn="MOHS_CC_CCNReceivedSuggestions_Calculated" />
+              <Mapping SourceColumn="MOHS_CC_CCNReceivedNegative" DataSetColumn="MOHS_CC_CCNReceivedNegative" />
+              <Mapping SourceColumn="MOHS_CC_CCNReceivedNegative_Published" DataSetColumn="MOHS_CC_CCNReceivedNegative_Published" />
+              <Mapping SourceColumn="MOHS_CC_CCNReceivedNegative_Calculated" DataSetColumn="MOHS_CC_CCNReceivedNegative_Calculated" />
+              <Mapping SourceColumn="MOHS_CC_CCNReceivedTotal" DataSetColumn="MOHS_CC_CCNReceivedTotal" />
+              <Mapping SourceColumn="MOHS_CC_ComplaintsReceived" DataSetColumn="MOHS_CC_ComplaintsReceived" />
+              <Mapping SourceColumn="MOHS_CC_ComplaintsReceived_Published" DataSetColumn="MOHS_CC_ComplaintsReceived_Published" />
+              <Mapping SourceColumn="MOHS_CC_ComplaintsReceived_Calculated" DataSetColumn="MOHS_CC_ComplaintsReceived_Calculated" />
+              <Mapping SourceColumn="MOHS_CC_TotalComplaints" DataSetColumn="MOHS_CC_TotalComplaints" />
+              <Mapping SourceColumn="MOHS_Care_TotalStaffTrained" DataSetColumn="MOHS_Care_TotalStaffTrained" />
+              <Mapping SourceColumn="MOHS_Care_TotalStaffEmployed" DataSetColumn="MOHS_Care_TotalStaffEmployed" />
+              <Mapping SourceColumn="MOHS_ModifiedDate" DataSetColumn="MOHS_ModifiedDate" />
+              <Mapping SourceColumn="MOHS_ModifiedBy" DataSetColumn="MOHS_ModifiedBy" />
+              <Mapping SourceColumn="MOHS_BeingModified" DataSetColumn="MOHS_BeingModified" />
+              <Mapping SourceColumn="MOHS_BeingModifiedDate" DataSetColumn="MOHS_BeingModifiedDate" />
+              <Mapping SourceColumn="MOHS_BeingModifiedBy" DataSetColumn="MOHS_BeingModifiedBy" />
+              <Mapping SourceColumn="MOHS_History" DataSetColumn="MOHS_History" />
+              <Mapping SourceColumn="MOHS_Archived" DataSetColumn="MOHS_Archived" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_MonthlyOccupationalHealthStatistics" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_Form_MonthlyOccupationalHealthStatistics" msprop:Generator_UserDSName="DataSet_Form_MonthlyOccupationalHealthStatistics">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vForm_MonthlyOccupationalHealthStatistics" msprop:Generator_TableClassName="vForm_MonthlyOccupationalHealthStatisticsDataTable" msprop:Generator_TableVarName="tablevForm_MonthlyOccupationalHealthStatistics" msprop:Generator_TablePropName="vForm_MonthlyOccupationalHealthStatistics" msprop:Generator_RowDeletingName="vForm_MonthlyOccupationalHealthStatisticsRowDeleting" msprop:Generator_RowChangingName="vForm_MonthlyOccupationalHealthStatisticsRowChanging" msprop:Generator_RowEvHandlerName="vForm_MonthlyOccupationalHealthStatisticsRowChangeEventHandler" msprop:Generator_RowDeletedName="vForm_MonthlyOccupationalHealthStatisticsRowDeleted" msprop:Generator_UserTableName="vForm_MonthlyOccupationalHealthStatistics" msprop:Generator_RowChangedName="vForm_MonthlyOccupationalHealthStatisticsRowChanged" msprop:Generator_RowEvArgName="vForm_MonthlyOccupationalHealthStatisticsRowChangeEvent" msprop:Generator_RowClassName="vForm_MonthlyOccupationalHealthStatisticsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MOHS_Id" msprop:Generator_ColumnVarNameInTable="columnMOHS_Id" msprop:Generator_ColumnPropNameInRow="MOHS_Id" msprop:Generator_ColumnPropNameInTable="MOHS_IdColumn" msprop:Generator_UserColumnName="MOHS_Id" type="xs:int" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facility_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityNameColumn" msprop:Generator_UserColumnName="Facility_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facility_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facility_FacilityCodeColumn" msprop:Generator_UserColumnName="Facility_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityDisplayName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityDisplayNameColumn" msprop:Generator_UserColumnName="Facility_FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Unit_Id" msprop:Generator_ColumnVarNameInTable="columnUnit_Id" msprop:Generator_ColumnPropNameInRow="Unit_Id" msprop:Generator_ColumnPropNameInTable="Unit_IdColumn" msprop:Generator_UserColumnName="Unit_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Unit_Name" msprop:Generator_ColumnVarNameInTable="columnUnit_Name" msprop:Generator_ColumnPropNameInRow="Unit_Name" msprop:Generator_ColumnPropNameInTable="Unit_NameColumn" msprop:Generator_UserColumnName="Unit_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOHS_Period" msprop:Generator_ColumnVarNameInTable="columnMOHS_Period" msprop:Generator_ColumnPropNameInRow="MOHS_Period" msprop:Generator_ColumnPropNameInTable="MOHS_PeriodColumn" msprop:Generator_UserColumnName="MOHS_Period" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOHS_FYPeriod" msprop:Generator_ColumnVarNameInTable="columnMOHS_FYPeriod" msprop:Generator_ColumnPropNameInRow="MOHS_FYPeriod" msprop:Generator_ColumnPropNameInTable="MOHS_FYPeriodColumn" msprop:Generator_UserColumnName="MOHS_FYPeriod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOHS_OH_ClinicVisits" msprop:Generator_ColumnVarNameInTable="columnMOHS_OH_ClinicVisits" msprop:Generator_ColumnPropNameInRow="MOHS_OH_ClinicVisits" msprop:Generator_ColumnPropNameInTable="MOHS_OH_ClinicVisitsColumn" msprop:Generator_UserColumnName="MOHS_OH_ClinicVisits" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_OH_LabourHours" msprop:Generator_ColumnVarNameInTable="columnMOHS_OH_LabourHours" msprop:Generator_ColumnPropNameInRow="MOHS_OH_LabourHours" msprop:Generator_ColumnPropNameInTable="MOHS_OH_LabourHoursColumn" msprop:Generator_UserColumnName="MOHS_OH_LabourHours" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_OH_PatientSatisfactionScore" msprop:Generator_ColumnVarNameInTable="columnMOHS_OH_PatientSatisfactionScore" msprop:Generator_ColumnPropNameInRow="MOHS_OH_PatientSatisfactionScore" msprop:Generator_ColumnPropNameInTable="MOHS_OH_PatientSatisfactionScoreColumn" msprop:Generator_UserColumnName="MOHS_OH_PatientSatisfactionScore" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_OH_PatientSatisfactionResponseRate" msprop:Generator_ColumnVarNameInTable="columnMOHS_OH_PatientSatisfactionResponseRate" msprop:Generator_ColumnPropNameInRow="MOHS_OH_PatientSatisfactionResponseRate" msprop:Generator_ColumnPropNameInTable="MOHS_OH_PatientSatisfactionResponseRateColumn" msprop:Generator_UserColumnName="MOHS_OH_PatientSatisfactionResponseRate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_CC_CCNReceivedPositive" msprop:Generator_ColumnVarNameInTable="columnMOHS_CC_CCNReceivedPositive" msprop:Generator_ColumnPropNameInRow="MOHS_CC_CCNReceivedPositive" msprop:Generator_ColumnPropNameInTable="MOHS_CC_CCNReceivedPositiveColumn" msprop:Generator_UserColumnName="MOHS_CC_CCNReceivedPositive" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_CC_CCNReceivedPositive_Published" msprop:Generator_ColumnVarNameInTable="columnMOHS_CC_CCNReceivedPositive_Published" msprop:Generator_ColumnPropNameInRow="MOHS_CC_CCNReceivedPositive_Published" msprop:Generator_ColumnPropNameInTable="MOHS_CC_CCNReceivedPositive_PublishedColumn" msprop:Generator_UserColumnName="MOHS_CC_CCNReceivedPositive_Published" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_CC_CCNReceivedPositive_Calculated" msprop:Generator_ColumnVarNameInTable="columnMOHS_CC_CCNReceivedPositive_Calculated" msprop:Generator_ColumnPropNameInRow="MOHS_CC_CCNReceivedPositive_Calculated" msprop:Generator_ColumnPropNameInTable="MOHS_CC_CCNReceivedPositive_CalculatedColumn" msprop:Generator_UserColumnName="MOHS_CC_CCNReceivedPositive_Calculated" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_CC_CCNReceivedSuggestions" msprop:Generator_ColumnVarNameInTable="columnMOHS_CC_CCNReceivedSuggestions" msprop:Generator_ColumnPropNameInRow="MOHS_CC_CCNReceivedSuggestions" msprop:Generator_ColumnPropNameInTable="MOHS_CC_CCNReceivedSuggestionsColumn" msprop:Generator_UserColumnName="MOHS_CC_CCNReceivedSuggestions" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_CC_CCNReceivedSuggestions_Published" msprop:Generator_ColumnVarNameInTable="columnMOHS_CC_CCNReceivedSuggestions_Published" msprop:Generator_ColumnPropNameInRow="MOHS_CC_CCNReceivedSuggestions_Published" msprop:Generator_ColumnPropNameInTable="MOHS_CC_CCNReceivedSuggestions_PublishedColumn" msprop:Generator_UserColumnName="MOHS_CC_CCNReceivedSuggestions_Published" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_CC_CCNReceivedSuggestions_Calculated" msprop:Generator_ColumnVarNameInTable="columnMOHS_CC_CCNReceivedSuggestions_Calculated" msprop:Generator_ColumnPropNameInRow="MOHS_CC_CCNReceivedSuggestions_Calculated" msprop:Generator_ColumnPropNameInTable="MOHS_CC_CCNReceivedSuggestions_CalculatedColumn" msprop:Generator_UserColumnName="MOHS_CC_CCNReceivedSuggestions_Calculated" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_CC_CCNReceivedNegative" msprop:Generator_ColumnVarNameInTable="columnMOHS_CC_CCNReceivedNegative" msprop:Generator_ColumnPropNameInRow="MOHS_CC_CCNReceivedNegative" msprop:Generator_ColumnPropNameInTable="MOHS_CC_CCNReceivedNegativeColumn" msprop:Generator_UserColumnName="MOHS_CC_CCNReceivedNegative" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_CC_CCNReceivedNegative_Published" msprop:Generator_ColumnVarNameInTable="columnMOHS_CC_CCNReceivedNegative_Published" msprop:Generator_ColumnPropNameInRow="MOHS_CC_CCNReceivedNegative_Published" msprop:Generator_ColumnPropNameInTable="MOHS_CC_CCNReceivedNegative_PublishedColumn" msprop:Generator_UserColumnName="MOHS_CC_CCNReceivedNegative_Published" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_CC_CCNReceivedNegative_Calculated" msprop:Generator_ColumnVarNameInTable="columnMOHS_CC_CCNReceivedNegative_Calculated" msprop:Generator_ColumnPropNameInRow="MOHS_CC_CCNReceivedNegative_Calculated" msprop:Generator_ColumnPropNameInTable="MOHS_CC_CCNReceivedNegative_CalculatedColumn" msprop:Generator_UserColumnName="MOHS_CC_CCNReceivedNegative_Calculated" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_CC_CCNReceivedTotal" msprop:Generator_ColumnVarNameInTable="columnMOHS_CC_CCNReceivedTotal" msprop:Generator_ColumnPropNameInRow="MOHS_CC_CCNReceivedTotal" msprop:Generator_ColumnPropNameInTable="MOHS_CC_CCNReceivedTotalColumn" msprop:Generator_UserColumnName="MOHS_CC_CCNReceivedTotal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_CC_ComplaintsReceived" msprop:Generator_ColumnVarNameInTable="columnMOHS_CC_ComplaintsReceived" msprop:Generator_ColumnPropNameInRow="MOHS_CC_ComplaintsReceived" msprop:Generator_ColumnPropNameInTable="MOHS_CC_ComplaintsReceivedColumn" msprop:Generator_UserColumnName="MOHS_CC_ComplaintsReceived" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_CC_ComplaintsReceived_Published" msprop:Generator_ColumnVarNameInTable="columnMOHS_CC_ComplaintsReceived_Published" msprop:Generator_ColumnPropNameInRow="MOHS_CC_ComplaintsReceived_Published" msprop:Generator_ColumnPropNameInTable="MOHS_CC_ComplaintsReceived_PublishedColumn" msprop:Generator_UserColumnName="MOHS_CC_ComplaintsReceived_Published" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_CC_ComplaintsReceived_Calculated" msprop:Generator_ColumnVarNameInTable="columnMOHS_CC_ComplaintsReceived_Calculated" msprop:Generator_ColumnPropNameInRow="MOHS_CC_ComplaintsReceived_Calculated" msprop:Generator_ColumnPropNameInTable="MOHS_CC_ComplaintsReceived_CalculatedColumn" msprop:Generator_UserColumnName="MOHS_CC_ComplaintsReceived_Calculated" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_CC_TotalComplaints" msprop:Generator_ColumnVarNameInTable="columnMOHS_CC_TotalComplaints" msprop:Generator_ColumnPropNameInRow="MOHS_CC_TotalComplaints" msprop:Generator_ColumnPropNameInTable="MOHS_CC_TotalComplaintsColumn" msprop:Generator_UserColumnName="MOHS_CC_TotalComplaints" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_Care_TotalStaffTrained" msprop:Generator_ColumnVarNameInTable="columnMOHS_Care_TotalStaffTrained" msprop:Generator_ColumnPropNameInRow="MOHS_Care_TotalStaffTrained" msprop:Generator_ColumnPropNameInTable="MOHS_Care_TotalStaffTrainedColumn" msprop:Generator_UserColumnName="MOHS_Care_TotalStaffTrained" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_Care_TotalStaffEmployed" msprop:Generator_ColumnVarNameInTable="columnMOHS_Care_TotalStaffEmployed" msprop:Generator_ColumnPropNameInRow="MOHS_Care_TotalStaffEmployed" msprop:Generator_ColumnPropNameInTable="MOHS_Care_TotalStaffEmployedColumn" msprop:Generator_UserColumnName="MOHS_Care_TotalStaffEmployed" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOHS_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnMOHS_ModifiedDate" msprop:Generator_ColumnPropNameInRow="MOHS_ModifiedDate" msprop:Generator_ColumnPropNameInTable="MOHS_ModifiedDateColumn" msprop:Generator_UserColumnName="MOHS_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MOHS_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnMOHS_ModifiedBy" msprop:Generator_ColumnPropNameInRow="MOHS_ModifiedBy" msprop:Generator_ColumnPropNameInTable="MOHS_ModifiedByColumn" msprop:Generator_UserColumnName="MOHS_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOHS_BeingModified" msprop:Generator_ColumnVarNameInTable="columnMOHS_BeingModified" msprop:Generator_ColumnPropNameInRow="MOHS_BeingModified" msprop:Generator_ColumnPropNameInTable="MOHS_BeingModifiedColumn" msprop:Generator_UserColumnName="MOHS_BeingModified" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MOHS_BeingModifiedDate" msprop:Generator_ColumnVarNameInTable="columnMOHS_BeingModifiedDate" msprop:Generator_ColumnPropNameInRow="MOHS_BeingModifiedDate" msprop:Generator_ColumnPropNameInTable="MOHS_BeingModifiedDateColumn" msprop:Generator_UserColumnName="MOHS_BeingModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MOHS_BeingModifiedBy" msprop:Generator_ColumnVarNameInTable="columnMOHS_BeingModifiedBy" msprop:Generator_ColumnPropNameInRow="MOHS_BeingModifiedBy" msprop:Generator_ColumnPropNameInTable="MOHS_BeingModifiedByColumn" msprop:Generator_UserColumnName="MOHS_BeingModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOHS_History" msprop:Generator_ColumnVarNameInTable="columnMOHS_History" msprop:Generator_ColumnPropNameInRow="MOHS_History" msprop:Generator_ColumnPropNameInTable="MOHS_HistoryColumn" msprop:Generator_UserColumnName="MOHS_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOHS_Archived" msprop:Generator_ColumnVarNameInTable="columnMOHS_Archived" msprop:Generator_ColumnPropNameInRow="MOHS_Archived" msprop:Generator_ColumnPropNameInTable="MOHS_ArchivedColumn" msprop:Generator_UserColumnName="MOHS_Archived" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vForm_MonthlyOccupationalHealthStatistics" />
+      <xs:field xpath="mstns:MOHS_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

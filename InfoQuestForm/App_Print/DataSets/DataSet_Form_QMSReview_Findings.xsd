@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_QMSReview_Findings" targetNamespace="http://tempuri.org/DataSet_Form_QMSReview_Findings.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_QMSReview_Findings.xsd" xmlns="http://tempuri.org/DataSet_Form_QMSReview_Findings.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vForm_QMSReview_FindingsTableAdapter" GeneratorDataComponentClassName="vForm_QMSReview_FindingsTableAdapter" Name="vForm_QMSReview_Findings" UserDataComponentName="vForm_QMSReview_FindingsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vForm_QMSReview_Findings" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT QMSReview_Id, Facility_Id, Facility_FacilityName, Facility_FacilityCode, Facility_FacilityDisplayName, QMSReview_Date, QMSReview_Completed, QMSReview_CompletedDate, QMSReview_CreatedDate, QMSReview_CreatedBy, QMSReview_ModifiedDate, QMSReview_ModifiedBy, QMSReview_History, QMSReview_IsActive, QMSReview_Archived, QMSReview_Findings_Id, QMSReview_Findings_System, QMSReview_Findings_Element, QMSReview_Findings_CriteriaNo, QMSReview_Findings_MeasurementCriteria, QMSReview_Findings_Category, QMSReview_Findings_Comments, QMSReview_Findings_Score, QMSReview_Findings_CoreStandard,QMSReview_Findings_RootCause ,QMSReview_Findings_Actions, QMSReview_Findings_ResponsiblePerson, QMSReview_Findings_DueDate, QMSReview_Findings_ActionsEffective, QMSReview_Findings_Tracking_List, QMSReview_Findings_Tracking_Name, QMSReview_Findings_TrackingDate, QMSReview_Findings_LateClosingOutCNC_List , QMSReview_Findings_LateClosingOutCNC_Name , QMSReview_Findings_LateClosingOutCNC_List_Other , QMSReview_Findings_CreatedDate, QMSReview_Findings_CreatedBy, QMSReview_Findings_ModifiedDate, QMSReview_Findings_ModifiedBy, QMSReview_Findings_History FROM vForm_QMSReview_Findings WHERE (QMSReview_Findings_Id = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="QMSReview_Id" DataSetColumn="QMSReview_Id" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facility_FacilityName" DataSetColumn="Facility_FacilityName" />
+              <Mapping SourceColumn="Facility_FacilityCode" DataSetColumn="Facility_FacilityCode" />
+              <Mapping SourceColumn="Facility_FacilityDisplayName" DataSetColumn="Facility_FacilityDisplayName" />
+              <Mapping SourceColumn="QMSReview_Date" DataSetColumn="QMSReview_Date" />
+              <Mapping SourceColumn="QMSReview_Completed" DataSetColumn="QMSReview_Completed" />
+              <Mapping SourceColumn="QMSReview_CompletedDate" DataSetColumn="QMSReview_CompletedDate" />
+              <Mapping SourceColumn="QMSReview_CreatedDate" DataSetColumn="QMSReview_CreatedDate" />
+              <Mapping SourceColumn="QMSReview_CreatedBy" DataSetColumn="QMSReview_CreatedBy" />
+              <Mapping SourceColumn="QMSReview_ModifiedDate" DataSetColumn="QMSReview_ModifiedDate" />
+              <Mapping SourceColumn="QMSReview_ModifiedBy" DataSetColumn="QMSReview_ModifiedBy" />
+              <Mapping SourceColumn="QMSReview_History" DataSetColumn="QMSReview_History" />
+              <Mapping SourceColumn="QMSReview_IsActive" DataSetColumn="QMSReview_IsActive" />
+              <Mapping SourceColumn="QMSReview_Archived" DataSetColumn="QMSReview_Archived" />
+              <Mapping SourceColumn="QMSReview_Findings_Id" DataSetColumn="QMSReview_Findings_Id" />
+              <Mapping SourceColumn="QMSReview_Findings_System" DataSetColumn="QMSReview_Findings_System" />
+              <Mapping SourceColumn="QMSReview_Findings_Element" DataSetColumn="QMSReview_Findings_Element" />
+              <Mapping SourceColumn="QMSReview_Findings_CriteriaNo" DataSetColumn="QMSReview_Findings_CriteriaNo" />
+              <Mapping SourceColumn="QMSReview_Findings_MeasurementCriteria" DataSetColumn="QMSReview_Findings_MeasurementCriteria" />
+              <Mapping SourceColumn="QMSReview_Findings_Category" DataSetColumn="QMSReview_Findings_Category" />
+              <Mapping SourceColumn="QMSReview_Findings_Comments" DataSetColumn="QMSReview_Findings_Comments" />
+              <Mapping SourceColumn="QMSReview_Findings_Score" DataSetColumn="QMSReview_Findings_Score" />
+              <Mapping SourceColumn="QMSReview_Findings_CoreStandard" DataSetColumn="QMSReview_Findings_CoreStandard" />
+              <Mapping SourceColumn="QMSReview_Findings_RootCause" DataSetColumn="QMSReview_Findings_RootCause" />
+              <Mapping SourceColumn="QMSReview_Findings_Actions" DataSetColumn="QMSReview_Findings_Actions" />
+              <Mapping SourceColumn="QMSReview_Findings_ResponsiblePerson" DataSetColumn="QMSReview_Findings_ResponsiblePerson" />
+              <Mapping SourceColumn="QMSReview_Findings_DueDate" DataSetColumn="QMSReview_Findings_DueDate" />
+              <Mapping SourceColumn="QMSReview_Findings_ActionsEffective" DataSetColumn="QMSReview_Findings_ActionsEffective" />
+              <Mapping SourceColumn="QMSReview_Findings_Tracking_List" DataSetColumn="QMSReview_Findings_Tracking_List" />
+              <Mapping SourceColumn="QMSReview_Findings_Tracking_Name" DataSetColumn="QMSReview_Findings_Tracking_Name" />
+              <Mapping SourceColumn="QMSReview_Findings_TrackingDate" DataSetColumn="QMSReview_Findings_TrackingDate" />
+              <Mapping SourceColumn="QMSReview_Findings_LateClosingOutCNC_List" DataSetColumn="QMSReview_Findings_LateClosingOutCNC_List" />
+              <Mapping SourceColumn="QMSReview_Findings_LateClosingOutCNC_Name" DataSetColumn="QMSReview_Findings_LateClosingOutCNC_Name" />
+              <Mapping SourceColumn="QMSReview_Findings_LateClosingOutCNC_List_Other" DataSetColumn="QMSReview_Findings_LateClosingOutCNC_List_Other" />
+              <Mapping SourceColumn="QMSReview_Findings_CreatedDate" DataSetColumn="QMSReview_Findings_CreatedDate" />
+              <Mapping SourceColumn="QMSReview_Findings_CreatedBy" DataSetColumn="QMSReview_Findings_CreatedBy" />
+              <Mapping SourceColumn="QMSReview_Findings_ModifiedDate" DataSetColumn="QMSReview_Findings_ModifiedDate" />
+              <Mapping SourceColumn="QMSReview_Findings_ModifiedBy" DataSetColumn="QMSReview_Findings_ModifiedBy" />
+              <Mapping SourceColumn="QMSReview_Findings_History" DataSetColumn="QMSReview_Findings_History" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_QMSReview_Findings" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet_Form_QMSReview_Findings" msprop:Generator_UserDSName="DataSet_Form_QMSReview_Findings">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vForm_QMSReview_Findings" msprop:Generator_TableClassName="vForm_QMSReview_FindingsDataTable" msprop:Generator_TableVarName="tablevForm_QMSReview_Findings" msprop:Generator_TablePropName="vForm_QMSReview_Findings" msprop:Generator_RowDeletingName="vForm_QMSReview_FindingsRowDeleting" msprop:Generator_RowChangingName="vForm_QMSReview_FindingsRowChanging" msprop:Generator_RowEvHandlerName="vForm_QMSReview_FindingsRowChangeEventHandler" msprop:Generator_RowDeletedName="vForm_QMSReview_FindingsRowDeleted" msprop:Generator_UserTableName="vForm_QMSReview_Findings" msprop:Generator_RowChangedName="vForm_QMSReview_FindingsRowChanged" msprop:Generator_RowEvArgName="vForm_QMSReview_FindingsRowChangeEvent" msprop:Generator_RowClassName="vForm_QMSReview_FindingsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="QMSReview_Id" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Id" msprop:Generator_ColumnPropNameInRow="QMSReview_Id" msprop:Generator_ColumnPropNameInTable="QMSReview_IdColumn" msprop:Generator_UserColumnName="QMSReview_Id" type="xs:int" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facility_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityNameColumn" msprop:Generator_UserColumnName="Facility_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facility_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facility_FacilityCodeColumn" msprop:Generator_UserColumnName="Facility_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityDisplayName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityDisplayNameColumn" msprop:Generator_UserColumnName="Facility_FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_Date" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Date" msprop:Generator_ColumnPropNameInRow="QMSReview_Date" msprop:Generator_ColumnPropNameInTable="QMSReview_DateColumn" msprop:Generator_UserColumnName="QMSReview_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="QMSReview_Completed" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Completed" msprop:Generator_ColumnPropNameInRow="QMSReview_Completed" msprop:Generator_ColumnPropNameInTable="QMSReview_CompletedColumn" msprop:Generator_UserColumnName="QMSReview_Completed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="QMSReview_CompletedDate" msprop:Generator_ColumnVarNameInTable="columnQMSReview_CompletedDate" msprop:Generator_ColumnPropNameInRow="QMSReview_CompletedDate" msprop:Generator_ColumnPropNameInTable="QMSReview_CompletedDateColumn" msprop:Generator_UserColumnName="QMSReview_CompletedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="QMSReview_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnQMSReview_CreatedDate" msprop:Generator_ColumnPropNameInRow="QMSReview_CreatedDate" msprop:Generator_ColumnPropNameInTable="QMSReview_CreatedDateColumn" msprop:Generator_UserColumnName="QMSReview_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="QMSReview_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnQMSReview_CreatedBy" msprop:Generator_ColumnPropNameInRow="QMSReview_CreatedBy" msprop:Generator_ColumnPropNameInTable="QMSReview_CreatedByColumn" msprop:Generator_UserColumnName="QMSReview_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnQMSReview_ModifiedDate" msprop:Generator_ColumnPropNameInRow="QMSReview_ModifiedDate" msprop:Generator_ColumnPropNameInTable="QMSReview_ModifiedDateColumn" msprop:Generator_UserColumnName="QMSReview_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="QMSReview_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnQMSReview_ModifiedBy" msprop:Generator_ColumnPropNameInRow="QMSReview_ModifiedBy" msprop:Generator_ColumnPropNameInTable="QMSReview_ModifiedByColumn" msprop:Generator_UserColumnName="QMSReview_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_History" msprop:Generator_ColumnVarNameInTable="columnQMSReview_History" msprop:Generator_ColumnPropNameInRow="QMSReview_History" msprop:Generator_ColumnPropNameInTable="QMSReview_HistoryColumn" msprop:Generator_UserColumnName="QMSReview_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_IsActive" msprop:Generator_ColumnVarNameInTable="columnQMSReview_IsActive" msprop:Generator_ColumnPropNameInRow="QMSReview_IsActive" msprop:Generator_ColumnPropNameInTable="QMSReview_IsActiveColumn" msprop:Generator_UserColumnName="QMSReview_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="QMSReview_Archived" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Archived" msprop:Generator_ColumnPropNameInRow="QMSReview_Archived" msprop:Generator_ColumnPropNameInTable="QMSReview_ArchivedColumn" msprop:Generator_UserColumnName="QMSReview_Archived" type="xs:boolean" minOccurs="0" />
+              <xs:element name="QMSReview_Findings_Id" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_Id" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_Id" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_IdColumn" msprop:Generator_UserColumnName="QMSReview_Findings_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="QMSReview_Findings_System" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_System" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_System" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_SystemColumn" msprop:Generator_UserColumnName="QMSReview_Findings_System" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_Findings_Element" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_Element" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_Element" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_ElementColumn" msprop:Generator_UserColumnName="QMSReview_Findings_Element" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_Findings_CriteriaNo" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_CriteriaNo" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_CriteriaNo" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_CriteriaNoColumn" msprop:Generator_UserColumnName="QMSReview_Findings_CriteriaNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_Findings_MeasurementCriteria" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_MeasurementCriteria" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_MeasurementCriteria" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_MeasurementCriteriaColumn" msprop:Generator_UserColumnName="QMSReview_Findings_MeasurementCriteria" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_Findings_Category" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_Category" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_Category" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_CategoryColumn" msprop:Generator_UserColumnName="QMSReview_Findings_Category" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_Findings_Comments" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_Comments" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_Comments" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_CommentsColumn" msprop:Generator_UserColumnName="QMSReview_Findings_Comments" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_Findings_Score" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_Score" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_Score" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_ScoreColumn" msprop:Generator_UserColumnName="QMSReview_Findings_Score" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_Findings_CoreStandard" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_CoreStandard" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_CoreStandard" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_CoreStandardColumn" msprop:Generator_UserColumnName="QMSReview_Findings_CoreStandard" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_Findings_RootCause" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_RootCause" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_RootCause" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_RootCauseColumn" msprop:Generator_UserColumnName="QMSReview_Findings_RootCause" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_Findings_Actions" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_Actions" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_Actions" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_ActionsColumn" msprop:Generator_UserColumnName="QMSReview_Findings_Actions" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_Findings_ResponsiblePerson" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_ResponsiblePerson" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_ResponsiblePerson" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_ResponsiblePersonColumn" msprop:Generator_UserColumnName="QMSReview_Findings_ResponsiblePerson" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_Findings_DueDate" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_DueDate" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_DueDate" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_DueDateColumn" msprop:Generator_UserColumnName="QMSReview_Findings_DueDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="QMSReview_Findings_ActionsEffective" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_ActionsEffective" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_ActionsEffective" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_ActionsEffectiveColumn" msprop:Generator_UserColumnName="QMSReview_Findings_ActionsEffective" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_Findings_Tracking_List" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_Tracking_List" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_Tracking_List" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_Tracking_ListColumn" msprop:Generator_UserColumnName="QMSReview_Findings_Tracking_List" type="xs:int" minOccurs="0" />
+              <xs:element name="QMSReview_Findings_Tracking_Name" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_Tracking_Name" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_Tracking_Name" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_Tracking_NameColumn" msprop:Generator_UserColumnName="QMSReview_Findings_Tracking_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_Findings_TrackingDate" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_TrackingDate" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_TrackingDate" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_TrackingDateColumn" msprop:Generator_UserColumnName="QMSReview_Findings_TrackingDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="QMSReview_Findings_LateClosingOutCNC_List" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_LateClosingOutCNC_List" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_LateClosingOutCNC_List" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_LateClosingOutCNC_ListColumn" msprop:Generator_UserColumnName="QMSReview_Findings_LateClosingOutCNC_List" type="xs:int" minOccurs="0" />
+              <xs:element name="QMSReview_Findings_LateClosingOutCNC_Name" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_LateClosingOutCNC_Name" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_LateClosingOutCNC_Name" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_LateClosingOutCNC_NameColumn" msprop:Generator_UserColumnName="QMSReview_Findings_LateClosingOutCNC_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_Findings_LateClosingOutCNC_List_Other" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_LateClosingOutCNC_List_Other" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_LateClosingOutCNC_List_Other" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_LateClosingOutCNC_List_OtherColumn" msprop:Generator_UserColumnName="QMSReview_Findings_LateClosingOutCNC_List_Other" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_Findings_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_CreatedDate" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_CreatedDate" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_CreatedDateColumn" msprop:Generator_UserColumnName="QMSReview_Findings_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="QMSReview_Findings_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_CreatedBy" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_CreatedBy" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_CreatedByColumn" msprop:Generator_UserColumnName="QMSReview_Findings_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_Findings_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_ModifiedDate" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_ModifiedDate" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_ModifiedDateColumn" msprop:Generator_UserColumnName="QMSReview_Findings_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="QMSReview_Findings_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_ModifiedBy" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_ModifiedBy" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_ModifiedByColumn" msprop:Generator_UserColumnName="QMSReview_Findings_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QMSReview_Findings_History" msprop:Generator_ColumnVarNameInTable="columnQMSReview_Findings_History" msprop:Generator_ColumnPropNameInRow="QMSReview_Findings_History" msprop:Generator_ColumnPropNameInTable="QMSReview_Findings_HistoryColumn" msprop:Generator_UserColumnName="QMSReview_Findings_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

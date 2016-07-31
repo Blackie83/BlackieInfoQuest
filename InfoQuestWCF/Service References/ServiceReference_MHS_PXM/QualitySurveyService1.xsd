@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://MHS.BTSAPP.SCH.QualitySurvey.MHS_Document_EventFile" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:ns0="https://MHS.BTSAPP.WCF.QualitySurvey.PropertySchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://MHS.BTSAPP.SCH.QualitySurvey.MHS_Document_EventFile" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo />
+  </xs:annotation>
+  <xs:element name="EventFile">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="Header">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="To" type="xs:string" />
+              <xs:element name="From" type="xs:string" />
+              <xs:element name="Payload" type="xs:string" />
+              <xs:element name="EventFileNumber" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="Body">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="unbounded" name="Event">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="AdmissionDate" type="xs:dateTime" />
+                    <xs:element name="DischargedDate" type="xs:dateTime" />
+                    <xs:element name="Email" type="xs:string" />
+                    <xs:element name="Mobile" type="xs:string" />
+                    <xs:element name="EventId" type="xs:string" />
+                    <xs:element name="PatientFirstname" type="xs:string" />
+                    <xs:element name="PatientKnownAs" type="xs:string" />
+                    <xs:element name="PatientSurname" type="xs:string" />
+                    <xs:element name="PatientTitle" type="xs:string" />
+                    <xs:element name="PatientMobileNumber" type="xs:string" />
+                    <xs:element name="PatientDateOfBirth" type="xs:dateTime" />
+                    <xs:element name="PatientAge" type="xs:string" />
+                    <xs:element name="EmergencyContactPersonFirstname" type="xs:string" />
+                    <xs:element name="EmergencyContactPersonSurname" type="xs:string" />
+                    <xs:element name="EmergencyContactPersonMobileNumber" type="xs:string" />
+                    <xs:element name="EmergencyContactPersonEmail" type="xs:string" />
+                    <xs:element name="Relationship" type="xs:string" />
+                    <xs:element name="Hospital" type="xs:string" />
+                    <xs:element name="HospitalCode" type="xs:string" />
+                    <xs:element name="IDNumber" type="xs:string" />
+                    <xs:element name="MedicalFunder" type="xs:string" />
+                    <xs:element name="FunderOption" type="xs:string" />
+                    <xs:element name="PreferredChannel" type="xs:string" />
+                    <xs:element name="TreatingDoctor" type="xs:string" />
+                    <xs:element name="CareType" type="xs:string" />
+                    <xs:element name="Lifenumber" type="xs:string" />
+                    <xs:element name="VisitNumber" type="xs:string" />
+                    <xs:element name="DischargeWard" type="xs:string" />
+                    <xs:element name="DepartureTypeId" type="xs:string" />
+                    <xs:element name="DepartureType" type="xs:string" />
+                    <xs:element name="UnderAge" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EventFileResponse">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="EventFileNumber" type="xs:string" />
+        <xs:element name="IsSuccessful" type="xs:boolean" />
+        <xs:element name="ErrorMessage" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

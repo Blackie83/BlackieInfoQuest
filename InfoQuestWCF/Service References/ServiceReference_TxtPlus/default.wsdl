@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://lhc.co.za/webservices/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://lhc.co.za/webservices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://lhc.co.za/webservices/">
+      <s:element name="SendSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cellNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="text" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="applicationID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="facilityCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="scheduled" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="scheduledDateTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendSMSResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendScheduledSMS">
+        <s:complexType />
+      </s:element>
+      <s:element name="SendScheduledSMSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResponseResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmailAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmailAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmailAddressResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserName">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUserNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupCellInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GroupID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="GroupName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupCellInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGroupCellInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int" type="s:int" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendScheduledSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendScheduledSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendScheduledSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendScheduledSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ResponseSoapIn">
+    <wsdl:part name="parameters" element="tns:Response" />
+  </wsdl:message>
+  <wsdl:message name="ResponseSoapOut">
+    <wsdl:part name="parameters" element="tns:ResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmailAddress" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmailAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserName" />
+  </wsdl:message>
+  <wsdl:message name="GetUserNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupCellInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroupCellInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupCellInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupCellInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSHttpGetIn">
+    <wsdl:part name="cellNumber" type="s:string" />
+    <wsdl:part name="text" type="s:string" />
+    <wsdl:part name="applicationID" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="facilityCode" type="s:string" />
+    <wsdl:part name="scheduled" type="s:string" />
+    <wsdl:part name="scheduledDateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="SendScheduledSMSHttpGetIn" />
+  <wsdl:message name="SendScheduledSMSHttpGetOut" />
+  <wsdl:message name="ResponseHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ResponseHttpGetOut" />
+  <wsdl:message name="GetEmailAddressHttpGetIn">
+    <wsdl:part name="userName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailAddressHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserNameHttpGetIn" />
+  <wsdl:message name="GetUserNameHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupCellInfoHttpGetIn">
+    <wsdl:part name="GroupID" type="s:string" />
+    <wsdl:part name="GroupName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupCellInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSHttpPostIn">
+    <wsdl:part name="cellNumber" type="s:string" />
+    <wsdl:part name="text" type="s:string" />
+    <wsdl:part name="applicationID" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="facilityCode" type="s:string" />
+    <wsdl:part name="scheduled" type="s:string" />
+    <wsdl:part name="scheduledDateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="SendScheduledSMSHttpPostIn" />
+  <wsdl:message name="SendScheduledSMSHttpPostOut" />
+  <wsdl:message name="ResponseHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ResponseHttpPostOut" />
+  <wsdl:message name="GetEmailAddressHttpPostIn">
+    <wsdl:part name="userName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailAddressHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserNameHttpPostIn" />
+  <wsdl:message name="GetUserNameHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupCellInfoHttpPostIn">
+    <wsdl:part name="GroupID" type="s:string" />
+    <wsdl:part name="GroupName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupCellInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="SMSSoap">
+    <wsdl:operation name="SendSMS">
+      <wsdl:input message="tns:SendSMSSoapIn" />
+      <wsdl:output message="tns:SendSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendScheduledSMS">
+      <wsdl:input message="tns:SendScheduledSMSSoapIn" />
+      <wsdl:output message="tns:SendScheduledSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Response">
+      <wsdl:input message="tns:ResponseSoapIn" />
+      <wsdl:output message="tns:ResponseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailAddress">
+      <wsdl:input message="tns:GetEmailAddressSoapIn" />
+      <wsdl:output message="tns:GetEmailAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <wsdl:input message="tns:GetUserNameSoapIn" />
+      <wsdl:output message="tns:GetUserNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupCellInfo">
+      <wsdl:input message="tns:GetGroupCellInfoSoapIn" />
+      <wsdl:output message="tns:GetGroupCellInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SMSHttpGet">
+    <wsdl:operation name="SendSMS">
+      <wsdl:input message="tns:SendSMSHttpGetIn" />
+      <wsdl:output message="tns:SendSMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendScheduledSMS">
+      <wsdl:input message="tns:SendScheduledSMSHttpGetIn" />
+      <wsdl:output message="tns:SendScheduledSMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Response">
+      <wsdl:input message="tns:ResponseHttpGetIn" />
+      <wsdl:output message="tns:ResponseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailAddress">
+      <wsdl:input message="tns:GetEmailAddressHttpGetIn" />
+      <wsdl:output message="tns:GetEmailAddressHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <wsdl:input message="tns:GetUserNameHttpGetIn" />
+      <wsdl:output message="tns:GetUserNameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupCellInfo">
+      <wsdl:input message="tns:GetGroupCellInfoHttpGetIn" />
+      <wsdl:output message="tns:GetGroupCellInfoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SMSHttpPost">
+    <wsdl:operation name="SendSMS">
+      <wsdl:input message="tns:SendSMSHttpPostIn" />
+      <wsdl:output message="tns:SendSMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendScheduledSMS">
+      <wsdl:input message="tns:SendScheduledSMSHttpPostIn" />
+      <wsdl:output message="tns:SendScheduledSMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Response">
+      <wsdl:input message="tns:ResponseHttpPostIn" />
+      <wsdl:output message="tns:ResponseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailAddress">
+      <wsdl:input message="tns:GetEmailAddressHttpPostIn" />
+      <wsdl:output message="tns:GetEmailAddressHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <wsdl:input message="tns:GetUserNameHttpPostIn" />
+      <wsdl:output message="tns:GetUserNameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupCellInfo">
+      <wsdl:input message="tns:GetGroupCellInfoHttpPostIn" />
+      <wsdl:output message="tns:GetGroupCellInfoHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SMSSoap" type="tns:SMSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendSMS">
+      <soap:operation soapAction="http://lhc.co.za/webservices/SendSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendScheduledSMS">
+      <soap:operation soapAction="http://lhc.co.za/webservices/SendScheduledSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Response">
+      <soap:operation soapAction="http://lhc.co.za/webservices/Response" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailAddress">
+      <soap:operation soapAction="http://lhc.co.za/webservices/GetEmailAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <soap:operation soapAction="http://lhc.co.za/webservices/GetUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupCellInfo">
+      <soap:operation soapAction="http://lhc.co.za/webservices/GetGroupCellInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SMSSoap12" type="tns:SMSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendSMS">
+      <soap12:operation soapAction="http://lhc.co.za/webservices/SendSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendScheduledSMS">
+      <soap12:operation soapAction="http://lhc.co.za/webservices/SendScheduledSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Response">
+      <soap12:operation soapAction="http://lhc.co.za/webservices/Response" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailAddress">
+      <soap12:operation soapAction="http://lhc.co.za/webservices/GetEmailAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <soap12:operation soapAction="http://lhc.co.za/webservices/GetUserName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupCellInfo">
+      <soap12:operation soapAction="http://lhc.co.za/webservices/GetGroupCellInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SMSHttpGet" type="tns:SMSHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="SendSMS">
+      <http:operation location="/SendSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendScheduledSMS">
+      <http:operation location="/SendScheduledSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Response">
+      <http:operation location="/Response" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailAddress">
+      <http:operation location="/GetEmailAddress" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <http:operation location="/GetUserName" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupCellInfo">
+      <http:operation location="/GetGroupCellInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SMSHttpPost" type="tns:SMSHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="SendSMS">
+      <http:operation location="/SendSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendScheduledSMS">
+      <http:operation location="/SendScheduledSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Response">
+      <http:operation location="/Response" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailAddress">
+      <http:operation location="/GetEmailAddress" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <http:operation location="/GetUserName" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupCellInfo">
+      <http:operation location="/GetGroupCellInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SMS">
+    <wsdl:port name="SMSSoap" binding="tns:SMSSoap">
+      <soap:address location="http://172.27.11.142/SMS_WS/default.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SMSSoap12" binding="tns:SMSSoap12">
+      <soap12:address location="http://172.27.11.142/SMS_WS/default.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SMSHttpGet" binding="tns:SMSHttpGet">
+      <http:address location="http://172.27.11.142/SMS_WS/default.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SMSHttpPost" binding="tns:SMSHttpPost">
+      <http:address location="http://172.27.11.142/SMS_WS/default.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

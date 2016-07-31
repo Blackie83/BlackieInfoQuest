@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_Pharmacy_UPD" targetNamespace="http://tempuri.org/DataSet_Form_Pharmacy_UPD.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_Pharmacy_UPD.xsd" xmlns="http://tempuri.org/DataSet_Form_Pharmacy_UPD.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vInfoQuest_Form_Pharmacy_UPDTableAdapter" GeneratorDataComponentClassName="vInfoQuest_Form_Pharmacy_UPDTableAdapter" Name="vInfoQuest_Form_Pharmacy_UPD" UserDataComponentName="vInfoQuest_Form_Pharmacy_UPDTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vInfoQuest_Form_Pharmacy_UPD" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM vInfoQuest_Form_Pharmacy_UPD WHERE UPD_Id = 2</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="UPD_Id" DataSetColumn="UPD_Id" />
+              <Mapping SourceColumn="UPD_Date" DataSetColumn="UPD_Date" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facilities_FacilityName" DataSetColumn="Facilities_FacilityName" />
+              <Mapping SourceColumn="Facilities_FacilityCode" DataSetColumn="Facilities_FacilityCode" />
+              <Mapping SourceColumn="FacilityDisplayName" DataSetColumn="FacilityDisplayName" />
+              <Mapping SourceColumn="UPD_ReportNumber" DataSetColumn="UPD_ReportNumber" />
+              <Mapping SourceColumn="UPD_ContactPerson" DataSetColumn="UPD_ContactPerson" />
+              <Mapping SourceColumn="UPD_ProductClassification_Lists" DataSetColumn="UPD_ProductClassification_Lists" />
+              <Mapping SourceColumn="UPD_ProductClassification_Name" DataSetColumn="UPD_ProductClassification_Name" />
+              <Mapping SourceColumn="UPD_ProductCode" DataSetColumn="UPD_ProductCode" />
+              <Mapping SourceColumn="UPD_ProductDescription" DataSetColumn="UPD_ProductDescription" />
+              <Mapping SourceColumn="UPD_ProductStrength" DataSetColumn="UPD_ProductStrength" />
+              <Mapping SourceColumn="UPD_ProductPackSize" DataSetColumn="UPD_ProductPackSize" />
+              <Mapping SourceColumn="UPD_ProductStatus_Lists" DataSetColumn="UPD_ProductStatus_Lists" />
+              <Mapping SourceColumn="UPD_ProductStatus_Name" DataSetColumn="UPD_ProductStatus_Name" />
+              <Mapping SourceColumn="UPD_OrderDate" DataSetColumn="UPD_OrderDate" />
+              <Mapping SourceColumn="UPD_MethodOrderPlacement_Lists" DataSetColumn="UPD_MethodOrderPlacement_Lists" />
+              <Mapping SourceColumn="UPD_MethodOrderPlacement_Name" DataSetColumn="UPD_MethodOrderPlacement_Name" />
+              <Mapping SourceColumn="UPD_StockFromAnotherWholesaler" DataSetColumn="UPD_StockFromAnotherWholesaler" />
+              <Mapping SourceColumn="UPD_Feedback_Completed" DataSetColumn="UPD_Feedback_Completed" />
+              <Mapping SourceColumn="UPD_Feedback_Description" DataSetColumn="UPD_Feedback_Description" />
+              <Mapping SourceColumn="UPD_Feedback_Date" DataSetColumn="UPD_Feedback_Date" />
+              <Mapping SourceColumn="UPD_CreatedDate" DataSetColumn="UPD_CreatedDate" />
+              <Mapping SourceColumn="UPD_CreatedBy" DataSetColumn="UPD_CreatedBy" />
+              <Mapping SourceColumn="UPD_ModifiedDate" DataSetColumn="UPD_ModifiedDate" />
+              <Mapping SourceColumn="UPD_ModifiedBy" DataSetColumn="UPD_ModifiedBy" />
+              <Mapping SourceColumn="UPD_History" DataSetColumn="UPD_History" />
+              <Mapping SourceColumn="UPD_IsActive" DataSetColumn="UPD_IsActive" />
+              <Mapping SourceColumn="Form_Emailed" DataSetColumn="Form_Emailed" />
+              <Mapping SourceColumn="Completed" DataSetColumn="Completed" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_Pharmacy_UPD" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet_Form_Pharmacy_UPD" msprop:Generator_DataSetName="DataSet_Form_Pharmacy_UPD">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vInfoQuest_Form_Pharmacy_UPD" msprop:Generator_TableClassName="vInfoQuest_Form_Pharmacy_UPDDataTable" msprop:Generator_TableVarName="tablevInfoQuest_Form_Pharmacy_UPD" msprop:Generator_TablePropName="vInfoQuest_Form_Pharmacy_UPD" msprop:Generator_RowDeletingName="vInfoQuest_Form_Pharmacy_UPDRowDeleting" msprop:Generator_UserTableName="vInfoQuest_Form_Pharmacy_UPD" msprop:Generator_RowChangingName="vInfoQuest_Form_Pharmacy_UPDRowChanging" msprop:Generator_RowEvHandlerName="vInfoQuest_Form_Pharmacy_UPDRowChangeEventHandler" msprop:Generator_RowDeletedName="vInfoQuest_Form_Pharmacy_UPDRowDeleted" msprop:Generator_RowEvArgName="vInfoQuest_Form_Pharmacy_UPDRowChangeEvent" msprop:Generator_RowChangedName="vInfoQuest_Form_Pharmacy_UPDRowChanged" msprop:Generator_RowClassName="vInfoQuest_Form_Pharmacy_UPDRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UPD_Id" msprop:Generator_ColumnVarNameInTable="columnUPD_Id" msprop:Generator_ColumnPropNameInRow="UPD_Id" msprop:Generator_ColumnPropNameInTable="UPD_IdColumn" msprop:Generator_UserColumnName="UPD_Id" type="xs:int" />
+              <xs:element name="UPD_Date" msprop:Generator_ColumnVarNameInTable="columnUPD_Date" msprop:Generator_ColumnPropNameInRow="UPD_Date" msprop:Generator_ColumnPropNameInTable="UPD_DateColumn" msprop:Generator_UserColumnName="UPD_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facilities_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityName" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityName" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityNameColumn" msprop:Generator_UserColumnName="Facilities_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facilities_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityCodeColumn" msprop:Generator_UserColumnName="Facilities_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacilityDisplayName" msprop:Generator_ColumnPropNameInRow="FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="FacilityDisplayNameColumn" msprop:Generator_UserColumnName="FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="253" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UPD_ReportNumber" msprop:Generator_ColumnVarNameInTable="columnUPD_ReportNumber" msprop:Generator_ColumnPropNameInRow="UPD_ReportNumber" msprop:Generator_ColumnPropNameInTable="UPD_ReportNumberColumn" msprop:Generator_UserColumnName="UPD_ReportNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UPD_ContactPerson" msprop:Generator_ColumnVarNameInTable="columnUPD_ContactPerson" msprop:Generator_ColumnPropNameInRow="UPD_ContactPerson" msprop:Generator_ColumnPropNameInTable="UPD_ContactPersonColumn" msprop:Generator_UserColumnName="UPD_ContactPerson" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UPD_ProductClassification_Lists" msprop:Generator_ColumnVarNameInTable="columnUPD_ProductClassification_Lists" msprop:Generator_ColumnPropNameInRow="UPD_ProductClassification_Lists" msprop:Generator_ColumnPropNameInTable="UPD_ProductClassification_ListsColumn" msprop:Generator_UserColumnName="UPD_ProductClassification_Lists" type="xs:int" minOccurs="0" />
+              <xs:element name="UPD_ProductClassification_Name" msprop:Generator_ColumnVarNameInTable="columnUPD_ProductClassification_Name" msprop:Generator_ColumnPropNameInRow="UPD_ProductClassification_Name" msprop:Generator_ColumnPropNameInTable="UPD_ProductClassification_NameColumn" msprop:Generator_UserColumnName="UPD_ProductClassification_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UPD_ProductCode" msprop:Generator_ColumnVarNameInTable="columnUPD_ProductCode" msprop:Generator_ColumnPropNameInRow="UPD_ProductCode" msprop:Generator_ColumnPropNameInTable="UPD_ProductCodeColumn" msprop:Generator_UserColumnName="UPD_ProductCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UPD_ProductDescription" msprop:Generator_ColumnVarNameInTable="columnUPD_ProductDescription" msprop:Generator_ColumnPropNameInRow="UPD_ProductDescription" msprop:Generator_ColumnPropNameInTable="UPD_ProductDescriptionColumn" msprop:Generator_UserColumnName="UPD_ProductDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UPD_ProductStrength" msprop:Generator_ColumnVarNameInTable="columnUPD_ProductStrength" msprop:Generator_ColumnPropNameInRow="UPD_ProductStrength" msprop:Generator_ColumnPropNameInTable="UPD_ProductStrengthColumn" msprop:Generator_UserColumnName="UPD_ProductStrength" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UPD_ProductPackSize" msprop:Generator_ColumnVarNameInTable="columnUPD_ProductPackSize" msprop:Generator_ColumnPropNameInRow="UPD_ProductPackSize" msprop:Generator_ColumnPropNameInTable="UPD_ProductPackSizeColumn" msprop:Generator_UserColumnName="UPD_ProductPackSize" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UPD_ProductStatus_Lists" msprop:Generator_ColumnVarNameInTable="columnUPD_ProductStatus_Lists" msprop:Generator_ColumnPropNameInRow="UPD_ProductStatus_Lists" msprop:Generator_ColumnPropNameInTable="UPD_ProductStatus_ListsColumn" msprop:Generator_UserColumnName="UPD_ProductStatus_Lists" type="xs:int" minOccurs="0" />
+              <xs:element name="UPD_ProductStatus_Name" msprop:Generator_ColumnVarNameInTable="columnUPD_ProductStatus_Name" msprop:Generator_ColumnPropNameInRow="UPD_ProductStatus_Name" msprop:Generator_ColumnPropNameInTable="UPD_ProductStatus_NameColumn" msprop:Generator_UserColumnName="UPD_ProductStatus_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UPD_OrderDate" msprop:Generator_ColumnVarNameInTable="columnUPD_OrderDate" msprop:Generator_ColumnPropNameInRow="UPD_OrderDate" msprop:Generator_ColumnPropNameInTable="UPD_OrderDateColumn" msprop:Generator_UserColumnName="UPD_OrderDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UPD_MethodOrderPlacement_Lists" msprop:Generator_ColumnVarNameInTable="columnUPD_MethodOrderPlacement_Lists" msprop:Generator_ColumnPropNameInRow="UPD_MethodOrderPlacement_Lists" msprop:Generator_ColumnPropNameInTable="UPD_MethodOrderPlacement_ListsColumn" msprop:Generator_UserColumnName="UPD_MethodOrderPlacement_Lists" type="xs:int" minOccurs="0" />
+              <xs:element name="UPD_MethodOrderPlacement_Name" msprop:Generator_ColumnVarNameInTable="columnUPD_MethodOrderPlacement_Name" msprop:Generator_ColumnPropNameInRow="UPD_MethodOrderPlacement_Name" msprop:Generator_ColumnPropNameInTable="UPD_MethodOrderPlacement_NameColumn" msprop:Generator_UserColumnName="UPD_MethodOrderPlacement_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UPD_StockFromAnotherWholesaler" msprop:Generator_ColumnVarNameInTable="columnUPD_StockFromAnotherWholesaler" msprop:Generator_ColumnPropNameInRow="UPD_StockFromAnotherWholesaler" msprop:Generator_ColumnPropNameInTable="UPD_StockFromAnotherWholesalerColumn" msprop:Generator_UserColumnName="UPD_StockFromAnotherWholesaler" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UPD_Feedback_Completed" msprop:Generator_ColumnVarNameInTable="columnUPD_Feedback_Completed" msprop:Generator_ColumnPropNameInRow="UPD_Feedback_Completed" msprop:Generator_ColumnPropNameInTable="UPD_Feedback_CompletedColumn" msprop:Generator_UserColumnName="UPD_Feedback_Completed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UPD_Feedback_Description" msprop:Generator_ColumnVarNameInTable="columnUPD_Feedback_Description" msprop:Generator_ColumnPropNameInRow="UPD_Feedback_Description" msprop:Generator_ColumnPropNameInTable="UPD_Feedback_DescriptionColumn" msprop:Generator_UserColumnName="UPD_Feedback_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UPD_Feedback_Date" msprop:Generator_ColumnVarNameInTable="columnUPD_Feedback_Date" msprop:Generator_ColumnPropNameInRow="UPD_Feedback_Date" msprop:Generator_ColumnPropNameInTable="UPD_Feedback_DateColumn" msprop:Generator_UserColumnName="UPD_Feedback_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UPD_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnUPD_CreatedDate" msprop:Generator_ColumnPropNameInRow="UPD_CreatedDate" msprop:Generator_ColumnPropNameInTable="UPD_CreatedDateColumn" msprop:Generator_UserColumnName="UPD_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UPD_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnUPD_CreatedBy" msprop:Generator_ColumnPropNameInRow="UPD_CreatedBy" msprop:Generator_ColumnPropNameInTable="UPD_CreatedByColumn" msprop:Generator_UserColumnName="UPD_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UPD_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnUPD_ModifiedDate" msprop:Generator_ColumnPropNameInRow="UPD_ModifiedDate" msprop:Generator_ColumnPropNameInTable="UPD_ModifiedDateColumn" msprop:Generator_UserColumnName="UPD_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UPD_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnUPD_ModifiedBy" msprop:Generator_ColumnPropNameInRow="UPD_ModifiedBy" msprop:Generator_ColumnPropNameInTable="UPD_ModifiedByColumn" msprop:Generator_UserColumnName="UPD_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UPD_History" msprop:Generator_ColumnVarNameInTable="columnUPD_History" msprop:Generator_ColumnPropNameInRow="UPD_History" msprop:Generator_ColumnPropNameInTable="UPD_HistoryColumn" msprop:Generator_UserColumnName="UPD_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UPD_IsActive" msprop:Generator_ColumnVarNameInTable="columnUPD_IsActive" msprop:Generator_ColumnPropNameInRow="UPD_IsActive" msprop:Generator_ColumnPropNameInTable="UPD_IsActiveColumn" msprop:Generator_UserColumnName="UPD_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Form_Emailed" msprop:Generator_ColumnVarNameInTable="columnForm_Emailed" msprop:Generator_ColumnPropNameInRow="Form_Emailed" msprop:Generator_ColumnPropNameInTable="Form_EmailedColumn" msprop:Generator_UserColumnName="Form_Emailed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Completed" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCompleted" msprop:Generator_ColumnPropNameInRow="Completed" msprop:Generator_ColumnPropNameInTable="CompletedColumn" msprop:Generator_UserColumnName="Completed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="39" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vInfoQuest_Form_Pharmacy_UPD" />
+      <xs:field xpath="mstns:UPD_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

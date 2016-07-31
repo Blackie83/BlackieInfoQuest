@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_Pharmacy_Hotline" targetNamespace="http://tempuri.org/DataSet_Form_Pharmacy_Hotline.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_Pharmacy_Hotline.xsd" xmlns="http://tempuri.org/DataSet_Form_Pharmacy_Hotline.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vInfoQuest_Form_Pharmacy_HotlineTableAdapter" GeneratorDataComponentClassName="vInfoQuest_Form_Pharmacy_HotlineTableAdapter" Name="vInfoQuest_Form_Pharmacy_Hotline" UserDataComponentName="vInfoQuest_Form_Pharmacy_HotlineTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vInfoQuest_Form_Pharmacy_Hotline" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM vInfoQuest_Form_Pharmacy_Hotline WHERE Hotline_Id = 2</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Hotline_Id" DataSetColumn="Hotline_Id" />
+              <Mapping SourceColumn="Hotline_Date" DataSetColumn="Hotline_Date" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facilities_FacilityName" DataSetColumn="Facilities_FacilityName" />
+              <Mapping SourceColumn="Facilities_FacilityCode" DataSetColumn="Facilities_FacilityCode" />
+              <Mapping SourceColumn="FacilityDisplayName" DataSetColumn="FacilityDisplayName" />
+              <Mapping SourceColumn="Hotline_ReportNumber" DataSetColumn="Hotline_ReportNumber" />
+              <Mapping SourceColumn="Hotline_ContactPerson" DataSetColumn="Hotline_ContactPerson" />
+              <Mapping SourceColumn="Hotline_Description" DataSetColumn="Hotline_Description" />
+              <Mapping SourceColumn="Hotline_StockCode" DataSetColumn="Hotline_StockCode" />
+              <Mapping SourceColumn="Hotline_ProductClassification_Lists" DataSetColumn="Hotline_ProductClassification_Lists" />
+              <Mapping SourceColumn="Hotline_ProductClassification_Name" DataSetColumn="Hotline_ProductClassification_Name" />
+              <Mapping SourceColumn="Hotline_ProductDescription" DataSetColumn="Hotline_ProductDescription" />
+              <Mapping SourceColumn="Hotline_Supplier_Lists" DataSetColumn="Hotline_Supplier_Lists" />
+              <Mapping SourceColumn="Hotline_Supplier_Name" DataSetColumn="Hotline_Supplier_Name" />
+              <Mapping SourceColumn="Hotline_Feedback_Date" DataSetColumn="Hotline_Feedback_Date" />
+              <Mapping SourceColumn="Hotline_Feedback_Description" DataSetColumn="Hotline_Feedback_Description" />
+              <Mapping SourceColumn="Hotline_Feedback_TypeOfQuery_Lists" DataSetColumn="Hotline_Feedback_TypeOfQuery_Lists" />
+              <Mapping SourceColumn="Hotline_Feedback_TypeOfQuery_Name" DataSetColumn="Hotline_Feedback_TypeOfQuery_Name" />
+              <Mapping SourceColumn="Hotline_Feedback_Completed" DataSetColumn="Hotline_Feedback_Completed" />
+              <Mapping SourceColumn="Hotline_CreatedDate" DataSetColumn="Hotline_CreatedDate" />
+              <Mapping SourceColumn="Hotline_CreatedBy" DataSetColumn="Hotline_CreatedBy" />
+              <Mapping SourceColumn="Hotline_ModifiedDate" DataSetColumn="Hotline_ModifiedDate" />
+              <Mapping SourceColumn="Hotline_ModifiedBy" DataSetColumn="Hotline_ModifiedBy" />
+              <Mapping SourceColumn="Hotline_History" DataSetColumn="Hotline_History" />
+              <Mapping SourceColumn="Hotline_IsActive" DataSetColumn="Hotline_IsActive" />
+              <Mapping SourceColumn="Form_Emailed" DataSetColumn="Form_Emailed" />
+              <Mapping SourceColumn="Completed" DataSetColumn="Completed" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_Pharmacy_Hotline" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet_Form_Pharmacy_Hotline" msprop:Generator_DataSetName="DataSet_Form_Pharmacy_Hotline">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vInfoQuest_Form_Pharmacy_Hotline" msprop:Generator_TableClassName="vInfoQuest_Form_Pharmacy_HotlineDataTable" msprop:Generator_TableVarName="tablevInfoQuest_Form_Pharmacy_Hotline" msprop:Generator_TablePropName="vInfoQuest_Form_Pharmacy_Hotline" msprop:Generator_RowDeletingName="vInfoQuest_Form_Pharmacy_HotlineRowDeleting" msprop:Generator_UserTableName="vInfoQuest_Form_Pharmacy_Hotline" msprop:Generator_RowChangingName="vInfoQuest_Form_Pharmacy_HotlineRowChanging" msprop:Generator_RowEvHandlerName="vInfoQuest_Form_Pharmacy_HotlineRowChangeEventHandler" msprop:Generator_RowDeletedName="vInfoQuest_Form_Pharmacy_HotlineRowDeleted" msprop:Generator_RowEvArgName="vInfoQuest_Form_Pharmacy_HotlineRowChangeEvent" msprop:Generator_RowChangedName="vInfoQuest_Form_Pharmacy_HotlineRowChanged" msprop:Generator_RowClassName="vInfoQuest_Form_Pharmacy_HotlineRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Hotline_Id" msprop:Generator_ColumnVarNameInTable="columnHotline_Id" msprop:Generator_ColumnPropNameInRow="Hotline_Id" msprop:Generator_ColumnPropNameInTable="Hotline_IdColumn" msprop:Generator_UserColumnName="Hotline_Id" type="xs:int" />
+              <xs:element name="Hotline_Date" msprop:Generator_ColumnVarNameInTable="columnHotline_Date" msprop:Generator_ColumnPropNameInRow="Hotline_Date" msprop:Generator_ColumnPropNameInTable="Hotline_DateColumn" msprop:Generator_UserColumnName="Hotline_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facilities_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityName" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityName" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityNameColumn" msprop:Generator_UserColumnName="Facilities_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facilities_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityCodeColumn" msprop:Generator_UserColumnName="Facilities_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacilityDisplayName" msprop:Generator_ColumnPropNameInRow="FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="FacilityDisplayNameColumn" msprop:Generator_UserColumnName="FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="253" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Hotline_ReportNumber" msprop:Generator_ColumnVarNameInTable="columnHotline_ReportNumber" msprop:Generator_ColumnPropNameInRow="Hotline_ReportNumber" msprop:Generator_ColumnPropNameInTable="Hotline_ReportNumberColumn" msprop:Generator_UserColumnName="Hotline_ReportNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Hotline_ContactPerson" msprop:Generator_ColumnVarNameInTable="columnHotline_ContactPerson" msprop:Generator_ColumnPropNameInRow="Hotline_ContactPerson" msprop:Generator_ColumnPropNameInTable="Hotline_ContactPersonColumn" msprop:Generator_UserColumnName="Hotline_ContactPerson" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Hotline_Description" msprop:Generator_ColumnVarNameInTable="columnHotline_Description" msprop:Generator_ColumnPropNameInRow="Hotline_Description" msprop:Generator_ColumnPropNameInTable="Hotline_DescriptionColumn" msprop:Generator_UserColumnName="Hotline_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Hotline_StockCode" msprop:Generator_ColumnVarNameInTable="columnHotline_StockCode" msprop:Generator_ColumnPropNameInRow="Hotline_StockCode" msprop:Generator_ColumnPropNameInTable="Hotline_StockCodeColumn" msprop:Generator_UserColumnName="Hotline_StockCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Hotline_ProductClassification_Lists" msprop:Generator_ColumnVarNameInTable="columnHotline_ProductClassification_Lists" msprop:Generator_ColumnPropNameInRow="Hotline_ProductClassification_Lists" msprop:Generator_ColumnPropNameInTable="Hotline_ProductClassification_ListsColumn" msprop:Generator_UserColumnName="Hotline_ProductClassification_Lists" type="xs:int" minOccurs="0" />
+              <xs:element name="Hotline_ProductClassification_Name" msprop:Generator_ColumnVarNameInTable="columnHotline_ProductClassification_Name" msprop:Generator_ColumnPropNameInRow="Hotline_ProductClassification_Name" msprop:Generator_ColumnPropNameInTable="Hotline_ProductClassification_NameColumn" msprop:Generator_UserColumnName="Hotline_ProductClassification_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Hotline_ProductDescription" msprop:Generator_ColumnVarNameInTable="columnHotline_ProductDescription" msprop:Generator_ColumnPropNameInRow="Hotline_ProductDescription" msprop:Generator_ColumnPropNameInTable="Hotline_ProductDescriptionColumn" msprop:Generator_UserColumnName="Hotline_ProductDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Hotline_Supplier_Lists" msprop:Generator_ColumnVarNameInTable="columnHotline_Supplier_Lists" msprop:Generator_ColumnPropNameInRow="Hotline_Supplier_Lists" msprop:Generator_ColumnPropNameInTable="Hotline_Supplier_ListsColumn" msprop:Generator_UserColumnName="Hotline_Supplier_Lists" type="xs:int" minOccurs="0" />
+              <xs:element name="Hotline_Supplier_Name" msprop:Generator_ColumnVarNameInTable="columnHotline_Supplier_Name" msprop:Generator_ColumnPropNameInRow="Hotline_Supplier_Name" msprop:Generator_ColumnPropNameInTable="Hotline_Supplier_NameColumn" msprop:Generator_UserColumnName="Hotline_Supplier_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Hotline_Feedback_Date" msprop:Generator_ColumnVarNameInTable="columnHotline_Feedback_Date" msprop:Generator_ColumnPropNameInRow="Hotline_Feedback_Date" msprop:Generator_ColumnPropNameInTable="Hotline_Feedback_DateColumn" msprop:Generator_UserColumnName="Hotline_Feedback_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Hotline_Feedback_Description" msprop:Generator_ColumnVarNameInTable="columnHotline_Feedback_Description" msprop:Generator_ColumnPropNameInRow="Hotline_Feedback_Description" msprop:Generator_ColumnPropNameInTable="Hotline_Feedback_DescriptionColumn" msprop:Generator_UserColumnName="Hotline_Feedback_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Hotline_Feedback_TypeOfQuery_Lists" msprop:Generator_ColumnVarNameInTable="columnHotline_Feedback_TypeOfQuery_Lists" msprop:Generator_ColumnPropNameInRow="Hotline_Feedback_TypeOfQuery_Lists" msprop:Generator_ColumnPropNameInTable="Hotline_Feedback_TypeOfQuery_ListsColumn" msprop:Generator_UserColumnName="Hotline_Feedback_TypeOfQuery_Lists" type="xs:int" minOccurs="0" />
+              <xs:element name="Hotline_Feedback_TypeOfQuery_Name" msprop:Generator_ColumnVarNameInTable="columnHotline_Feedback_TypeOfQuery_Name" msprop:Generator_ColumnPropNameInRow="Hotline_Feedback_TypeOfQuery_Name" msprop:Generator_ColumnPropNameInTable="Hotline_Feedback_TypeOfQuery_NameColumn" msprop:Generator_UserColumnName="Hotline_Feedback_TypeOfQuery_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Hotline_Feedback_Completed" msprop:Generator_ColumnVarNameInTable="columnHotline_Feedback_Completed" msprop:Generator_ColumnPropNameInRow="Hotline_Feedback_Completed" msprop:Generator_ColumnPropNameInTable="Hotline_Feedback_CompletedColumn" msprop:Generator_UserColumnName="Hotline_Feedback_Completed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Hotline_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnHotline_CreatedDate" msprop:Generator_ColumnPropNameInRow="Hotline_CreatedDate" msprop:Generator_ColumnPropNameInTable="Hotline_CreatedDateColumn" msprop:Generator_UserColumnName="Hotline_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Hotline_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnHotline_CreatedBy" msprop:Generator_ColumnPropNameInRow="Hotline_CreatedBy" msprop:Generator_ColumnPropNameInTable="Hotline_CreatedByColumn" msprop:Generator_UserColumnName="Hotline_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Hotline_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnHotline_ModifiedDate" msprop:Generator_ColumnPropNameInRow="Hotline_ModifiedDate" msprop:Generator_ColumnPropNameInTable="Hotline_ModifiedDateColumn" msprop:Generator_UserColumnName="Hotline_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Hotline_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnHotline_ModifiedBy" msprop:Generator_ColumnPropNameInRow="Hotline_ModifiedBy" msprop:Generator_ColumnPropNameInTable="Hotline_ModifiedByColumn" msprop:Generator_UserColumnName="Hotline_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Hotline_History" msprop:Generator_ColumnVarNameInTable="columnHotline_History" msprop:Generator_ColumnPropNameInRow="Hotline_History" msprop:Generator_ColumnPropNameInTable="Hotline_HistoryColumn" msprop:Generator_UserColumnName="Hotline_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Hotline_IsActive" msprop:Generator_ColumnVarNameInTable="columnHotline_IsActive" msprop:Generator_ColumnPropNameInRow="Hotline_IsActive" msprop:Generator_ColumnPropNameInTable="Hotline_IsActiveColumn" msprop:Generator_UserColumnName="Hotline_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Form_Emailed" msprop:Generator_ColumnVarNameInTable="columnForm_Emailed" msprop:Generator_ColumnPropNameInRow="Form_Emailed" msprop:Generator_ColumnPropNameInTable="Form_EmailedColumn" msprop:Generator_UserColumnName="Form_Emailed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Completed" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCompleted" msprop:Generator_ColumnPropNameInRow="Completed" msprop:Generator_ColumnPropNameInTable="CompletedColumn" msprop:Generator_UserColumnName="Completed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="39" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vInfoQuest_Form_Pharmacy_Hotline" />
+      <xs:field xpath="mstns:Hotline_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

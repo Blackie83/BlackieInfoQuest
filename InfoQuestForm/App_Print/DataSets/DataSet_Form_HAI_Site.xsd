@@ -1,0 +1,710 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_HAI_Site" targetNamespace="http://tempuri.org/DataSet_Form_HAI_Site.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_HAI_Site.xsd" xmlns="http://tempuri.org/DataSet_Form_HAI_Site.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_HAI_HeaderTableAdapter" GeneratorDataComponentClassName="Form_HAI_HeaderTableAdapter" Name="Form_HAI_Header" UserDataComponentName="Form_HAI_HeaderTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT DISTINCT vAdministration_Facility_All.Facility_FacilityDisplayName AS FacilityDisplayName , tblInfectionPrevention.sReportNumber
+                      FROM tblInfectionPrevention , vAdministration_Facility_All
+                      WHERE
+                      tblInfectionPrevention.fkiFacilityID = vAdministration_Facility_All.Facility_Id
+                      AND (pkiInfectionFormID = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FacilityDisplayName" DataSetColumn="FacilityDisplayName" />
+              <Mapping SourceColumn="sReportNumber" DataSetColumn="sReportNumber" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_HAI_SiteTableAdapter" GeneratorDataComponentClassName="Form_HAI_SiteTableAdapter" Name="Form_HAI_Site" UserDataComponentName="Form_HAI_SiteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.tblInfectionPrevention_Site" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT iSiteNumber
+FROM         tblInfectionPrevention_Site
+WHERE     (fkiInfectionFormID = 1) AND ( iSiteNumber = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="iSiteNumber" DataSetColumn="iSiteNumber" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_HAI_InfectionDetailTableAdapter" GeneratorDataComponentClassName="Form_HAI_InfectionDetailTableAdapter" Name="Form_HAI_InfectionDetail" UserDataComponentName="Form_HAI_InfectionDetailTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT DISTINCT
+                      tblInfectionPrevention_Site.fkiInfectionFormID, tblInfectionPrevention_Site.iSiteNumber, tblInfectionPrevention_Site.fkiFacilityUnitID,
+                      Administration_Unit.Unit_Name, tblInfectionPrevention_Site.dtReported, tblInfectionPrevention_Site.fkiInfectionTypeID,
+                      vAdministration_ListItem_Active_1.ListItem_Name AS InfectionTypeName, tblInfectionPrevention_Site.fkiInfectionSubTypeID, vAdministration_ListItem_Active.ListItem_Name AS InfectionSubTypeName,
+                      tblInfectionPrevention_Site.fkiSeverityTypeID, tblSeverityType.sDescription, tblInfectionPrevention_Site.sDescription AS InfectionPrevention_SiteDescription
+                      FROM         vAdministration_ListItem_Active AS vAdministration_ListItem_Active_1 RIGHT OUTER JOIN
+                      tblInfectionPrevention_Site ON vAdministration_ListItem_Active_1.ListItem_Id = tblInfectionPrevention_Site.fkiInfectionTypeID LEFT OUTER JOIN
+                      tblSeverityType ON tblInfectionPrevention_Site.fkiSeverityTypeID = tblSeverityType.pkiSeverityTypeID LEFT OUTER JOIN
+                      vAdministration_ListItem_Active AS vAdministration_ListItem_Active ON tblInfectionPrevention_Site.fkiInfectionSubTypeID = vAdministration_ListItem_Active.ListItem_Id LEFT OUTER JOIN
+                      Administration_Unit ON tblInfectionPrevention_Site.fkiFacilityUnitID = Administration_Unit.Unit_Id
+                      WHERE     (tblInfectionPrevention_Site.fkiInfectionFormID = 1) AND (tblInfectionPrevention_Site.iSiteNumber = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="fkiInfectionFormID" DataSetColumn="fkiInfectionFormID" />
+              <Mapping SourceColumn="iSiteNumber" DataSetColumn="iSiteNumber" />
+              <Mapping SourceColumn="fkiFacilityUnitID" DataSetColumn="fkiFacilityUnitID" />
+              <Mapping SourceColumn="Unit_Name" DataSetColumn="Unit_Name" />
+              <Mapping SourceColumn="dtReported" DataSetColumn="dtReported" />
+              <Mapping SourceColumn="fkiInfectionTypeID" DataSetColumn="fkiInfectionTypeID" />
+              <Mapping SourceColumn="InfectionTypeName" DataSetColumn="InfectionTypeName" />
+              <Mapping SourceColumn="fkiInfectionSubTypeID" DataSetColumn="fkiInfectionSubTypeID" />
+              <Mapping SourceColumn="InfectionSubTypeName" DataSetColumn="InfectionSubTypeName" />
+              <Mapping SourceColumn="fkiSeverityTypeID" DataSetColumn="fkiSeverityTypeID" />
+              <Mapping SourceColumn="sDescription" DataSetColumn="sDescription" />
+              <Mapping SourceColumn="InfectionPrevention_SiteDescription" DataSetColumn="InfectionPrevention_SiteDescription" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_HAI_PredisposingConditionTableAdapter" GeneratorDataComponentClassName="Form_HAI_PredisposingConditionTableAdapter" Name="Form_HAI_PredisposingCondition" UserDataComponentName="Form_HAI_PredisposingConditionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT DISTINCT
+                      tblInfectionPrevention_Site.fkiInfectionFormID, tblInfectionPrevention_Site.iSiteNumber,
+                      tblInfectionPrevention_Site_PredisposingCondition.fkiConditionID, vAdministration_ListItem_Active.ListItem_Name AS PredisposingConditonName,
+                      tblInfectionPrevention_Site_PredisposingCondition.sDescription AS PredisposingConditionsDescription,
+                      tblInfectionPrevention_Site_PredisposingCondition.bSelected
+                      FROM         tblInfectionPrevention_Site LEFT OUTER JOIN
+                      vAdministration_ListItem_Active AS vAdministration_ListItem_Active RIGHT OUTER JOIN
+                      tblInfectionPrevention_Site_PredisposingCondition ON
+                      vAdministration_ListItem_Active.ListItem_Id = tblInfectionPrevention_Site_PredisposingCondition.fkiConditionID ON
+                      tblInfectionPrevention_Site.pkiSiteID = tblInfectionPrevention_Site_PredisposingCondition.fkiSiteID
+                      WHERE     (tblInfectionPrevention_Site.fkiInfectionFormID = 1) AND (tblInfectionPrevention_Site.iSiteNumber = 1) AND
+                      (tblInfectionPrevention_Site_PredisposingCondition.bSelected = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="fkiInfectionFormID" DataSetColumn="fkiInfectionFormID" />
+              <Mapping SourceColumn="iSiteNumber" DataSetColumn="iSiteNumber" />
+              <Mapping SourceColumn="fkiConditionID" DataSetColumn="fkiConditionID" />
+              <Mapping SourceColumn="PredisposingConditonName" DataSetColumn="PredisposingConditonName" />
+              <Mapping SourceColumn="PredisposingConditionsDescription" DataSetColumn="PredisposingConditionsDescription" />
+              <Mapping SourceColumn="bSelected" DataSetColumn="bSelected" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_HAI_BedHistoryTableAdapter" GeneratorDataComponentClassName="Form_HAI_BedHistoryTableAdapter" Name="Form_HAI_BedHistory" UserDataComponentName="Form_HAI_BedHistoryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT tblInfectionPrevention_Site.fkiInfectionFormID, tblInfectionPrevention_Site.iSiteNumber, tblInfectionPrevention_Site_BedHistory.sFromUnit, tblInfectionPrevention_Site_BedHistory.sToUnit, CAST(tblInfectionPrevention_Site_BedHistory.sDateTransferred AS DATETIME) AS sDateTransferred FROM tblInfectionPrevention_Site LEFT OUTER JOIN tblInfectionPrevention_Site_BedHistory ON tblInfectionPrevention_Site.pkiSiteID = tblInfectionPrevention_Site_BedHistory.fkiSiteID WHERE (tblInfectionPrevention_Site.fkiInfectionFormID = 1) AND (tblInfectionPrevention_Site.iSiteNumber = 1) AND  (tblInfectionPrevention_Site_BedHistory.bSelected = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="fkiInfectionFormID" DataSetColumn="fkiInfectionFormID" />
+              <Mapping SourceColumn="iSiteNumber" DataSetColumn="iSiteNumber" />
+              <Mapping SourceColumn="sFromUnit" DataSetColumn="sFromUnit" />
+              <Mapping SourceColumn="sToUnit" DataSetColumn="sToUnit" />
+              <Mapping SourceColumn="sDateTransferred" DataSetColumn="sDateTransferred" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_HAI_TPN_ENTTableAdapter" GeneratorDataComponentClassName="Form_HAI_TPN_ENTTableAdapter" Name="Form_HAI_TPN_ENT" UserDataComponentName="Form_HAI_TPN_ENTTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.tblInfectionPrevention_Site" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT fkiInfectionFormID, iSiteNumber 
+sRelatedHighRiskProcedures,
+CASE
+	WHEN (CHARINDEX('TPN',sRelatedHighRiskProcedures,0)) &gt; 0
+		THEN 'Yes'
+	WHEN (CHARINDEX('TPN',sRelatedHighRiskProcedures,0)) = 0
+		THEN 'No'
+END AS TPN,
+CASE 
+	WHEN (CHARINDEX('Enteral Feeding',sRelatedHighRiskProcedures,0)) &gt; 0
+                      THEN'Yes'
+                      WHEN (CHARINDEX('Enteral Feeding',sRelatedHighRiskProcedures,0)) = 0
+                      THEN 'No'
+                      END AS ENT
+                      FROM         vAdministration_ListItem_Active AS vAdministration_ListItem_Active_1 RIGHT OUTER JOIN
+                      tblInfectionPrevention_Site ON vAdministration_ListItem_Active_1.ListItem_Id = tblInfectionPrevention_Site.fkiInfectionTypeID LEFT OUTER JOIN
+                      tblSeverityType ON tblInfectionPrevention_Site.fkiSeverityTypeID = tblSeverityType.pkiSeverityTypeID LEFT OUTER JOIN
+                      vAdministration_ListItem_Active AS vAdministration_ListItem_Active ON tblInfectionPrevention_Site.fkiInfectionSubTypeID = vAdministration_ListItem_Active.ListItem_Id LEFT OUTER JOIN
+                      Administration_Unit ON tblInfectionPrevention_Site.fkiFacilityUnitID = Administration_Unit.Unit_Id
+                      WHERE     (tblInfectionPrevention_Site.fkiInfectionFormID = 1) AND (tblInfectionPrevention_Site.iSiteNumber = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="fkiInfectionFormID" DataSetColumn="fkiInfectionFormID" />
+              <Mapping SourceColumn="sRelatedHighRiskProcedures" DataSetColumn="sRelatedHighRiskProcedures" />
+              <Mapping SourceColumn="TPN" DataSetColumn="TPN" />
+              <Mapping SourceColumn="ENT" DataSetColumn="ENT" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_HAI_AntibioticTableAdapter" GeneratorDataComponentClassName="Form_HAI_AntibioticTableAdapter" Name="Form_HAI_Antibiotic" UserDataComponentName="Form_HAI_AntibioticTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.tblInfectionPrevention_Antibiotic" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT  sDescription FROM tblInfectionPrevention_Antibiotic
+WHERE fkiInfectionFormID = 1
+ORDER BY sDescription</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="sDescription" DataSetColumn="sDescription" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_HAI_BundleComplianceTableAdapter" GeneratorDataComponentClassName="Form_HAI_BundleComplianceTableAdapter" Name="Form_HAI_BundleCompliance" UserDataComponentName="Form_HAI_BundleComplianceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT DISTINCT
+                      tblInfectionPrevention_Site.fkiInfectionFormID, tblInfectionPrevention_Site.iSiteNumber,
+                      tblInfectionPrevention_Site.sRelatedHighRiskProcedures, tblInfectionPrevention_Site.fkiInfectionTypeID, vAdministration_ListItem_Active_1.ListItem_Name AS InfectionTypeName,
+                      tblInfectionPrevention_Site.fkiBundleComplianceID, tblOveralBundleCompliance.sDescription, tblInfectionPrevention_Site.sInfectionDays,
+                      tblInfectionPrevention_Site_BundleComplianceItem.fkiBundleItemTypeID, vAdministration_ListItem_Active.ListItem_Name AS BundleItemTypeName,
+                      tblInfectionPrevention_Site_BundleComplianceItem.bSelected
+                      FROM         vAdministration_ListItem_Active AS vAdministration_ListItem_Active_1 RIGHT OUTER JOIN
+                      tblInfectionPrevention_Site ON vAdministration_ListItem_Active_1.ListItem_Id = tblInfectionPrevention_Site.fkiInfectionTypeID LEFT OUTER JOIN
+                      tblOveralBundleCompliance ON
+                      tblInfectionPrevention_Site.fkiBundleComplianceID = tblOveralBundleCompliance.pkiBundleComplianceID LEFT OUTER JOIN
+                      vAdministration_ListItem_Active AS vAdministration_ListItem_Active RIGHT OUTER JOIN
+                      tblInfectionPrevention_Site_BundleComplianceItem ON
+                      vAdministration_ListItem_Active.ListItem_Id = tblInfectionPrevention_Site_BundleComplianceItem.fkiBundleItemTypeID ON
+                      tblInfectionPrevention_Site.pkiSiteID = tblInfectionPrevention_Site_BundleComplianceItem.fkiSiteID
+                      WHERE     (tblInfectionPrevention_Site.fkiInfectionFormID = 1) AND (tblInfectionPrevention_Site.iSiteNumber = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="fkiInfectionFormID" DataSetColumn="fkiInfectionFormID" />
+              <Mapping SourceColumn="iSiteNumber" DataSetColumn="iSiteNumber" />
+              <Mapping SourceColumn="sRelatedHighRiskProcedures" DataSetColumn="sRelatedHighRiskProcedures" />
+              <Mapping SourceColumn="fkiInfectionTypeID" DataSetColumn="fkiInfectionTypeID" />
+              <Mapping SourceColumn="InfectionTypeName" DataSetColumn="InfectionTypeName" />
+              <Mapping SourceColumn="fkiBundleComplianceID" DataSetColumn="fkiBundleComplianceID" />
+              <Mapping SourceColumn="sDescription" DataSetColumn="sDescription" />
+              <Mapping SourceColumn="sInfectionDays" DataSetColumn="sInfectionDays" />
+              <Mapping SourceColumn="fkiBundleItemTypeID" DataSetColumn="fkiBundleItemTypeID" />
+              <Mapping SourceColumn="BundleItemTypeName" DataSetColumn="BundleItemTypeName" />
+              <Mapping SourceColumn="bSelected" DataSetColumn="bSelected" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_HAI_ReportableDiseasesTableAdapter" GeneratorDataComponentClassName="Form_HAI_ReportableDiseasesTableAdapter" Name="Form_HAI_ReportableDiseases" UserDataComponentName="Form_HAI_ReportableDiseasesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT tblInfectionPrevention_Site.fkiInfectionFormID, tblInfectionPrevention_Site.iSiteNumber, tblInfectionPrevention_Site_ReportableDisease.sReportedToDepartment, vAdministration_ListItem_Active.ListItem_Name AS DiseaseName, CAST(tblInfectionPrevention_Site_ReportableDisease.sDateReported AS DATETIME) AS sDateReported, tblInfectionPrevention_Site_ReportableDisease.sReferenceNumber FROM tblInfectionPrevention_Site LEFT OUTER JOIN vAdministration_ListItem_Active AS vAdministration_ListItem_Active RIGHT OUTER JOIN tblInfectionPrevention_Site_ReportableDisease ON vAdministration_ListItem_Active.ListItem_Id = tblInfectionPrevention_Site_ReportableDisease.fkiDiseaseID ON tblInfectionPrevention_Site.pkiSiteID = tblInfectionPrevention_Site_ReportableDisease.fkiSiteID WHERE (tblInfectionPrevention_Site.fkiInfectionFormID = 1) AND (tblInfectionPrevention_Site.iSiteNumber = 1) AND (tblInfectionPrevention_Site_ReportableDisease.bSelected = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="fkiInfectionFormID" DataSetColumn="fkiInfectionFormID" />
+              <Mapping SourceColumn="iSiteNumber" DataSetColumn="iSiteNumber" />
+              <Mapping SourceColumn="sReportedToDepartment" DataSetColumn="sReportedToDepartment" />
+              <Mapping SourceColumn="DiseaseName" DataSetColumn="DiseaseName" />
+              <Mapping SourceColumn="sDateReported" DataSetColumn="sDateReported" />
+              <Mapping SourceColumn="sReferenceNumber" DataSetColumn="sReferenceNumber" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_HAI_LabReportsTableAdapter" GeneratorDataComponentClassName="Form_HAI_LabReportsTableAdapter" Name="Form_HAI_LabReports" UserDataComponentName="Form_HAI_LabReportsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT tblInfectionPrevention_Site.fkiInfectionFormID, tblInfectionPrevention_Site.iSiteNumber, CAST(tblInfectionPrevention_Site_LabReport.sLabDate AS DATETIME) AS sLabDate, tblInfectionPrevention_Site_LabReport.sSpecimen, tblInfectionPrevention_Site_LabReport.sOrganism, tblInfectionPrevention_Site_LabReport.sLabNumber FROM tblInfectionPrevention_Site LEFT OUTER JOIN tblInfectionPrevention_Site_LabReport ON tblInfectionPrevention_Site.pkiSiteID = tblInfectionPrevention_Site_LabReport.fkiSiteID WHERE (tblInfectionPrevention_Site.fkiInfectionFormID = 1) AND (tblInfectionPrevention_Site.iSiteNumber = 1) AND (tblInfectionPrevention_Site_LabReport.bSelected = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="fkiInfectionFormID" DataSetColumn="fkiInfectionFormID" />
+              <Mapping SourceColumn="iSiteNumber" DataSetColumn="iSiteNumber" />
+              <Mapping SourceColumn="sLabDate" DataSetColumn="sLabDate" />
+              <Mapping SourceColumn="sSpecimen" DataSetColumn="sSpecimen" />
+              <Mapping SourceColumn="sOrganism" DataSetColumn="sOrganism" />
+              <Mapping SourceColumn="sLabNumber" DataSetColumn="sLabNumber" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_HAI_SurgeryDetailsTableAdapter" GeneratorDataComponentClassName="Form_HAI_SurgeryDetailsTableAdapter" Name="Form_HAI_SurgeryDetails" UserDataComponentName="Form_HAI_SurgeryDetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT tblInfectionPrevention_Site.fkiInfectionFormID, tblInfectionPrevention_Site.iSiteNumber, CASE WHEN tblInfectionPrevention_Site_Surgery.sFacility = '' THEN 'No Information' WHEN tblInfectionPrevention_Site_Surgery.sFacility &lt;&gt; '' THEN tblInfectionPrevention_Site_Surgery.sFacility END AS sFacility, CASE WHEN tblInfectionPrevention_Site_Surgery.sVisitNumber = '' THEN 'No Information' WHEN tblInfectionPrevention_Site_Surgery.sVisitNumber &lt;&gt; '' THEN tblInfectionPrevention_Site_Surgery.sVisitNumber END AS sVisitNumber, CASE WHEN tblInfectionPrevention_Site_Surgery.sProcedure = '' THEN 'No Information' WHEN tblInfectionPrevention_Site_Surgery.sProcedure &lt;&gt; '' THEN tblInfectionPrevention_Site_Surgery.sProcedure END AS sProcedure, CASE WHEN tblInfectionPrevention_Site_Surgery.sSurgeryDate = '' THEN 'No Information' WHEN tblInfectionPrevention_Site_Surgery.sSurgeryDate &lt;&gt; '' THEN CAST(tblInfectionPrevention_Site_Surgery.sSurgeryDate AS DATETIME) END AS sSurgeryDate, CASE WHEN tblInfectionPrevention_Site_Surgery.sSurgeryDuration = '' THEN 'No Information' WHEN tblInfectionPrevention_Site_Surgery.sSurgeryDuration &lt;&gt; '' THEN tblInfectionPrevention_Site_Surgery.sSurgeryDuration END AS sSurgeryDuration, CASE WHEN dbo.tblInfectionPrevention_Site_Surgery.sTheatreInvoice = '' THEN 'No Information' WHEN dbo.tblInfectionPrevention_Site_Surgery.sTheatreInvoice &lt;&gt; '' THEN dbo.tblInfectionPrevention_Site_Surgery.sTheatreInvoice END AS sTheatreInvoice, CASE WHEN tblInfectionPrevention_Site_Surgery.sTheatre = '' THEN 'No Information' WHEN tblInfectionPrevention_Site_Surgery.sTheatre &lt;&gt; '' THEN tblInfectionPrevention_Site_Surgery.sTheatre END AS sTheatre, CASE WHEN tblInfectionPrevention_Site_Surgery.sSurgeon = '' THEN 'No Information' WHEN tblInfectionPrevention_Site_Surgery.sSurgeon &lt;&gt; '' THEN tblInfectionPrevention_Site_Surgery.sSurgeon END AS sSurgeon, CASE WHEN tblInfectionPrevention_Site_Surgery.sAssistant = '' THEN 'No Information' WHEN tblInfectionPrevention_Site_Surgery.sAssistant &lt;&gt; '' THEN tblInfectionPrevention_Site_Surgery.sAssistant END AS sAssistant, CASE WHEN tblInfectionPrevention_Site_Surgery.sScrubNurse = '' THEN 'No Information' WHEN tblInfectionPrevention_Site_Surgery.sScrubNurse &lt;&gt; '' THEN tblInfectionPrevention_Site_Surgery.sScrubNurse END AS sScrubNurse, CASE WHEN tblInfectionPrevention_Site_Surgery.sAnaesthesist = '' THEN 'No Information' WHEN tblInfectionPrevention_Site_Surgery.sAnaesthesist &lt;&gt; '' THEN tblInfectionPrevention_Site_Surgery.sAnaesthesist END AS sAnaesthesist, CASE WHEN tblInfectionPrevention_Site_Surgery.sWound = '' THEN 'No Information' WHEN tblInfectionPrevention_Site_Surgery.sWound &lt;&gt; '' THEN tblInfectionPrevention_Site_Surgery.sWound END AS sWound, CASE WHEN tblInfectionPrevention_Site_Surgery.sCategory = '' THEN 'No Information' WHEN tblInfectionPrevention_Site_Surgery.sCategory &lt;&gt; '' THEN tblInfectionPrevention_Site_Surgery.sCategory END AS sCategory, CASE WHEN tblInfectionPrevention_Site_Surgery.sFinalDiagnosis = '' THEN 'No Information' WHEN tblInfectionPrevention_Site_Surgery.sFinalDiagnosis &lt;&gt; '' THEN tblInfectionPrevention_Site_Surgery.sFinalDiagnosis END AS sFinalDiagnosis, CASE WHEN tblInfectionPrevention_Site_Surgery.sAdmissionDate = '' THEN 'No Information' WHEN tblInfectionPrevention_Site_Surgery.sAdmissionDate &lt;&gt; '' THEN tblInfectionPrevention_Site_Surgery.sAdmissionDate END AS sAdmissionDate, CASE WHEN tblInfectionPrevention_Site_Surgery.sDischargeDate = '' THEN 'No Information' WHEN tblInfectionPrevention_Site_Surgery.sDischargeDate &lt;&gt; '' THEN tblInfectionPrevention_Site_Surgery.sDischargeDate END AS sDischargeDate, tblInfectionPrevention_Site_Surgery.bSelected FROM tblInfectionPrevention_Site LEFT OUTER JOIN tblInfectionPrevention_Site_Surgery ON tblInfectionPrevention_Site.pkiSiteID = tblInfectionPrevention_Site_Surgery.fkiSiteID WHERE (tblInfectionPrevention_Site.fkiInfectionFormID = 1) AND (tblInfectionPrevention_Site_Surgery.bSelected = 1) AND (tblInfectionPrevention_Site.iSiteNumber = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="fkiInfectionFormID" DataSetColumn="fkiInfectionFormID" />
+              <Mapping SourceColumn="iSiteNumber" DataSetColumn="iSiteNumber" />
+              <Mapping SourceColumn="sFacility" DataSetColumn="sFacility" />
+              <Mapping SourceColumn="sVisitNumber" DataSetColumn="sVisitNumber" />
+              <Mapping SourceColumn="sProcedure" DataSetColumn="sProcedure" />
+              <Mapping SourceColumn="sSurgeryDate" DataSetColumn="sSurgeryDate" />
+              <Mapping SourceColumn="sSurgeryDuration" DataSetColumn="sSurgeryDuration" />
+              <Mapping SourceColumn="sTheatreInvoice" DataSetColumn="sTheatreInvoice" />
+              <Mapping SourceColumn="sTheatre" DataSetColumn="sTheatre" />
+              <Mapping SourceColumn="sSurgeon" DataSetColumn="sSurgeon" />
+              <Mapping SourceColumn="sAssistant" DataSetColumn="sAssistant" />
+              <Mapping SourceColumn="sScrubNurse" DataSetColumn="sScrubNurse" />
+              <Mapping SourceColumn="sAnaesthesist" DataSetColumn="sAnaesthesist" />
+              <Mapping SourceColumn="sWound" DataSetColumn="sWound" />
+              <Mapping SourceColumn="sCategory" DataSetColumn="sCategory" />
+              <Mapping SourceColumn="sFinalDiagnosis" DataSetColumn="sFinalDiagnosis" />
+              <Mapping SourceColumn="sAdmissionDate" DataSetColumn="sAdmissionDate" />
+              <Mapping SourceColumn="sDischargeDate" DataSetColumn="sDischargeDate" />
+              <Mapping SourceColumn="bSelected" DataSetColumn="bSelected" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_HAI_Site" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet_Form_HAI_Site" msprop:Generator_UserDSName="DataSet_Form_HAI_Site">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Form_HAI_Header" msprop:Generator_TableClassName="Form_HAI_HeaderDataTable" msprop:Generator_TableVarName="tableForm_HAI_Header" msprop:Generator_TablePropName="Form_HAI_Header" msprop:Generator_RowDeletingName="Form_HAI_HeaderRowDeleting" msprop:Generator_UserTableName="Form_HAI_Header" msprop:Generator_RowChangingName="Form_HAI_HeaderRowChanging" msprop:Generator_RowEvHandlerName="Form_HAI_HeaderRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_HAI_HeaderRowDeleted" msprop:Generator_RowEvArgName="Form_HAI_HeaderRowChangeEvent" msprop:Generator_RowChangedName="Form_HAI_HeaderRowChanged" msprop:Generator_RowClassName="Form_HAI_HeaderRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacilityDisplayName" msprop:Generator_ColumnPropNameInRow="FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="FacilityDisplayNameColumn" msprop:Generator_UserColumnName="FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="253" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sReportNumber" msprop:Generator_ColumnVarNameInTable="columnsReportNumber" msprop:Generator_ColumnPropNameInRow="sReportNumber" msprop:Generator_ColumnPropNameInTable="sReportNumberColumn" msprop:Generator_UserColumnName="sReportNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_HAI_Site" msprop:Generator_TableClassName="Form_HAI_SiteDataTable" msprop:Generator_TableVarName="tableForm_HAI_Site" msprop:Generator_TablePropName="Form_HAI_Site" msprop:Generator_RowDeletingName="Form_HAI_SiteRowDeleting" msprop:Generator_UserTableName="Form_HAI_Site" msprop:Generator_RowChangingName="Form_HAI_SiteRowChanging" msprop:Generator_RowEvHandlerName="Form_HAI_SiteRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_HAI_SiteRowDeleted" msprop:Generator_RowEvArgName="Form_HAI_SiteRowChangeEvent" msprop:Generator_RowChangedName="Form_HAI_SiteRowChanged" msprop:Generator_RowClassName="Form_HAI_SiteRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="iSiteNumber" msprop:Generator_ColumnVarNameInTable="columniSiteNumber" msprop:Generator_ColumnPropNameInRow="iSiteNumber" msprop:Generator_ColumnPropNameInTable="iSiteNumberColumn" msprop:Generator_UserColumnName="iSiteNumber" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_HAI_InfectionDetail" msprop:Generator_TableClassName="Form_HAI_InfectionDetailDataTable" msprop:Generator_TableVarName="tableForm_HAI_InfectionDetail" msprop:Generator_TablePropName="Form_HAI_InfectionDetail" msprop:Generator_RowDeletingName="Form_HAI_InfectionDetailRowDeleting" msprop:Generator_UserTableName="Form_HAI_InfectionDetail" msprop:Generator_RowChangingName="Form_HAI_InfectionDetailRowChanging" msprop:Generator_RowEvHandlerName="Form_HAI_InfectionDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_HAI_InfectionDetailRowDeleted" msprop:Generator_RowEvArgName="Form_HAI_InfectionDetailRowChangeEvent" msprop:Generator_RowChangedName="Form_HAI_InfectionDetailRowChanged" msprop:Generator_RowClassName="Form_HAI_InfectionDetailRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fkiInfectionFormID" msprop:Generator_ColumnVarNameInTable="columnfkiInfectionFormID" msprop:Generator_ColumnPropNameInRow="fkiInfectionFormID" msprop:Generator_ColumnPropNameInTable="fkiInfectionFormIDColumn" msprop:Generator_UserColumnName="fkiInfectionFormID" type="xs:int" />
+              <xs:element name="iSiteNumber" msprop:Generator_ColumnVarNameInTable="columniSiteNumber" msprop:Generator_ColumnPropNameInRow="iSiteNumber" msprop:Generator_ColumnPropNameInTable="iSiteNumberColumn" msprop:Generator_UserColumnName="iSiteNumber" type="xs:int" />
+              <xs:element name="fkiFacilityUnitID" msprop:Generator_ColumnVarNameInTable="columnfkiFacilityUnitID" msprop:Generator_ColumnPropNameInRow="fkiFacilityUnitID" msprop:Generator_ColumnPropNameInTable="fkiFacilityUnitIDColumn" msprop:Generator_UserColumnName="fkiFacilityUnitID" type="xs:int" />
+              <xs:element name="Unit_Name" msprop:Generator_ColumnVarNameInTable="columnUnit_Name" msprop:Generator_ColumnPropNameInRow="Unit_Name" msprop:Generator_ColumnPropNameInTable="Unit_NameColumn" msprop:Generator_UserColumnName="Unit_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dtReported" msprop:Generator_ColumnVarNameInTable="columndtReported" msprop:Generator_ColumnPropNameInRow="dtReported" msprop:Generator_ColumnPropNameInTable="dtReportedColumn" msprop:Generator_UserColumnName="dtReported" type="xs:dateTime" />
+              <xs:element name="fkiInfectionTypeID" msprop:Generator_ColumnVarNameInTable="columnfkiInfectionTypeID" msprop:Generator_ColumnPropNameInRow="fkiInfectionTypeID" msprop:Generator_ColumnPropNameInTable="fkiInfectionTypeIDColumn" msprop:Generator_UserColumnName="fkiInfectionTypeID" type="xs:int" />
+              <xs:element name="InfectionTypeName" msprop:Generator_ColumnVarNameInTable="columnInfectionTypeName" msprop:Generator_ColumnPropNameInRow="InfectionTypeName" msprop:Generator_ColumnPropNameInTable="InfectionTypeNameColumn" msprop:Generator_UserColumnName="InfectionTypeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fkiInfectionSubTypeID" msprop:Generator_ColumnVarNameInTable="columnfkiInfectionSubTypeID" msprop:Generator_ColumnPropNameInRow="fkiInfectionSubTypeID" msprop:Generator_ColumnPropNameInTable="fkiInfectionSubTypeIDColumn" msprop:Generator_UserColumnName="fkiInfectionSubTypeID" type="xs:int" minOccurs="0" />
+              <xs:element name="InfectionSubTypeName" msprop:Generator_ColumnVarNameInTable="columnInfectionSubTypeName" msprop:Generator_ColumnPropNameInRow="InfectionSubTypeName" msprop:Generator_ColumnPropNameInTable="InfectionSubTypeNameColumn" msprop:Generator_UserColumnName="InfectionSubTypeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fkiSeverityTypeID" msprop:Generator_ColumnVarNameInTable="columnfkiSeverityTypeID" msprop:Generator_ColumnPropNameInRow="fkiSeverityTypeID" msprop:Generator_ColumnPropNameInTable="fkiSeverityTypeIDColumn" msprop:Generator_UserColumnName="fkiSeverityTypeID" type="xs:int" />
+              <xs:element name="sDescription" msprop:Generator_ColumnVarNameInTable="columnsDescription" msprop:Generator_ColumnPropNameInRow="sDescription" msprop:Generator_ColumnPropNameInTable="sDescriptionColumn" msprop:Generator_UserColumnName="sDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InfectionPrevention_SiteDescription" msprop:Generator_ColumnVarNameInTable="columnInfectionPrevention_SiteDescription" msprop:Generator_ColumnPropNameInRow="InfectionPrevention_SiteDescription" msprop:Generator_ColumnPropNameInTable="InfectionPrevention_SiteDescriptionColumn" msprop:Generator_UserColumnName="InfectionPrevention_SiteDescription">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_HAI_PredisposingCondition" msprop:Generator_TableClassName="Form_HAI_PredisposingConditionDataTable" msprop:Generator_TableVarName="tableForm_HAI_PredisposingCondition" msprop:Generator_TablePropName="Form_HAI_PredisposingCondition" msprop:Generator_RowDeletingName="Form_HAI_PredisposingConditionRowDeleting" msprop:Generator_UserTableName="Form_HAI_PredisposingCondition" msprop:Generator_RowChangingName="Form_HAI_PredisposingConditionRowChanging" msprop:Generator_RowEvHandlerName="Form_HAI_PredisposingConditionRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_HAI_PredisposingConditionRowDeleted" msprop:Generator_RowEvArgName="Form_HAI_PredisposingConditionRowChangeEvent" msprop:Generator_RowChangedName="Form_HAI_PredisposingConditionRowChanged" msprop:Generator_RowClassName="Form_HAI_PredisposingConditionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fkiInfectionFormID" msprop:Generator_ColumnVarNameInTable="columnfkiInfectionFormID" msprop:Generator_ColumnPropNameInRow="fkiInfectionFormID" msprop:Generator_ColumnPropNameInTable="fkiInfectionFormIDColumn" msprop:Generator_UserColumnName="fkiInfectionFormID" type="xs:int" />
+              <xs:element name="iSiteNumber" msprop:Generator_ColumnVarNameInTable="columniSiteNumber" msprop:Generator_ColumnPropNameInRow="iSiteNumber" msprop:Generator_ColumnPropNameInTable="iSiteNumberColumn" msprop:Generator_UserColumnName="iSiteNumber" type="xs:int" />
+              <xs:element name="fkiConditionID" msprop:Generator_ColumnVarNameInTable="columnfkiConditionID" msprop:Generator_ColumnPropNameInRow="fkiConditionID" msprop:Generator_ColumnPropNameInTable="fkiConditionIDColumn" msprop:Generator_UserColumnName="fkiConditionID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PredisposingConditonName" msprop:Generator_ColumnVarNameInTable="columnPredisposingConditonName" msprop:Generator_ColumnPropNameInRow="PredisposingConditonName" msprop:Generator_ColumnPropNameInTable="PredisposingConditonNameColumn" msprop:Generator_UserColumnName="PredisposingConditonName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PredisposingConditionsDescription" msprop:Generator_ColumnVarNameInTable="columnPredisposingConditionsDescription" msprop:Generator_ColumnPropNameInRow="PredisposingConditionsDescription" msprop:Generator_ColumnPropNameInTable="PredisposingConditionsDescriptionColumn" msprop:Generator_UserColumnName="PredisposingConditionsDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bSelected" msprop:Generator_ColumnVarNameInTable="columnbSelected" msprop:Generator_ColumnPropNameInRow="bSelected" msprop:Generator_ColumnPropNameInTable="bSelectedColumn" msprop:Generator_UserColumnName="bSelected" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_HAI_BedHistory" msprop:Generator_TableClassName="Form_HAI_BedHistoryDataTable" msprop:Generator_TableVarName="tableForm_HAI_BedHistory" msprop:Generator_TablePropName="Form_HAI_BedHistory" msprop:Generator_RowDeletingName="Form_HAI_BedHistoryRowDeleting" msprop:Generator_UserTableName="Form_HAI_BedHistory" msprop:Generator_RowChangingName="Form_HAI_BedHistoryRowChanging" msprop:Generator_RowEvHandlerName="Form_HAI_BedHistoryRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_HAI_BedHistoryRowDeleted" msprop:Generator_RowEvArgName="Form_HAI_BedHistoryRowChangeEvent" msprop:Generator_RowChangedName="Form_HAI_BedHistoryRowChanged" msprop:Generator_RowClassName="Form_HAI_BedHistoryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fkiInfectionFormID" msprop:Generator_ColumnVarNameInTable="columnfkiInfectionFormID" msprop:Generator_ColumnPropNameInRow="fkiInfectionFormID" msprop:Generator_ColumnPropNameInTable="fkiInfectionFormIDColumn" msprop:Generator_UserColumnName="fkiInfectionFormID" type="xs:int" />
+              <xs:element name="iSiteNumber" msprop:Generator_ColumnVarNameInTable="columniSiteNumber" msprop:Generator_ColumnPropNameInRow="iSiteNumber" msprop:Generator_ColumnPropNameInTable="iSiteNumberColumn" msprop:Generator_UserColumnName="iSiteNumber" type="xs:int" />
+              <xs:element name="sFromUnit" msprop:Generator_ColumnVarNameInTable="columnsFromUnit" msprop:Generator_ColumnPropNameInRow="sFromUnit" msprop:Generator_ColumnPropNameInTable="sFromUnitColumn" msprop:Generator_UserColumnName="sFromUnit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sToUnit" msprop:Generator_ColumnVarNameInTable="columnsToUnit" msprop:Generator_ColumnPropNameInRow="sToUnit" msprop:Generator_ColumnPropNameInTable="sToUnitColumn" msprop:Generator_UserColumnName="sToUnit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sDateTransferred" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsDateTransferred" msprop:Generator_ColumnPropNameInRow="sDateTransferred" msprop:Generator_ColumnPropNameInTable="sDateTransferredColumn" msprop:Generator_UserColumnName="sDateTransferred" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_HAI_TPN_ENT" msprop:Generator_TableClassName="Form_HAI_TPN_ENTDataTable" msprop:Generator_TableVarName="tableForm_HAI_TPN_ENT" msprop:Generator_TablePropName="Form_HAI_TPN_ENT" msprop:Generator_RowDeletingName="Form_HAI_TPN_ENTRowDeleting" msprop:Generator_UserTableName="Form_HAI_TPN_ENT" msprop:Generator_RowChangingName="Form_HAI_TPN_ENTRowChanging" msprop:Generator_RowEvHandlerName="Form_HAI_TPN_ENTRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_HAI_TPN_ENTRowDeleted" msprop:Generator_RowEvArgName="Form_HAI_TPN_ENTRowChangeEvent" msprop:Generator_RowChangedName="Form_HAI_TPN_ENTRowChanged" msprop:Generator_RowClassName="Form_HAI_TPN_ENTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fkiInfectionFormID" msprop:Generator_ColumnVarNameInTable="columnfkiInfectionFormID" msprop:Generator_ColumnPropNameInRow="fkiInfectionFormID" msprop:Generator_ColumnPropNameInTable="fkiInfectionFormIDColumn" msprop:Generator_UserColumnName="fkiInfectionFormID" type="xs:int" />
+              <xs:element name="sRelatedHighRiskProcedures" msprop:Generator_ColumnVarNameInTable="columnsRelatedHighRiskProcedures" msprop:Generator_ColumnPropNameInRow="sRelatedHighRiskProcedures" msprop:Generator_ColumnPropNameInTable="sRelatedHighRiskProceduresColumn" msprop:Generator_UserColumnName="sRelatedHighRiskProcedures" type="xs:int" />
+              <xs:element name="TPN" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTPN" msprop:Generator_ColumnPropNameInRow="TPN" msprop:Generator_ColumnPropNameInTable="TPNColumn" msprop:Generator_UserColumnName="TPN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ENT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnENT" msprop:Generator_ColumnPropNameInRow="ENT" msprop:Generator_ColumnPropNameInTable="ENTColumn" msprop:Generator_UserColumnName="ENT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_HAI_Antibiotic" msprop:Generator_TableClassName="Form_HAI_AntibioticDataTable" msprop:Generator_TableVarName="tableForm_HAI_Antibiotic" msprop:Generator_TablePropName="Form_HAI_Antibiotic" msprop:Generator_RowDeletingName="Form_HAI_AntibioticRowDeleting" msprop:Generator_UserTableName="Form_HAI_Antibiotic" msprop:Generator_RowChangingName="Form_HAI_AntibioticRowChanging" msprop:Generator_RowEvHandlerName="Form_HAI_AntibioticRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_HAI_AntibioticRowDeleted" msprop:Generator_RowEvArgName="Form_HAI_AntibioticRowChangeEvent" msprop:Generator_RowChangedName="Form_HAI_AntibioticRowChanged" msprop:Generator_RowClassName="Form_HAI_AntibioticRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sDescription" msprop:Generator_ColumnVarNameInTable="columnsDescription" msprop:Generator_ColumnPropNameInRow="sDescription" msprop:Generator_ColumnPropNameInTable="sDescriptionColumn" msprop:Generator_UserColumnName="sDescription">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_HAI_BundleCompliance" msprop:Generator_TableClassName="Form_HAI_BundleComplianceDataTable" msprop:Generator_TableVarName="tableForm_HAI_BundleCompliance" msprop:Generator_TablePropName="Form_HAI_BundleCompliance" msprop:Generator_RowDeletingName="Form_HAI_BundleComplianceRowDeleting" msprop:Generator_UserTableName="Form_HAI_BundleCompliance" msprop:Generator_RowChangingName="Form_HAI_BundleComplianceRowChanging" msprop:Generator_RowEvHandlerName="Form_HAI_BundleComplianceRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_HAI_BundleComplianceRowDeleted" msprop:Generator_RowEvArgName="Form_HAI_BundleComplianceRowChangeEvent" msprop:Generator_RowChangedName="Form_HAI_BundleComplianceRowChanged" msprop:Generator_RowClassName="Form_HAI_BundleComplianceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fkiInfectionFormID" msprop:Generator_ColumnVarNameInTable="columnfkiInfectionFormID" msprop:Generator_ColumnPropNameInRow="fkiInfectionFormID" msprop:Generator_ColumnPropNameInTable="fkiInfectionFormIDColumn" msprop:Generator_UserColumnName="fkiInfectionFormID" type="xs:int" />
+              <xs:element name="iSiteNumber" msprop:Generator_ColumnVarNameInTable="columniSiteNumber" msprop:Generator_ColumnPropNameInRow="iSiteNumber" msprop:Generator_ColumnPropNameInTable="iSiteNumberColumn" msprop:Generator_UserColumnName="iSiteNumber" type="xs:int" />
+              <xs:element name="sRelatedHighRiskProcedures" msprop:Generator_ColumnVarNameInTable="columnsRelatedHighRiskProcedures" msprop:Generator_ColumnPropNameInRow="sRelatedHighRiskProcedures" msprop:Generator_ColumnPropNameInTable="sRelatedHighRiskProceduresColumn" msprop:Generator_UserColumnName="sRelatedHighRiskProcedures">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fkiInfectionTypeID" msprop:Generator_ColumnVarNameInTable="columnfkiInfectionTypeID" msprop:Generator_ColumnPropNameInRow="fkiInfectionTypeID" msprop:Generator_ColumnPropNameInTable="fkiInfectionTypeIDColumn" msprop:Generator_UserColumnName="fkiInfectionTypeID" type="xs:int" />
+              <xs:element name="InfectionTypeName" msprop:Generator_ColumnVarNameInTable="columnInfectionTypeName" msprop:Generator_ColumnPropNameInRow="InfectionTypeName" msprop:Generator_ColumnPropNameInTable="InfectionTypeNameColumn" msprop:Generator_UserColumnName="InfectionTypeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fkiBundleComplianceID" msprop:Generator_ColumnVarNameInTable="columnfkiBundleComplianceID" msprop:Generator_ColumnPropNameInRow="fkiBundleComplianceID" msprop:Generator_ColumnPropNameInTable="fkiBundleComplianceIDColumn" msprop:Generator_UserColumnName="fkiBundleComplianceID" type="xs:int" />
+              <xs:element name="sDescription" msprop:Generator_ColumnVarNameInTable="columnsDescription" msprop:Generator_ColumnPropNameInRow="sDescription" msprop:Generator_ColumnPropNameInTable="sDescriptionColumn" msprop:Generator_UserColumnName="sDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sInfectionDays" msprop:Generator_ColumnVarNameInTable="columnsInfectionDays" msprop:Generator_ColumnPropNameInRow="sInfectionDays" msprop:Generator_ColumnPropNameInTable="sInfectionDaysColumn" msprop:Generator_UserColumnName="sInfectionDays" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fkiBundleItemTypeID" msprop:Generator_ColumnVarNameInTable="columnfkiBundleItemTypeID" msprop:Generator_ColumnPropNameInRow="fkiBundleItemTypeID" msprop:Generator_ColumnPropNameInTable="fkiBundleItemTypeIDColumn" msprop:Generator_UserColumnName="fkiBundleItemTypeID" type="xs:int" minOccurs="0" />
+              <xs:element name="BundleItemTypeName" msprop:Generator_ColumnVarNameInTable="columnBundleItemTypeName" msprop:Generator_ColumnPropNameInRow="BundleItemTypeName" msprop:Generator_ColumnPropNameInTable="BundleItemTypeNameColumn" msprop:Generator_UserColumnName="BundleItemTypeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bSelected" msprop:Generator_ColumnVarNameInTable="columnbSelected" msprop:Generator_ColumnPropNameInRow="bSelected" msprop:Generator_ColumnPropNameInTable="bSelectedColumn" msprop:Generator_UserColumnName="bSelected" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_HAI_ReportableDiseases" msprop:Generator_TableClassName="Form_HAI_ReportableDiseasesDataTable" msprop:Generator_TableVarName="tableForm_HAI_ReportableDiseases" msprop:Generator_TablePropName="Form_HAI_ReportableDiseases" msprop:Generator_RowDeletingName="Form_HAI_ReportableDiseasesRowDeleting" msprop:Generator_UserTableName="Form_HAI_ReportableDiseases" msprop:Generator_RowChangingName="Form_HAI_ReportableDiseasesRowChanging" msprop:Generator_RowEvHandlerName="Form_HAI_ReportableDiseasesRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_HAI_ReportableDiseasesRowDeleted" msprop:Generator_RowEvArgName="Form_HAI_ReportableDiseasesRowChangeEvent" msprop:Generator_RowChangedName="Form_HAI_ReportableDiseasesRowChanged" msprop:Generator_RowClassName="Form_HAI_ReportableDiseasesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fkiInfectionFormID" msprop:Generator_ColumnVarNameInTable="columnfkiInfectionFormID" msprop:Generator_ColumnPropNameInRow="fkiInfectionFormID" msprop:Generator_ColumnPropNameInTable="fkiInfectionFormIDColumn" msprop:Generator_UserColumnName="fkiInfectionFormID" type="xs:int" />
+              <xs:element name="iSiteNumber" msprop:Generator_ColumnVarNameInTable="columniSiteNumber" msprop:Generator_ColumnPropNameInRow="iSiteNumber" msprop:Generator_ColumnPropNameInTable="iSiteNumberColumn" msprop:Generator_UserColumnName="iSiteNumber" type="xs:int" />
+              <xs:element name="sReportedToDepartment" msprop:Generator_ColumnVarNameInTable="columnsReportedToDepartment" msprop:Generator_ColumnPropNameInRow="sReportedToDepartment" msprop:Generator_ColumnPropNameInTable="sReportedToDepartmentColumn" msprop:Generator_UserColumnName="sReportedToDepartment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DiseaseName" msprop:Generator_ColumnVarNameInTable="columnDiseaseName" msprop:Generator_ColumnPropNameInRow="DiseaseName" msprop:Generator_ColumnPropNameInTable="DiseaseNameColumn" msprop:Generator_UserColumnName="DiseaseName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sDateReported" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsDateReported" msprop:Generator_ColumnPropNameInRow="sDateReported" msprop:Generator_ColumnPropNameInTable="sDateReportedColumn" msprop:Generator_UserColumnName="sDateReported" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="sReferenceNumber" msprop:Generator_ColumnVarNameInTable="columnsReferenceNumber" msprop:Generator_ColumnPropNameInRow="sReferenceNumber" msprop:Generator_ColumnPropNameInTable="sReferenceNumberColumn" msprop:Generator_UserColumnName="sReferenceNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_HAI_LabReports" msprop:Generator_TableClassName="Form_HAI_LabReportsDataTable" msprop:Generator_TableVarName="tableForm_HAI_LabReports" msprop:Generator_TablePropName="Form_HAI_LabReports" msprop:Generator_RowDeletingName="Form_HAI_LabReportsRowDeleting" msprop:Generator_UserTableName="Form_HAI_LabReports" msprop:Generator_RowChangingName="Form_HAI_LabReportsRowChanging" msprop:Generator_RowEvHandlerName="Form_HAI_LabReportsRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_HAI_LabReportsRowDeleted" msprop:Generator_RowEvArgName="Form_HAI_LabReportsRowChangeEvent" msprop:Generator_RowChangedName="Form_HAI_LabReportsRowChanged" msprop:Generator_RowClassName="Form_HAI_LabReportsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fkiInfectionFormID" msprop:Generator_ColumnVarNameInTable="columnfkiInfectionFormID" msprop:Generator_ColumnPropNameInRow="fkiInfectionFormID" msprop:Generator_ColumnPropNameInTable="fkiInfectionFormIDColumn" msprop:Generator_UserColumnName="fkiInfectionFormID" type="xs:int" />
+              <xs:element name="iSiteNumber" msprop:Generator_ColumnVarNameInTable="columniSiteNumber" msprop:Generator_ColumnPropNameInRow="iSiteNumber" msprop:Generator_ColumnPropNameInTable="iSiteNumberColumn" msprop:Generator_UserColumnName="iSiteNumber" type="xs:int" />
+              <xs:element name="sLabDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsLabDate" msprop:Generator_ColumnPropNameInRow="sLabDate" msprop:Generator_ColumnPropNameInTable="sLabDateColumn" msprop:Generator_UserColumnName="sLabDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="sSpecimen" msprop:Generator_ColumnVarNameInTable="columnsSpecimen" msprop:Generator_ColumnPropNameInRow="sSpecimen" msprop:Generator_ColumnPropNameInTable="sSpecimenColumn" msprop:Generator_UserColumnName="sSpecimen" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sOrganism" msprop:Generator_ColumnVarNameInTable="columnsOrganism" msprop:Generator_ColumnPropNameInRow="sOrganism" msprop:Generator_ColumnPropNameInTable="sOrganismColumn" msprop:Generator_UserColumnName="sOrganism" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sLabNumber" msprop:Generator_ColumnVarNameInTable="columnsLabNumber" msprop:Generator_ColumnPropNameInRow="sLabNumber" msprop:Generator_ColumnPropNameInTable="sLabNumberColumn" msprop:Generator_UserColumnName="sLabNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_HAI_SurgeryDetails" msprop:Generator_TableClassName="Form_HAI_SurgeryDetailsDataTable" msprop:Generator_TableVarName="tableForm_HAI_SurgeryDetails" msprop:Generator_TablePropName="Form_HAI_SurgeryDetails" msprop:Generator_RowDeletingName="Form_HAI_SurgeryDetailsRowDeleting" msprop:Generator_UserTableName="Form_HAI_SurgeryDetails" msprop:Generator_RowChangingName="Form_HAI_SurgeryDetailsRowChanging" msprop:Generator_RowEvHandlerName="Form_HAI_SurgeryDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_HAI_SurgeryDetailsRowDeleted" msprop:Generator_RowEvArgName="Form_HAI_SurgeryDetailsRowChangeEvent" msprop:Generator_RowChangedName="Form_HAI_SurgeryDetailsRowChanged" msprop:Generator_RowClassName="Form_HAI_SurgeryDetailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fkiInfectionFormID" msprop:Generator_ColumnVarNameInTable="columnfkiInfectionFormID" msprop:Generator_ColumnPropNameInRow="fkiInfectionFormID" msprop:Generator_ColumnPropNameInTable="fkiInfectionFormIDColumn" msprop:Generator_UserColumnName="fkiInfectionFormID" type="xs:int" />
+              <xs:element name="iSiteNumber" msprop:Generator_ColumnVarNameInTable="columniSiteNumber" msprop:Generator_ColumnPropNameInRow="iSiteNumber" msprop:Generator_ColumnPropNameInTable="iSiteNumberColumn" msprop:Generator_UserColumnName="iSiteNumber" type="xs:int" />
+              <xs:element name="sFacility" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsFacility" msprop:Generator_ColumnPropNameInRow="sFacility" msprop:Generator_ColumnPropNameInTable="sFacilityColumn" msprop:Generator_UserColumnName="sFacility" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sVisitNumber" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsVisitNumber" msprop:Generator_ColumnPropNameInRow="sVisitNumber" msprop:Generator_ColumnPropNameInTable="sVisitNumberColumn" msprop:Generator_UserColumnName="sVisitNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sProcedure" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsProcedure" msprop:Generator_ColumnPropNameInRow="sProcedure" msprop:Generator_ColumnPropNameInTable="sProcedureColumn" msprop:Generator_UserColumnName="sProcedure" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sSurgeryDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsSurgeryDate" msprop:Generator_ColumnPropNameInRow="sSurgeryDate" msprop:Generator_ColumnPropNameInTable="sSurgeryDateColumn" msprop:Generator_UserColumnName="sSurgeryDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="sSurgeryDuration" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsSurgeryDuration" msprop:Generator_ColumnPropNameInRow="sSurgeryDuration" msprop:Generator_ColumnPropNameInTable="sSurgeryDurationColumn" msprop:Generator_UserColumnName="sSurgeryDuration" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sTheatreInvoice" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsTheatreInvoice" msprop:Generator_ColumnPropNameInRow="sTheatreInvoice" msprop:Generator_ColumnPropNameInTable="sTheatreInvoiceColumn" msprop:Generator_UserColumnName="sTheatreInvoice" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sTheatre" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsTheatre" msprop:Generator_ColumnPropNameInRow="sTheatre" msprop:Generator_ColumnPropNameInTable="sTheatreColumn" msprop:Generator_UserColumnName="sTheatre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sSurgeon" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsSurgeon" msprop:Generator_ColumnPropNameInRow="sSurgeon" msprop:Generator_ColumnPropNameInTable="sSurgeonColumn" msprop:Generator_UserColumnName="sSurgeon" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sAssistant" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsAssistant" msprop:Generator_ColumnPropNameInRow="sAssistant" msprop:Generator_ColumnPropNameInTable="sAssistantColumn" msprop:Generator_UserColumnName="sAssistant" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sScrubNurse" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsScrubNurse" msprop:Generator_ColumnPropNameInRow="sScrubNurse" msprop:Generator_ColumnPropNameInTable="sScrubNurseColumn" msprop:Generator_UserColumnName="sScrubNurse" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sAnaesthesist" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsAnaesthesist" msprop:Generator_ColumnPropNameInRow="sAnaesthesist" msprop:Generator_ColumnPropNameInTable="sAnaesthesistColumn" msprop:Generator_UserColumnName="sAnaesthesist" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sWound" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsWound" msprop:Generator_ColumnPropNameInRow="sWound" msprop:Generator_ColumnPropNameInTable="sWoundColumn" msprop:Generator_UserColumnName="sWound" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sCategory" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsCategory" msprop:Generator_ColumnPropNameInRow="sCategory" msprop:Generator_ColumnPropNameInTable="sCategoryColumn" msprop:Generator_UserColumnName="sCategory" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sFinalDiagnosis" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsFinalDiagnosis" msprop:Generator_ColumnPropNameInRow="sFinalDiagnosis" msprop:Generator_ColumnPropNameInTable="sFinalDiagnosisColumn" msprop:Generator_UserColumnName="sFinalDiagnosis" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sAdmissionDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsAdmissionDate" msprop:Generator_ColumnPropNameInRow="sAdmissionDate" msprop:Generator_ColumnPropNameInTable="sAdmissionDateColumn" msprop:Generator_UserColumnName="sAdmissionDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sDischargeDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsDischargeDate" msprop:Generator_ColumnPropNameInRow="sDischargeDate" msprop:Generator_ColumnPropNameInTable="sDischargeDateColumn" msprop:Generator_UserColumnName="sDischargeDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bSelected" msprop:Generator_ColumnVarNameInTable="columnbSelected" msprop:Generator_ColumnPropNameInRow="bSelected" msprop:Generator_ColumnPropNameInTable="bSelectedColumn" msprop:Generator_UserColumnName="bSelected" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

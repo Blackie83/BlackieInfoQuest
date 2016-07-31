@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_FIMFAM" targetNamespace="http://tempuri.org/DataSet_Form_FIMFAM.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_FIMFAM.xsd" xmlns="http://tempuri.org/DataSet_Form_FIMFAM.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_FIMFAM_EfficiencyTableAdapter" GeneratorDataComponentClassName="Form_FIMFAM_EfficiencyTableAdapter" Name="Form_FIMFAM_Efficiency" UserDataComponentName="Form_FIMFAM_EfficiencyTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT 
+	A.[LengthOfStay] , 
+	A.[FIMLatestScore] , A.[FAMLatestScore] , A.[TotalLatestScore] , 
+	B.[FIMAdmissionScore] , B.[FAMAdmissionScore] , B.[TotalAdmissionScore] , 
+	CASE WHEN A.[LengthOfStay] = 0 THEN 0 ELSE CAST(((A.[FIMLatestScore] - B.[FIMAdmissionScore]) / A.[LengthOfStay]) AS DECIMAL(18,2)) END AS [FIMEfficiencyLOS] , 
+	CASE WHEN A.[LengthOfStay] = 0 THEN 0 ELSE CAST(((A.[FAMLatestScore] - B.[FAMAdmissionScore]) / A.[LengthOfStay]) AS DECIMAL(18,2)) END AS [FAMEfficiencyLOS] , 
+	CASE WHEN A.[LengthOfStay] = 0 THEN 0 ELSE CAST(((A.[TotalLatestScore] - B.[TotalAdmissionScore]) / A.[LengthOfStay]) AS DECIMAL(18,2)) END AS [FIMFAMEfficiencyLOS] 
+FROM (
+	SELECT TOP 1 
+		FIMFAM_Elements_Id , FIMFAM_Elements_PatientVisitNumber , FIMFAM_PI_PatientDateOfAdmission , FIMFAM_Elements_ObservationDate , FIMFAM_Elements_CreatedDate , 
+		DATEDIFF(DAY , FIMFAM_PI_PatientDateOfAdmission , FIMFAM_Elements_ObservationDate) + 1 AS [LengthOfStay] , 
+		FIMFAM_Elements_Selfcare_Eating + FIMFAM_Elements_Selfcare_Grooming + FIMFAM_Elements_Selfcare_Bathing + FIMFAM_Elements_Selfcare_DressingUpper + FIMFAM_Elements_Selfcare_DressingLower + FIMFAM_Elements_Selfcare_Toileting + (CASE WHEN FIMFAM_Elements_Sphincter_Bladder1 &lt;= FIMFAM_Elements_Sphincter_Bladder2 THEN FIMFAM_Elements_Sphincter_Bladder1 ELSE FIMFAM_Elements_Sphincter_Bladder2 END) + (CASE WHEN FIMFAM_Elements_Sphincter_Bowel1 &lt;= FIMFAM_Elements_Sphincter_Bowel2 THEN FIMFAM_Elements_Sphincter_Bowel1 ELSE FIMFAM_Elements_Sphincter_Bowel2 END) + FIMFAM_Elements_Transfer_BCW + FIMFAM_Elements_Transfer_Toilet + FIMFAM_Elements_Transfer_TS + FIMFAM_Elements_Locomotion_WW + FIMFAM_Elements_Locomotion_Stairs + FIMFAM_Elements_Communication_AV + FIMFAM_Elements_Communication_VN + FIMFAM_Elements_PSAdjust_SocialInteraction + FIMFAM_Elements_CognitiveFunction_ProblemSolving + FIMFAM_Elements_CognitiveFunction_Memory AS [FIMLatestScore] , 
+		FIMFAM_Elements_Selfcare_Swallowing + FIMFAM_Elements_Transfer_CarTransfer + FIMFAM_Elements_Locomotion_CommunityAccess + FIMFAM_Elements_Communication_Reading + FIMFAM_Elements_Communication_Writing + FIMFAM_Elements_Communication_Speech + FIMFAM_Elements_PSAdjust_EmotionalStatus + FIMFAM_Elements_PSAdjust_Adjustment + FIMFAM_Elements_PSAdjust_Employability + FIMFAM_Elements_CognitiveFunction_Orientation + FIMFAM_Elements_CognitiveFunction_Attention + FIMFAM_Elements_CognitiveFunction_SafetyJudgement AS [FAMLatestScore] , 
+		FIMFAM_Elements_Total AS [TotalLatestScore] 
+	FROM vForm_FIMFAM 
+	WHERE CAST(Facility_Id AS NVARCHAR(MAX)) + '::' + CAST(FIMFAM_Elements_PatientVisitNumber AS NVARCHAR(MAX)) IN (SELECT CAST(Facility_Id AS NVARCHAR(MAX)) + '::' + CAST(FIMFAM_Elements_PatientVisitNumber AS NVARCHAR(MAX)) FROM vForm_FIMFAM WHERE FIMFAM_Elements_Id = 52) AND FIMFAM_Elements_IsActive = 1 
+	ORDER BY FIMFAM_Elements_ObservationDate DESC , FIMFAM_Elements_CreatedDate DESC
+) A INNER JOIN (
+	SELECT TOP 1 
+		FIMFAM_Elements_Id , FIMFAM_Elements_PatientVisitNumber , FIMFAM_PI_PatientDateOfAdmission , FIMFAM_Elements_ObservationDate , FIMFAM_Elements_CreatedDate , 
+		DATEDIFF(DAY , FIMFAM_PI_PatientDateOfAdmission , FIMFAM_Elements_ObservationDate) + 1 AS [LengthOfStay] , 
+		FIMFAM_Elements_Selfcare_Eating + FIMFAM_Elements_Selfcare_Grooming + FIMFAM_Elements_Selfcare_Bathing + FIMFAM_Elements_Selfcare_DressingUpper + FIMFAM_Elements_Selfcare_DressingLower + FIMFAM_Elements_Selfcare_Toileting + (CASE WHEN FIMFAM_Elements_Sphincter_Bladder1 &lt;= FIMFAM_Elements_Sphincter_Bladder2 THEN FIMFAM_Elements_Sphincter_Bladder1 ELSE FIMFAM_Elements_Sphincter_Bladder2 END) + (CASE WHEN FIMFAM_Elements_Sphincter_Bowel1 &lt;= FIMFAM_Elements_Sphincter_Bowel2 THEN FIMFAM_Elements_Sphincter_Bowel1 ELSE FIMFAM_Elements_Sphincter_Bowel2 END) + FIMFAM_Elements_Transfer_BCW + FIMFAM_Elements_Transfer_Toilet + FIMFAM_Elements_Transfer_TS + FIMFAM_Elements_Locomotion_WW + FIMFAM_Elements_Locomotion_Stairs + FIMFAM_Elements_Communication_AV + FIMFAM_Elements_Communication_VN + FIMFAM_Elements_PSAdjust_SocialInteraction + FIMFAM_Elements_CognitiveFunction_ProblemSolving + FIMFAM_Elements_CognitiveFunction_Memory AS [FIMAdmissionScore] , 
+		FIMFAM_Elements_Selfcare_Swallowing + FIMFAM_Elements_Transfer_CarTransfer + FIMFAM_Elements_Locomotion_CommunityAccess + FIMFAM_Elements_Communication_Reading + FIMFAM_Elements_Communication_Writing + FIMFAM_Elements_Communication_Speech + FIMFAM_Elements_PSAdjust_EmotionalStatus + FIMFAM_Elements_PSAdjust_Adjustment + FIMFAM_Elements_PSAdjust_Employability + FIMFAM_Elements_CognitiveFunction_Orientation + FIMFAM_Elements_CognitiveFunction_Attention + FIMFAM_Elements_CognitiveFunction_SafetyJudgement AS [FAMAdmissionScore] , 
+		FIMFAM_Elements_Total AS [TotalAdmissionScore] 
+	FROM vForm_FIMFAM 
+	WHERE CAST(Facility_Id AS NVARCHAR(MAX)) + '::' + CAST(FIMFAM_Elements_PatientVisitNumber AS NVARCHAR(MAX)) IN (SELECT CAST(Facility_Id AS NVARCHAR(MAX)) + '::' + CAST(FIMFAM_Elements_PatientVisitNumber AS NVARCHAR(MAX)) FROM vForm_FIMFAM WHERE FIMFAM_Elements_Id = 52) AND FIMFAM_Elements_IsActive = 1 
+	ORDER BY FIMFAM_Elements_ObservationDate , FIMFAM_Elements_CreatedDate
+) B 
+ON A.FIMFAM_Elements_PatientVisitNumber = B.FIMFAM_Elements_PatientVisitNumber</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="LengthOfStay" DataSetColumn="LengthOfStay" />
+              <Mapping SourceColumn="FIMLatestScore" DataSetColumn="FIMLatestScore" />
+              <Mapping SourceColumn="FAMLatestScore" DataSetColumn="FAMLatestScore" />
+              <Mapping SourceColumn="TotalLatestScore" DataSetColumn="TotalLatestScore" />
+              <Mapping SourceColumn="FIMAdmissionScore" DataSetColumn="FIMAdmissionScore" />
+              <Mapping SourceColumn="FAMAdmissionScore" DataSetColumn="FAMAdmissionScore" />
+              <Mapping SourceColumn="TotalAdmissionScore" DataSetColumn="TotalAdmissionScore" />
+              <Mapping SourceColumn="FIMEfficiencyLOS" DataSetColumn="FIMEfficiencyLOS" />
+              <Mapping SourceColumn="FAMEfficiencyLOS" DataSetColumn="FAMEfficiencyLOS" />
+              <Mapping SourceColumn="FIMFAMEfficiencyLOS" DataSetColumn="FIMFAMEfficiencyLOS" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_FIMFAMTableAdapter" GeneratorDataComponentClassName="Form_FIMFAMTableAdapter" Name="Form_FIMFAM" UserDataComponentName="Form_FIMFAMTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vForm_FIMFAM" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT FIMFAM_Elements_Id, Facility_Id, Facility_FacilityName, Facility_FacilityCode, Facility_FacilityDisplayName, FIMFAM_PI_PatientVisitNumber, FIMFAM_PI_PatientName, FIMFAM_PI_PatientAge, FIMFAM_PI_PatientDateOfAdmission, FIMFAM_PI_PatientDateOfDischarge, FIMFAM_PI_Archived, FIMFAM_Elements_PatientVisitNumber, FIMFAM_Elements_ReportNumber, FIMFAM_Elements_ObservationDate, FIMFAM_Elements_OnsetDate, FIMFAM_Elements_Selfcare_Eating, FIMFAM_Elements_Selfcare_Grooming, FIMFAM_Elements_Selfcare_Bathing, FIMFAM_Elements_Selfcare_DressingUpper, FIMFAM_Elements_Selfcare_DressingLower, FIMFAM_Elements_Selfcare_Toileting, FIMFAM_Elements_Selfcare_Swallowing, FIMFAM_Elements_Sphincter_Bladder1, FIMFAM_Elements_Sphincter_Bladder2, FIMFAM_Elements_Sphincter_Bowel1, FIMFAM_Elements_Sphincter_Bowel2, FIMFAM_Elements_Transfer_BCW, FIMFAM_Elements_Transfer_Toilet, FIMFAM_Elements_Transfer_TS, FIMFAM_Elements_Transfer_CarTransfer, FIMFAM_Elements_Locomotion_WW, FIMFAM_Elements_Locomotion_Stairs, FIMFAM_Elements_Locomotion_CommunityAccess, FIMFAM_Elements_MotorSubScore, FIMFAM_Elements_Communication_AV, FIMFAM_Elements_Communication_VN, FIMFAM_Elements_Communication_Reading, FIMFAM_Elements_Communication_Writing, FIMFAM_Elements_Communication_Speech, FIMFAM_Elements_PSAdjust_SocialInteraction, FIMFAM_Elements_PSAdjust_EmotionalStatus, FIMFAM_Elements_PSAdjust_Adjustment, FIMFAM_Elements_PSAdjust_Employability, FIMFAM_Elements_CognitiveFunction_ProblemSolving, FIMFAM_Elements_CognitiveFunction_Memory, FIMFAM_Elements_CognitiveFunction_Orientation, FIMFAM_Elements_CognitiveFunction_Attention, FIMFAM_Elements_CognitiveFunction_SafetyJudgement, FIMFAM_Elements_CognitiveSubScore, FIMFAM_Elements_Total, FIMFAM_Elements_CreatedDate, FIMFAM_Elements_CreatedBy, FIMFAM_Elements_ModifiedDate, FIMFAM_Elements_ModifiedBy, FIMFAM_Elements_History, FIMFAM_Elements_IsActive FROM vForm_FIMFAM WHERE ((CAST(Facility_Id AS NVARCHAR(MAX)) + '::' + CAST(FIMFAM_Elements_PatientVisitNumber AS NVARCHAR(MAX))) IN (SELECT CAST(Facility_Id AS NVARCHAR(MAX)) + '::' + CAST(FIMFAM_Elements_PatientVisitNumber AS NVARCHAR(MAX)) AS Expr1 FROM vForm_FIMFAM AS vInfoQuest_Form_FIMFAM_1 WHERE (FIMFAM_Elements_Id = 1))) AND (FIMFAM_Elements_IsActive = 1) ORDER BY FIMFAM_Elements_ObservationDate DESC, FIMFAM_Elements_CreatedDate DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FIMFAM_Elements_Id" DataSetColumn="FIMFAM_Elements_Id" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="FIMFAM_PI_PatientVisitNumber" DataSetColumn="FIMFAM_PI_PatientVisitNumber" />
+              <Mapping SourceColumn="FIMFAM_PI_PatientName" DataSetColumn="FIMFAM_PI_PatientName" />
+              <Mapping SourceColumn="FIMFAM_PI_PatientAge" DataSetColumn="FIMFAM_PI_PatientAge" />
+              <Mapping SourceColumn="FIMFAM_PI_PatientDateOfAdmission" DataSetColumn="FIMFAM_PI_PatientDateOfAdmission" />
+              <Mapping SourceColumn="FIMFAM_PI_PatientDateOfDischarge" DataSetColumn="FIMFAM_PI_PatientDateOfDischarge" />
+              <Mapping SourceColumn="FIMFAM_PI_Archived" DataSetColumn="FIMFAM_PI_Archived" />
+              <Mapping SourceColumn="FIMFAM_Elements_PatientVisitNumber" DataSetColumn="FIMFAM_Elements_PatientVisitNumber" />
+              <Mapping SourceColumn="FIMFAM_Elements_ReportNumber" DataSetColumn="FIMFAM_Elements_ReportNumber" />
+              <Mapping SourceColumn="FIMFAM_Elements_ObservationDate" DataSetColumn="FIMFAM_Elements_ObservationDate" />
+              <Mapping SourceColumn="FIMFAM_Elements_OnsetDate" DataSetColumn="FIMFAM_Elements_OnsetDate" />
+              <Mapping SourceColumn="FIMFAM_Elements_Selfcare_Eating" DataSetColumn="FIMFAM_Elements_Selfcare_Eating" />
+              <Mapping SourceColumn="FIMFAM_Elements_Selfcare_Grooming" DataSetColumn="FIMFAM_Elements_Selfcare_Grooming" />
+              <Mapping SourceColumn="FIMFAM_Elements_Selfcare_Bathing" DataSetColumn="FIMFAM_Elements_Selfcare_Bathing" />
+              <Mapping SourceColumn="FIMFAM_Elements_Selfcare_DressingUpper" DataSetColumn="FIMFAM_Elements_Selfcare_DressingUpper" />
+              <Mapping SourceColumn="FIMFAM_Elements_Selfcare_DressingLower" DataSetColumn="FIMFAM_Elements_Selfcare_DressingLower" />
+              <Mapping SourceColumn="FIMFAM_Elements_Selfcare_Toileting" DataSetColumn="FIMFAM_Elements_Selfcare_Toileting" />
+              <Mapping SourceColumn="FIMFAM_Elements_Selfcare_Swallowing" DataSetColumn="FIMFAM_Elements_Selfcare_Swallowing" />
+              <Mapping SourceColumn="FIMFAM_Elements_Sphincter_Bladder1" DataSetColumn="FIMFAM_Elements_Sphincter_Bladder1" />
+              <Mapping SourceColumn="FIMFAM_Elements_Sphincter_Bladder2" DataSetColumn="FIMFAM_Elements_Sphincter_Bladder2" />
+              <Mapping SourceColumn="FIMFAM_Elements_Sphincter_Bowel1" DataSetColumn="FIMFAM_Elements_Sphincter_Bowel1" />
+              <Mapping SourceColumn="FIMFAM_Elements_Sphincter_Bowel2" DataSetColumn="FIMFAM_Elements_Sphincter_Bowel2" />
+              <Mapping SourceColumn="FIMFAM_Elements_Transfer_BCW" DataSetColumn="FIMFAM_Elements_Transfer_BCW" />
+              <Mapping SourceColumn="FIMFAM_Elements_Transfer_Toilet" DataSetColumn="FIMFAM_Elements_Transfer_Toilet" />
+              <Mapping SourceColumn="FIMFAM_Elements_Transfer_TS" DataSetColumn="FIMFAM_Elements_Transfer_TS" />
+              <Mapping SourceColumn="FIMFAM_Elements_Transfer_CarTransfer" DataSetColumn="FIMFAM_Elements_Transfer_CarTransfer" />
+              <Mapping SourceColumn="FIMFAM_Elements_Locomotion_WW" DataSetColumn="FIMFAM_Elements_Locomotion_WW" />
+              <Mapping SourceColumn="FIMFAM_Elements_Locomotion_Stairs" DataSetColumn="FIMFAM_Elements_Locomotion_Stairs" />
+              <Mapping SourceColumn="FIMFAM_Elements_Locomotion_CommunityAccess" DataSetColumn="FIMFAM_Elements_Locomotion_CommunityAccess" />
+              <Mapping SourceColumn="FIMFAM_Elements_MotorSubScore" DataSetColumn="FIMFAM_Elements_MotorSubScore" />
+              <Mapping SourceColumn="FIMFAM_Elements_Communication_AV" DataSetColumn="FIMFAM_Elements_Communication_AV" />
+              <Mapping SourceColumn="FIMFAM_Elements_Communication_VN" DataSetColumn="FIMFAM_Elements_Communication_VN" />
+              <Mapping SourceColumn="FIMFAM_Elements_Communication_Reading" DataSetColumn="FIMFAM_Elements_Communication_Reading" />
+              <Mapping SourceColumn="FIMFAM_Elements_Communication_Writing" DataSetColumn="FIMFAM_Elements_Communication_Writing" />
+              <Mapping SourceColumn="FIMFAM_Elements_Communication_Speech" DataSetColumn="FIMFAM_Elements_Communication_Speech" />
+              <Mapping SourceColumn="FIMFAM_Elements_PSAdjust_SocialInteraction" DataSetColumn="FIMFAM_Elements_PSAdjust_SocialInteraction" />
+              <Mapping SourceColumn="FIMFAM_Elements_PSAdjust_EmotionalStatus" DataSetColumn="FIMFAM_Elements_PSAdjust_EmotionalStatus" />
+              <Mapping SourceColumn="FIMFAM_Elements_PSAdjust_Adjustment" DataSetColumn="FIMFAM_Elements_PSAdjust_Adjustment" />
+              <Mapping SourceColumn="FIMFAM_Elements_PSAdjust_Employability" DataSetColumn="FIMFAM_Elements_PSAdjust_Employability" />
+              <Mapping SourceColumn="FIMFAM_Elements_CognitiveFunction_ProblemSolving" DataSetColumn="FIMFAM_Elements_CognitiveFunction_ProblemSolving" />
+              <Mapping SourceColumn="FIMFAM_Elements_CognitiveFunction_Memory" DataSetColumn="FIMFAM_Elements_CognitiveFunction_Memory" />
+              <Mapping SourceColumn="FIMFAM_Elements_CognitiveFunction_Orientation" DataSetColumn="FIMFAM_Elements_CognitiveFunction_Orientation" />
+              <Mapping SourceColumn="FIMFAM_Elements_CognitiveFunction_Attention" DataSetColumn="FIMFAM_Elements_CognitiveFunction_Attention" />
+              <Mapping SourceColumn="FIMFAM_Elements_CognitiveFunction_SafetyJudgement" DataSetColumn="FIMFAM_Elements_CognitiveFunction_SafetyJudgement" />
+              <Mapping SourceColumn="FIMFAM_Elements_CognitiveSubScore" DataSetColumn="FIMFAM_Elements_CognitiveSubScore" />
+              <Mapping SourceColumn="FIMFAM_Elements_Total" DataSetColumn="FIMFAM_Elements_Total" />
+              <Mapping SourceColumn="FIMFAM_Elements_CreatedDate" DataSetColumn="FIMFAM_Elements_CreatedDate" />
+              <Mapping SourceColumn="FIMFAM_Elements_CreatedBy" DataSetColumn="FIMFAM_Elements_CreatedBy" />
+              <Mapping SourceColumn="FIMFAM_Elements_ModifiedDate" DataSetColumn="FIMFAM_Elements_ModifiedDate" />
+              <Mapping SourceColumn="FIMFAM_Elements_ModifiedBy" DataSetColumn="FIMFAM_Elements_ModifiedBy" />
+              <Mapping SourceColumn="FIMFAM_Elements_History" DataSetColumn="FIMFAM_Elements_History" />
+              <Mapping SourceColumn="FIMFAM_Elements_IsActive" DataSetColumn="FIMFAM_Elements_IsActive" />
+              <Mapping SourceColumn="Facility_FacilityName" DataSetColumn="Facility_FacilityName" />
+              <Mapping SourceColumn="Facility_FacilityCode" DataSetColumn="Facility_FacilityCode" />
+              <Mapping SourceColumn="Facility_FacilityDisplayName" DataSetColumn="Facility_FacilityDisplayName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_FIMFAM" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="False" msprop:Generator_DataSetName="DataSet_Form_FIMFAM" msprop:Generator_UserDSName="DataSet_Form_FIMFAM">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Form_FIMFAM_Efficiency" msprop:Generator_TableClassName="Form_FIMFAM_EfficiencyDataTable" msprop:Generator_TableVarName="tableForm_FIMFAM_Efficiency" msprop:Generator_TablePropName="Form_FIMFAM_Efficiency" msprop:Generator_RowDeletingName="Form_FIMFAM_EfficiencyRowDeleting" msprop:Generator_RowChangingName="Form_FIMFAM_EfficiencyRowChanging" msprop:Generator_RowEvHandlerName="Form_FIMFAM_EfficiencyRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_FIMFAM_EfficiencyRowDeleted" msprop:Generator_UserTableName="Form_FIMFAM_Efficiency" msprop:Generator_RowChangedName="Form_FIMFAM_EfficiencyRowChanged" msprop:Generator_RowEvArgName="Form_FIMFAM_EfficiencyRowChangeEvent" msprop:Generator_RowClassName="Form_FIMFAM_EfficiencyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LengthOfStay" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLengthOfStay" msprop:Generator_ColumnPropNameInRow="LengthOfStay" msprop:Generator_ColumnPropNameInTable="LengthOfStayColumn" msprop:Generator_UserColumnName="LengthOfStay" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMLatestScore" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFIMLatestScore" msprop:Generator_ColumnPropNameInRow="FIMLatestScore" msprop:Generator_ColumnPropNameInTable="FIMLatestScoreColumn" msprop:Generator_UserColumnName="FIMLatestScore" type="xs:int" minOccurs="0" />
+              <xs:element name="FAMLatestScore" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFAMLatestScore" msprop:Generator_ColumnPropNameInRow="FAMLatestScore" msprop:Generator_ColumnPropNameInTable="FAMLatestScoreColumn" msprop:Generator_UserColumnName="FAMLatestScore" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalLatestScore" msprop:Generator_ColumnVarNameInTable="columnTotalLatestScore" msprop:Generator_ColumnPropNameInRow="TotalLatestScore" msprop:Generator_ColumnPropNameInTable="TotalLatestScoreColumn" msprop:Generator_UserColumnName="TotalLatestScore" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMAdmissionScore" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFIMAdmissionScore" msprop:Generator_ColumnPropNameInRow="FIMAdmissionScore" msprop:Generator_ColumnPropNameInTable="FIMAdmissionScoreColumn" msprop:Generator_UserColumnName="FIMAdmissionScore" type="xs:int" minOccurs="0" />
+              <xs:element name="FAMAdmissionScore" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFAMAdmissionScore" msprop:Generator_ColumnPropNameInRow="FAMAdmissionScore" msprop:Generator_ColumnPropNameInTable="FAMAdmissionScoreColumn" msprop:Generator_UserColumnName="FAMAdmissionScore" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalAdmissionScore" msprop:Generator_ColumnVarNameInTable="columnTotalAdmissionScore" msprop:Generator_ColumnPropNameInRow="TotalAdmissionScore" msprop:Generator_ColumnPropNameInTable="TotalAdmissionScoreColumn" msprop:Generator_UserColumnName="TotalAdmissionScore" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMEfficiencyLOS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFIMEfficiencyLOS" msprop:Generator_ColumnPropNameInRow="FIMEfficiencyLOS" msprop:Generator_ColumnPropNameInTable="FIMEfficiencyLOSColumn" msprop:Generator_UserColumnName="FIMEfficiencyLOS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FAMEfficiencyLOS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFAMEfficiencyLOS" msprop:Generator_ColumnPropNameInRow="FAMEfficiencyLOS" msprop:Generator_ColumnPropNameInTable="FAMEfficiencyLOSColumn" msprop:Generator_UserColumnName="FAMEfficiencyLOS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FIMFAMEfficiencyLOS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFIMFAMEfficiencyLOS" msprop:Generator_ColumnPropNameInRow="FIMFAMEfficiencyLOS" msprop:Generator_ColumnPropNameInTable="FIMFAMEfficiencyLOSColumn" msprop:Generator_UserColumnName="FIMFAMEfficiencyLOS" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_FIMFAM" msprop:Generator_TableClassName="Form_FIMFAMDataTable" msprop:Generator_TableVarName="tableForm_FIMFAM" msprop:Generator_RowChangedName="Form_FIMFAMRowChanged" msprop:Generator_TablePropName="Form_FIMFAM" msprop:Generator_RowDeletingName="Form_FIMFAMRowDeleting" msprop:Generator_RowChangingName="Form_FIMFAMRowChanging" msprop:Generator_RowEvHandlerName="Form_FIMFAMRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_FIMFAMRowDeleted" msprop:Generator_RowClassName="Form_FIMFAMRow" msprop:Generator_UserTableName="Form_FIMFAM" msprop:Generator_RowEvArgName="Form_FIMFAMRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FIMFAM_Elements_Id" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Id" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Id" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_IdColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Id" type="xs:int" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_PI_PatientVisitNumber" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_PI_PatientVisitNumber" msprop:Generator_ColumnPropNameInRow="FIMFAM_PI_PatientVisitNumber" msprop:Generator_ColumnPropNameInTable="FIMFAM_PI_PatientVisitNumberColumn" msprop:Generator_UserColumnName="FIMFAM_PI_PatientVisitNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FIMFAM_PI_PatientName" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_PI_PatientName" msprop:Generator_ColumnPropNameInRow="FIMFAM_PI_PatientName" msprop:Generator_ColumnPropNameInTable="FIMFAM_PI_PatientNameColumn" msprop:Generator_UserColumnName="FIMFAM_PI_PatientName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FIMFAM_PI_PatientAge" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_PI_PatientAge" msprop:Generator_ColumnPropNameInRow="FIMFAM_PI_PatientAge" msprop:Generator_ColumnPropNameInTable="FIMFAM_PI_PatientAgeColumn" msprop:Generator_UserColumnName="FIMFAM_PI_PatientAge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FIMFAM_PI_PatientDateOfAdmission" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_PI_PatientDateOfAdmission" msprop:Generator_ColumnPropNameInRow="FIMFAM_PI_PatientDateOfAdmission" msprop:Generator_ColumnPropNameInTable="FIMFAM_PI_PatientDateOfAdmissionColumn" msprop:Generator_UserColumnName="FIMFAM_PI_PatientDateOfAdmission" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FIMFAM_PI_PatientDateOfDischarge" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_PI_PatientDateOfDischarge" msprop:Generator_ColumnPropNameInRow="FIMFAM_PI_PatientDateOfDischarge" msprop:Generator_ColumnPropNameInTable="FIMFAM_PI_PatientDateOfDischargeColumn" msprop:Generator_UserColumnName="FIMFAM_PI_PatientDateOfDischarge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FIMFAM_PI_Archived" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_PI_Archived" msprop:Generator_ColumnPropNameInRow="FIMFAM_PI_Archived" msprop:Generator_ColumnPropNameInTable="FIMFAM_PI_ArchivedColumn" msprop:Generator_UserColumnName="FIMFAM_PI_Archived" type="xs:boolean" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_PatientVisitNumber" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_PatientVisitNumber" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_PatientVisitNumber" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_PatientVisitNumberColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_PatientVisitNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FIMFAM_Elements_ReportNumber" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_ReportNumber" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_ReportNumber" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_ReportNumberColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_ReportNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FIMFAM_Elements_ObservationDate" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_ObservationDate" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_ObservationDate" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_ObservationDateColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_ObservationDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_OnsetDate" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_OnsetDate" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_OnsetDate" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_OnsetDateColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_OnsetDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Selfcare_Eating" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Selfcare_Eating" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Selfcare_Eating" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Selfcare_EatingColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Selfcare_Eating" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Selfcare_Grooming" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Selfcare_Grooming" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Selfcare_Grooming" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Selfcare_GroomingColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Selfcare_Grooming" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Selfcare_Bathing" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Selfcare_Bathing" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Selfcare_Bathing" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Selfcare_BathingColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Selfcare_Bathing" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Selfcare_DressingUpper" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Selfcare_DressingUpper" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Selfcare_DressingUpper" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Selfcare_DressingUpperColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Selfcare_DressingUpper" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Selfcare_DressingLower" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Selfcare_DressingLower" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Selfcare_DressingLower" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Selfcare_DressingLowerColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Selfcare_DressingLower" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Selfcare_Toileting" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Selfcare_Toileting" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Selfcare_Toileting" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Selfcare_ToiletingColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Selfcare_Toileting" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Selfcare_Swallowing" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Selfcare_Swallowing" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Selfcare_Swallowing" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Selfcare_SwallowingColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Selfcare_Swallowing" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Sphincter_Bladder1" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Sphincter_Bladder1" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Sphincter_Bladder1" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Sphincter_Bladder1Column" msprop:Generator_UserColumnName="FIMFAM_Elements_Sphincter_Bladder1" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Sphincter_Bladder2" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Sphincter_Bladder2" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Sphincter_Bladder2" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Sphincter_Bladder2Column" msprop:Generator_UserColumnName="FIMFAM_Elements_Sphincter_Bladder2" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Sphincter_Bowel1" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Sphincter_Bowel1" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Sphincter_Bowel1" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Sphincter_Bowel1Column" msprop:Generator_UserColumnName="FIMFAM_Elements_Sphincter_Bowel1" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Sphincter_Bowel2" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Sphincter_Bowel2" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Sphincter_Bowel2" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Sphincter_Bowel2Column" msprop:Generator_UserColumnName="FIMFAM_Elements_Sphincter_Bowel2" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Transfer_BCW" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Transfer_BCW" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Transfer_BCW" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Transfer_BCWColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Transfer_BCW" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Transfer_Toilet" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Transfer_Toilet" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Transfer_Toilet" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Transfer_ToiletColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Transfer_Toilet" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Transfer_TS" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Transfer_TS" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Transfer_TS" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Transfer_TSColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Transfer_TS" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Transfer_CarTransfer" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Transfer_CarTransfer" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Transfer_CarTransfer" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Transfer_CarTransferColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Transfer_CarTransfer" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Locomotion_WW" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Locomotion_WW" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Locomotion_WW" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Locomotion_WWColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Locomotion_WW" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Locomotion_Stairs" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Locomotion_Stairs" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Locomotion_Stairs" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Locomotion_StairsColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Locomotion_Stairs" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Locomotion_CommunityAccess" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Locomotion_CommunityAccess" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Locomotion_CommunityAccess" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Locomotion_CommunityAccessColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Locomotion_CommunityAccess" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_MotorSubScore" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_MotorSubScore" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_MotorSubScore" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_MotorSubScoreColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_MotorSubScore" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Communication_AV" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Communication_AV" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Communication_AV" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Communication_AVColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Communication_AV" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Communication_VN" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Communication_VN" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Communication_VN" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Communication_VNColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Communication_VN" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Communication_Reading" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Communication_Reading" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Communication_Reading" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Communication_ReadingColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Communication_Reading" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Communication_Writing" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Communication_Writing" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Communication_Writing" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Communication_WritingColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Communication_Writing" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Communication_Speech" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Communication_Speech" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Communication_Speech" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_Communication_SpeechColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Communication_Speech" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_PSAdjust_SocialInteraction" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_PSAdjust_SocialInteraction" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_PSAdjust_SocialInteraction" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_PSAdjust_SocialInteractionColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_PSAdjust_SocialInteraction" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_PSAdjust_EmotionalStatus" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_PSAdjust_EmotionalStatus" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_PSAdjust_EmotionalStatus" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_PSAdjust_EmotionalStatusColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_PSAdjust_EmotionalStatus" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_PSAdjust_Adjustment" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_PSAdjust_Adjustment" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_PSAdjust_Adjustment" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_PSAdjust_AdjustmentColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_PSAdjust_Adjustment" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_PSAdjust_Employability" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_PSAdjust_Employability" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_PSAdjust_Employability" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_PSAdjust_EmployabilityColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_PSAdjust_Employability" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_CognitiveFunction_ProblemSolving" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_CognitiveFunction_ProblemSolving" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_CognitiveFunction_ProblemSolving" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_CognitiveFunction_ProblemSolvingColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_CognitiveFunction_ProblemSolving" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_CognitiveFunction_Memory" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_CognitiveFunction_Memory" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_CognitiveFunction_Memory" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_CognitiveFunction_MemoryColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_CognitiveFunction_Memory" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_CognitiveFunction_Orientation" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_CognitiveFunction_Orientation" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_CognitiveFunction_Orientation" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_CognitiveFunction_OrientationColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_CognitiveFunction_Orientation" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_CognitiveFunction_Attention" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_CognitiveFunction_Attention" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_CognitiveFunction_Attention" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_CognitiveFunction_AttentionColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_CognitiveFunction_Attention" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_CognitiveFunction_SafetyJudgement" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_CognitiveFunction_SafetyJudgement" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_CognitiveFunction_SafetyJudgement" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_CognitiveFunction_SafetyJudgementColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_CognitiveFunction_SafetyJudgement" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_CognitiveSubScore" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_CognitiveSubScore" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_CognitiveSubScore" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_CognitiveSubScoreColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_CognitiveSubScore" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_Total" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_Total" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_Total" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_TotalColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_Total" type="xs:int" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_CreatedDate" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_CreatedDate" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_CreatedDateColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_CreatedBy" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_CreatedBy" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_CreatedByColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FIMFAM_Elements_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_ModifiedDate" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_ModifiedDate" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_ModifiedDateColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FIMFAM_Elements_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_ModifiedBy" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_ModifiedBy" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_ModifiedByColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FIMFAM_Elements_History" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_History" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_History" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_HistoryColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FIMFAM_Elements_IsActive" msprop:Generator_ColumnVarNameInTable="columnFIMFAM_Elements_IsActive" msprop:Generator_ColumnPropNameInRow="FIMFAM_Elements_IsActive" msprop:Generator_ColumnPropNameInTable="FIMFAM_Elements_IsActiveColumn" msprop:Generator_UserColumnName="FIMFAM_Elements_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Facility_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityNameColumn" msprop:Generator_UserColumnName="Facility_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facility_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facility_FacilityCodeColumn" msprop:Generator_UserColumnName="Facility_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityDisplayName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityDisplayNameColumn" msprop:Generator_UserColumnName="Facility_FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Form_FIMFAM" />
+      <xs:field xpath="mstns:FIMFAM_Elements_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

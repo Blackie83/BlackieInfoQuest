@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_HAI" targetNamespace="http://tempuri.org/DataSet_Form_HAI.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_HAI.xsd" xmlns="http://tempuri.org/DataSet_Form_HAI.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_HAI_HeaderTableAdapter" GeneratorDataComponentClassName="Form_HAI_HeaderTableAdapter" Name="Form_HAI_Header" UserDataComponentName="Form_HAI_HeaderTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT DISTINCT vAdministration_Facility_All.Facility_FacilityDisplayName AS FacilityDisplayName , tblInfectionPrevention.sReportNumber
+                      FROM tblInfectionPrevention , vAdministration_Facility_All
+                      WHERE
+                      tblInfectionPrevention.fkiFacilityID = vAdministration_Facility_All.Facility_Id
+                      AND (pkiInfectionFormID = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FacilityDisplayName" DataSetColumn="FacilityDisplayName" />
+              <Mapping SourceColumn="sReportNumber" DataSetColumn="sReportNumber" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_HAI_SiteTableAdapter" GeneratorDataComponentClassName="Form_HAI_SiteTableAdapter" Name="Form_HAI_Site" UserDataComponentName="Form_HAI_SiteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.tblInfectionPrevention_Site" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT iSiteNumber
+FROM         tblInfectionPrevention_Site
+WHERE     (fkiInfectionFormID = 1) AND ( iSiteNumber = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="iSiteNumber" DataSetColumn="iSiteNumber" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_HAI" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet_Form_HAI" msprop:Generator_UserDSName="DataSet_Form_HAI">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Form_HAI_Header" msprop:Generator_TableClassName="Form_HAI_HeaderDataTable" msprop:Generator_TableVarName="tableForm_HAI_Header" msprop:Generator_TablePropName="Form_HAI_Header" msprop:Generator_RowDeletingName="Form_HAI_HeaderRowDeleting" msprop:Generator_UserTableName="Form_HAI_Header" msprop:Generator_RowChangingName="Form_HAI_HeaderRowChanging" msprop:Generator_RowEvHandlerName="Form_HAI_HeaderRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_HAI_HeaderRowDeleted" msprop:Generator_RowEvArgName="Form_HAI_HeaderRowChangeEvent" msprop:Generator_RowChangedName="Form_HAI_HeaderRowChanged" msprop:Generator_RowClassName="Form_HAI_HeaderRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacilityDisplayName" msprop:Generator_ColumnPropNameInRow="FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="FacilityDisplayNameColumn" msprop:Generator_UserColumnName="FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="253" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sReportNumber" msprop:Generator_ColumnVarNameInTable="columnsReportNumber" msprop:Generator_ColumnPropNameInRow="sReportNumber" msprop:Generator_ColumnPropNameInTable="sReportNumberColumn" msprop:Generator_UserColumnName="sReportNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_HAI_Site" msprop:Generator_TableClassName="Form_HAI_SiteDataTable" msprop:Generator_TableVarName="tableForm_HAI_Site" msprop:Generator_TablePropName="Form_HAI_Site" msprop:Generator_RowDeletingName="Form_HAI_SiteRowDeleting" msprop:Generator_UserTableName="Form_HAI_Site" msprop:Generator_RowChangingName="Form_HAI_SiteRowChanging" msprop:Generator_RowEvHandlerName="Form_HAI_SiteRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_HAI_SiteRowDeleted" msprop:Generator_RowEvArgName="Form_HAI_SiteRowChangeEvent" msprop:Generator_RowChangedName="Form_HAI_SiteRowChanged" msprop:Generator_RowClassName="Form_HAI_SiteRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="iSiteNumber" msprop:Generator_ColumnVarNameInTable="columniSiteNumber" msprop:Generator_ColumnPropNameInRow="iSiteNumber" msprop:Generator_ColumnPropNameInTable="iSiteNumberColumn" msprop:Generator_UserColumnName="iSiteNumber" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

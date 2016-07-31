@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_Pharmacy_Product" targetNamespace="http://tempuri.org/DataSet_Form_Pharmacy_Product.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_Pharmacy_Product.xsd" xmlns="http://tempuri.org/DataSet_Form_Pharmacy_Product.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vInfoQuest_Form_Pharmacy_ProductTableAdapter" GeneratorDataComponentClassName="vInfoQuest_Form_Pharmacy_ProductTableAdapter" Name="vInfoQuest_Form_Pharmacy_Product" UserDataComponentName="vInfoQuest_Form_Pharmacy_ProductTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vInfoQuest_Form_Pharmacy_Product" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM vInfoQuest_Form_Pharmacy_Product WHERE Product_Id = 2</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Product_Id" DataSetColumn="Product_Id" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facilities_FacilityName" DataSetColumn="Facilities_FacilityName" />
+              <Mapping SourceColumn="Facilities_FacilityCode" DataSetColumn="Facilities_FacilityCode" />
+              <Mapping SourceColumn="FacilityDisplayName" DataSetColumn="FacilityDisplayName" />
+              <Mapping SourceColumn="Product_ReportNumber" DataSetColumn="Product_ReportNumber" />
+              <Mapping SourceColumn="Product_Date" DataSetColumn="Product_Date" />
+              <Mapping SourceColumn="Product_Requestor" DataSetColumn="Product_Requestor" />
+              <Mapping SourceColumn="Product_ProductDescription" DataSetColumn="Product_ProductDescription" />
+              <Mapping SourceColumn="Product_Manafacturer" DataSetColumn="Product_Manafacturer" />
+              <Mapping SourceColumn="Product_AlternativeProduct" DataSetColumn="Product_AlternativeProduct" />
+              <Mapping SourceColumn="Product_AlternativeProductYes" DataSetColumn="Product_AlternativeProductYes" />
+              <Mapping SourceColumn="Product_ReasonForRequest" DataSetColumn="Product_ReasonForRequest" />
+              <Mapping SourceColumn="Product_Approved" DataSetColumn="Product_Approved" />
+              <Mapping SourceColumn="Product_ApprovedNo" DataSetColumn="Product_ApprovedNo" />
+              <Mapping SourceColumn="Product_MainCategory" DataSetColumn="Product_MainCategory" />
+              <Mapping SourceColumn="Product_SubCategory" DataSetColumn="Product_SubCategory" />
+              <Mapping SourceColumn="Product_Feedback_PricefileResource" DataSetColumn="Product_Feedback_PricefileResource" />
+              <Mapping SourceColumn="Product_Feedback_DateReceived" DataSetColumn="Product_Feedback_DateReceived" />
+              <Mapping SourceColumn="Product_Feedback_DateAllocation" DataSetColumn="Product_Feedback_DateAllocation" />
+              <Mapping SourceColumn="Product_Feedback_Allocated" DataSetColumn="Product_Feedback_Allocated" />
+              <Mapping SourceColumn="Product_Feedback_AllocatedNo" DataSetColumn="Product_Feedback_AllocatedNo" />
+              <Mapping SourceColumn="Product_Feedback_AllocatedYes" DataSetColumn="Product_Feedback_AllocatedYes" />
+              <Mapping SourceColumn="Product_Feedback_BarcodeCaptured" DataSetColumn="Product_Feedback_BarcodeCaptured" />
+              <Mapping SourceColumn="Product_Feedback_Barcode" DataSetColumn="Product_Feedback_Barcode" />
+              <Mapping SourceColumn="Product_Feedback_Completed" DataSetColumn="Product_Feedback_Completed" />
+              <Mapping SourceColumn="Product_Feedback_Date" DataSetColumn="Product_Feedback_Date" />
+              <Mapping SourceColumn="Product_CreatedDate" DataSetColumn="Product_CreatedDate" />
+              <Mapping SourceColumn="Product_CreatedBy" DataSetColumn="Product_CreatedBy" />
+              <Mapping SourceColumn="Product_ModifiedDate" DataSetColumn="Product_ModifiedDate" />
+              <Mapping SourceColumn="Product_ModifiedBy" DataSetColumn="Product_ModifiedBy" />
+              <Mapping SourceColumn="Product_History" DataSetColumn="Product_History" />
+              <Mapping SourceColumn="Product_IsActive" DataSetColumn="Product_IsActive" />
+              <Mapping SourceColumn="Form_Emailed" DataSetColumn="Form_Emailed" />
+              <Mapping SourceColumn="Completed" DataSetColumn="Completed" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_Pharmacy_Product" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet_Form_Pharmacy_Product" msprop:Generator_DataSetName="DataSet_Form_Pharmacy_Product">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vInfoQuest_Form_Pharmacy_Product" msprop:Generator_TableClassName="vInfoQuest_Form_Pharmacy_ProductDataTable" msprop:Generator_TableVarName="tablevInfoQuest_Form_Pharmacy_Product" msprop:Generator_TablePropName="vInfoQuest_Form_Pharmacy_Product" msprop:Generator_RowDeletingName="vInfoQuest_Form_Pharmacy_ProductRowDeleting" msprop:Generator_UserTableName="vInfoQuest_Form_Pharmacy_Product" msprop:Generator_RowChangingName="vInfoQuest_Form_Pharmacy_ProductRowChanging" msprop:Generator_RowEvHandlerName="vInfoQuest_Form_Pharmacy_ProductRowChangeEventHandler" msprop:Generator_RowDeletedName="vInfoQuest_Form_Pharmacy_ProductRowDeleted" msprop:Generator_RowEvArgName="vInfoQuest_Form_Pharmacy_ProductRowChangeEvent" msprop:Generator_RowChangedName="vInfoQuest_Form_Pharmacy_ProductRowChanged" msprop:Generator_RowClassName="vInfoQuest_Form_Pharmacy_ProductRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Product_Id" msprop:Generator_ColumnVarNameInTable="columnProduct_Id" msprop:Generator_ColumnPropNameInRow="Product_Id" msprop:Generator_ColumnPropNameInTable="Product_IdColumn" msprop:Generator_UserColumnName="Product_Id" type="xs:int" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facilities_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityName" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityName" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityNameColumn" msprop:Generator_UserColumnName="Facilities_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facilities_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityCodeColumn" msprop:Generator_UserColumnName="Facilities_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacilityDisplayName" msprop:Generator_ColumnPropNameInRow="FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="FacilityDisplayNameColumn" msprop:Generator_UserColumnName="FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="253" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_ReportNumber" msprop:Generator_ColumnVarNameInTable="columnProduct_ReportNumber" msprop:Generator_ColumnPropNameInRow="Product_ReportNumber" msprop:Generator_ColumnPropNameInTable="Product_ReportNumberColumn" msprop:Generator_UserColumnName="Product_ReportNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_Date" msprop:Generator_ColumnVarNameInTable="columnProduct_Date" msprop:Generator_ColumnPropNameInRow="Product_Date" msprop:Generator_ColumnPropNameInTable="Product_DateColumn" msprop:Generator_UserColumnName="Product_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Product_Requestor" msprop:Generator_ColumnVarNameInTable="columnProduct_Requestor" msprop:Generator_ColumnPropNameInRow="Product_Requestor" msprop:Generator_ColumnPropNameInTable="Product_RequestorColumn" msprop:Generator_UserColumnName="Product_Requestor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_ProductDescription" msprop:Generator_ColumnVarNameInTable="columnProduct_ProductDescription" msprop:Generator_ColumnPropNameInRow="Product_ProductDescription" msprop:Generator_ColumnPropNameInTable="Product_ProductDescriptionColumn" msprop:Generator_UserColumnName="Product_ProductDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_Manafacturer" msprop:Generator_ColumnVarNameInTable="columnProduct_Manafacturer" msprop:Generator_ColumnPropNameInRow="Product_Manafacturer" msprop:Generator_ColumnPropNameInTable="Product_ManafacturerColumn" msprop:Generator_UserColumnName="Product_Manafacturer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_AlternativeProduct" msprop:Generator_ColumnVarNameInTable="columnProduct_AlternativeProduct" msprop:Generator_ColumnPropNameInRow="Product_AlternativeProduct" msprop:Generator_ColumnPropNameInTable="Product_AlternativeProductColumn" msprop:Generator_UserColumnName="Product_AlternativeProduct" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Product_AlternativeProductYes" msprop:Generator_ColumnVarNameInTable="columnProduct_AlternativeProductYes" msprop:Generator_ColumnPropNameInRow="Product_AlternativeProductYes" msprop:Generator_ColumnPropNameInTable="Product_AlternativeProductYesColumn" msprop:Generator_UserColumnName="Product_AlternativeProductYes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_ReasonForRequest" msprop:Generator_ColumnVarNameInTable="columnProduct_ReasonForRequest" msprop:Generator_ColumnPropNameInRow="Product_ReasonForRequest" msprop:Generator_ColumnPropNameInTable="Product_ReasonForRequestColumn" msprop:Generator_UserColumnName="Product_ReasonForRequest" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_Approved" msprop:Generator_ColumnVarNameInTable="columnProduct_Approved" msprop:Generator_ColumnPropNameInRow="Product_Approved" msprop:Generator_ColumnPropNameInTable="Product_ApprovedColumn" msprop:Generator_UserColumnName="Product_Approved" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Product_ApprovedNo" msprop:Generator_ColumnVarNameInTable="columnProduct_ApprovedNo" msprop:Generator_ColumnPropNameInRow="Product_ApprovedNo" msprop:Generator_ColumnPropNameInTable="Product_ApprovedNoColumn" msprop:Generator_UserColumnName="Product_ApprovedNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_MainCategory" msprop:Generator_ColumnVarNameInTable="columnProduct_MainCategory" msprop:Generator_ColumnPropNameInRow="Product_MainCategory" msprop:Generator_ColumnPropNameInTable="Product_MainCategoryColumn" msprop:Generator_UserColumnName="Product_MainCategory" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_SubCategory" msprop:Generator_ColumnVarNameInTable="columnProduct_SubCategory" msprop:Generator_ColumnPropNameInRow="Product_SubCategory" msprop:Generator_ColumnPropNameInTable="Product_SubCategoryColumn" msprop:Generator_UserColumnName="Product_SubCategory" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_Feedback_PricefileResource" msprop:Generator_ColumnVarNameInTable="columnProduct_Feedback_PricefileResource" msprop:Generator_ColumnPropNameInRow="Product_Feedback_PricefileResource" msprop:Generator_ColumnPropNameInTable="Product_Feedback_PricefileResourceColumn" msprop:Generator_UserColumnName="Product_Feedback_PricefileResource" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_Feedback_DateReceived" msprop:Generator_ColumnVarNameInTable="columnProduct_Feedback_DateReceived" msprop:Generator_ColumnPropNameInRow="Product_Feedback_DateReceived" msprop:Generator_ColumnPropNameInTable="Product_Feedback_DateReceivedColumn" msprop:Generator_UserColumnName="Product_Feedback_DateReceived" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Product_Feedback_DateAllocation" msprop:Generator_ColumnVarNameInTable="columnProduct_Feedback_DateAllocation" msprop:Generator_ColumnPropNameInRow="Product_Feedback_DateAllocation" msprop:Generator_ColumnPropNameInTable="Product_Feedback_DateAllocationColumn" msprop:Generator_UserColumnName="Product_Feedback_DateAllocation" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Product_Feedback_Allocated" msprop:Generator_ColumnVarNameInTable="columnProduct_Feedback_Allocated" msprop:Generator_ColumnPropNameInRow="Product_Feedback_Allocated" msprop:Generator_ColumnPropNameInTable="Product_Feedback_AllocatedColumn" msprop:Generator_UserColumnName="Product_Feedback_Allocated" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Product_Feedback_AllocatedNo" msprop:Generator_ColumnVarNameInTable="columnProduct_Feedback_AllocatedNo" msprop:Generator_ColumnPropNameInRow="Product_Feedback_AllocatedNo" msprop:Generator_ColumnPropNameInTable="Product_Feedback_AllocatedNoColumn" msprop:Generator_UserColumnName="Product_Feedback_AllocatedNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_Feedback_AllocatedYes" msprop:Generator_ColumnVarNameInTable="columnProduct_Feedback_AllocatedYes" msprop:Generator_ColumnPropNameInRow="Product_Feedback_AllocatedYes" msprop:Generator_ColumnPropNameInTable="Product_Feedback_AllocatedYesColumn" msprop:Generator_UserColumnName="Product_Feedback_AllocatedYes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_Feedback_BarcodeCaptured" msprop:Generator_ColumnVarNameInTable="columnProduct_Feedback_BarcodeCaptured" msprop:Generator_ColumnPropNameInRow="Product_Feedback_BarcodeCaptured" msprop:Generator_ColumnPropNameInTable="Product_Feedback_BarcodeCapturedColumn" msprop:Generator_UserColumnName="Product_Feedback_BarcodeCaptured" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Product_Feedback_Barcode" msprop:Generator_ColumnVarNameInTable="columnProduct_Feedback_Barcode" msprop:Generator_ColumnPropNameInRow="Product_Feedback_Barcode" msprop:Generator_ColumnPropNameInTable="Product_Feedback_BarcodeColumn" msprop:Generator_UserColumnName="Product_Feedback_Barcode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_Feedback_Completed" msprop:Generator_ColumnVarNameInTable="columnProduct_Feedback_Completed" msprop:Generator_ColumnPropNameInRow="Product_Feedback_Completed" msprop:Generator_ColumnPropNameInTable="Product_Feedback_CompletedColumn" msprop:Generator_UserColumnName="Product_Feedback_Completed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Product_Feedback_Date" msprop:Generator_ColumnVarNameInTable="columnProduct_Feedback_Date" msprop:Generator_ColumnPropNameInRow="Product_Feedback_Date" msprop:Generator_ColumnPropNameInTable="Product_Feedback_DateColumn" msprop:Generator_UserColumnName="Product_Feedback_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Product_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnProduct_CreatedDate" msprop:Generator_ColumnPropNameInRow="Product_CreatedDate" msprop:Generator_ColumnPropNameInTable="Product_CreatedDateColumn" msprop:Generator_UserColumnName="Product_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Product_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnProduct_CreatedBy" msprop:Generator_ColumnPropNameInRow="Product_CreatedBy" msprop:Generator_ColumnPropNameInTable="Product_CreatedByColumn" msprop:Generator_UserColumnName="Product_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnProduct_ModifiedDate" msprop:Generator_ColumnPropNameInRow="Product_ModifiedDate" msprop:Generator_ColumnPropNameInTable="Product_ModifiedDateColumn" msprop:Generator_UserColumnName="Product_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Product_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnProduct_ModifiedBy" msprop:Generator_ColumnPropNameInRow="Product_ModifiedBy" msprop:Generator_ColumnPropNameInTable="Product_ModifiedByColumn" msprop:Generator_UserColumnName="Product_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_History" msprop:Generator_ColumnVarNameInTable="columnProduct_History" msprop:Generator_ColumnPropNameInRow="Product_History" msprop:Generator_ColumnPropNameInTable="Product_HistoryColumn" msprop:Generator_UserColumnName="Product_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_IsActive" msprop:Generator_ColumnVarNameInTable="columnProduct_IsActive" msprop:Generator_ColumnPropNameInRow="Product_IsActive" msprop:Generator_ColumnPropNameInTable="Product_IsActiveColumn" msprop:Generator_UserColumnName="Product_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Form_Emailed" msprop:Generator_ColumnVarNameInTable="columnForm_Emailed" msprop:Generator_ColumnPropNameInRow="Form_Emailed" msprop:Generator_ColumnPropNameInTable="Form_EmailedColumn" msprop:Generator_UserColumnName="Form_Emailed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Completed" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCompleted" msprop:Generator_ColumnPropNameInRow="Completed" msprop:Generator_ColumnPropNameInTable="CompletedColumn" msprop:Generator_UserColumnName="Completed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="39" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vInfoQuest_Form_Pharmacy_Product" />
+      <xs:field xpath="mstns:Product_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

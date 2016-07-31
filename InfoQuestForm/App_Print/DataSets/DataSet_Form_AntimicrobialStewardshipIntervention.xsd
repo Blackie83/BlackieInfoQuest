@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_AntimicrobialStewardshipIntervention" targetNamespace="http://tempuri.org/DataSet_Form_AntimicrobialStewardshipIntervention.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_AntimicrobialStewardshipIntervention.xsd" xmlns="http://tempuri.org/DataSet_Form_AntimicrobialStewardshipIntervention.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vForm_AntimicrobialStewardshipIntervention_AntibioticTableAdapter" GeneratorDataComponentClassName="vForm_AntimicrobialStewardshipIntervention_AntibioticTableAdapter" Name="vForm_AntimicrobialStewardshipIntervention_Antibiotic" UserDataComponentName="vForm_AntimicrobialStewardshipIntervention_AntibioticTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT vForm_AntimicrobialStewardshipIntervention_Antibiotic.* , vForm_AntimicrobialStewardshipIntervention_Nursing5B.ASI_Nursing5B_Item_Name 
+FROM vForm_AntimicrobialStewardshipIntervention_Antibiotic 
+LEFT JOIN vForm_AntimicrobialStewardshipIntervention_Nursing5B ON vForm_AntimicrobialStewardshipIntervention_Antibiotic.ASI_Intervention_Id = vForm_AntimicrobialStewardshipIntervention_Nursing5B.ASI_Intervention_Id 
+WHERE vForm_AntimicrobialStewardshipIntervention_Antibiotic.ASI_Intervention_Id = 17
+ORDER BY vForm_AntimicrobialStewardshipIntervention_Antibiotic.ASI_Intervention_Date DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ASI_Intervention_Id" DataSetColumn="ASI_Intervention_Id" />
+              <Mapping SourceColumn="ASI_VisitInformation_Id" DataSetColumn="ASI_VisitInformation_Id" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facility_FacilityName" DataSetColumn="Facility_FacilityName" />
+              <Mapping SourceColumn="Facility_FacilityCode" DataSetColumn="Facility_FacilityCode" />
+              <Mapping SourceColumn="Facility_FacilityDisplayName" DataSetColumn="Facility_FacilityDisplayName" />
+              <Mapping SourceColumn="ASI_VisitInformation_VisitNumber" DataSetColumn="ASI_VisitInformation_VisitNumber" />
+              <Mapping SourceColumn="PatientInformation_Id" DataSetColumn="PatientInformation_Id" />
+              <Mapping SourceColumn="PatientInformation_LifeCountry" DataSetColumn="PatientInformation_LifeCountry" />
+              <Mapping SourceColumn="PatientInformation_LifeNumber" DataSetColumn="PatientInformation_LifeNumber" />
+              <Mapping SourceColumn="PatientInformation_Name" DataSetColumn="PatientInformation_Name" />
+              <Mapping SourceColumn="PatientInformation_Surname" DataSetColumn="PatientInformation_Surname" />
+              <Mapping SourceColumn="PatientInformation_IDNumber" DataSetColumn="PatientInformation_IDNumber" />
+              <Mapping SourceColumn="PatientInformation_DateOfBirth" DataSetColumn="PatientInformation_DateOfBirth" />
+              <Mapping SourceColumn="PatientInformation_Gender" DataSetColumn="PatientInformation_Gender" />
+              <Mapping SourceColumn="PatientInformation_Email" DataSetColumn="PatientInformation_Email" />
+              <Mapping SourceColumn="PatientInformation_ContactNumber" DataSetColumn="PatientInformation_ContactNumber" />
+              <Mapping SourceColumn="ASI_VisitInformation_PatientAge" DataSetColumn="ASI_VisitInformation_PatientAge" />
+              <Mapping SourceColumn="ASI_VisitInformation_DateOfAdmission" DataSetColumn="ASI_VisitInformation_DateOfAdmission" />
+              <Mapping SourceColumn="ASI_VisitInformation_DateOfDischarge" DataSetColumn="ASI_VisitInformation_DateOfDischarge" />
+              <Mapping SourceColumn="ASI_VisitInformation_Archived" DataSetColumn="ASI_VisitInformation_Archived" />
+              <Mapping SourceColumn="ASI_Intervention_ReportNumber" DataSetColumn="ASI_Intervention_ReportNumber" />
+              <Mapping SourceColumn="ASI_Intervention_Date" DataSetColumn="ASI_Intervention_Date" />
+              <Mapping SourceColumn="ASI_Intervention_By_List" DataSetColumn="ASI_Intervention_By_List" />
+              <Mapping SourceColumn="ASI_Intervention_By_Name" DataSetColumn="ASI_Intervention_By_Name" />
+              <Mapping SourceColumn="ASI_Intervention_Unit" DataSetColumn="ASI_Intervention_Unit" />
+              <Mapping SourceColumn="ASI_Intervention_Doctor" DataSetColumn="ASI_Intervention_Doctor" />
+              <Mapping SourceColumn="ASI_Intervention_Nursing_1" DataSetColumn="ASI_Intervention_Nursing_1" />
+              <Mapping SourceColumn="ASI_Intervention_Nursing_1_B" DataSetColumn="ASI_Intervention_Nursing_1_B" />
+              <Mapping SourceColumn="ASI_Intervention_Nursing_2" DataSetColumn="ASI_Intervention_Nursing_2" />
+              <Mapping SourceColumn="ASI_Intervention_Nursing_2_B" DataSetColumn="ASI_Intervention_Nursing_2_B" />
+              <Mapping SourceColumn="ASI_Intervention_Nursing_3" DataSetColumn="ASI_Intervention_Nursing_3" />
+              <Mapping SourceColumn="ASI_Intervention_Nursing_3_B" DataSetColumn="ASI_Intervention_Nursing_3_B" />
+              <Mapping SourceColumn="ASI_Intervention_Nursing_4" DataSetColumn="ASI_Intervention_Nursing_4" />
+              <Mapping SourceColumn="ASI_Intervention_Nursing_5" DataSetColumn="ASI_Intervention_Nursing_5" />
+              <Mapping SourceColumn="ASI_Intervention_Nursing_5_B" DataSetColumn="ASI_Intervention_Nursing_5_B" />
+              <Mapping SourceColumn="ASI_Intervention_Nursing_6" DataSetColumn="ASI_Intervention_Nursing_6" />
+              <Mapping SourceColumn="ASI_Intervention_Nursing_6_B" DataSetColumn="ASI_Intervention_Nursing_6_B" />
+              <Mapping SourceColumn="ASI_Intervention_Nursing_Score" DataSetColumn="ASI_Intervention_Nursing_Score" />
+              <Mapping SourceColumn="ASI_Intervention_Pharmacy_1" DataSetColumn="ASI_Intervention_Pharmacy_1" />
+              <Mapping SourceColumn="ASI_Intervention_Pharmacy_1_B" DataSetColumn="ASI_Intervention_Pharmacy_1_B" />
+              <Mapping SourceColumn="ASI_Intervention_Pharmacy_2" DataSetColumn="ASI_Intervention_Pharmacy_2" />
+              <Mapping SourceColumn="ASI_Intervention_Pharmacy_2_B" DataSetColumn="ASI_Intervention_Pharmacy_2_B" />
+              <Mapping SourceColumn="ASI_Intervention_Pharmacy_3" DataSetColumn="ASI_Intervention_Pharmacy_3" />
+              <Mapping SourceColumn="ASI_Intervention_Pharmacy_3_B" DataSetColumn="ASI_Intervention_Pharmacy_3_B" />
+              <Mapping SourceColumn="ASI_Intervention_Pharmacy_4" DataSetColumn="ASI_Intervention_Pharmacy_4" />
+              <Mapping SourceColumn="ASI_Intervention_Pharmacy_4_B" DataSetColumn="ASI_Intervention_Pharmacy_4_B" />
+              <Mapping SourceColumn="ASI_Intervention_Pharmacy_5" DataSetColumn="ASI_Intervention_Pharmacy_5" />
+              <Mapping SourceColumn="ASI_Intervention_Pharmacy_5_B" DataSetColumn="ASI_Intervention_Pharmacy_5_B" />
+              <Mapping SourceColumn="ASI_Intervention_Pharmacy_6" DataSetColumn="ASI_Intervention_Pharmacy_6" />
+              <Mapping SourceColumn="ASI_Intervention_Pharmacy_6_B" DataSetColumn="ASI_Intervention_Pharmacy_6_B" />
+              <Mapping SourceColumn="ASI_Intervention_Pharmacy_7" DataSetColumn="ASI_Intervention_Pharmacy_7" />
+              <Mapping SourceColumn="ASI_Intervention_Pharmacy_7_B" DataSetColumn="ASI_Intervention_Pharmacy_7_B" />
+              <Mapping SourceColumn="ASI_Intervention_Pharmacy_8" DataSetColumn="ASI_Intervention_Pharmacy_8" />
+              <Mapping SourceColumn="ASI_Intervention_Pharmacy_Score" DataSetColumn="ASI_Intervention_Pharmacy_Score" />
+              <Mapping SourceColumn="ASI_Intervention_CreatedDate" DataSetColumn="ASI_Intervention_CreatedDate" />
+              <Mapping SourceColumn="ASI_Intervention_CreatedBy" DataSetColumn="ASI_Intervention_CreatedBy" />
+              <Mapping SourceColumn="ASI_Intervention_ModifiedDate" DataSetColumn="ASI_Intervention_ModifiedDate" />
+              <Mapping SourceColumn="ASI_Intervention_ModifiedBy" DataSetColumn="ASI_Intervention_ModifiedBy" />
+              <Mapping SourceColumn="ASI_Intervention_History" DataSetColumn="ASI_Intervention_History" />
+              <Mapping SourceColumn="ASI_Intervention_IsActive" DataSetColumn="ASI_Intervention_IsActive" />
+              <Mapping SourceColumn="ASI_Antibiotic_Id" DataSetColumn="ASI_Antibiotic_Id" />
+              <Mapping SourceColumn="ASI_Antibiotic_Description" DataSetColumn="ASI_Antibiotic_Description" />
+              <Mapping SourceColumn="ASI_Antibiotic_Information" DataSetColumn="ASI_Antibiotic_Information" />
+              <Mapping SourceColumn="ASI_Nursing5B_Item_Name" DataSetColumn="ASI_Nursing5B_Item_Name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_AntimicrobialStewardshipIntervention" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_Form_AntimicrobialStewardshipIntervention" msprop:Generator_UserDSName="DataSet_Form_AntimicrobialStewardshipIntervention">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vForm_AntimicrobialStewardshipIntervention_Antibiotic" msprop:Generator_TableClassName="vForm_AntimicrobialStewardshipIntervention_AntibioticDataTable" msprop:Generator_TableVarName="tablevForm_AntimicrobialStewardshipIntervention_Antibiotic" msprop:Generator_TablePropName="vForm_AntimicrobialStewardshipIntervention_Antibiotic" msprop:Generator_RowDeletingName="vForm_AntimicrobialStewardshipIntervention_AntibioticRowDeleting" msprop:Generator_RowChangingName="vForm_AntimicrobialStewardshipIntervention_AntibioticRowChanging" msprop:Generator_RowEvHandlerName="vForm_AntimicrobialStewardshipIntervention_AntibioticRowChangeEventHandler" msprop:Generator_RowDeletedName="vForm_AntimicrobialStewardshipIntervention_AntibioticRowDeleted" msprop:Generator_UserTableName="vForm_AntimicrobialStewardshipIntervention_Antibiotic" msprop:Generator_RowChangedName="vForm_AntimicrobialStewardshipIntervention_AntibioticRowChanged" msprop:Generator_RowEvArgName="vForm_AntimicrobialStewardshipIntervention_AntibioticRowChangeEvent" msprop:Generator_RowClassName="vForm_AntimicrobialStewardshipIntervention_AntibioticRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ASI_Intervention_Id" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Id" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Id" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_IdColumn" msprop:Generator_UserColumnName="ASI_Intervention_Id" type="xs:int" />
+              <xs:element name="ASI_VisitInformation_Id" msprop:Generator_ColumnVarNameInTable="columnASI_VisitInformation_Id" msprop:Generator_ColumnPropNameInRow="ASI_VisitInformation_Id" msprop:Generator_ColumnPropNameInTable="ASI_VisitInformation_IdColumn" msprop:Generator_UserColumnName="ASI_VisitInformation_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facility_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityNameColumn" msprop:Generator_UserColumnName="Facility_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facility_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facility_FacilityCodeColumn" msprop:Generator_UserColumnName="Facility_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityDisplayName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityDisplayNameColumn" msprop:Generator_UserColumnName="Facility_FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_VisitInformation_VisitNumber" msprop:Generator_ColumnVarNameInTable="columnASI_VisitInformation_VisitNumber" msprop:Generator_ColumnPropNameInRow="ASI_VisitInformation_VisitNumber" msprop:Generator_ColumnPropNameInTable="ASI_VisitInformation_VisitNumberColumn" msprop:Generator_UserColumnName="ASI_VisitInformation_VisitNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Id" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Id" msprop:Generator_ColumnPropNameInRow="PatientInformation_Id" msprop:Generator_ColumnPropNameInTable="PatientInformation_IdColumn" msprop:Generator_UserColumnName="PatientInformation_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="PatientInformation_LifeCountry" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_LifeCountry" msprop:Generator_ColumnPropNameInRow="PatientInformation_LifeCountry" msprop:Generator_ColumnPropNameInTable="PatientInformation_LifeCountryColumn" msprop:Generator_UserColumnName="PatientInformation_LifeCountry" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_LifeNumber" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_LifeNumber" msprop:Generator_ColumnPropNameInRow="PatientInformation_LifeNumber" msprop:Generator_ColumnPropNameInTable="PatientInformation_LifeNumberColumn" msprop:Generator_UserColumnName="PatientInformation_LifeNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Name" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Name" msprop:Generator_ColumnPropNameInRow="PatientInformation_Name" msprop:Generator_ColumnPropNameInTable="PatientInformation_NameColumn" msprop:Generator_UserColumnName="PatientInformation_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Surname" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Surname" msprop:Generator_ColumnPropNameInRow="PatientInformation_Surname" msprop:Generator_ColumnPropNameInTable="PatientInformation_SurnameColumn" msprop:Generator_UserColumnName="PatientInformation_Surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_IDNumber" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_IDNumber" msprop:Generator_ColumnPropNameInRow="PatientInformation_IDNumber" msprop:Generator_ColumnPropNameInTable="PatientInformation_IDNumberColumn" msprop:Generator_UserColumnName="PatientInformation_IDNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_DateOfBirth" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_DateOfBirth" msprop:Generator_ColumnPropNameInRow="PatientInformation_DateOfBirth" msprop:Generator_ColumnPropNameInTable="PatientInformation_DateOfBirthColumn" msprop:Generator_UserColumnName="PatientInformation_DateOfBirth" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Gender" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Gender" msprop:Generator_ColumnPropNameInRow="PatientInformation_Gender" msprop:Generator_ColumnPropNameInTable="PatientInformation_GenderColumn" msprop:Generator_UserColumnName="PatientInformation_Gender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Email" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Email" msprop:Generator_ColumnPropNameInRow="PatientInformation_Email" msprop:Generator_ColumnPropNameInTable="PatientInformation_EmailColumn" msprop:Generator_UserColumnName="PatientInformation_Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_ContactNumber" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_ContactNumber" msprop:Generator_ColumnPropNameInRow="PatientInformation_ContactNumber" msprop:Generator_ColumnPropNameInTable="PatientInformation_ContactNumberColumn" msprop:Generator_UserColumnName="PatientInformation_ContactNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_VisitInformation_PatientAge" msprop:Generator_ColumnVarNameInTable="columnASI_VisitInformation_PatientAge" msprop:Generator_ColumnPropNameInRow="ASI_VisitInformation_PatientAge" msprop:Generator_ColumnPropNameInTable="ASI_VisitInformation_PatientAgeColumn" msprop:Generator_UserColumnName="ASI_VisitInformation_PatientAge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_VisitInformation_DateOfAdmission" msprop:Generator_ColumnVarNameInTable="columnASI_VisitInformation_DateOfAdmission" msprop:Generator_ColumnPropNameInRow="ASI_VisitInformation_DateOfAdmission" msprop:Generator_ColumnPropNameInTable="ASI_VisitInformation_DateOfAdmissionColumn" msprop:Generator_UserColumnName="ASI_VisitInformation_DateOfAdmission" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_VisitInformation_DateOfDischarge" msprop:Generator_ColumnVarNameInTable="columnASI_VisitInformation_DateOfDischarge" msprop:Generator_ColumnPropNameInRow="ASI_VisitInformation_DateOfDischarge" msprop:Generator_ColumnPropNameInTable="ASI_VisitInformation_DateOfDischargeColumn" msprop:Generator_UserColumnName="ASI_VisitInformation_DateOfDischarge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_VisitInformation_Archived" msprop:Generator_ColumnVarNameInTable="columnASI_VisitInformation_Archived" msprop:Generator_ColumnPropNameInRow="ASI_VisitInformation_Archived" msprop:Generator_ColumnPropNameInTable="ASI_VisitInformation_ArchivedColumn" msprop:Generator_UserColumnName="ASI_VisitInformation_Archived" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ASI_Intervention_ReportNumber" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_ReportNumber" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_ReportNumber" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_ReportNumberColumn" msprop:Generator_UserColumnName="ASI_Intervention_ReportNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Date" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Date" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Date" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_DateColumn" msprop:Generator_UserColumnName="ASI_Intervention_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ASI_Intervention_By_List" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_By_List" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_By_List" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_By_ListColumn" msprop:Generator_UserColumnName="ASI_Intervention_By_List" type="xs:int" minOccurs="0" />
+              <xs:element name="ASI_Intervention_By_Name" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_By_Name" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_By_Name" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_By_NameColumn" msprop:Generator_UserColumnName="ASI_Intervention_By_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Unit" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Unit" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Unit" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_UnitColumn" msprop:Generator_UserColumnName="ASI_Intervention_Unit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Doctor" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Doctor" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Doctor" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_DoctorColumn" msprop:Generator_UserColumnName="ASI_Intervention_Doctor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Nursing_1" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Nursing_1" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Nursing_1" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Nursing_1Column" msprop:Generator_UserColumnName="ASI_Intervention_Nursing_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Nursing_1_B" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Nursing_1_B" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Nursing_1_B" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Nursing_1_BColumn" msprop:Generator_UserColumnName="ASI_Intervention_Nursing_1_B" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Nursing_2" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Nursing_2" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Nursing_2" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Nursing_2Column" msprop:Generator_UserColumnName="ASI_Intervention_Nursing_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Nursing_2_B" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Nursing_2_B" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Nursing_2_B" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Nursing_2_BColumn" msprop:Generator_UserColumnName="ASI_Intervention_Nursing_2_B" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Nursing_3" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Nursing_3" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Nursing_3" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Nursing_3Column" msprop:Generator_UserColumnName="ASI_Intervention_Nursing_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Nursing_3_B" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Nursing_3_B" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Nursing_3_B" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Nursing_3_BColumn" msprop:Generator_UserColumnName="ASI_Intervention_Nursing_3_B" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Nursing_4" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Nursing_4" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Nursing_4" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Nursing_4Column" msprop:Generator_UserColumnName="ASI_Intervention_Nursing_4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Nursing_5" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Nursing_5" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Nursing_5" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Nursing_5Column" msprop:Generator_UserColumnName="ASI_Intervention_Nursing_5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Nursing_5_B" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Nursing_5_B" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Nursing_5_B" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Nursing_5_BColumn" msprop:Generator_UserColumnName="ASI_Intervention_Nursing_5_B" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Nursing_6" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Nursing_6" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Nursing_6" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Nursing_6Column" msprop:Generator_UserColumnName="ASI_Intervention_Nursing_6" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Nursing_6_B" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Nursing_6_B" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Nursing_6_B" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Nursing_6_BColumn" msprop:Generator_UserColumnName="ASI_Intervention_Nursing_6_B" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Nursing_Score" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Nursing_Score" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Nursing_Score" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Nursing_ScoreColumn" msprop:Generator_UserColumnName="ASI_Intervention_Nursing_Score" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Pharmacy_1" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Pharmacy_1" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Pharmacy_1" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Pharmacy_1Column" msprop:Generator_UserColumnName="ASI_Intervention_Pharmacy_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Pharmacy_1_B" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Pharmacy_1_B" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Pharmacy_1_B" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Pharmacy_1_BColumn" msprop:Generator_UserColumnName="ASI_Intervention_Pharmacy_1_B" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Pharmacy_2" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Pharmacy_2" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Pharmacy_2" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Pharmacy_2Column" msprop:Generator_UserColumnName="ASI_Intervention_Pharmacy_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Pharmacy_2_B" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Pharmacy_2_B" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Pharmacy_2_B" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Pharmacy_2_BColumn" msprop:Generator_UserColumnName="ASI_Intervention_Pharmacy_2_B" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Pharmacy_3" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Pharmacy_3" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Pharmacy_3" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Pharmacy_3Column" msprop:Generator_UserColumnName="ASI_Intervention_Pharmacy_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Pharmacy_3_B" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Pharmacy_3_B" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Pharmacy_3_B" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Pharmacy_3_BColumn" msprop:Generator_UserColumnName="ASI_Intervention_Pharmacy_3_B" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Pharmacy_4" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Pharmacy_4" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Pharmacy_4" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Pharmacy_4Column" msprop:Generator_UserColumnName="ASI_Intervention_Pharmacy_4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Pharmacy_4_B" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Pharmacy_4_B" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Pharmacy_4_B" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Pharmacy_4_BColumn" msprop:Generator_UserColumnName="ASI_Intervention_Pharmacy_4_B" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Pharmacy_5" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Pharmacy_5" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Pharmacy_5" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Pharmacy_5Column" msprop:Generator_UserColumnName="ASI_Intervention_Pharmacy_5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Pharmacy_5_B" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Pharmacy_5_B" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Pharmacy_5_B" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Pharmacy_5_BColumn" msprop:Generator_UserColumnName="ASI_Intervention_Pharmacy_5_B" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Pharmacy_6" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Pharmacy_6" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Pharmacy_6" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Pharmacy_6Column" msprop:Generator_UserColumnName="ASI_Intervention_Pharmacy_6" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Pharmacy_6_B" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Pharmacy_6_B" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Pharmacy_6_B" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Pharmacy_6_BColumn" msprop:Generator_UserColumnName="ASI_Intervention_Pharmacy_6_B" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Pharmacy_7" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Pharmacy_7" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Pharmacy_7" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Pharmacy_7Column" msprop:Generator_UserColumnName="ASI_Intervention_Pharmacy_7" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Pharmacy_7_B" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Pharmacy_7_B" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Pharmacy_7_B" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Pharmacy_7_BColumn" msprop:Generator_UserColumnName="ASI_Intervention_Pharmacy_7_B" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Pharmacy_8" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Pharmacy_8" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Pharmacy_8" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Pharmacy_8Column" msprop:Generator_UserColumnName="ASI_Intervention_Pharmacy_8" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_Pharmacy_Score" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_Pharmacy_Score" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_Pharmacy_Score" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_Pharmacy_ScoreColumn" msprop:Generator_UserColumnName="ASI_Intervention_Pharmacy_Score" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_CreatedDate" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_CreatedDate" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_CreatedDateColumn" msprop:Generator_UserColumnName="ASI_Intervention_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ASI_Intervention_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_CreatedBy" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_CreatedBy" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_CreatedByColumn" msprop:Generator_UserColumnName="ASI_Intervention_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_ModifiedDate" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_ModifiedDate" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_ModifiedDateColumn" msprop:Generator_UserColumnName="ASI_Intervention_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ASI_Intervention_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_ModifiedBy" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_ModifiedBy" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_ModifiedByColumn" msprop:Generator_UserColumnName="ASI_Intervention_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_History" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_History" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_History" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_HistoryColumn" msprop:Generator_UserColumnName="ASI_Intervention_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Intervention_IsActive" msprop:Generator_ColumnVarNameInTable="columnASI_Intervention_IsActive" msprop:Generator_ColumnPropNameInRow="ASI_Intervention_IsActive" msprop:Generator_ColumnPropNameInTable="ASI_Intervention_IsActiveColumn" msprop:Generator_UserColumnName="ASI_Intervention_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ASI_Antibiotic_Id" msprop:Generator_ColumnVarNameInTable="columnASI_Antibiotic_Id" msprop:Generator_ColumnPropNameInRow="ASI_Antibiotic_Id" msprop:Generator_ColumnPropNameInTable="ASI_Antibiotic_IdColumn" msprop:Generator_UserColumnName="ASI_Antibiotic_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="ASI_Antibiotic_Description" msprop:Generator_ColumnVarNameInTable="columnASI_Antibiotic_Description" msprop:Generator_ColumnPropNameInRow="ASI_Antibiotic_Description" msprop:Generator_ColumnPropNameInTable="ASI_Antibiotic_DescriptionColumn" msprop:Generator_UserColumnName="ASI_Antibiotic_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Antibiotic_Information" msprop:Generator_ColumnVarNameInTable="columnASI_Antibiotic_Information" msprop:Generator_ColumnPropNameInRow="ASI_Antibiotic_Information" msprop:Generator_ColumnPropNameInTable="ASI_Antibiotic_InformationColumn" msprop:Generator_UserColumnName="ASI_Antibiotic_Information" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASI_Nursing5B_Item_Name" msprop:Generator_ColumnVarNameInTable="columnASI_Nursing5B_Item_Name" msprop:Generator_ColumnPropNameInRow="ASI_Nursing5B_Item_Name" msprop:Generator_ColumnPropNameInTable="ASI_Nursing5B_Item_NameColumn" msprop:Generator_UserColumnName="ASI_Nursing5B_Item_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

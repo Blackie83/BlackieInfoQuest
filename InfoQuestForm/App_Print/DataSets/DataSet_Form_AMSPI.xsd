@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_AMSPI" targetNamespace="http://tempuri.org/DataSet_Form_AMSPI.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_AMSPI.xsd" xmlns="http://tempuri.org/DataSet_Form_AMSPI.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_AMSPITableAdapter" GeneratorDataComponentClassName="Form_AMSPITableAdapter" Name="Form_AMSPI" UserDataComponentName="Form_AMSPITableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vForm_AMSPI" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * 
+FROM vForm_AMSPI
+WHERE 
+	(CAST(Facility_Id AS NVARCHAR(MAX)) + '::' + CAST(AMSPI_Intervention_PatientVisitNumber AS NVARCHAR(MAX))) IN (
+		SELECT CAST(Facility_Id AS NVARCHAR(MAX)) + '::' + CAST(AMSPI_Intervention_PatientVisitNumber AS NVARCHAR(MAX)) 
+		FROM vForm_AMSPI 
+		WHERE AMSPI_Intervention_Id = 1
+	)
+ORDER BY AMSPI_Intervention_Date DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AMSPI_Intervention_Id" DataSetColumn="AMSPI_Intervention_Id" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="AMSPI_PI_PatientVisitNumber" DataSetColumn="AMSPI_PI_PatientVisitNumber" />
+              <Mapping SourceColumn="AMSPI_PI_PatientName" DataSetColumn="AMSPI_PI_PatientName" />
+              <Mapping SourceColumn="AMSPI_PI_PatientAge" DataSetColumn="AMSPI_PI_PatientAge" />
+              <Mapping SourceColumn="AMSPI_PI_PatientDateOfAdmission" DataSetColumn="AMSPI_PI_PatientDateOfAdmission" />
+              <Mapping SourceColumn="AMSPI_PI_PatientDateOfDischarge" DataSetColumn="AMSPI_PI_PatientDateOfDischarge" />
+              <Mapping SourceColumn="AMSPI_PI_Archived" DataSetColumn="AMSPI_PI_Archived" />
+              <Mapping SourceColumn="AMSPI_Intervention_PatientVisitNumber" DataSetColumn="AMSPI_Intervention_PatientVisitNumber" />
+              <Mapping SourceColumn="AMSPI_Intervention_ReportNumber" DataSetColumn="AMSPI_Intervention_ReportNumber" />
+              <Mapping SourceColumn="Unit_Id" DataSetColumn="Unit_Id" />
+              <Mapping SourceColumn="AMSPI_Intervention_Date" DataSetColumn="AMSPI_Intervention_Date" />
+              <Mapping SourceColumn="AMSPI_Intervention_Communication_List" DataSetColumn="AMSPI_Intervention_Communication_List" />
+              <Mapping SourceColumn="AMSPI_Intervention_Communication_Name" DataSetColumn="AMSPI_Intervention_Communication_Name" />
+              <Mapping SourceColumn="AMSPI_Intervention_Time" DataSetColumn="AMSPI_Intervention_Time" />
+              <Mapping SourceColumn="AMSPI_Intervention_Intervention_List" DataSetColumn="AMSPI_Intervention_Intervention_List" />
+              <Mapping SourceColumn="AMSPI_Intervention_Intervention_Name" DataSetColumn="AMSPI_Intervention_Intervention_Name" />
+              <Mapping SourceColumn="AMSPI_Intervention_InterventionIn_List" DataSetColumn="AMSPI_Intervention_InterventionIn_List" />
+              <Mapping SourceColumn="AMSPI_Intervention_InterventionIn_Name" DataSetColumn="AMSPI_Intervention_InterventionIn_Name" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type1" DataSetColumn="AMSPI_Intervention_Type1" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type2" DataSetColumn="AMSPI_Intervention_Type2" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type3" DataSetColumn="AMSPI_Intervention_Type3" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type4" DataSetColumn="AMSPI_Intervention_Type4" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type5" DataSetColumn="AMSPI_Intervention_Type5" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type6" DataSetColumn="AMSPI_Intervention_Type6" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type7" DataSetColumn="AMSPI_Intervention_Type7" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type8" DataSetColumn="AMSPI_Intervention_Type8" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type9" DataSetColumn="AMSPI_Intervention_Type9" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type10" DataSetColumn="AMSPI_Intervention_Type10" />
+              <Mapping SourceColumn="AMSPI_Intervention_TypeTotal" DataSetColumn="AMSPI_Intervention_TypeTotal" />
+              <Mapping SourceColumn="AMSPI_Intervention_CreatedDate" DataSetColumn="AMSPI_Intervention_CreatedDate" />
+              <Mapping SourceColumn="AMSPI_Intervention_CreatedBy" DataSetColumn="AMSPI_Intervention_CreatedBy" />
+              <Mapping SourceColumn="AMSPI_Intervention_ModifiedDate" DataSetColumn="AMSPI_Intervention_ModifiedDate" />
+              <Mapping SourceColumn="AMSPI_Intervention_ModifiedBy" DataSetColumn="AMSPI_Intervention_ModifiedBy" />
+              <Mapping SourceColumn="AMSPI_Intervention_History" DataSetColumn="AMSPI_Intervention_History" />
+              <Mapping SourceColumn="AMSPI_Intervention_IsActive" DataSetColumn="AMSPI_Intervention_IsActive" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type11" DataSetColumn="AMSPI_Intervention_Type11" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type11_List" DataSetColumn="AMSPI_Intervention_Type11_List" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type11_Name" DataSetColumn="AMSPI_Intervention_Type11_Name" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type1_List" DataSetColumn="AMSPI_Intervention_Type1_List" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type1_Name" DataSetColumn="AMSPI_Intervention_Type1_Name" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type2_List" DataSetColumn="AMSPI_Intervention_Type2_List" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type2_Name" DataSetColumn="AMSPI_Intervention_Type2_Name" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type3_List" DataSetColumn="AMSPI_Intervention_Type3_List" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type3_Name" DataSetColumn="AMSPI_Intervention_Type3_Name" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type4_List" DataSetColumn="AMSPI_Intervention_Type4_List" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type4_Name" DataSetColumn="AMSPI_Intervention_Type4_Name" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type7_List" DataSetColumn="AMSPI_Intervention_Type7_List" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type7_Name" DataSetColumn="AMSPI_Intervention_Type7_Name" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type9_List" DataSetColumn="AMSPI_Intervention_Type9_List" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type9_Name" DataSetColumn="AMSPI_Intervention_Type9_Name" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type10_List" DataSetColumn="AMSPI_Intervention_Type10_List" />
+              <Mapping SourceColumn="AMSPI_Intervention_Type10_Name" DataSetColumn="AMSPI_Intervention_Type10_Name" />
+              <Mapping SourceColumn="Facility_FacilityName" DataSetColumn="Facility_FacilityName" />
+              <Mapping SourceColumn="Facility_FacilityCode" DataSetColumn="Facility_FacilityCode" />
+              <Mapping SourceColumn="Facility_FacilityDisplayName" DataSetColumn="Facility_FacilityDisplayName" />
+              <Mapping SourceColumn="Unit_Name" DataSetColumn="Unit_Name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_AMSPI" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet_Form_AMSPI" msprop:Generator_UserDSName="DataSet_Form_AMSPI">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Form_AMSPI" msprop:Generator_TableClassName="Form_AMSPIDataTable" msprop:Generator_TableVarName="tableForm_AMSPI" msprop:Generator_RowChangedName="Form_AMSPIRowChanged" msprop:Generator_TablePropName="Form_AMSPI" msprop:Generator_RowDeletingName="Form_AMSPIRowDeleting" msprop:Generator_RowChangingName="Form_AMSPIRowChanging" msprop:Generator_RowEvHandlerName="Form_AMSPIRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_AMSPIRowDeleted" msprop:Generator_RowClassName="Form_AMSPIRow" msprop:Generator_UserTableName="Form_AMSPI" msprop:Generator_RowEvArgName="Form_AMSPIRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AMSPI_Intervention_Id" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Id" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Id" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_IdColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Id" type="xs:int" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="AMSPI_PI_PatientVisitNumber" msprop:Generator_ColumnVarNameInTable="columnAMSPI_PI_PatientVisitNumber" msprop:Generator_ColumnPropNameInRow="AMSPI_PI_PatientVisitNumber" msprop:Generator_ColumnPropNameInTable="AMSPI_PI_PatientVisitNumberColumn" msprop:Generator_UserColumnName="AMSPI_PI_PatientVisitNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMSPI_PI_PatientName" msprop:Generator_ColumnVarNameInTable="columnAMSPI_PI_PatientName" msprop:Generator_ColumnPropNameInRow="AMSPI_PI_PatientName" msprop:Generator_ColumnPropNameInTable="AMSPI_PI_PatientNameColumn" msprop:Generator_UserColumnName="AMSPI_PI_PatientName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMSPI_PI_PatientAge" msprop:Generator_ColumnVarNameInTable="columnAMSPI_PI_PatientAge" msprop:Generator_ColumnPropNameInRow="AMSPI_PI_PatientAge" msprop:Generator_ColumnPropNameInTable="AMSPI_PI_PatientAgeColumn" msprop:Generator_UserColumnName="AMSPI_PI_PatientAge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMSPI_PI_PatientDateOfAdmission" msprop:Generator_ColumnVarNameInTable="columnAMSPI_PI_PatientDateOfAdmission" msprop:Generator_ColumnPropNameInRow="AMSPI_PI_PatientDateOfAdmission" msprop:Generator_ColumnPropNameInTable="AMSPI_PI_PatientDateOfAdmissionColumn" msprop:Generator_UserColumnName="AMSPI_PI_PatientDateOfAdmission" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMSPI_PI_PatientDateOfDischarge" msprop:Generator_ColumnVarNameInTable="columnAMSPI_PI_PatientDateOfDischarge" msprop:Generator_ColumnPropNameInRow="AMSPI_PI_PatientDateOfDischarge" msprop:Generator_ColumnPropNameInTable="AMSPI_PI_PatientDateOfDischargeColumn" msprop:Generator_UserColumnName="AMSPI_PI_PatientDateOfDischarge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMSPI_PI_Archived" msprop:Generator_ColumnVarNameInTable="columnAMSPI_PI_Archived" msprop:Generator_ColumnPropNameInRow="AMSPI_PI_Archived" msprop:Generator_ColumnPropNameInTable="AMSPI_PI_ArchivedColumn" msprop:Generator_UserColumnName="AMSPI_PI_Archived" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_PatientVisitNumber" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_PatientVisitNumber" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_PatientVisitNumber" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_PatientVisitNumberColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_PatientVisitNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMSPI_Intervention_ReportNumber" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_ReportNumber" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_ReportNumber" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_ReportNumberColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_ReportNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Unit_Id" msprop:Generator_ColumnVarNameInTable="columnUnit_Id" msprop:Generator_ColumnPropNameInRow="Unit_Id" msprop:Generator_ColumnPropNameInTable="Unit_IdColumn" msprop:Generator_UserColumnName="Unit_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Date" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Date" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Date" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_DateColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Communication_List" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Communication_List" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Communication_List" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Communication_ListColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Communication_List" type="xs:int" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Communication_Name" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Communication_Name" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Communication_Name" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Communication_NameColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Communication_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMSPI_Intervention_Time" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Time" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Time" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_TimeColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Time" type="xs:int" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Intervention_List" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Intervention_List" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Intervention_List" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Intervention_ListColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Intervention_List" type="xs:int" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Intervention_Name" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Intervention_Name" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Intervention_Name" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Intervention_NameColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Intervention_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMSPI_Intervention_InterventionIn_List" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_InterventionIn_List" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_InterventionIn_List" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_InterventionIn_ListColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_InterventionIn_List" type="xs:int" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_InterventionIn_Name" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_InterventionIn_Name" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_InterventionIn_Name" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_InterventionIn_NameColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_InterventionIn_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMSPI_Intervention_Type1" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type1" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type1" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type1Column" msprop:Generator_UserColumnName="AMSPI_Intervention_Type1" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Type2" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type2" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type2" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type2Column" msprop:Generator_UserColumnName="AMSPI_Intervention_Type2" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Type3" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type3" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type3" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type3Column" msprop:Generator_UserColumnName="AMSPI_Intervention_Type3" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Type4" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type4" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type4" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type4Column" msprop:Generator_UserColumnName="AMSPI_Intervention_Type4" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Type5" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type5" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type5" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type5Column" msprop:Generator_UserColumnName="AMSPI_Intervention_Type5" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Type6" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type6" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type6" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type6Column" msprop:Generator_UserColumnName="AMSPI_Intervention_Type6" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Type7" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type7" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type7" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type7Column" msprop:Generator_UserColumnName="AMSPI_Intervention_Type7" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Type8" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type8" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type8" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type8Column" msprop:Generator_UserColumnName="AMSPI_Intervention_Type8" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Type9" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type9" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type9" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type9Column" msprop:Generator_UserColumnName="AMSPI_Intervention_Type9" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Type10" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type10" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type10" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type10Column" msprop:Generator_UserColumnName="AMSPI_Intervention_Type10" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_TypeTotal" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_TypeTotal" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_TypeTotal" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_TypeTotalColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_TypeTotal" type="xs:int" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_CreatedDate" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_CreatedDate" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_CreatedDateColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_CreatedBy" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_CreatedBy" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_CreatedByColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMSPI_Intervention_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_ModifiedDate" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_ModifiedDate" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_ModifiedDateColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_ModifiedBy" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_ModifiedBy" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_ModifiedByColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMSPI_Intervention_History" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_History" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_History" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_HistoryColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMSPI_Intervention_IsActive" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_IsActive" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_IsActive" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_IsActiveColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Type11" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type11" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type11" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type11Column" msprop:Generator_UserColumnName="AMSPI_Intervention_Type11" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Type11_List" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type11_List" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type11_List" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type11_ListColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Type11_List" type="xs:int" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Type11_Name" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type11_Name" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type11_Name" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type11_NameColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Type11_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMSPI_Intervention_Type1_List" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type1_List" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type1_List" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type1_ListColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Type1_List" type="xs:int" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Type1_Name" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type1_Name" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type1_Name" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type1_NameColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Type1_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMSPI_Intervention_Type2_List" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type2_List" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type2_List" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type2_ListColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Type2_List" type="xs:int" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Type2_Name" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type2_Name" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type2_Name" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type2_NameColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Type2_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMSPI_Intervention_Type3_List" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type3_List" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type3_List" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type3_ListColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Type3_List" type="xs:int" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Type3_Name" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type3_Name" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type3_Name" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type3_NameColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Type3_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMSPI_Intervention_Type4_List" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type4_List" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type4_List" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type4_ListColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Type4_List" type="xs:int" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Type4_Name" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type4_Name" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type4_Name" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type4_NameColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Type4_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMSPI_Intervention_Type7_List" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type7_List" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type7_List" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type7_ListColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Type7_List" type="xs:int" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Type7_Name" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type7_Name" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type7_Name" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type7_NameColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Type7_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMSPI_Intervention_Type9_List" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type9_List" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type9_List" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type9_ListColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Type9_List" type="xs:int" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Type9_Name" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type9_Name" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type9_Name" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type9_NameColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Type9_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMSPI_Intervention_Type10_List" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type10_List" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type10_List" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type10_ListColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Type10_List" type="xs:int" minOccurs="0" />
+              <xs:element name="AMSPI_Intervention_Type10_Name" msprop:Generator_ColumnVarNameInTable="columnAMSPI_Intervention_Type10_Name" msprop:Generator_ColumnPropNameInRow="AMSPI_Intervention_Type10_Name" msprop:Generator_ColumnPropNameInTable="AMSPI_Intervention_Type10_NameColumn" msprop:Generator_UserColumnName="AMSPI_Intervention_Type10_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityNameColumn" msprop:Generator_UserColumnName="Facility_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facility_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facility_FacilityCodeColumn" msprop:Generator_UserColumnName="Facility_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityDisplayName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityDisplayNameColumn" msprop:Generator_UserColumnName="Facility_FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Unit_Name" msprop:Generator_ColumnVarNameInTable="columnUnit_Name" msprop:Generator_ColumnPropNameInRow="Unit_Name" msprop:Generator_ColumnPropNameInTable="Unit_NameColumn" msprop:Generator_UserColumnName="Unit_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Form_AMSPI" />
+      <xs:field xpath="mstns:AMSPI_Intervention_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

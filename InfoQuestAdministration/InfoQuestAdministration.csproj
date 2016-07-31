@@ -1,0 +1,827 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DEDC143B-3E27-4BA1-B343-0B6A8F621DA1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InfoQuestAdministration</RootNamespace>
+    <AssemblyName>InfoQuestAdministration</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>App_CodeAnalysis\CodeAnalysisRules.ruleset</CodeAnalysisRuleSet>
+    <PublishDatabases>false</PublishDatabases>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Administration_EmailNotification.aspx" />
+    <Content Include="Administration_EmailNotification_List.aspx" />
+    <Content Include="Administration_Exceptions.aspx" />
+    <Content Include="Administration_Exceptions_List.aspx" />
+    <Content Include="Administration_Facility.aspx" />
+    <Content Include="Administration_Facility_Form.aspx" />
+    <Content Include="Administration_Facility_Form_List.aspx" />
+    <Content Include="Administration_Facility_List.aspx" />
+    <Content Include="Administration_Facility_Type_Lookup.aspx" />
+    <Content Include="Administration_Facility_Type_Lookup_List.aspx" />
+    <Content Include="Administration_Facility_Unit.aspx" />
+    <Content Include="Administration_Facility_Unit_List.aspx" />
+    <Content Include="Administration_Form.aspx" />
+    <Content Include="Administration_FormStatusDateUpdate.aspx" />
+    <Content Include="Administration_Form_List.aspx" />
+    <Content Include="Administration_ListCategory.aspx" />
+    <Content Include="Administration_ListCategory_List.aspx" />
+    <Content Include="Administration_ListItem.aspx" />
+    <Content Include="Administration_ListItem_List.aspx" />
+    <Content Include="Administration_Navigation.aspx" />
+    <Content Include="Administration_Navigation_List.aspx" />
+    <Content Include="Administration_PageView_List.aspx" />
+    <Content Include="Administration_ReportNumber_List.aspx" />
+    <Content Include="Administration_SecurityAccess.aspx" />
+    <Content Include="Administration_SecurityAccess_List.aspx" />
+    <Content Include="Administration_SecurityAccess_SwitchAccess.aspx" />
+    <Content Include="Administration_SecurityAccess_WCF.aspx" />
+    <Content Include="Administration_SecurityAccess_WCF_List.aspx" />
+    <Content Include="Administration_SecurityRole.aspx" />
+    <Content Include="Administration_SecurityRole_List.aspx" />
+    <Content Include="Administration_SecurityUser.aspx" />
+    <Content Include="Administration_SecurityUser_List.aspx" />
+    <Content Include="Administration_SendEmail.aspx" />
+    <Content Include="Administration_SendEmail_List.aspx" />
+    <Content Include="Administration_StoredProcedureExecution_List.aspx" />
+    <Content Include="Administration_SystemAccount.aspx" />
+    <Content Include="Administration_SystemAccount_List.aspx" />
+    <Content Include="Administration_SystemAdministrator.aspx" />
+    <Content Include="Administration_SystemAdministrator_List.aspx" />
+    <Content Include="Administration_SystemEmailTemplate.aspx" />
+    <Content Include="Administration_SystemEmailTemplate_List.aspx" />
+    <Content Include="Administration_SystemPageText.aspx" />
+    <Content Include="Administration_SystemPageText_List.aspx" />
+    <Content Include="Administration_SystemServer.aspx" />
+    <Content Include="Administration_SystemServer_List.aspx" />
+    <Content Include="Administration_Unit.aspx" />
+    <Content Include="Administration_Unit_List.aspx" />
+    <Content Include="App_Controls\Controls_Footer.ascx" />
+    <Content Include="App_Controls\Controls_Header.ascx" />
+    <Content Include="App_Controls\Controls_Navigation.ascx" />
+    <Content Include="App_Files\InfoQuest_DisasterRecovery\placeholder.txt" />
+    <Content Include="App_Files\InfoQuest_ViewState\placeholder.txt" />
+    <Content Include="App_Images\CaptionBg.gif" />
+    <Content Include="App_Images\ErrorCircle-256x256.png" />
+    <Content Include="App_Images\Favorites-256x256.png" />
+    <Content Include="App_Images\HeaderBg.gif" />
+    <Content Include="App_Images\Icons\group-2_population_red.png" />
+    <Content Include="App_Images\Icons\hospital-building_medicalscheme_blue.png" />
+    <Content Include="App_Images\Icons\letter_a_magenta.png" />
+    <Content Include="App_Images\Icons\letter_c_orange.png" />
+    <Content Include="App_Images\Icons\letter_e_lightred.png" />
+    <Content Include="App_Images\Icons\letter_g_yellow.png" />
+    <Content Include="App_Images\Icons\letter_h_grey.png" />
+    <Content Include="App_Images\Icons\letter_j_purple.png" />
+    <Content Include="App_Images\Icons\letter_l_red.png" />
+    <Content Include="App_Images\Icons\letter_m_lightblue.png" />
+    <Content Include="App_Images\Icons\letter_n_darkblue.png" />
+    <Content Include="App_Images\Icons\letter_o_green.png" />
+    <Content Include="App_Images\Icons\markerA.png" />
+    <Content Include="App_Images\Icons\markerB.png" />
+    <Content Include="App_Images\Icons\medicine_doctor_green.png" />
+    <Content Include="App_Images\Icons\medicine_doctor_red.png" />
+    <Content Include="App_Images\InfoBox-256x256.png" />
+    <Content Include="App_Images\Information_16x16.png" />
+    <Content Include="App_Images\Life Icon.gif" />
+    <Content Include="App_Images\Life Icon.png" />
+    <Content Include="App_Images\Loader\Frame0.jpg" />
+    <Content Include="App_Images\Loader\Frame1.jpg" />
+    <Content Include="App_Images\Loader\Frame10.jpg" />
+    <Content Include="App_Images\Loader\Frame11.jpg" />
+    <Content Include="App_Images\Loader\Frame2.jpg" />
+    <Content Include="App_Images\Loader\Frame3.jpg" />
+    <Content Include="App_Images\Loader\Frame4.jpg" />
+    <Content Include="App_Images\Loader\Frame5.jpg" />
+    <Content Include="App_Images\Loader\Frame6.jpg" />
+    <Content Include="App_Images\Loader\Frame7.jpg" />
+    <Content Include="App_Images\Loader\Frame8.jpg" />
+    <Content Include="App_Images\Loader\Frame9.jpg" />
+    <Content Include="App_Images\Logos\Cardiac Excellence\121_logo_1_col_blue iQ cardiac excellence.jpg" />
+    <Content Include="App_Images\Logos\Cardiac Excellence\121_logo_2_col_blue_red iQ cardiac excellence.jpg" />
+    <Content Include="App_Images\Logos\Cardiac Excellence\121_logo_2_col_blue_red iQ cardiac excellence3.jpg" />
+    <Content Include="App_Images\Logos\Cardiac Excellence\121_logo_2_col_blue_red iQ cardiac excellence4.jpg" />
+    <Content Include="App_Images\Logos\Cardiac Excellence\121_logo_2_col_blue_red Qe cardiac excellence2.jpg" />
+    <Content Include="App_Images\Logos\Cardiac Excellence\121_logo_2_col_blue_red Qe patient experience.jpg" />
+    <Content Include="App_Images\Logos\Impilo\123_logo_2_col_blue_red_rev.jpg" />
+    <Content Include="App_Images\Logos\Impilo\123_logo_2_col_red_blue.jpg" />
+    <Content Include="App_Images\Logos\Kidz\120_logo_full_col.jpg" />
+    <Content Include="App_Images\Logos\Life College of Learning\116_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Life College of Learning\116_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Life College of Learning\116_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life College of Learning\116_logo_1_col_red.jpg" />
+    <Content Include="App_Images\Logos\Life College of Learning\116_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Life College of Learning\116_logo_2_col_red_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Esidimeni\85_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Life Esidimeni\85_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Life Esidimeni\85_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Esidimeni\85_logo_1_col_red.jpg" />
+    <Content Include="App_Images\Logos\Life Esidimeni\85_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Life Esidimeni\85_logo_2_col_red_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Foundation\86_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Life Foundation\86_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Life Foundation\86_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Foundation\86_logo_1_col_red.jpg" />
+    <Content Include="App_Images\Logos\Life Foundation\86_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Life Foundation\86_logo_2_col_red_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Group\13_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Life Group\13_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Life Group\13_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Group\13_logo_1_col_red.jpg" />
+    <Content Include="App_Images\Logos\Life Group\13_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Life Group\13_logo_2_col_red_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\12_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\12_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\12_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\12_logo_1_col_red.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\12_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\12_logo_2_col_red_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\14_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\14_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\14_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\14_logo_1_col_red.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\14_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\14_logo_2_col_red_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Mental Health\66_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Life Mental Health\66_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Life Mental Health\66_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Mental Health\66_logo_1_col_red.jpg" />
+    <Content Include="App_Images\Logos\Life Mental Health\66_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Life Mental Health\66_logo_2_col_red_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Occupational Health\64_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Life Occupational Health\64_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Life Occupational Health\64_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Occupational Health\64_logo_1_col_red.jpg" />
+    <Content Include="App_Images\Logos\Life Occupational Health\64_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Life Occupational Health\64_logo_2_col_red_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Occupational Health\64_sign_1_line_2_col_eng.jpg" />
+    <Content Include="App_Images\Logos\Life Rehabilitation\65_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Life Rehabilitation\65_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Life Rehabilitation\65_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Rehabilitation\65_logo_1_col_red.jpg" />
+    <Content Include="App_Images\Logos\Life Rehabilitation\65_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Life Rehabilitation\65_logo_2_col_red_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Little Life\63_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Little Life\63_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Little Life\63_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Making Life Better\125_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Making Life Better\125_logo_1_col_red_rev.jpg" />
+    <Content Include="App_Images\Logos\Making Life Better\125_logo_2_col_blue_red Moments.jpg" />
+    <Content Include="App_Images\Logos\Making Life Better\125_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Pharmacy\124_logo_2_col_red_blue.jpg" />
+    <Content Include="App_Images\Logos\Pharmacy\124_logo_2_col_red_blue2.jpg" />
+    <Content Include="App_Images\Logos\Pharmacy\124_logo_2_col_red_blue3.jpg" />
+    <Content Include="App_Images\Logos\Print Images\14_logo_1_col_black.png" />
+    <Content Include="App_Images\Logos\Print Images\65_logo_1_col_black.png" />
+    <Content Include="App_Images\Logos\Print Images\85_logo_1_col_black.png" />
+    <Content Include="App_Images\Logos\Quality\122_logo_1_col_blue iQ.jpg" />
+    <Content Include="App_Images\Logos\Quality\122_logo_1_col_blue Qe.jpg" />
+    <Content Include="App_Images\Logos\Quality\122_logo_2_col_blue_red iQ.jpg" />
+    <Content Include="App_Images\Logos\Quality\122_logo_2_col_blue_red Qe.jpg" />
+    <Content Include="App_Images\Logos\Quality\122_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Quality\122_logo_2_col_red_blue_rev iQ.jpg" />
+    <Content Include="App_Images\Logos\Quality\122_logo_2_col_red_blue_rev Qe.jpg" />
+    <Content Include="App_Images\NoAccess.png" />
+    <Content Include="App_Images\Oficina-HTML2-128x128.png" />
+    <Content Include="App_Images\OKShield-256x256.png" />
+    <Content Include="App_Images\Search-2-256x256.png" />
+    <Content Include="App_Images\Search-256x256.png" />
+    <Content Include="App_Images\TextoPlano-128x128.png" />
+    <Content Include="App_Images\UnderConstruction.jpg" />
+    <Content Include="App_JavaScripts\Administration_EmailNotification.js" />
+    <Content Include="App_JavaScripts\Administration_Exceptions.js" />
+    <Content Include="App_JavaScripts\Administration_Facility.js" />
+    <Content Include="App_JavaScripts\Administration_Facility_Form.js" />
+    <Content Include="App_JavaScripts\Administration_Facility_Type_Lookup.js" />
+    <Content Include="App_JavaScripts\Administration_Facility_Unit.js" />
+    <Content Include="App_JavaScripts\Administration_Form.js" />
+    <Content Include="App_JavaScripts\Administration_ListCategory.js" />
+    <Content Include="App_JavaScripts\Administration_ListItem.js" />
+    <Content Include="App_JavaScripts\Administration_Navigation.js" />
+    <Content Include="App_JavaScripts\Administration_SecurityAccess.js" />
+    <Content Include="App_JavaScripts\Administration_SecurityAccess_WCF.js" />
+    <Content Include="App_JavaScripts\Administration_SecurityRole.js" />
+    <Content Include="App_JavaScripts\Administration_SecurityUser.js" />
+    <Content Include="App_JavaScripts\Administration_SendEmail_List.js" />
+    <Content Include="App_JavaScripts\Administration_SystemAccount.js" />
+    <Content Include="App_JavaScripts\Administration_SystemAdministrator.js" />
+    <Content Include="App_JavaScripts\Administration_SystemArchiveMonth.js" />
+    <Content Include="App_JavaScripts\Administration_SystemEmailTemplate.js" />
+    <Content Include="App_JavaScripts\Administration_SystemPageText.js" />
+    <Content Include="App_JavaScripts\Administration_SystemServer.js" />
+    <Content Include="App_JavaScripts\Administration_Unit.js" />
+    <Content Include="App_JavaScripts\InfoQuest_DisasterRecovery.js" />
+    <Content Include="App_JavaScripts\InfoQuest_Email.js" />
+    <Content Include="App_JavaScripts\InfoQuest_Loader.js" />
+    <Content Include="App_JavaScripts\InfoQuest_LoaderSettings.js" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\Asc.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\AscOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\Back.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\CaptionBg.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\DatePicker.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\Desc.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\DescOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonCancel.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonDelete.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonFirst.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonFirstOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonInsert.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonLast.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonLastOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonLogin.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonLogout.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonNext.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonNextOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonPrev.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonPrevOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonSearch.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonToday.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonUpdate.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\First.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\FirstOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\Forward.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\HeaderBg.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\HeaderLeft.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\HeaderRight.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\Last.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\LastOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\MenuActiveBg.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\MenuBg.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\Next.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\NextOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\Prev.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\PrevOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\Spacer.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\SubmenuArrow.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\Asc.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\AscOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\Back.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\CaptionBg.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\DatePicker.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\Desc.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\DescOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonCancel.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonDelete.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonFirst.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonFirstOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonInsert.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonLast.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonLastOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonLogin.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonLogout.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonNext.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonNextOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonPrev.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonPrevOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonSearch.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonToday.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonUpdate.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\First.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\FirstOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\Forward.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\HeaderBg.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\HeaderLeft.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\HeaderRight.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\Last.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\LastOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\MenuActiveBg.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\MenuBg.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\Next.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\NextOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\Prev.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\PrevOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\Spacer.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\SubmenuArrow.gif" />
+    <Content Include="App_Themes\LifeHealthcare\InfoQuest_Navigation.css" />
+    <Content Include="App_Themes\LifeHealthcare\LifeHealthcare.css" />
+    <None Include="InfoQuestAdministrationProject.pfx" />
+    <None Include="App_CodeAnalysis\CodeAnalysisRules.ruleset" />
+    <None Include="App_CodeAnalysis\CodeAnalysisDictionary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\PublishProfiles\InfoQuestAdministration-Development.pubxml" />
+    <None Include="Properties\PublishProfiles\InfoQuestAdministration.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="App_CodeAnalysis\CodeAnalysisDictionary.xml" />
+    <Content Include="bin\ActiveUp.Net.Common.dll" />
+    <Content Include="bin\ActiveUp.Net.Smtp.dll" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\InfoQuestAdministration.dll" />
+    <Content Include="bin\InfoQuestAdministration.pdb" />
+    <Content Include="bin\InfoQuestWCF.dll" />
+    <Content Include="bin\InfoQuestWCF.pdb" />
+    <Content Include="InfoQuest_DisasterRecovery.aspx" />
+    <Content Include="InfoQuest_Error.aspx" />
+    <Content Include="InfoQuest_History.aspx" />
+    <Content Include="InfoQuest_Index.aspx" />
+    <Content Include="InfoQuest_NoAccess.aspx" />
+    <Content Include="InfoQuest_PageLoading.htm" />
+    <Content Include="InfoQuest_PageText.aspx" />
+    <None Include="Properties\PublishProfiles\InfoQuestAdministration-Development.pubxml.user" />
+    <None Include="Properties\PublishProfiles\InfoQuestAdministration.pubxml.user" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administration_EmailNotification.aspx.cs">
+      <DependentUpon>Administration_EmailNotification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_EmailNotification.aspx.designer.cs">
+      <DependentUpon>Administration_EmailNotification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_EmailNotification_List.aspx.cs">
+      <DependentUpon>Administration_EmailNotification_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_EmailNotification_List.aspx.designer.cs">
+      <DependentUpon>Administration_EmailNotification_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_Exceptions.aspx.cs">
+      <DependentUpon>Administration_Exceptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_Exceptions.aspx.designer.cs">
+      <DependentUpon>Administration_Exceptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_Exceptions_List.aspx.cs">
+      <DependentUpon>Administration_Exceptions_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_Exceptions_List.aspx.designer.cs">
+      <DependentUpon>Administration_Exceptions_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_Facility.aspx.cs">
+      <DependentUpon>Administration_Facility.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_Facility.aspx.designer.cs">
+      <DependentUpon>Administration_Facility.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_Facility_Form.aspx.cs">
+      <DependentUpon>Administration_Facility_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_Facility_Form.aspx.designer.cs">
+      <DependentUpon>Administration_Facility_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_Facility_Form_List.aspx.cs">
+      <DependentUpon>Administration_Facility_Form_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_Facility_Form_List.aspx.designer.cs">
+      <DependentUpon>Administration_Facility_Form_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_Facility_List.aspx.cs">
+      <DependentUpon>Administration_Facility_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_Facility_List.aspx.designer.cs">
+      <DependentUpon>Administration_Facility_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_Facility_Type_Lookup.aspx.cs">
+      <DependentUpon>Administration_Facility_Type_Lookup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_Facility_Type_Lookup.aspx.designer.cs">
+      <DependentUpon>Administration_Facility_Type_Lookup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_Facility_Type_Lookup_List.aspx.cs">
+      <DependentUpon>Administration_Facility_Type_Lookup_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_Facility_Type_Lookup_List.aspx.designer.cs">
+      <DependentUpon>Administration_Facility_Type_Lookup_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_Facility_Unit.aspx.cs">
+      <DependentUpon>Administration_Facility_Unit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_Facility_Unit.aspx.designer.cs">
+      <DependentUpon>Administration_Facility_Unit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_Facility_Unit_List.aspx.cs">
+      <DependentUpon>Administration_Facility_Unit_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_Facility_Unit_List.aspx.designer.cs">
+      <DependentUpon>Administration_Facility_Unit_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_Form.aspx.cs">
+      <DependentUpon>Administration_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_Form.aspx.designer.cs">
+      <DependentUpon>Administration_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_FormStatusDateUpdate.aspx.cs">
+      <DependentUpon>Administration_FormStatusDateUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_FormStatusDateUpdate.aspx.designer.cs">
+      <DependentUpon>Administration_FormStatusDateUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_Form_List.aspx.cs">
+      <DependentUpon>Administration_Form_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_Form_List.aspx.designer.cs">
+      <DependentUpon>Administration_Form_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_ListCategory.aspx.cs">
+      <DependentUpon>Administration_ListCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_ListCategory.aspx.designer.cs">
+      <DependentUpon>Administration_ListCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_ListCategory_List.aspx.cs">
+      <DependentUpon>Administration_ListCategory_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_ListCategory_List.aspx.designer.cs">
+      <DependentUpon>Administration_ListCategory_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_ListItem.aspx.cs">
+      <DependentUpon>Administration_ListItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_ListItem.aspx.designer.cs">
+      <DependentUpon>Administration_ListItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_ListItem_List.aspx.cs">
+      <DependentUpon>Administration_ListItem_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_ListItem_List.aspx.designer.cs">
+      <DependentUpon>Administration_ListItem_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_Navigation.aspx.cs">
+      <DependentUpon>Administration_Navigation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_Navigation.aspx.designer.cs">
+      <DependentUpon>Administration_Navigation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_Navigation_List.aspx.cs">
+      <DependentUpon>Administration_Navigation_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_Navigation_List.aspx.designer.cs">
+      <DependentUpon>Administration_Navigation_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_PageView_List.aspx.cs">
+      <DependentUpon>Administration_PageView_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_PageView_List.aspx.designer.cs">
+      <DependentUpon>Administration_PageView_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_ReportNumber_List.aspx.cs">
+      <DependentUpon>Administration_ReportNumber_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_ReportNumber_List.aspx.designer.cs">
+      <DependentUpon>Administration_ReportNumber_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SecurityAccess.aspx.cs">
+      <DependentUpon>Administration_SecurityAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SecurityAccess.aspx.designer.cs">
+      <DependentUpon>Administration_SecurityAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SecurityAccess_List.aspx.cs">
+      <DependentUpon>Administration_SecurityAccess_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SecurityAccess_List.aspx.designer.cs">
+      <DependentUpon>Administration_SecurityAccess_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SecurityAccess_SwitchAccess.aspx.cs">
+      <DependentUpon>Administration_SecurityAccess_SwitchAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SecurityAccess_SwitchAccess.aspx.designer.cs">
+      <DependentUpon>Administration_SecurityAccess_SwitchAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SecurityAccess_WCF.aspx.cs">
+      <DependentUpon>Administration_SecurityAccess_WCF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SecurityAccess_WCF.aspx.designer.cs">
+      <DependentUpon>Administration_SecurityAccess_WCF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SecurityAccess_WCF_List.aspx.cs">
+      <DependentUpon>Administration_SecurityAccess_WCF_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SecurityAccess_WCF_List.aspx.designer.cs">
+      <DependentUpon>Administration_SecurityAccess_WCF_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SecurityRole.aspx.cs">
+      <DependentUpon>Administration_SecurityRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SecurityRole.aspx.designer.cs">
+      <DependentUpon>Administration_SecurityRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SecurityRole_List.aspx.cs">
+      <DependentUpon>Administration_SecurityRole_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SecurityRole_List.aspx.designer.cs">
+      <DependentUpon>Administration_SecurityRole_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SecurityUser.aspx.cs">
+      <DependentUpon>Administration_SecurityUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SecurityUser.aspx.designer.cs">
+      <DependentUpon>Administration_SecurityUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SecurityUser_List.aspx.cs">
+      <DependentUpon>Administration_SecurityUser_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SecurityUser_List.aspx.designer.cs">
+      <DependentUpon>Administration_SecurityUser_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SendEmail.aspx.cs">
+      <DependentUpon>Administration_SendEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SendEmail.aspx.designer.cs">
+      <DependentUpon>Administration_SendEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SendEmail_List.aspx.cs">
+      <DependentUpon>Administration_SendEmail_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SendEmail_List.aspx.designer.cs">
+      <DependentUpon>Administration_SendEmail_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_StoredProcedureExecution_List.aspx.cs">
+      <DependentUpon>Administration_StoredProcedureExecution_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_StoredProcedureExecution_List.aspx.designer.cs">
+      <DependentUpon>Administration_StoredProcedureExecution_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SystemAccount.aspx.cs">
+      <DependentUpon>Administration_SystemAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SystemAccount.aspx.designer.cs">
+      <DependentUpon>Administration_SystemAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SystemAccount_List.aspx.cs">
+      <DependentUpon>Administration_SystemAccount_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SystemAccount_List.aspx.designer.cs">
+      <DependentUpon>Administration_SystemAccount_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SystemAdministrator.aspx.cs">
+      <DependentUpon>Administration_SystemAdministrator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SystemAdministrator.aspx.designer.cs">
+      <DependentUpon>Administration_SystemAdministrator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SystemAdministrator_List.aspx.cs">
+      <DependentUpon>Administration_SystemAdministrator_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SystemAdministrator_List.aspx.designer.cs">
+      <DependentUpon>Administration_SystemAdministrator_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SystemEmailTemplate.aspx.cs">
+      <DependentUpon>Administration_SystemEmailTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SystemEmailTemplate.aspx.designer.cs">
+      <DependentUpon>Administration_SystemEmailTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SystemEmailTemplate_List.aspx.cs">
+      <DependentUpon>Administration_SystemEmailTemplate_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SystemEmailTemplate_List.aspx.designer.cs">
+      <DependentUpon>Administration_SystemEmailTemplate_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SystemPageText.aspx.cs">
+      <DependentUpon>Administration_SystemPageText.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SystemPageText.aspx.designer.cs">
+      <DependentUpon>Administration_SystemPageText.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SystemPageText_List.aspx.cs">
+      <DependentUpon>Administration_SystemPageText_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SystemPageText_List.aspx.designer.cs">
+      <DependentUpon>Administration_SystemPageText_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SystemServer.aspx.cs">
+      <DependentUpon>Administration_SystemServer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SystemServer.aspx.designer.cs">
+      <DependentUpon>Administration_SystemServer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_SystemServer_List.aspx.cs">
+      <DependentUpon>Administration_SystemServer_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_SystemServer_List.aspx.designer.cs">
+      <DependentUpon>Administration_SystemServer_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_Unit.aspx.cs">
+      <DependentUpon>Administration_Unit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_Unit.aspx.designer.cs">
+      <DependentUpon>Administration_Unit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration_Unit_List.aspx.cs">
+      <DependentUpon>Administration_Unit_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration_Unit_List.aspx.designer.cs">
+      <DependentUpon>Administration_Unit_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Controls\Controls_Footer.ascx.cs">
+      <DependentUpon>Controls_Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Controls\Controls_Footer.ascx.designer.cs">
+      <DependentUpon>Controls_Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Controls\Controls_Header.ascx.cs">
+      <DependentUpon>Controls_Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Controls\Controls_Header.ascx.designer.cs">
+      <DependentUpon>Controls_Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Controls\Controls_Navigation.ascx.cs">
+      <DependentUpon>Controls_Navigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Controls\Controls_Navigation.ascx.designer.cs">
+      <DependentUpon>Controls_Navigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="InfoQuest_DisasterRecovery.aspx.cs">
+      <DependentUpon>InfoQuest_DisasterRecovery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoQuest_DisasterRecovery.aspx.designer.cs">
+      <DependentUpon>InfoQuest_DisasterRecovery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoQuest_Error.aspx.cs">
+      <DependentUpon>InfoQuest_Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoQuest_Error.aspx.designer.cs">
+      <DependentUpon>InfoQuest_Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoQuest_History.aspx.cs">
+      <DependentUpon>InfoQuest_History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoQuest_History.aspx.designer.cs">
+      <DependentUpon>InfoQuest_History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoQuest_Index.aspx.cs">
+      <DependentUpon>InfoQuest_Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoQuest_Index.aspx.designer.cs">
+      <DependentUpon>InfoQuest_Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoQuest_NoAccess.aspx.cs">
+      <DependentUpon>InfoQuest_NoAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoQuest_NoAccess.aspx.designer.cs">
+      <DependentUpon>InfoQuest_NoAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoQuest_PageText.aspx.cs">
+      <DependentUpon>InfoQuest_PageText.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoQuest_PageText.aspx.designer.cs">
+      <DependentUpon>InfoQuest_PageText.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.51116.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InfoQuestWCF\InfoQuestWCF.csproj">
+      <Project>{e1c77371-9475-4ab0-98d3-3b51975a6643}</Project>
+      <Name>InfoQuestWCF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>InfoQuestAdministrationProject.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7233</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:7233/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,3166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A679B2AD-81D7-4159-A6B0-6D690F34340D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InfoQuestForm</RootNamespace>
+    <AssemblyName>InfoQuestForm</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>App_CodeAnalysis\CodeAnalysisRules.ruleset</CodeAnalysisRuleSet>
+    <PublishDatabases>false</PublishDatabases>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="App_Controls\Controls_DatePicker.ascx" />
+    <Content Include="App_Controls\Controls_DateTimePicker.ascx" />
+    <Content Include="App_Controls\Controls_Footer.ascx" />
+    <Content Include="App_Controls\Controls_Header.ascx" />
+    <Content Include="App_Controls\Controls_Navigation.ascx" />
+    <Content Include="App_Controls\Controls_TimePicker.ascx" />
+    <Content Include="App_Files\Form_CollegeLearningAudit_Upload\placeholder.txt" />
+    <Content Include="App_Files\Form_CRM_DiscoveryComment_Upload\placeholder.txt" />
+    <Content Include="App_Files\Form_CRM_PXM_Upload\CRM_PXM_PDCH_Escalation\placeholder.txt" />
+    <Content Include="App_Files\Form_InfrastructureAudit_Upload\placeholder.txt" />
+    <Content Include="App_Files\Form_MonthlyHospitalStatistics_DSOInternal_Upload\placeholder.txt" />
+    <Content Include="App_Files\Form_MonthlyHospitalStatistics_Waste_Upload\placeholder.txt" />
+    <Content Include="App_Files\Form_OccupationalHealthAudit_Upload\placeholder.txt" />
+    <Content Include="App_Files\Form_PXM_Upload\PXM_PDCH_DoctorQuestion\placeholder.txt" />
+    <Content Include="App_Files\Form_PXM_Upload\PXM_PDCH_Escalation\placeholder.txt" />
+    <Content Include="App_Files\Form_PXM_Upload\PXM_PDCH_Event\placeholder.txt" />
+    <Content Include="App_Files\Form_PXM_Upload\PXM_PDCH_Report\placeholder.txt" />
+    <Content Include="App_Files\Form_PXM_Upload\PXM_PDCH_TouchPoint\placeholder.txt" />
+    <Content Include="App_Files\Form_QMSReview_Upload\placeholder.txt" />
+    <Content Include="App_Files\Form_RenalClinicalOutcomes_Upload\placeholder.txt" />
+    <Content Include="App_Files\InfoQuest_ViewState\placeholder.txt" />
+    <Content Include="App_Files\InfoQuest_Zip\placeholder.txt" />
+    <Content Include="App_Images\CaptionBg.gif" />
+    <Content Include="App_Images\ErrorCircle-256x256.png" />
+    <Content Include="App_Images\Favorites-256x256.png" />
+    <Content Include="App_Images\HeaderBg.gif" />
+    <Content Include="App_Images\Icons\group-2_population_red.png" />
+    <Content Include="App_Images\Icons\hospital-building_medicalscheme_blue.png" />
+    <Content Include="App_Images\Icons\letter_a_magenta.png" />
+    <Content Include="App_Images\Icons\letter_c_orange.png" />
+    <Content Include="App_Images\Icons\letter_e_lightred.png" />
+    <Content Include="App_Images\Icons\letter_g_yellow.png" />
+    <Content Include="App_Images\Icons\letter_h_grey.png" />
+    <Content Include="App_Images\Icons\letter_j_purple.png" />
+    <Content Include="App_Images\Icons\letter_l_red.png" />
+    <Content Include="App_Images\Icons\letter_m_lightblue.png" />
+    <Content Include="App_Images\Icons\letter_n_darkblue.png" />
+    <Content Include="App_Images\Icons\letter_o_green.png" />
+    <Content Include="App_Images\Icons\markerA.png" />
+    <Content Include="App_Images\Icons\markerB.png" />
+    <Content Include="App_Images\Icons\medicine_doctor_green.png" />
+    <Content Include="App_Images\Icons\medicine_doctor_red.png" />
+    <Content Include="App_Images\InfoBox-256x256.png" />
+    <Content Include="App_Images\Information_16x16.png" />
+    <Content Include="App_Images\Life Icon.gif" />
+    <Content Include="App_Images\Life Icon.png" />
+    <Content Include="App_Images\Loader\Frame0.jpg" />
+    <Content Include="App_Images\Loader\Frame1.jpg" />
+    <Content Include="App_Images\Loader\Frame10.jpg" />
+    <Content Include="App_Images\Loader\Frame11.jpg" />
+    <Content Include="App_Images\Loader\Frame2.jpg" />
+    <Content Include="App_Images\Loader\Frame3.jpg" />
+    <Content Include="App_Images\Loader\Frame4.jpg" />
+    <Content Include="App_Images\Loader\Frame5.jpg" />
+    <Content Include="App_Images\Loader\Frame6.jpg" />
+    <Content Include="App_Images\Loader\Frame7.jpg" />
+    <Content Include="App_Images\Loader\Frame8.jpg" />
+    <Content Include="App_Images\Loader\Frame9.jpg" />
+    <Content Include="App_Images\Logos\Cardiac Excellence\121_logo_1_col_blue iQ cardiac excellence.jpg" />
+    <Content Include="App_Images\Logos\Cardiac Excellence\121_logo_2_col_blue_red iQ cardiac excellence.jpg" />
+    <Content Include="App_Images\Logos\Cardiac Excellence\121_logo_2_col_blue_red iQ cardiac excellence3.jpg" />
+    <Content Include="App_Images\Logos\Cardiac Excellence\121_logo_2_col_blue_red iQ cardiac excellence4.jpg" />
+    <Content Include="App_Images\Logos\Cardiac Excellence\121_logo_2_col_blue_red Qe cardiac excellence2.jpg" />
+    <Content Include="App_Images\Logos\Cardiac Excellence\121_logo_2_col_blue_red Qe patient experience.jpg" />
+    <Content Include="App_Images\Logos\Impilo\123_logo_2_col_blue_red_rev.jpg" />
+    <Content Include="App_Images\Logos\Impilo\123_logo_2_col_red_blue.jpg" />
+    <Content Include="App_Images\Logos\Kidz\120_logo_full_col.jpg" />
+    <Content Include="App_Images\Logos\Life College of Learning\116_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Life College of Learning\116_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Life College of Learning\116_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life College of Learning\116_logo_1_col_red.jpg" />
+    <Content Include="App_Images\Logos\Life College of Learning\116_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Life College of Learning\116_logo_2_col_red_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Esidimeni\85_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Life Esidimeni\85_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Life Esidimeni\85_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Esidimeni\85_logo_1_col_red.jpg" />
+    <Content Include="App_Images\Logos\Life Esidimeni\85_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Life Esidimeni\85_logo_2_col_red_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Foundation\86_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Life Foundation\86_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Life Foundation\86_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Foundation\86_logo_1_col_red.jpg" />
+    <Content Include="App_Images\Logos\Life Foundation\86_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Life Foundation\86_logo_2_col_red_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Group\13_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Life Group\13_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Life Group\13_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Group\13_logo_1_col_red.jpg" />
+    <Content Include="App_Images\Logos\Life Group\13_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Life Group\13_logo_2_col_red_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\12_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\12_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\12_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\12_logo_1_col_red.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\12_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\12_logo_2_col_red_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\14_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\14_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\14_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\14_logo_1_col_red.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\14_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Life Healthcare\14_logo_2_col_red_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Mental Health\66_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Life Mental Health\66_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Life Mental Health\66_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Mental Health\66_logo_1_col_red.jpg" />
+    <Content Include="App_Images\Logos\Life Mental Health\66_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Life Mental Health\66_logo_2_col_red_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Occupational Health\64_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Life Occupational Health\64_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Life Occupational Health\64_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Occupational Health\64_logo_1_col_red.jpg" />
+    <Content Include="App_Images\Logos\Life Occupational Health\64_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Life Occupational Health\64_logo_2_col_red_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Occupational Health\64_sign_1_line_2_col_eng.jpg" />
+    <Content Include="App_Images\Logos\Life Rehabilitation\65_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Life Rehabilitation\65_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Life Rehabilitation\65_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Life Rehabilitation\65_logo_1_col_red.jpg" />
+    <Content Include="App_Images\Logos\Life Rehabilitation\65_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Life Rehabilitation\65_logo_2_col_red_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Little Life\63_logo_1_col_black.jpg" />
+    <Content Include="App_Images\Logos\Little Life\63_logo_1_col_blue.jpg" />
+    <Content Include="App_Images\Logos\Little Life\63_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Making Life Better\125_logo_1_col_blue_rev.jpg" />
+    <Content Include="App_Images\Logos\Making Life Better\125_logo_1_col_red_rev.jpg" />
+    <Content Include="App_Images\Logos\Making Life Better\125_logo_2_col_blue_red Moments.jpg" />
+    <Content Include="App_Images\Logos\Making Life Better\125_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Pharmacy\124_logo_2_col_red_blue.jpg" />
+    <Content Include="App_Images\Logos\Pharmacy\124_logo_2_col_red_blue2.jpg" />
+    <Content Include="App_Images\Logos\Pharmacy\124_logo_2_col_red_blue3.jpg" />
+    <Content Include="App_Images\Logos\Print Images\14_logo_1_col_black.png" />
+    <Content Include="App_Images\Logos\Print Images\65_logo_1_col_black.png" />
+    <Content Include="App_Images\Logos\Print Images\85_logo_1_col_black.png" />
+    <Content Include="App_Images\Logos\Quality\122_logo_1_col_blue iQ.jpg" />
+    <Content Include="App_Images\Logos\Quality\122_logo_1_col_blue Qe.jpg" />
+    <Content Include="App_Images\Logos\Quality\122_logo_2_col_blue_red iQ.jpg" />
+    <Content Include="App_Images\Logos\Quality\122_logo_2_col_blue_red Qe.jpg" />
+    <Content Include="App_Images\Logos\Quality\122_logo_2_col_blue_red.jpg" />
+    <Content Include="App_Images\Logos\Quality\122_logo_2_col_red_blue_rev iQ.jpg" />
+    <Content Include="App_Images\Logos\Quality\122_logo_2_col_red_blue_rev Qe.jpg" />
+    <Content Include="App_Images\NoAccess.png" />
+    <Content Include="App_Images\Oficina-HTML2-128x128.png" />
+    <Content Include="App_Images\OKShield-256x256.png" />
+    <Content Include="App_Images\Search-2-256x256.png" />
+    <Content Include="App_Images\Search-256x256.png" />
+    <Content Include="App_Images\TextoPlano-128x128.png" />
+    <Content Include="App_Images\UnderConstruction.jpg" />
+    <Content Include="App_JavaScripts\Bootstrap\bootstrap.js" />
+    <Content Include="App_JavaScripts\Bootstrap\bootstrap.min.js" />
+    <Content Include="App_JavaScripts\ckeditor\adapters\jquery.js" />
+    <Content Include="App_JavaScripts\ckeditor\build-config.js" />
+    <Content Include="App_JavaScripts\ckeditor\ckeditor.js" />
+    <Content Include="App_JavaScripts\ckeditor\config.js" />
+    <Content Include="App_JavaScripts\ckeditor\contents.css" />
+    <Content Include="App_JavaScripts\ckeditor\lang\af.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\ar.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\bg.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\bn.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\bs.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\ca.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\cs.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\cy.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\da.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\de-ch.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\de.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\el.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\en-au.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\en-ca.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\en-gb.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\en.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\eo.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\es.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\et.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\eu.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\fa.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\fi.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\fo.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\fr-ca.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\fr.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\gl.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\gu.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\he.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\hi.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\hr.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\hu.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\id.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\is.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\it.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\ja.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\ka.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\km.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\ko.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\ku.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\lt.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\lv.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\mk.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\mn.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\ms.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\nb.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\nl.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\no.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\pl.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\pt-br.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\pt.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\ro.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\ru.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\si.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\sk.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\sl.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\sq.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\sr-latn.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\sr.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\sv.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\th.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\tr.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\tt.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\ug.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\uk.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\vi.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\zh-cn.js" />
+    <Content Include="App_JavaScripts\ckeditor\lang\zh.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\af.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\de-ch.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\eu.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\fo.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\colordialog\dialogs\colordialog.css" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\icons.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\magicline\images\hidpi\icon-rtl.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\magicline\images\icon-rtl.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\preview\preview.html" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\angel_smile.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\angry_smile.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\broken_heart.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\confused_smile.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\cry_smile.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\devil_smile.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\embarrassed_smile.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\embarrassed_smile.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\envelope.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\heart.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\kiss.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\lightbulb.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\omg_smile.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\regular_smile.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\sad_smile.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\shades_smile.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\teeth_smile.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\thumbs_down.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\thumbs_up.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\tongue_smile.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\tongue_smile.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\smiley\images\wink_smile.png" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\af.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\da.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\de-ch.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\eu.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\ko.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\lt.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\templates\dialogs\templates.css" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="App_JavaScripts\ckeditor\samples\css\samples.css" />
+    <Content Include="App_JavaScripts\ckeditor\samples\img\github-top.png" />
+    <Content Include="App_JavaScripts\ckeditor\samples\img\header-bg.png" />
+    <Content Include="App_JavaScripts\ckeditor\samples\img\header-separator.png" />
+    <Content Include="App_JavaScripts\ckeditor\samples\img\logo.png" />
+    <Content Include="App_JavaScripts\ckeditor\samples\img\navigation-tip.png" />
+    <Content Include="App_JavaScripts\ckeditor\samples\index.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\js\sample.js" />
+    <Content Include="App_JavaScripts\ckeditor\samples\js\sf.js" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\ajax.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\api.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\appendto.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\assets\inlineall\logo.png" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\assets\outputxhtml\outputxhtml.css" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\assets\posteddata.php" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\assets\sample.jpg" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\assets\uilanguages\languages.js" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\datafiltering.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\dialog\assets\my_dialog.js" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\dialog\dialog.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\divreplace.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\enterkey\enterkey.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.swf" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\htmlwriter\assets\outputforflash\swfobject.js" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\htmlwriter\outputforflash.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\htmlwriter\outputhtml.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\index.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\inlineall.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\inlinebycode.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\inlinetextarea.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\jquery.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\magicline\magicline.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\readonly.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\replacebyclass.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\replacebycode.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\sample.css" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\sample.js" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\sample_posteddata.php" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\tabindex.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\toolbar\toolbar.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\uicolor.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\uilanguages.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\wysiwygarea\fullpage.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\xhtmlstyle.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\toolbarconfigurator\css\fontello.css" />
+    <Content Include="App_JavaScripts\ckeditor\samples\toolbarconfigurator\font\fontello.svg" />
+    <Content Include="App_JavaScripts\ckeditor\samples\toolbarconfigurator\font\LICENSE.txt" />
+    <Content Include="App_JavaScripts\ckeditor\samples\toolbarconfigurator\index.html" />
+    <Content Include="App_JavaScripts\ckeditor\samples\toolbarconfigurator\js\abstracttoolbarmodifier.js" />
+    <Content Include="App_JavaScripts\ckeditor\samples\toolbarconfigurator\js\fulltoolbareditor.js" />
+    <Content Include="App_JavaScripts\ckeditor\samples\toolbarconfigurator\js\toolbarmodifier.js" />
+    <Content Include="App_JavaScripts\ckeditor\samples\toolbarconfigurator\js\toolbartextmodifier.js" />
+    <Content Include="App_JavaScripts\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.css" />
+    <Content Include="App_JavaScripts\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.js" />
+    <Content Include="App_JavaScripts\ckeditor\samples\toolbarconfigurator\lib\codemirror\javascript.js" />
+    <Content Include="App_JavaScripts\ckeditor\samples\toolbarconfigurator\lib\codemirror\neo.css" />
+    <Content Include="App_JavaScripts\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.css" />
+    <Content Include="App_JavaScripts\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.js" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\dialog.css" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\dialog_ie.css" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\dialog_ie7.css" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\dialog_ie8.css" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\dialog_iequirks.css" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\editor.css" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\editor_gecko.css" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\editor_ie.css" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\editor_ie7.css" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\editor_ie8.css" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\editor_iequirks.css" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\icons.png" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\icons_hidpi.png" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\images\arrow.png" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\images\close.png" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\images\hidpi\close.png" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\images\hidpi\lock.png" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\images\lock-open.png" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\images\lock.png" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\images\refresh.png" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\images\spinner.gif" />
+    <Content Include="App_JavaScripts\ckeditor\styles.js" />
+    <Content Include="App_JavaScripts\Form_AAA_Test.js" />
+    <Content Include="App_JavaScripts\Form_Alert.js" />
+    <Content Include="App_JavaScripts\Form_AMSPI.js" />
+    <Content Include="App_JavaScripts\Form_AntimicrobialStewardshipIntervention.js" />
+    <Content Include="App_JavaScripts\Form_BundleCompliance.js" />
+    <Content Include="App_JavaScripts\Form_CollegeLearningAudit_Findings.js" />
+    <Content Include="App_JavaScripts\Form_CollegeLearningAudit_Summary.js" />
+    <Content Include="App_JavaScripts\Form_CollegeLearningAudit_Upload.js" />
+    <Content Include="App_JavaScripts\Form_ContactCentre_InfoQuestAccess.js" />
+    <Content Include="App_JavaScripts\Form_CRM.js" />
+    <Content Include="App_JavaScripts\Form_CRM_DiscoveryComment_Upload.js" />
+    <Content Include="App_JavaScripts\Form_CRM_PXM_Upload.js" />
+    <Content Include="App_JavaScripts\Form_ExecutiveMarketInquiry_Map.js" />
+    <Content Include="App_JavaScripts\Form_ExecutiveMarketInquiry_Map_Doctor.js" />
+    <Content Include="App_JavaScripts\Form_ExecutiveMarketInquiry_Map_Hospital.js" />
+    <Content Include="App_JavaScripts\Form_FIMFAM.js" />
+    <Content Include="App_JavaScripts\Form_FSM_BusinessUnit.js" />
+    <Content Include="App_JavaScripts\Form_FSM_BusinessUnitComponent.js" />
+    <Content Include="App_JavaScripts\Form_FSM_BusinessUnitComponent_List.js" />
+    <Content Include="App_JavaScripts\Form_FSM_Location.js" />
+    <Content Include="App_JavaScripts\Form_HAI.js" />
+    <Content Include="App_JavaScripts\Form_HeadOfficeQualityAudit.js" />
+    <Content Include="App_JavaScripts\Form_Incident.js" />
+    <Content Include="App_JavaScripts\Form_InfectionPrevention.js" />
+    <Content Include="App_JavaScripts\Form_InfrastructureAudit_Summary.js" />
+    <Content Include="App_JavaScripts\Form_InfrastructureAudit_Upload.js" />
+    <Content Include="App_JavaScripts\Form_IPS.js" />
+    <Content Include="App_JavaScripts\Form_IPS_Antibiogram_Lookup.js" />
+    <Content Include="App_JavaScripts\Form_IPS_BedHistory.js" />
+    <Content Include="App_JavaScripts\Form_IPS_HAI.js" />
+    <Content Include="App_JavaScripts\Form_IPS_Organism_Lookup.js" />
+    <Content Include="App_JavaScripts\Form_IPS_Specimen.js" />
+    <Content Include="App_JavaScripts\Form_IPS_Theatre.js" />
+    <Content Include="App_JavaScripts\Form_IPS_VisitDiagnosis.js" />
+    <Content Include="App_JavaScripts\Form_Isidima.js" />
+    <Content Include="App_JavaScripts\Form_Isidima_Admin.js" />
+    <Content Include="App_JavaScripts\Form_MedicationBundleCompliance.js" />
+    <Content Include="App_JavaScripts\Form_MHQ14.js" />
+    <Content Include="App_JavaScripts\Form_MonthlyHospitalStatistics.js" />
+    <Content Include="App_JavaScripts\Form_MonthlyHospitalStatistics_DSOInternal_Upload.js" />
+    <Content Include="App_JavaScripts\Form_MonthlyHospitalStatistics_Waste_Upload.js" />
+    <Content Include="App_JavaScripts\Form_MonthlyOccupationalHealthStatistics.js" />
+    <Content Include="App_JavaScripts\Form_MonthlyPharmacyStatistics.js" />
+    <Content Include="App_JavaScripts\Form_OccupationalHealthAudit_Findings.js" />
+    <Content Include="App_JavaScripts\Form_OccupationalHealthAudit_Summary.js" />
+    <Content Include="App_JavaScripts\Form_OccupationalHealthAudit_Upload.js" />
+    <Content Include="App_JavaScripts\Form_PharmacyClinicalMetrics.js" />
+    <Content Include="App_JavaScripts\Form_PharmacySurveys.js" />
+    <Content Include="App_JavaScripts\Form_PharmacySurveys_Create.js" />
+    <Content Include="App_JavaScripts\Form_PharmacySurveys_LoadedSurveys.js" />
+    <Content Include="App_JavaScripts\Form_PharmacySurveys_LoadedSurveys_List.js" />
+    <Content Include="App_JavaScripts\Form_Pharmacy_NewProduct.js" />
+    <Content Include="App_JavaScripts\Form_Pharmacy_Supplier_Lookup.js" />
+    <Content Include="App_JavaScripts\Form_PROMS.js" />
+    <Content Include="App_JavaScripts\Form_PXM_PDCH_DoctorQuestion_List.js" />
+    <Content Include="App_JavaScripts\Form_PXM_PDCH_DoctorQuestion_Upload.js" />
+    <Content Include="App_JavaScripts\Form_PXM_PDCH_TouchPoint_List.js" />
+    <Content Include="App_JavaScripts\Form_PXM_PDCH_TouchPoint_Upload.js" />
+    <Content Include="App_JavaScripts\Form_QMSReview_Findings.js" />
+    <Content Include="App_JavaScripts\Form_QMSReview_Summary.js" />
+    <Content Include="App_JavaScripts\Form_QMSReview_Upload.js" />
+    <Content Include="App_JavaScripts\Form_RehabBundleCompliance.js" />
+    <Content Include="App_JavaScripts\Form_RenalClinicalOutcomes_List.js" />
+    <Content Include="App_JavaScripts\Form_RenalClinicalOutcomes_Upload.js" />
+    <Content Include="App_JavaScripts\Form_SustainabilityManagement.js" />
+    <Content Include="App_JavaScripts\Form_TransparencyRegister.js" />
+    <Content Include="App_JavaScripts\Form_VTE.js" />
+    <Content Include="App_JavaScripts\GoogleMapAddon\ContextMenu.js" />
+    <Content Include="App_JavaScripts\GoogleMapAddon\oms.min.js" />
+    <Content Include="App_JavaScripts\Holder\holder.js" />
+    <Content Include="App_JavaScripts\Holder\holder.min.js" />
+    <Content Include="App_JavaScripts\InfoQuest_Email.js" />
+    <Content Include="App_JavaScripts\InfoQuest_Loader.js" />
+    <Content Include="App_JavaScripts\InfoQuest_LoaderSettings.js" />
+    <Content Include="App_JavaScripts\InfoQuest_OccupationalHealthSearch.js" />
+    <Content Include="App_JavaScripts\InfoQuest_PatientSearch.js" />
+    <Content Include="App_JavaScripts\jQuery\jquery-1.10.2.js" />
+    <Content Include="App_JavaScripts\jQuery\jquery-1.10.2.min.js" />
+    <Content Include="App_JavaScripts\jQuery\jquery-2.2.4.js" />
+    <Content Include="App_JavaScripts\jQuery\jquery-2.2.4.min.js" />
+    <Content Include="App_JavaScripts\jQuery\jquery-3.0.0.js" />
+    <Content Include="App_JavaScripts\jQuery\jquery-3.0.0.min.js" />
+    <Content Include="App_JavaScripts\jQuery\jquery-ui.js" />
+    <Content Include="App_JavaScripts\jQuery\jquery-ui.min.js" />
+    <Content Include="App_JavaScripts\jQuery\jquery.multiselect.js" />
+    <Content Include="App_JavaScripts\jQuery\jquery.multiselect.min.js" />
+    <Content Include="App_Themes\Bootstrap\bootstrap-theme.css" />
+    <Content Include="App_Themes\Bootstrap\bootstrap-theme.min.css" />
+    <Content Include="App_Themes\Bootstrap\bootstrap.css" />
+    <Content Include="App_Themes\Bootstrap\bootstrap.min.css" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\Asc.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\AscOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\Back.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\CaptionBg.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\DatePicker.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\Desc.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\DescOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonCancel.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonDelete.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonFirst.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonFirstOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonInsert.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonLast.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonLastOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonLogin.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonLogout.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonNext.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonNextOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonPrev.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonPrevOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonSearch.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonToday.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\en\ButtonUpdate.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\First.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\FirstOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\Forward.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\HeaderBg.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\HeaderLeft.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\HeaderRight.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\Last.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\LastOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\MenuActiveBg.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\MenuBg.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\Next.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\NextOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\Prev.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\PrevOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\Spacer.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Blue\SubmenuArrow.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\Asc.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\AscOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\Back.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\CaptionBg.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\DatePicker.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\Desc.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\DescOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonCancel.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonDelete.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonFirst.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonFirstOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonInsert.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonLast.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonLastOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonLogin.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonLogout.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonNext.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonNextOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonPrev.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonPrevOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonSearch.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonToday.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\en\ButtonUpdate.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\First.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\FirstOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\Forward.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\HeaderBg.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\HeaderLeft.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\HeaderRight.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\Last.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\LastOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\MenuActiveBg.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\MenuBg.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\Next.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\NextOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\Prev.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\PrevOff.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\Spacer.gif" />
+    <Content Include="App_Themes\LifeHealthcare\Images\Red\SubmenuArrow.gif" />
+    <Content Include="App_Themes\LifeHealthcare\InfoQuest_Navigation.css" />
+    <Content Include="App_Themes\LifeHealthcare\LifeHealthcare.css" />
+    <Content Include="App_Themes\Form_AAA_Test.css" />
+    <Content Include="bin\ActiveUp.Net.Common.dll" />
+    <Content Include="bin\ActiveUp.Net.Smtp.dll" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\DocumentFormat.OpenXml.dll" />
+    <Content Include="bin\InfoQuestForm.dll" />
+    <Content Include="bin\InfoQuestForm.pdb" />
+    <Content Include="bin\InfoQuestWCF.dll" />
+    <Content Include="bin\InfoQuestWCF.pdb" />
+    <Content Include="bin\itextsharp.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.Common.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.DataVisualization.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.ProcessingObjectModel.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.WebForms.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.WinForms.dll" />
+    <Content Include="Form_AAA_Test.aspx" />
+    <Content Include="Form_Alert_List.aspx" />
+    <Content Include="Form_AMI.aspx" />
+    <Content Include="Form_AMI_List.aspx" />
+    <Content Include="Form_AMSPI.aspx" />
+    <Content Include="Form_AMSPI_List.aspx" />
+    <Content Include="Form_AntimicrobialStewardshipIntervention.aspx" />
+    <Content Include="Form_AntimicrobialStewardshipIntervention_List.aspx" />
+    <Content Include="Form_BundleCompliance.aspx" />
+    <Content Include="Form_BundleCompliance_List.aspx" />
+    <Content Include="Form_ClinicalPracticeAudit.aspx" />
+    <Content Include="Form_ClinicalPracticeAudit_List.aspx" />
+    <Content Include="Form_CollegeLearningAudit.aspx" />
+    <Content Include="Form_CollegeLearningAudit_Findings.aspx" />
+    <Content Include="Form_CollegeLearningAudit_Findings_List.aspx" />
+    <Content Include="Form_CollegeLearningAudit_List.aspx" />
+    <Content Include="Form_CollegeLearningAudit_Summary.aspx" />
+    <Content Include="Form_CollegeLearningAudit_Summary_Print.aspx" />
+    <Content Include="Form_CollegeLearningAudit_Upload.aspx" />
+    <Content Include="Form_ContactCentre_InfoQuestAccess.aspx" />
+    <Content Include="Form_ContactCentre_UserAccessRequest.aspx" />
+    <Content Include="Form_CRM.aspx" />
+    <Content Include="Form_CRM_DiscoveryComment_Upload.aspx" />
+    <Content Include="Form_CRM_IncompleteComplaints.aspx" />
+    <Content Include="Form_CRM_IncompleteOther.aspx" />
+    <Content Include="Form_CRM_List.aspx" />
+    <Content Include="Form_CRM_PXM_Upload.aspx" />
+    <Content Include="Form_ECM.aspx" />
+    <Content Include="Form_ECM_List.aspx" />
+    <Content Include="Form_EquipmentClassifiedSystem_Available.aspx" />
+    <Content Include="Form_EquipmentClassifiedSystem_List.aspx" />
+    <Content Include="Form_EquipmentClassifiedSystem_Request.aspx" />
+    <Content Include="Form_EsidimeniStats_Ailments.aspx" />
+    <Content Include="Form_EsidimeniStats_Death.aspx" />
+    <Content Include="Form_EsidimeniStats_LeaveAbsence.aspx" />
+    <Content Include="Form_EsidimeniStats_OBRM.aspx" />
+    <Content Include="Form_EsidimeniStats_Periodicals.aspx" />
+    <Content Include="Form_EsidimeniStats_TeflaScores.aspx" />
+    <Content Include="Form_EsidimeniStats_Visits.aspx" />
+    <Content Include="Form_ExecutiveMarketInquiry_Map.aspx" />
+    <Content Include="Form_ExecutiveMarketInquiry_Map_Doctor.aspx" />
+    <Content Include="Form_ExecutiveMarketInquiry_Map_Hospital.aspx" />
+    <Content Include="Form_FIMFAM.aspx" />
+    <Content Include="Form_FIMFAM_List.aspx" />
+    <Content Include="Form_FSM_BusinessUnit.aspx" />
+    <Content Include="Form_FSM_BusinessUnitComponent.aspx" />
+    <Content Include="Form_FSM_BusinessUnitComponent_List.aspx" />
+    <Content Include="Form_FSM_BusinessUnit_List.aspx" />
+    <Content Include="Form_FSM_Location.aspx" />
+    <Content Include="Form_FSM_Location_List.aspx" />
+    <Content Include="Form_FSM_Map.aspx" />
+    <Content Include="Form_HeadOfficeQualityAudit.aspx" />
+    <Content Include="Form_HeadOfficeQualityAudit_List.aspx" />
+    <Content Include="Form_Incident.aspx" />
+    <Content Include="Form_Incident_List.aspx" />
+    <Content Include="Form_InfectionPrevention.aspx" />
+    <Content Include="Form_InfectionPrevention_List.aspx" />
+    <Content Include="Form_InfrastructureAudit.aspx" />
+    <Content Include="Form_InfrastructureAudit_List.aspx" />
+    <Content Include="Form_InfrastructureAudit_Summary.aspx" />
+    <Content Include="Form_InfrastructureAudit_Summary_Print.aspx" />
+    <Content Include="Form_InfrastructureAudit_Upload.aspx" />
+    <Content Include="Form_IPS.aspx" />
+    <Content Include="Form_IPS_Antibiogram_Lookup.aspx" />
+    <Content Include="Form_IPS_BedHistory.aspx" />
+    <Content Include="Form_IPS_HAI.aspx" />
+    <Content Include="Form_IPS_InfectionHistory.aspx" />
+    <Content Include="Form_IPS_List.aspx" />
+    <Content Include="Form_IPS_Organism_Lookup.aspx" />
+    <Content Include="Form_IPS_Specimen.aspx" />
+    <Content Include="Form_IPS_SpecimenAll.aspx" />
+    <Content Include="Form_IPS_Theatre.aspx" />
+    <Content Include="Form_IPS_VisitDiagnosis.aspx" />
+    <Content Include="Form_Isidima.aspx" />
+    <Content Include="Form_Isidima_Admin.aspx" />
+    <Content Include="Form_Isidima_List.aspx" />
+    <Content Include="Form_Isidima_Next.aspx" />
+    <Content Include="Form_Isidima_Rules.aspx" />
+    <Content Include="Form_MedicationBundleCompliance.aspx" />
+    <Content Include="Form_MedicationBundleCompliance_List.aspx" />
+    <Content Include="Form_MHQ14.aspx" />
+    <Content Include="Form_MHQ14_List.aspx" />
+    <Content Include="Form_MHQ14_Required.aspx" />
+    <Content Include="Form_MonthlyHospitalStatistics.aspx" />
+    <Content Include="Form_MonthlyHospitalStatistics_DSOInternal_Upload.aspx" />
+    <Content Include="Form_MonthlyHospitalStatistics_EmptyFields.aspx" />
+    <Content Include="Form_MonthlyHospitalStatistics_List.aspx" />
+    <Content Include="Form_MonthlyHospitalStatistics_Waste_Upload.aspx" />
+    <Content Include="Form_MonthlyOccupationalHealthStatistics.aspx" />
+    <Content Include="Form_MonthlyOccupationalHealthStatistics_EmptyFields.aspx" />
+    <Content Include="Form_MonthlyOccupationalHealthStatistics_List.aspx" />
+    <Content Include="Form_MonthlyPharmacyStatistics.aspx" />
+    <Content Include="Form_MonthlyPharmacyStatistics_EmptyFields.aspx" />
+    <Content Include="Form_MonthlyPharmacyStatistics_List.aspx" />
+    <Content Include="Form_OccupationalHealthAudit.aspx" />
+    <Content Include="Form_OccupationalHealthAudit_Findings.aspx" />
+    <Content Include="Form_OccupationalHealthAudit_Findings_List.aspx" />
+    <Content Include="Form_OccupationalHealthAudit_List.aspx" />
+    <Content Include="Form_OccupationalHealthAudit_Summary.aspx" />
+    <Content Include="Form_OccupationalHealthAudit_Summary_Print.aspx" />
+    <Content Include="Form_OccupationalHealthAudit_Upload.aspx" />
+    <Content Include="Form_PharmacyClinicalMetrics.aspx" />
+    <Content Include="Form_PharmacyClinicalMetrics_List.aspx" />
+    <Content Include="Form_PharmacySurveys.aspx" />
+    <Content Include="Form_PharmacySurveys_Create.aspx" />
+    <Content Include="Form_PharmacySurveys_List.aspx" />
+    <Content Include="Form_PharmacySurveys_LoadedSurveys.aspx" />
+    <Content Include="Form_PharmacySurveys_LoadedSurveys_List.aspx" />
+    <Content Include="Form_Pharmacy_DeadStock.aspx" />
+    <Content Include="Form_Pharmacy_DeadStock_List.aspx" />
+    <Content Include="Form_Pharmacy_Formulary.aspx" />
+    <Content Include="Form_Pharmacy_Formulary_List.aspx" />
+    <Content Include="Form_Pharmacy_Hotline.aspx" />
+    <Content Include="Form_Pharmacy_Hotline_List.aspx" />
+    <Content Include="Form_Pharmacy_NewProduct.aspx" />
+    <Content Include="Form_Pharmacy_NewProduct_List.aspx" />
+    <Content Include="Form_Pharmacy_Product.aspx" />
+    <Content Include="Form_Pharmacy_ProductComplaint.aspx" />
+    <Content Include="Form_Pharmacy_ProductComplaint_List.aspx" />
+    <Content Include="Form_Pharmacy_Product_List.aspx" />
+    <Content Include="Form_Pharmacy_Supplier_Lookup.aspx" />
+    <Content Include="Form_Pharmacy_UPD.aspx" />
+    <Content Include="Form_Pharmacy_UPD_List.aspx" />
+    <Content Include="Form_Pharmacy_Vendor.aspx" />
+    <Content Include="Form_Pharmacy_Vendor_List.aspx" />
+    <Content Include="Form_PROMS.aspx" />
+    <Content Include="Form_PROMS_List.aspx" />
+    <Content Include="Form_PROMS_Next.aspx" />
+    <Content Include="Form_PXM_PDCH_DoctorQuestion_List.aspx" />
+    <Content Include="Form_PXM_PDCH_DoctorQuestion_Upload.aspx" />
+    <Content Include="Form_PXM_PDCH_TouchPoint_List.aspx" />
+    <Content Include="Form_PXM_PDCH_TouchPoint_Upload.aspx" />
+    <Content Include="Form_QMSReview.aspx" />
+    <Content Include="Form_QMSReview_Findings.aspx" />
+    <Content Include="Form_QMSReview_Findings_List.aspx" />
+    <Content Include="Form_QMSReview_List.aspx" />
+    <Content Include="Form_QMSReview_Summary.aspx" />
+    <Content Include="Form_QMSReview_Summary_Print.aspx" />
+    <Content Include="Form_QMSReview_Upload.aspx" />
+    <Content Include="Form_RehabBundleCompliance.aspx" />
+    <Content Include="Form_RehabBundleCompliance_List.aspx" />
+    <Content Include="Form_RenalClinicalOutcomes_List.aspx" />
+    <Content Include="Form_RenalClinicalOutcomes_Upload.aspx" />
+    <Content Include="Form_SustainabilityManagement.aspx" />
+    <Content Include="Form_SustainabilityManagement_EmptyFields.aspx" />
+    <Content Include="Form_SustainabilityManagement_List.aspx" />
+    <Content Include="Form_TransparencyRegister.aspx" />
+    <Content Include="Form_TransparencyRegister_List.aspx" />
+    <Content Include="Form_VTE.aspx" />
+    <Content Include="Form_VTE_List.aspx" />
+    <Content Include="App_JavaScripts\ckeditor\CHANGES.md" />
+    <Content Include="App_JavaScripts\ckeditor\LICENSE.md" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\scayt\CHANGELOG.md" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\scayt\README.md" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="App_JavaScripts\ckeditor\plugins\wsc\README.md" />
+    <Content Include="App_JavaScripts\ckeditor\README.md" />
+    <Content Include="App_JavaScripts\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.fla" />
+    <Content Include="App_JavaScripts\ckeditor\samples\toolbarconfigurator\font\config.json" />
+    <Content Include="App_JavaScripts\ckeditor\samples\toolbarconfigurator\font\fontello.eot" />
+    <Content Include="App_JavaScripts\ckeditor\samples\toolbarconfigurator\font\fontello.ttf" />
+    <Content Include="App_JavaScripts\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
+    <Content Include="App_JavaScripts\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
+    <Content Include="App_JavaScripts\ckeditor\skins\moono\readme.md" />
+    <None Include="InfoQuestFormProject.pfx" />
+    <None Include="App_CodeAnalysis\CodeAnalysisRules.ruleset" />
+    <None Include="App_CodeAnalysis\CodeAnalysisDictionary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Files\Form_MonthlyHospitalStatistics_Waste_Upload_Template\MHS Waste Import.xls" />
+    <Content Include="App_Files\Form_MonthlyHospitalStatistics_Waste_Upload_Template\MHS Waste Import.xlsx" />
+    <Content Include="App_Print\DataSets\DataSet_Form_Alert.xsc">
+      <DependentUpon>DataSet_Form_Alert.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_Alert.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_Alert.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_Alert.xss">
+      <DependentUpon>DataSet_Form_Alert.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_AMSPI.xsc">
+      <DependentUpon>DataSet_Form_AMSPI.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_AMSPI.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_AMSPI.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_AMSPI.xss">
+      <DependentUpon>DataSet_Form_AMSPI.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_AntimicrobialStewardshipIntervention.xsc">
+      <DependentUpon>DataSet_Form_AntimicrobialStewardshipIntervention.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_AntimicrobialStewardshipIntervention.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_AntimicrobialStewardshipIntervention.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_AntimicrobialStewardshipIntervention.xss">
+      <DependentUpon>DataSet_Form_AntimicrobialStewardshipIntervention.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_AntimicrobialStewardshipIntervention_All.xsc">
+      <DependentUpon>DataSet_Form_AntimicrobialStewardshipIntervention_All.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_AntimicrobialStewardshipIntervention_All.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_AntimicrobialStewardshipIntervention_All.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_AntimicrobialStewardshipIntervention_All.xss">
+      <DependentUpon>DataSet_Form_AntimicrobialStewardshipIntervention_All.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_BundleCompliance.xsc">
+      <DependentUpon>DataSet_Form_BundleCompliance.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_BundleCompliance.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_BundleCompliance.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_BundleCompliance.xss">
+      <DependentUpon>DataSet_Form_BundleCompliance.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_BundleCompliance_All.xsc">
+      <DependentUpon>DataSet_Form_BundleCompliance_All.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_BundleCompliance_All.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_BundleCompliance_All.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_BundleCompliance_All.xss">
+      <DependentUpon>DataSet_Form_BundleCompliance_All.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_ClinicalPracticeAudit.xsc">
+      <DependentUpon>DataSet_Form_ClinicalPracticeAudit.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_ClinicalPracticeAudit.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_ClinicalPracticeAudit.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_ClinicalPracticeAudit.xss">
+      <DependentUpon>DataSet_Form_ClinicalPracticeAudit.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_ClinicalPracticeAudit_All.xsc">
+      <DependentUpon>DataSet_Form_ClinicalPracticeAudit_All.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_ClinicalPracticeAudit_All.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_ClinicalPracticeAudit_All.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_ClinicalPracticeAudit_All.xss">
+      <DependentUpon>DataSet_Form_ClinicalPracticeAudit_All.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_CollegeLearningAudit_Findings.xsc">
+      <DependentUpon>DataSet_Form_CollegeLearningAudit_Findings.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_CollegeLearningAudit_Findings.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_CollegeLearningAudit_Findings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_CollegeLearningAudit_Findings.xss">
+      <DependentUpon>DataSet_Form_CollegeLearningAudit_Findings.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_CRM.xsc">
+      <DependentUpon>DataSet_Form_CRM.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_CRM.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_CRM.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_CRM.xss">
+      <DependentUpon>DataSet_Form_CRM.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_ECM.xsc">
+      <DependentUpon>DataSet_Form_ECM.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_ECM.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_ECM.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_ECM.xss">
+      <DependentUpon>DataSet_Form_ECM.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_EquipmentClassifiedSystem_Available.xsc">
+      <DependentUpon>DataSet_Form_EquipmentClassifiedSystem_Available.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_EquipmentClassifiedSystem_Available.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_EquipmentClassifiedSystem_Available.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_EquipmentClassifiedSystem_Available.xss">
+      <DependentUpon>DataSet_Form_EquipmentClassifiedSystem_Available.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_EquipmentClassifiedSystem_Request.xsc">
+      <DependentUpon>DataSet_Form_EquipmentClassifiedSystem_Request.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_EquipmentClassifiedSystem_Request.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_EquipmentClassifiedSystem_Request.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_EquipmentClassifiedSystem_Request.xss">
+      <DependentUpon>DataSet_Form_EquipmentClassifiedSystem_Request.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_FIMFAM.xsc">
+      <DependentUpon>DataSet_Form_FIMFAM.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_FIMFAM.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_FIMFAM.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_FIMFAM.xss">
+      <DependentUpon>DataSet_Form_FIMFAM.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_HAI.xsc">
+      <DependentUpon>DataSet_Form_HAI.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_HAI.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_HAI.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_HAI.xss">
+      <DependentUpon>DataSet_Form_HAI.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_HAI_Investigation.xsc">
+      <DependentUpon>DataSet_Form_HAI_Investigation.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_HAI_Investigation.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_HAI_Investigation.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_HAI_Investigation.xss">
+      <DependentUpon>DataSet_Form_HAI_Investigation.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_HAI_Patient.xsc">
+      <DependentUpon>DataSet_Form_HAI_Patient.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_HAI_Patient.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_HAI_Patient.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_HAI_Patient.xss">
+      <DependentUpon>DataSet_Form_HAI_Patient.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_HAI_Patient_Extra.xsc">
+      <DependentUpon>DataSet_Form_HAI_Patient_Extra.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_HAI_Patient_Extra.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_HAI_Patient_Extra.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_HAI_Patient_Extra.xss">
+      <DependentUpon>DataSet_Form_HAI_Patient_Extra.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_HAI_Site.xsc">
+      <DependentUpon>DataSet_Form_HAI_Site.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_HAI_Site.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_HAI_Site.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_HAI_Site.xss">
+      <DependentUpon>DataSet_Form_HAI_Site.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_HeadOfficeQualityAudit.xsc">
+      <DependentUpon>DataSet_Form_HeadOfficeQualityAudit.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_HeadOfficeQualityAudit.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_HeadOfficeQualityAudit.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_HeadOfficeQualityAudit.xss">
+      <DependentUpon>DataSet_Form_HeadOfficeQualityAudit.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_Incident.xsc">
+      <DependentUpon>DataSet_Form_Incident.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_Incident.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_Incident.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_Incident.xss">
+      <DependentUpon>DataSet_Form_Incident.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_IPS.xsc">
+      <DependentUpon>DataSet_Form_IPS.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_IPS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_IPS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_IPS.xss">
+      <DependentUpon>DataSet_Form_IPS.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_IPS_InfectionDetail.xsc">
+      <DependentUpon>DataSet_Form_IPS_InfectionDetail.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_IPS_InfectionDetail.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_IPS_InfectionDetail.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_IPS_InfectionDetail.xss">
+      <DependentUpon>DataSet_Form_IPS_InfectionDetail.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_IPS_InfectionDetail_Extra.xsc">
+      <DependentUpon>DataSet_Form_IPS_InfectionDetail_Extra.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_IPS_InfectionDetail_Extra.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_IPS_InfectionDetail_Extra.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_IPS_InfectionDetail_Extra.xss">
+      <DependentUpon>DataSet_Form_IPS_InfectionDetail_Extra.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_IPS_Investigation.xsc">
+      <DependentUpon>DataSet_Form_IPS_Investigation.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_IPS_Investigation.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_IPS_Investigation.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_IPS_Investigation.xss">
+      <DependentUpon>DataSet_Form_IPS_Investigation.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_Isidima.xsc">
+      <DependentUpon>DataSet_Form_Isidima.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_Isidima.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_Isidima.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_Isidima.xss">
+      <DependentUpon>DataSet_Form_Isidima.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_MedicationBundleCompliance.xsc">
+      <DependentUpon>DataSet_Form_MedicationBundleCompliance.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_MedicationBundleCompliance.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_MedicationBundleCompliance.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_MedicationBundleCompliance.xss">
+      <DependentUpon>DataSet_Form_MedicationBundleCompliance.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_MedicationBundleCompliance_All.xsc">
+      <DependentUpon>DataSet_Form_MedicationBundleCompliance_All.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_MedicationBundleCompliance_All.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_MedicationBundleCompliance_All.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_MedicationBundleCompliance_All.xss">
+      <DependentUpon>DataSet_Form_MedicationBundleCompliance_All.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_MHQ14.xsc">
+      <DependentUpon>DataSet_Form_MHQ14.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_MHQ14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_MHQ14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_MHQ14.xss">
+      <DependentUpon>DataSet_Form_MHQ14.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_MonthlyHospitalStatistics.xsc">
+      <DependentUpon>DataSet_Form_MonthlyHospitalStatistics.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_MonthlyHospitalStatistics.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_MonthlyHospitalStatistics.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_MonthlyHospitalStatistics.xss">
+      <DependentUpon>DataSet_Form_MonthlyHospitalStatistics.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_MonthlyOccupationalHealthStatistics.xsc">
+      <DependentUpon>DataSet_Form_MonthlyOccupationalHealthStatistics.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_MonthlyOccupationalHealthStatistics.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_MonthlyOccupationalHealthStatistics.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_MonthlyOccupationalHealthStatistics.xss">
+      <DependentUpon>DataSet_Form_MonthlyOccupationalHealthStatistics.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_MonthlyPharmacyStatistics.xsc">
+      <DependentUpon>DataSet_Form_MonthlyPharmacyStatistics.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_MonthlyPharmacyStatistics.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_MonthlyPharmacyStatistics.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_MonthlyPharmacyStatistics.xss">
+      <DependentUpon>DataSet_Form_MonthlyPharmacyStatistics.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_OccupationalHealthAudit_Findings.xsc">
+      <DependentUpon>DataSet_Form_OccupationalHealthAudit_Findings.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_OccupationalHealthAudit_Findings.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_OccupationalHealthAudit_Findings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_OccupationalHealthAudit_Findings.xss">
+      <DependentUpon>DataSet_Form_OccupationalHealthAudit_Findings.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_PharmacyClinicalMetrics_PharmacistTime.xsc">
+      <DependentUpon>DataSet_Form_PharmacyClinicalMetrics_PharmacistTime.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_PharmacyClinicalMetrics_PharmacistTime.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_PharmacyClinicalMetrics_PharmacistTime.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_PharmacyClinicalMetrics_PharmacistTime.xss">
+      <DependentUpon>DataSet_Form_PharmacyClinicalMetrics_PharmacistTime.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_PharmacyClinicalMetrics_PharmacistTime_All.xsc">
+      <DependentUpon>DataSet_Form_PharmacyClinicalMetrics_PharmacistTime_All.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_PharmacyClinicalMetrics_PharmacistTime_All.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_PharmacyClinicalMetrics_PharmacistTime_All.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_PharmacyClinicalMetrics_PharmacistTime_All.xss">
+      <DependentUpon>DataSet_Form_PharmacyClinicalMetrics_PharmacistTime_All.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_PharmacyClinicalMetrics_TherapeuticIntervention.xsc">
+      <DependentUpon>DataSet_Form_PharmacyClinicalMetrics_TherapeuticIntervention.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_PharmacyClinicalMetrics_TherapeuticIntervention.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_PharmacyClinicalMetrics_TherapeuticIntervention.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_PharmacyClinicalMetrics_TherapeuticIntervention.xss">
+      <DependentUpon>DataSet_Form_PharmacyClinicalMetrics_TherapeuticIntervention.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_PharmacyClinicalMetrics_TherapeuticIntervention_All.xsc">
+      <DependentUpon>DataSet_Form_PharmacyClinicalMetrics_TherapeuticIntervention_All.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_PharmacyClinicalMetrics_TherapeuticIntervention_All.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_PharmacyClinicalMetrics_TherapeuticIntervention_All.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_PharmacyClinicalMetrics_TherapeuticIntervention_All.xss">
+      <DependentUpon>DataSet_Form_PharmacyClinicalMetrics_TherapeuticIntervention_All.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_PharmacySurveys.xsc">
+      <DependentUpon>DataSet_Form_PharmacySurveys.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_PharmacySurveys.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_PharmacySurveys.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_PharmacySurveys.xss">
+      <DependentUpon>DataSet_Form_PharmacySurveys.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_Pharmacy_DeadStock.xsc">
+      <DependentUpon>DataSet_Form_Pharmacy_DeadStock.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_Pharmacy_DeadStock.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_Pharmacy_DeadStock.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_Pharmacy_DeadStock.xss">
+      <DependentUpon>DataSet_Form_Pharmacy_DeadStock.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_Pharmacy_Formulary.xsc">
+      <DependentUpon>DataSet_Form_Pharmacy_Formulary.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_Pharmacy_Formulary.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_Pharmacy_Formulary.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_Pharmacy_Formulary.xss">
+      <DependentUpon>DataSet_Form_Pharmacy_Formulary.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_Pharmacy_Hotline.xsc">
+      <DependentUpon>DataSet_Form_Pharmacy_Hotline.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_Pharmacy_Hotline.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_Pharmacy_Hotline.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_Pharmacy_Hotline.xss">
+      <DependentUpon>DataSet_Form_Pharmacy_Hotline.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_Pharmacy_NewProduct.xsc">
+      <DependentUpon>DataSet_Form_Pharmacy_NewProduct.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_Pharmacy_NewProduct.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_Pharmacy_NewProduct.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_Pharmacy_NewProduct.xss">
+      <DependentUpon>DataSet_Form_Pharmacy_NewProduct.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_Pharmacy_Product.xsc">
+      <DependentUpon>DataSet_Form_Pharmacy_Product.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_Pharmacy_Product.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_Pharmacy_Product.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_Pharmacy_Product.xss">
+      <DependentUpon>DataSet_Form_Pharmacy_Product.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_Pharmacy_ProductComplaint.xsc">
+      <DependentUpon>DataSet_Form_Pharmacy_ProductComplaint.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_Pharmacy_ProductComplaint.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_Pharmacy_ProductComplaint.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_Pharmacy_ProductComplaint.xss">
+      <DependentUpon>DataSet_Form_Pharmacy_ProductComplaint.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_Pharmacy_UPD.xsc">
+      <DependentUpon>DataSet_Form_Pharmacy_UPD.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_Pharmacy_UPD.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_Pharmacy_UPD.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_Pharmacy_UPD.xss">
+      <DependentUpon>DataSet_Form_Pharmacy_UPD.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_Pharmacy_Vendor.xsc">
+      <DependentUpon>DataSet_Form_Pharmacy_Vendor.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_Pharmacy_Vendor.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_Pharmacy_Vendor.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_Pharmacy_Vendor.xss">
+      <DependentUpon>DataSet_Form_Pharmacy_Vendor.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_PROMS.xsc">
+      <DependentUpon>DataSet_Form_PROMS.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_PROMS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_PROMS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_PROMS.xss">
+      <DependentUpon>DataSet_Form_PROMS.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_QMSReview_Findings.xsc">
+      <DependentUpon>DataSet_Form_QMSReview_Findings.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_QMSReview_Findings.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_QMSReview_Findings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_QMSReview_Findings.xss">
+      <DependentUpon>DataSet_Form_QMSReview_Findings.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_RehabBundleCompliance.xsc">
+      <DependentUpon>DataSet_Form_RehabBundleCompliance.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_RehabBundleCompliance.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_RehabBundleCompliance.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_RehabBundleCompliance.xss">
+      <DependentUpon>DataSet_Form_RehabBundleCompliance.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_RehabBundleCompliance_All.xsc">
+      <DependentUpon>DataSet_Form_RehabBundleCompliance_All.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_RehabBundleCompliance_All.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_RehabBundleCompliance_All.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_RehabBundleCompliance_All.xss">
+      <DependentUpon>DataSet_Form_RehabBundleCompliance_All.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_SustainabilityManagement.xsc">
+      <DependentUpon>DataSet_Form_SustainabilityManagement.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_SustainabilityManagement.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_SustainabilityManagement.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_SustainabilityManagement.xss">
+      <DependentUpon>DataSet_Form_SustainabilityManagement.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_TransparencyRegister.xsc">
+      <DependentUpon>DataSet_Form_TransparencyRegister.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_TransparencyRegister.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_TransparencyRegister.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_TransparencyRegister.xss">
+      <DependentUpon>DataSet_Form_TransparencyRegister.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Print\DataSets\DataSet_Form_VTE.xsc">
+      <DependentUpon>DataSet_Form_VTE.xsd</DependentUpon>
+    </Content>
+    <None Include="App_Print\DataSets\DataSet_Form_VTE.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Form_VTE.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Print\DataSets\DataSet_Form_VTE.xss">
+      <DependentUpon>DataSet_Form_VTE.xsd</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\InfoQuestForm-Development.pubxml" />
+    <None Include="Properties\PublishProfiles\InfoQuestForm.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="App_CodeAnalysis\CodeAnalysisDictionary.xml">
+      <SubType>Designer</SubType>
+    </CodeAnalysisDictionary>
+    <Content Include="Form_Alert.aspx" />
+    <Content Include="InfoQuest_Captured.aspx" />
+    <Content Include="InfoQuest_Email.aspx" />
+    <Content Include="InfoQuest_Error.aspx" />
+    <Content Include="InfoQuest_History.aspx" />
+    <Content Include="InfoQuest_Index.aspx" />
+    <Content Include="InfoQuest_NoAccess.aspx" />
+    <Content Include="InfoQuest_OccupationalHealthSearch.aspx" />
+    <Content Include="InfoQuest_PageLoading.htm" />
+    <Content Include="InfoQuest_PageText.aspx" />
+    <Content Include="InfoQuest_PatientSearch.aspx" />
+    <Content Include="InfoQuest_Print.aspx" />
+    <Content Include="InfoQuest_ReportNumber.aspx" />
+    <Content Include="InfoQuest_TopMenu.aspx" />
+    <Content Include="InfoQuest_Updated.aspx" />
+    <None Include="Properties\PublishProfiles\InfoQuestForm-Development.pubxml.user" />
+    <None Include="Properties\PublishProfiles\InfoQuestForm.pubxml.user" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Controls\Controls_DatePicker.ascx.cs">
+      <DependentUpon>Controls_DatePicker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Controls\Controls_DatePicker.ascx.designer.cs">
+      <DependentUpon>Controls_DatePicker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Controls\Controls_DateTimePicker.ascx.cs">
+      <DependentUpon>Controls_DateTimePicker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Controls\Controls_DateTimePicker.ascx.designer.cs">
+      <DependentUpon>Controls_DateTimePicker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Controls\Controls_Footer.ascx.cs">
+      <DependentUpon>Controls_Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Controls\Controls_Footer.ascx.designer.cs">
+      <DependentUpon>Controls_Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Controls\Controls_Header.ascx.cs">
+      <DependentUpon>Controls_Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Controls\Controls_Header.ascx.designer.cs">
+      <DependentUpon>Controls_Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Controls\Controls_Navigation.ascx.cs">
+      <DependentUpon>Controls_Navigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Controls\Controls_Navigation.ascx.designer.cs">
+      <DependentUpon>Controls_Navigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Controls\Controls_TimePicker.ascx.cs">
+      <DependentUpon>Controls_TimePicker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Controls\Controls_TimePicker.ascx.designer.cs">
+      <DependentUpon>Controls_TimePicker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_Alert.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_Alert.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_AMSPI.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_AMSPI.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_AntimicrobialStewardshipIntervention.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_AntimicrobialStewardshipIntervention.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_AntimicrobialStewardshipIntervention_All.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_AntimicrobialStewardshipIntervention_All.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_BundleCompliance.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_BundleCompliance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_BundleCompliance_All.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_BundleCompliance_All.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_ClinicalPracticeAudit.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_ClinicalPracticeAudit.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_ClinicalPracticeAudit_All.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_ClinicalPracticeAudit_All.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_CollegeLearningAudit_Findings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_CollegeLearningAudit_Findings.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_CRM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_CRM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_ECM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_ECM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_EquipmentClassifiedSystem_Available.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_EquipmentClassifiedSystem_Available.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_EquipmentClassifiedSystem_Request.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_EquipmentClassifiedSystem_Request.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_FIMFAM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_FIMFAM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_HAI.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_HAI.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_HAI_Investigation.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_HAI_Investigation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_HAI_Patient.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_HAI_Patient.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_HAI_Patient_Extra.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_HAI_Patient_Extra.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_HAI_Site.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_HAI_Site.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_HeadOfficeQualityAudit.cs">
+      <DependentUpon>DataSet_Form_HeadOfficeQualityAudit.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_HeadOfficeQualityAudit.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_HeadOfficeQualityAudit.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_Incident.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_Incident.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_IPS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_IPS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_IPS_InfectionDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_IPS_InfectionDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_IPS_InfectionDetail_Extra.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_IPS_InfectionDetail_Extra.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_IPS_Investigation.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_IPS_Investigation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_Isidima.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_Isidima.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_MedicationBundleCompliance.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_MedicationBundleCompliance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_MedicationBundleCompliance_All.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_MedicationBundleCompliance_All.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_MHQ14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_MHQ14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_MonthlyHospitalStatistics.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_MonthlyHospitalStatistics.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_MonthlyOccupationalHealthStatistics.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_MonthlyOccupationalHealthStatistics.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_MonthlyPharmacyStatistics.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_MonthlyPharmacyStatistics.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_OccupationalHealthAudit_Findings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_OccupationalHealthAudit_Findings.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_PharmacyClinicalMetrics_PharmacistTime.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_PharmacyClinicalMetrics_PharmacistTime.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_PharmacyClinicalMetrics_PharmacistTime_All.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_PharmacyClinicalMetrics_PharmacistTime_All.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_PharmacyClinicalMetrics_TherapeuticIntervention.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_PharmacyClinicalMetrics_TherapeuticIntervention.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_PharmacyClinicalMetrics_TherapeuticIntervention_All.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_PharmacyClinicalMetrics_TherapeuticIntervention_All.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_PharmacySurveys.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_PharmacySurveys.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_Pharmacy_DeadStock.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_Pharmacy_DeadStock.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_Pharmacy_Formulary.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_Pharmacy_Formulary.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_Pharmacy_Hotline.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_Pharmacy_Hotline.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_Pharmacy_NewProduct.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_Pharmacy_NewProduct.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_Pharmacy_Product.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_Pharmacy_Product.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_Pharmacy_ProductComplaint.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_Pharmacy_ProductComplaint.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_Pharmacy_UPD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_Pharmacy_UPD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_Pharmacy_Vendor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_Pharmacy_Vendor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_PROMS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_PROMS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_QMSReview_Findings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_QMSReview_Findings.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_RehabBundleCompliance.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_RehabBundleCompliance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_RehabBundleCompliance_All.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_RehabBundleCompliance_All.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_SustainabilityManagement.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_SustainabilityManagement.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_TransparencyRegister.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_TransparencyRegister.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Print\DataSets\DataSet_Form_VTE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Form_VTE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form_AAA_Test.aspx.cs">
+      <DependentUpon>Form_AAA_Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_AAA_Test.aspx.designer.cs">
+      <DependentUpon>Form_AAA_Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Alert.aspx.cs">
+      <DependentUpon>Form_Alert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Alert.aspx.designer.cs">
+      <DependentUpon>Form_Alert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Alert_List.aspx.cs">
+      <DependentUpon>Form_Alert_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Alert_List.aspx.designer.cs">
+      <DependentUpon>Form_Alert_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_AMI.aspx.cs">
+      <DependentUpon>Form_AMI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_AMI.aspx.designer.cs">
+      <DependentUpon>Form_AMI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_AMI_List.aspx.cs">
+      <DependentUpon>Form_AMI_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_AMI_List.aspx.designer.cs">
+      <DependentUpon>Form_AMI_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_AMSPI.aspx.cs">
+      <DependentUpon>Form_AMSPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_AMSPI.aspx.designer.cs">
+      <DependentUpon>Form_AMSPI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_AMSPI_List.aspx.cs">
+      <DependentUpon>Form_AMSPI_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_AMSPI_List.aspx.designer.cs">
+      <DependentUpon>Form_AMSPI_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_AntimicrobialStewardshipIntervention.aspx.cs">
+      <DependentUpon>Form_AntimicrobialStewardshipIntervention.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_AntimicrobialStewardshipIntervention.aspx.designer.cs">
+      <DependentUpon>Form_AntimicrobialStewardshipIntervention.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_AntimicrobialStewardshipIntervention_List.aspx.cs">
+      <DependentUpon>Form_AntimicrobialStewardshipIntervention_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_AntimicrobialStewardshipIntervention_List.aspx.designer.cs">
+      <DependentUpon>Form_AntimicrobialStewardshipIntervention_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_BundleCompliance.aspx.cs">
+      <DependentUpon>Form_BundleCompliance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_BundleCompliance.aspx.designer.cs">
+      <DependentUpon>Form_BundleCompliance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_BundleCompliance_List.aspx.cs">
+      <DependentUpon>Form_BundleCompliance_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_BundleCompliance_List.aspx.designer.cs">
+      <DependentUpon>Form_BundleCompliance_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ClinicalPracticeAudit.aspx.cs">
+      <DependentUpon>Form_ClinicalPracticeAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_ClinicalPracticeAudit.aspx.designer.cs">
+      <DependentUpon>Form_ClinicalPracticeAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ClinicalPracticeAudit_List.aspx.cs">
+      <DependentUpon>Form_ClinicalPracticeAudit_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_ClinicalPracticeAudit_List.aspx.designer.cs">
+      <DependentUpon>Form_ClinicalPracticeAudit_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CollegeLearningAudit.aspx.cs">
+      <DependentUpon>Form_CollegeLearningAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_CollegeLearningAudit.aspx.designer.cs">
+      <DependentUpon>Form_CollegeLearningAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CollegeLearningAudit_Findings.aspx.cs">
+      <DependentUpon>Form_CollegeLearningAudit_Findings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_CollegeLearningAudit_Findings.aspx.designer.cs">
+      <DependentUpon>Form_CollegeLearningAudit_Findings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CollegeLearningAudit_Findings_List.aspx.cs">
+      <DependentUpon>Form_CollegeLearningAudit_Findings_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_CollegeLearningAudit_Findings_List.aspx.designer.cs">
+      <DependentUpon>Form_CollegeLearningAudit_Findings_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CollegeLearningAudit_List.aspx.cs">
+      <DependentUpon>Form_CollegeLearningAudit_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_CollegeLearningAudit_List.aspx.designer.cs">
+      <DependentUpon>Form_CollegeLearningAudit_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CollegeLearningAudit_Summary.aspx.cs">
+      <DependentUpon>Form_CollegeLearningAudit_Summary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_CollegeLearningAudit_Summary.aspx.designer.cs">
+      <DependentUpon>Form_CollegeLearningAudit_Summary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CollegeLearningAudit_Summary_Print.aspx.cs">
+      <DependentUpon>Form_CollegeLearningAudit_Summary_Print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_CollegeLearningAudit_Summary_Print.aspx.designer.cs">
+      <DependentUpon>Form_CollegeLearningAudit_Summary_Print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CollegeLearningAudit_Upload.aspx.cs">
+      <DependentUpon>Form_CollegeLearningAudit_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_CollegeLearningAudit_Upload.aspx.designer.cs">
+      <DependentUpon>Form_CollegeLearningAudit_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ContactCentre_InfoQuestAccess.aspx.cs">
+      <DependentUpon>Form_ContactCentre_InfoQuestAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_ContactCentre_InfoQuestAccess.aspx.designer.cs">
+      <DependentUpon>Form_ContactCentre_InfoQuestAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ContactCentre_UserAccessRequest.aspx.cs">
+      <DependentUpon>Form_ContactCentre_UserAccessRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_ContactCentre_UserAccessRequest.aspx.designer.cs">
+      <DependentUpon>Form_ContactCentre_UserAccessRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CRM.aspx.cs">
+      <DependentUpon>Form_CRM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_CRM.aspx.designer.cs">
+      <DependentUpon>Form_CRM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CRM_DiscoveryComment_Upload.aspx.cs">
+      <DependentUpon>Form_CRM_DiscoveryComment_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_CRM_DiscoveryComment_Upload.aspx.designer.cs">
+      <DependentUpon>Form_CRM_DiscoveryComment_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CRM_IncompleteComplaints.aspx.cs">
+      <DependentUpon>Form_CRM_IncompleteComplaints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_CRM_IncompleteComplaints.aspx.designer.cs">
+      <DependentUpon>Form_CRM_IncompleteComplaints.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CRM_IncompleteOther.aspx.cs">
+      <DependentUpon>Form_CRM_IncompleteOther.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_CRM_IncompleteOther.aspx.designer.cs">
+      <DependentUpon>Form_CRM_IncompleteOther.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CRM_List.aspx.cs">
+      <DependentUpon>Form_CRM_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_CRM_List.aspx.designer.cs">
+      <DependentUpon>Form_CRM_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CRM_PXM_Upload.aspx.cs">
+      <DependentUpon>Form_CRM_PXM_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_CRM_PXM_Upload.aspx.designer.cs">
+      <DependentUpon>Form_CRM_PXM_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ECM.aspx.cs">
+      <DependentUpon>Form_ECM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_ECM.aspx.designer.cs">
+      <DependentUpon>Form_ECM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ECM_List.aspx.cs">
+      <DependentUpon>Form_ECM_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_ECM_List.aspx.designer.cs">
+      <DependentUpon>Form_ECM_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_EquipmentClassifiedSystem_Available.aspx.cs">
+      <DependentUpon>Form_EquipmentClassifiedSystem_Available.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_EquipmentClassifiedSystem_Available.aspx.designer.cs">
+      <DependentUpon>Form_EquipmentClassifiedSystem_Available.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_EquipmentClassifiedSystem_List.aspx.cs">
+      <DependentUpon>Form_EquipmentClassifiedSystem_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_EquipmentClassifiedSystem_List.aspx.designer.cs">
+      <DependentUpon>Form_EquipmentClassifiedSystem_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_EquipmentClassifiedSystem_Request.aspx.cs">
+      <DependentUpon>Form_EquipmentClassifiedSystem_Request.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_EquipmentClassifiedSystem_Request.aspx.designer.cs">
+      <DependentUpon>Form_EquipmentClassifiedSystem_Request.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_EsidimeniStats_Ailments.aspx.cs">
+      <DependentUpon>Form_EsidimeniStats_Ailments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_EsidimeniStats_Ailments.aspx.designer.cs">
+      <DependentUpon>Form_EsidimeniStats_Ailments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_EsidimeniStats_Death.aspx.cs">
+      <DependentUpon>Form_EsidimeniStats_Death.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_EsidimeniStats_Death.aspx.designer.cs">
+      <DependentUpon>Form_EsidimeniStats_Death.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_EsidimeniStats_LeaveAbsence.aspx.cs">
+      <DependentUpon>Form_EsidimeniStats_LeaveAbsence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_EsidimeniStats_LeaveAbsence.aspx.designer.cs">
+      <DependentUpon>Form_EsidimeniStats_LeaveAbsence.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_EsidimeniStats_OBRM.aspx.cs">
+      <DependentUpon>Form_EsidimeniStats_OBRM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_EsidimeniStats_OBRM.aspx.designer.cs">
+      <DependentUpon>Form_EsidimeniStats_OBRM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_EsidimeniStats_Periodicals.aspx.cs">
+      <DependentUpon>Form_EsidimeniStats_Periodicals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_EsidimeniStats_Periodicals.aspx.designer.cs">
+      <DependentUpon>Form_EsidimeniStats_Periodicals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_EsidimeniStats_TeflaScores.aspx.cs">
+      <DependentUpon>Form_EsidimeniStats_TeflaScores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_EsidimeniStats_TeflaScores.aspx.designer.cs">
+      <DependentUpon>Form_EsidimeniStats_TeflaScores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_EsidimeniStats_Visits.aspx.cs">
+      <DependentUpon>Form_EsidimeniStats_Visits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_EsidimeniStats_Visits.aspx.designer.cs">
+      <DependentUpon>Form_EsidimeniStats_Visits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ExecutiveMarketInquiry_Map.aspx.cs">
+      <DependentUpon>Form_ExecutiveMarketInquiry_Map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_ExecutiveMarketInquiry_Map.aspx.designer.cs">
+      <DependentUpon>Form_ExecutiveMarketInquiry_Map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ExecutiveMarketInquiry_Map_Doctor.aspx.cs">
+      <DependentUpon>Form_ExecutiveMarketInquiry_Map_Doctor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_ExecutiveMarketInquiry_Map_Doctor.aspx.designer.cs">
+      <DependentUpon>Form_ExecutiveMarketInquiry_Map_Doctor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ExecutiveMarketInquiry_Map_Hospital.aspx.cs">
+      <DependentUpon>Form_ExecutiveMarketInquiry_Map_Hospital.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_ExecutiveMarketInquiry_Map_Hospital.aspx.designer.cs">
+      <DependentUpon>Form_ExecutiveMarketInquiry_Map_Hospital.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_FIMFAM.aspx.cs">
+      <DependentUpon>Form_FIMFAM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_FIMFAM.aspx.designer.cs">
+      <DependentUpon>Form_FIMFAM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_FIMFAM_List.aspx.cs">
+      <DependentUpon>Form_FIMFAM_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_FIMFAM_List.aspx.designer.cs">
+      <DependentUpon>Form_FIMFAM_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_FSM_BusinessUnit.aspx.cs">
+      <DependentUpon>Form_FSM_BusinessUnit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_FSM_BusinessUnit.aspx.designer.cs">
+      <DependentUpon>Form_FSM_BusinessUnit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_FSM_BusinessUnitComponent.aspx.cs">
+      <DependentUpon>Form_FSM_BusinessUnitComponent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_FSM_BusinessUnitComponent.aspx.designer.cs">
+      <DependentUpon>Form_FSM_BusinessUnitComponent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_FSM_BusinessUnitComponent_List.aspx.cs">
+      <DependentUpon>Form_FSM_BusinessUnitComponent_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_FSM_BusinessUnitComponent_List.aspx.designer.cs">
+      <DependentUpon>Form_FSM_BusinessUnitComponent_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_FSM_BusinessUnit_List.aspx.cs">
+      <DependentUpon>Form_FSM_BusinessUnit_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_FSM_BusinessUnit_List.aspx.designer.cs">
+      <DependentUpon>Form_FSM_BusinessUnit_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_FSM_Location.aspx.cs">
+      <DependentUpon>Form_FSM_Location.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_FSM_Location.aspx.designer.cs">
+      <DependentUpon>Form_FSM_Location.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_FSM_Location_List.aspx.cs">
+      <DependentUpon>Form_FSM_Location_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_FSM_Location_List.aspx.designer.cs">
+      <DependentUpon>Form_FSM_Location_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_FSM_Map.aspx.cs">
+      <DependentUpon>Form_FSM_Map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_FSM_Map.aspx.designer.cs">
+      <DependentUpon>Form_FSM_Map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_HeadOfficeQualityAudit.aspx.cs">
+      <DependentUpon>Form_HeadOfficeQualityAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_HeadOfficeQualityAudit.aspx.designer.cs">
+      <DependentUpon>Form_HeadOfficeQualityAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_HeadOfficeQualityAudit_List.aspx.cs">
+      <DependentUpon>Form_HeadOfficeQualityAudit_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_HeadOfficeQualityAudit_List.aspx.designer.cs">
+      <DependentUpon>Form_HeadOfficeQualityAudit_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Incident.aspx.cs">
+      <DependentUpon>Form_Incident.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Incident.aspx.designer.cs">
+      <DependentUpon>Form_Incident.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Incident_List.aspx.cs">
+      <DependentUpon>Form_Incident_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Incident_List.aspx.designer.cs">
+      <DependentUpon>Form_Incident_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_InfectionPrevention.aspx.cs">
+      <DependentUpon>Form_InfectionPrevention.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_InfectionPrevention.aspx.designer.cs">
+      <DependentUpon>Form_InfectionPrevention.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_InfectionPrevention_List.aspx.cs">
+      <DependentUpon>Form_InfectionPrevention_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_InfectionPrevention_List.aspx.designer.cs">
+      <DependentUpon>Form_InfectionPrevention_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_InfrastructureAudit.aspx.cs">
+      <DependentUpon>Form_InfrastructureAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_InfrastructureAudit.aspx.designer.cs">
+      <DependentUpon>Form_InfrastructureAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_InfrastructureAudit_List.aspx.cs">
+      <DependentUpon>Form_InfrastructureAudit_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_InfrastructureAudit_List.aspx.designer.cs">
+      <DependentUpon>Form_InfrastructureAudit_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_InfrastructureAudit_Summary.aspx.cs">
+      <DependentUpon>Form_InfrastructureAudit_Summary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_InfrastructureAudit_Summary.aspx.designer.cs">
+      <DependentUpon>Form_InfrastructureAudit_Summary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_InfrastructureAudit_Summary_Print.aspx.cs">
+      <DependentUpon>Form_InfrastructureAudit_Summary_Print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_InfrastructureAudit_Summary_Print.aspx.designer.cs">
+      <DependentUpon>Form_InfrastructureAudit_Summary_Print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_InfrastructureAudit_Upload.aspx.cs">
+      <DependentUpon>Form_InfrastructureAudit_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_InfrastructureAudit_Upload.aspx.designer.cs">
+      <DependentUpon>Form_InfrastructureAudit_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_IPS.aspx.cs">
+      <DependentUpon>Form_IPS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_IPS.aspx.designer.cs">
+      <DependentUpon>Form_IPS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_IPS_Antibiogram_Lookup.aspx.cs">
+      <DependentUpon>Form_IPS_Antibiogram_Lookup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_IPS_Antibiogram_Lookup.aspx.designer.cs">
+      <DependentUpon>Form_IPS_Antibiogram_Lookup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_IPS_BedHistory.aspx.cs">
+      <DependentUpon>Form_IPS_BedHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_IPS_BedHistory.aspx.designer.cs">
+      <DependentUpon>Form_IPS_BedHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_IPS_HAI.aspx.cs">
+      <DependentUpon>Form_IPS_HAI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_IPS_HAI.aspx.designer.cs">
+      <DependentUpon>Form_IPS_HAI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_IPS_InfectionHistory.aspx.cs">
+      <DependentUpon>Form_IPS_InfectionHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_IPS_InfectionHistory.aspx.designer.cs">
+      <DependentUpon>Form_IPS_InfectionHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_IPS_List.aspx.cs">
+      <DependentUpon>Form_IPS_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_IPS_List.aspx.designer.cs">
+      <DependentUpon>Form_IPS_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_IPS_Organism_Lookup.aspx.cs">
+      <DependentUpon>Form_IPS_Organism_Lookup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_IPS_Organism_Lookup.aspx.designer.cs">
+      <DependentUpon>Form_IPS_Organism_Lookup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_IPS_Specimen.aspx.cs">
+      <DependentUpon>Form_IPS_Specimen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_IPS_Specimen.aspx.designer.cs">
+      <DependentUpon>Form_IPS_Specimen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_IPS_SpecimenAll.aspx.cs">
+      <DependentUpon>Form_IPS_SpecimenAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_IPS_SpecimenAll.aspx.designer.cs">
+      <DependentUpon>Form_IPS_SpecimenAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_IPS_Theatre.aspx.cs">
+      <DependentUpon>Form_IPS_Theatre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_IPS_Theatre.aspx.designer.cs">
+      <DependentUpon>Form_IPS_Theatre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_IPS_VisitDiagnosis.aspx.cs">
+      <DependentUpon>Form_IPS_VisitDiagnosis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_IPS_VisitDiagnosis.aspx.designer.cs">
+      <DependentUpon>Form_IPS_VisitDiagnosis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Isidima.aspx.cs">
+      <DependentUpon>Form_Isidima.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Isidima.aspx.designer.cs">
+      <DependentUpon>Form_Isidima.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Isidima_Admin.aspx.cs">
+      <DependentUpon>Form_Isidima_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Isidima_Admin.aspx.designer.cs">
+      <DependentUpon>Form_Isidima_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Isidima_List.aspx.cs">
+      <DependentUpon>Form_Isidima_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Isidima_List.aspx.designer.cs">
+      <DependentUpon>Form_Isidima_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Isidima_Next.aspx.cs">
+      <DependentUpon>Form_Isidima_Next.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Isidima_Next.aspx.designer.cs">
+      <DependentUpon>Form_Isidima_Next.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Isidima_Rules.aspx.cs">
+      <DependentUpon>Form_Isidima_Rules.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Isidima_Rules.aspx.designer.cs">
+      <DependentUpon>Form_Isidima_Rules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MedicationBundleCompliance.aspx.cs">
+      <DependentUpon>Form_MedicationBundleCompliance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_MedicationBundleCompliance.aspx.designer.cs">
+      <DependentUpon>Form_MedicationBundleCompliance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MedicationBundleCompliance_List.aspx.cs">
+      <DependentUpon>Form_MedicationBundleCompliance_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_MedicationBundleCompliance_List.aspx.designer.cs">
+      <DependentUpon>Form_MedicationBundleCompliance_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MHQ14.aspx.cs">
+      <DependentUpon>Form_MHQ14.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_MHQ14.aspx.designer.cs">
+      <DependentUpon>Form_MHQ14.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MHQ14_List.aspx.cs">
+      <DependentUpon>Form_MHQ14_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_MHQ14_List.aspx.designer.cs">
+      <DependentUpon>Form_MHQ14_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MHQ14_Required.aspx.cs">
+      <DependentUpon>Form_MHQ14_Required.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_MHQ14_Required.aspx.designer.cs">
+      <DependentUpon>Form_MHQ14_Required.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MonthlyHospitalStatistics.aspx.cs">
+      <DependentUpon>Form_MonthlyHospitalStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_MonthlyHospitalStatistics.aspx.designer.cs">
+      <DependentUpon>Form_MonthlyHospitalStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MonthlyHospitalStatistics_DSOInternal_Upload.aspx.cs">
+      <DependentUpon>Form_MonthlyHospitalStatistics_DSOInternal_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_MonthlyHospitalStatistics_DSOInternal_Upload.aspx.designer.cs">
+      <DependentUpon>Form_MonthlyHospitalStatistics_DSOInternal_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MonthlyHospitalStatistics_EmptyFields.aspx.cs">
+      <DependentUpon>Form_MonthlyHospitalStatistics_EmptyFields.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_MonthlyHospitalStatistics_EmptyFields.aspx.designer.cs">
+      <DependentUpon>Form_MonthlyHospitalStatistics_EmptyFields.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MonthlyHospitalStatistics_List.aspx.cs">
+      <DependentUpon>Form_MonthlyHospitalStatistics_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_MonthlyHospitalStatistics_List.aspx.designer.cs">
+      <DependentUpon>Form_MonthlyHospitalStatistics_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MonthlyHospitalStatistics_Waste_Upload.aspx.cs">
+      <DependentUpon>Form_MonthlyHospitalStatistics_Waste_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MonthlyHospitalStatistics_Waste_Upload.aspx.designer.cs">
+      <DependentUpon>Form_MonthlyHospitalStatistics_Waste_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MonthlyOccupationalHealthStatistics.aspx.cs">
+      <DependentUpon>Form_MonthlyOccupationalHealthStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_MonthlyOccupationalHealthStatistics.aspx.designer.cs">
+      <DependentUpon>Form_MonthlyOccupationalHealthStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MonthlyOccupationalHealthStatistics_EmptyFields.aspx.cs">
+      <DependentUpon>Form_MonthlyOccupationalHealthStatistics_EmptyFields.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_MonthlyOccupationalHealthStatistics_EmptyFields.aspx.designer.cs">
+      <DependentUpon>Form_MonthlyOccupationalHealthStatistics_EmptyFields.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MonthlyOccupationalHealthStatistics_List.aspx.cs">
+      <DependentUpon>Form_MonthlyOccupationalHealthStatistics_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_MonthlyOccupationalHealthStatistics_List.aspx.designer.cs">
+      <DependentUpon>Form_MonthlyOccupationalHealthStatistics_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MonthlyPharmacyStatistics.aspx.cs">
+      <DependentUpon>Form_MonthlyPharmacyStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_MonthlyPharmacyStatistics.aspx.designer.cs">
+      <DependentUpon>Form_MonthlyPharmacyStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MonthlyPharmacyStatistics_EmptyFields.aspx.cs">
+      <DependentUpon>Form_MonthlyPharmacyStatistics_EmptyFields.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_MonthlyPharmacyStatistics_EmptyFields.aspx.designer.cs">
+      <DependentUpon>Form_MonthlyPharmacyStatistics_EmptyFields.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MonthlyPharmacyStatistics_List.aspx.cs">
+      <DependentUpon>Form_MonthlyPharmacyStatistics_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_MonthlyPharmacyStatistics_List.aspx.designer.cs">
+      <DependentUpon>Form_MonthlyPharmacyStatistics_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_OccupationalHealthAudit.aspx.cs">
+      <DependentUpon>Form_OccupationalHealthAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_OccupationalHealthAudit.aspx.designer.cs">
+      <DependentUpon>Form_OccupationalHealthAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_OccupationalHealthAudit_Findings.aspx.cs">
+      <DependentUpon>Form_OccupationalHealthAudit_Findings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_OccupationalHealthAudit_Findings.aspx.designer.cs">
+      <DependentUpon>Form_OccupationalHealthAudit_Findings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_OccupationalHealthAudit_Findings_List.aspx.cs">
+      <DependentUpon>Form_OccupationalHealthAudit_Findings_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_OccupationalHealthAudit_Findings_List.aspx.designer.cs">
+      <DependentUpon>Form_OccupationalHealthAudit_Findings_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_OccupationalHealthAudit_List.aspx.cs">
+      <DependentUpon>Form_OccupationalHealthAudit_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_OccupationalHealthAudit_List.aspx.designer.cs">
+      <DependentUpon>Form_OccupationalHealthAudit_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_OccupationalHealthAudit_Summary.aspx.cs">
+      <DependentUpon>Form_OccupationalHealthAudit_Summary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_OccupationalHealthAudit_Summary.aspx.designer.cs">
+      <DependentUpon>Form_OccupationalHealthAudit_Summary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_OccupationalHealthAudit_Summary_Print.aspx.cs">
+      <DependentUpon>Form_OccupationalHealthAudit_Summary_Print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_OccupationalHealthAudit_Summary_Print.aspx.designer.cs">
+      <DependentUpon>Form_OccupationalHealthAudit_Summary_Print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_OccupationalHealthAudit_Upload.aspx.cs">
+      <DependentUpon>Form_OccupationalHealthAudit_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_OccupationalHealthAudit_Upload.aspx.designer.cs">
+      <DependentUpon>Form_OccupationalHealthAudit_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PharmacyClinicalMetrics.aspx.cs">
+      <DependentUpon>Form_PharmacyClinicalMetrics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_PharmacyClinicalMetrics.aspx.designer.cs">
+      <DependentUpon>Form_PharmacyClinicalMetrics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PharmacyClinicalMetrics_List.aspx.cs">
+      <DependentUpon>Form_PharmacyClinicalMetrics_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_PharmacyClinicalMetrics_List.aspx.designer.cs">
+      <DependentUpon>Form_PharmacyClinicalMetrics_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PharmacySurveys.aspx.cs">
+      <DependentUpon>Form_PharmacySurveys.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_PharmacySurveys.aspx.designer.cs">
+      <DependentUpon>Form_PharmacySurveys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PharmacySurveys_Create.aspx.cs">
+      <DependentUpon>Form_PharmacySurveys_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_PharmacySurveys_Create.aspx.designer.cs">
+      <DependentUpon>Form_PharmacySurveys_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PharmacySurveys_List.aspx.cs">
+      <DependentUpon>Form_PharmacySurveys_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_PharmacySurveys_List.aspx.designer.cs">
+      <DependentUpon>Form_PharmacySurveys_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PharmacySurveys_LoadedSurveys.aspx.cs">
+      <DependentUpon>Form_PharmacySurveys_LoadedSurveys.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_PharmacySurveys_LoadedSurveys.aspx.designer.cs">
+      <DependentUpon>Form_PharmacySurveys_LoadedSurveys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PharmacySurveys_LoadedSurveys_List.aspx.cs">
+      <DependentUpon>Form_PharmacySurveys_LoadedSurveys_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_PharmacySurveys_LoadedSurveys_List.aspx.designer.cs">
+      <DependentUpon>Form_PharmacySurveys_LoadedSurveys_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pharmacy_DeadStock.aspx.cs">
+      <DependentUpon>Form_Pharmacy_DeadStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Pharmacy_DeadStock.aspx.designer.cs">
+      <DependentUpon>Form_Pharmacy_DeadStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pharmacy_DeadStock_List.aspx.cs">
+      <DependentUpon>Form_Pharmacy_DeadStock_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Pharmacy_DeadStock_List.aspx.designer.cs">
+      <DependentUpon>Form_Pharmacy_DeadStock_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pharmacy_Formulary.aspx.cs">
+      <DependentUpon>Form_Pharmacy_Formulary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Pharmacy_Formulary.aspx.designer.cs">
+      <DependentUpon>Form_Pharmacy_Formulary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pharmacy_Formulary_List.aspx.cs">
+      <DependentUpon>Form_Pharmacy_Formulary_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Pharmacy_Formulary_List.aspx.designer.cs">
+      <DependentUpon>Form_Pharmacy_Formulary_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pharmacy_Hotline.aspx.cs">
+      <DependentUpon>Form_Pharmacy_Hotline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Pharmacy_Hotline.aspx.designer.cs">
+      <DependentUpon>Form_Pharmacy_Hotline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pharmacy_Hotline_List.aspx.cs">
+      <DependentUpon>Form_Pharmacy_Hotline_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Pharmacy_Hotline_List.aspx.designer.cs">
+      <DependentUpon>Form_Pharmacy_Hotline_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pharmacy_NewProduct.aspx.cs">
+      <DependentUpon>Form_Pharmacy_NewProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Pharmacy_NewProduct.aspx.designer.cs">
+      <DependentUpon>Form_Pharmacy_NewProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pharmacy_NewProduct_List.aspx.cs">
+      <DependentUpon>Form_Pharmacy_NewProduct_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Pharmacy_NewProduct_List.aspx.designer.cs">
+      <DependentUpon>Form_Pharmacy_NewProduct_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pharmacy_Product.aspx.cs">
+      <DependentUpon>Form_Pharmacy_Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Pharmacy_Product.aspx.designer.cs">
+      <DependentUpon>Form_Pharmacy_Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pharmacy_ProductComplaint.aspx.cs">
+      <DependentUpon>Form_Pharmacy_ProductComplaint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Pharmacy_ProductComplaint.aspx.designer.cs">
+      <DependentUpon>Form_Pharmacy_ProductComplaint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pharmacy_ProductComplaint_List.aspx.cs">
+      <DependentUpon>Form_Pharmacy_ProductComplaint_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Pharmacy_ProductComplaint_List.aspx.designer.cs">
+      <DependentUpon>Form_Pharmacy_ProductComplaint_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pharmacy_Product_List.aspx.cs">
+      <DependentUpon>Form_Pharmacy_Product_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Pharmacy_Product_List.aspx.designer.cs">
+      <DependentUpon>Form_Pharmacy_Product_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pharmacy_Supplier_Lookup.aspx.cs">
+      <DependentUpon>Form_Pharmacy_Supplier_Lookup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Pharmacy_Supplier_Lookup.aspx.designer.cs">
+      <DependentUpon>Form_Pharmacy_Supplier_Lookup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pharmacy_UPD.aspx.cs">
+      <DependentUpon>Form_Pharmacy_UPD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Pharmacy_UPD.aspx.designer.cs">
+      <DependentUpon>Form_Pharmacy_UPD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pharmacy_UPD_List.aspx.cs">
+      <DependentUpon>Form_Pharmacy_UPD_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Pharmacy_UPD_List.aspx.designer.cs">
+      <DependentUpon>Form_Pharmacy_UPD_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pharmacy_Vendor.aspx.cs">
+      <DependentUpon>Form_Pharmacy_Vendor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Pharmacy_Vendor.aspx.designer.cs">
+      <DependentUpon>Form_Pharmacy_Vendor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pharmacy_Vendor_List.aspx.cs">
+      <DependentUpon>Form_Pharmacy_Vendor_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_Pharmacy_Vendor_List.aspx.designer.cs">
+      <DependentUpon>Form_Pharmacy_Vendor_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PROMS.aspx.cs">
+      <DependentUpon>Form_PROMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_PROMS.aspx.designer.cs">
+      <DependentUpon>Form_PROMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PROMS_List.aspx.cs">
+      <DependentUpon>Form_PROMS_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_PROMS_List.aspx.designer.cs">
+      <DependentUpon>Form_PROMS_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PROMS_Next.aspx.cs">
+      <DependentUpon>Form_PROMS_Next.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_PROMS_Next.aspx.designer.cs">
+      <DependentUpon>Form_PROMS_Next.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PXM_PDCH_DoctorQuestion_List.aspx.cs">
+      <DependentUpon>Form_PXM_PDCH_DoctorQuestion_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_PXM_PDCH_DoctorQuestion_List.aspx.designer.cs">
+      <DependentUpon>Form_PXM_PDCH_DoctorQuestion_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PXM_PDCH_DoctorQuestion_Upload.aspx.cs">
+      <DependentUpon>Form_PXM_PDCH_DoctorQuestion_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_PXM_PDCH_DoctorQuestion_Upload.aspx.designer.cs">
+      <DependentUpon>Form_PXM_PDCH_DoctorQuestion_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PXM_PDCH_TouchPoint_List.aspx.cs">
+      <DependentUpon>Form_PXM_PDCH_TouchPoint_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_PXM_PDCH_TouchPoint_List.aspx.designer.cs">
+      <DependentUpon>Form_PXM_PDCH_TouchPoint_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PXM_PDCH_TouchPoint_Upload.aspx.cs">
+      <DependentUpon>Form_PXM_PDCH_TouchPoint_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_PXM_PDCH_TouchPoint_Upload.aspx.designer.cs">
+      <DependentUpon>Form_PXM_PDCH_TouchPoint_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_QMSReview.aspx.cs">
+      <DependentUpon>Form_QMSReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_QMSReview.aspx.designer.cs">
+      <DependentUpon>Form_QMSReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_QMSReview_Findings.aspx.cs">
+      <DependentUpon>Form_QMSReview_Findings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_QMSReview_Findings.aspx.designer.cs">
+      <DependentUpon>Form_QMSReview_Findings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_QMSReview_Findings_List.aspx.cs">
+      <DependentUpon>Form_QMSReview_Findings_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_QMSReview_Findings_List.aspx.designer.cs">
+      <DependentUpon>Form_QMSReview_Findings_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_QMSReview_List.aspx.cs">
+      <DependentUpon>Form_QMSReview_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_QMSReview_List.aspx.designer.cs">
+      <DependentUpon>Form_QMSReview_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_QMSReview_Summary.aspx.cs">
+      <DependentUpon>Form_QMSReview_Summary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_QMSReview_Summary.aspx.designer.cs">
+      <DependentUpon>Form_QMSReview_Summary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_QMSReview_Summary_Print.aspx.cs">
+      <DependentUpon>Form_QMSReview_Summary_Print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_QMSReview_Summary_Print.aspx.designer.cs">
+      <DependentUpon>Form_QMSReview_Summary_Print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_QMSReview_Upload.aspx.cs">
+      <DependentUpon>Form_QMSReview_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_QMSReview_Upload.aspx.designer.cs">
+      <DependentUpon>Form_QMSReview_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_RehabBundleCompliance.aspx.cs">
+      <DependentUpon>Form_RehabBundleCompliance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_RehabBundleCompliance.aspx.designer.cs">
+      <DependentUpon>Form_RehabBundleCompliance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_RehabBundleCompliance_List.aspx.cs">
+      <DependentUpon>Form_RehabBundleCompliance_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_RehabBundleCompliance_List.aspx.designer.cs">
+      <DependentUpon>Form_RehabBundleCompliance_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_RenalClinicalOutcomes_List.aspx.cs">
+      <DependentUpon>Form_RenalClinicalOutcomes_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_RenalClinicalOutcomes_List.aspx.designer.cs">
+      <DependentUpon>Form_RenalClinicalOutcomes_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_RenalClinicalOutcomes_Upload.aspx.cs">
+      <DependentUpon>Form_RenalClinicalOutcomes_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_RenalClinicalOutcomes_Upload.aspx.designer.cs">
+      <DependentUpon>Form_RenalClinicalOutcomes_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_SustainabilityManagement.aspx.cs">
+      <DependentUpon>Form_SustainabilityManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_SustainabilityManagement.aspx.designer.cs">
+      <DependentUpon>Form_SustainabilityManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_SustainabilityManagement_EmptyFields.aspx.cs">
+      <DependentUpon>Form_SustainabilityManagement_EmptyFields.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_SustainabilityManagement_EmptyFields.aspx.designer.cs">
+      <DependentUpon>Form_SustainabilityManagement_EmptyFields.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_SustainabilityManagement_List.aspx.cs">
+      <DependentUpon>Form_SustainabilityManagement_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_SustainabilityManagement_List.aspx.designer.cs">
+      <DependentUpon>Form_SustainabilityManagement_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_TransparencyRegister.aspx.cs">
+      <DependentUpon>Form_TransparencyRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_TransparencyRegister.aspx.designer.cs">
+      <DependentUpon>Form_TransparencyRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_TransparencyRegister_List.aspx.cs">
+      <DependentUpon>Form_TransparencyRegister_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_TransparencyRegister_List.aspx.designer.cs">
+      <DependentUpon>Form_TransparencyRegister_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_VTE.aspx.cs">
+      <DependentUpon>Form_VTE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_VTE.aspx.designer.cs">
+      <DependentUpon>Form_VTE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_VTE_List.aspx.cs">
+      <DependentUpon>Form_VTE_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_VTE_List.aspx.designer.cs">
+      <DependentUpon>Form_VTE_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="InfoQuest_Captured.aspx.cs">
+      <DependentUpon>InfoQuest_Captured.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoQuest_Captured.aspx.designer.cs">
+      <DependentUpon>InfoQuest_Captured.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoQuest_Email.aspx.cs">
+      <DependentUpon>InfoQuest_Email.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoQuest_Email.aspx.designer.cs">
+      <DependentUpon>InfoQuest_Email.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoQuest_Error.aspx.cs">
+      <DependentUpon>InfoQuest_Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoQuest_Error.aspx.designer.cs">
+      <DependentUpon>InfoQuest_Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoQuest_History.aspx.cs">
+      <DependentUpon>InfoQuest_History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoQuest_History.aspx.designer.cs">
+      <DependentUpon>InfoQuest_History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoQuest_Index.aspx.cs">
+      <DependentUpon>InfoQuest_Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoQuest_Index.aspx.designer.cs">
+      <DependentUpon>InfoQuest_Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoQuest_NoAccess.aspx.cs">
+      <DependentUpon>InfoQuest_NoAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoQuest_NoAccess.aspx.designer.cs">
+      <DependentUpon>InfoQuest_NoAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoQuest_OccupationalHealthSearch.aspx.cs">
+      <DependentUpon>InfoQuest_OccupationalHealthSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoQuest_OccupationalHealthSearch.aspx.designer.cs">
+      <DependentUpon>InfoQuest_OccupationalHealthSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoQuest_PageText.aspx.cs">
+      <DependentUpon>InfoQuest_PageText.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoQuest_PageText.aspx.designer.cs">
+      <DependentUpon>InfoQuest_PageText.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoQuest_PatientSearch.aspx.cs">
+      <DependentUpon>InfoQuest_PatientSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoQuest_PatientSearch.aspx.designer.cs">
+      <DependentUpon>InfoQuest_PatientSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoQuest_Print.aspx.cs">
+      <DependentUpon>InfoQuest_Print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoQuest_Print.aspx.designer.cs">
+      <DependentUpon>InfoQuest_Print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoQuest_ReportNumber.aspx.cs">
+      <DependentUpon>InfoQuest_ReportNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoQuest_ReportNumber.aspx.designer.cs">
+      <DependentUpon>InfoQuest_ReportNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoQuest_TopMenu.aspx.cs">
+      <DependentUpon>InfoQuest_TopMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoQuest_TopMenu.aspx.designer.cs">
+      <DependentUpon>InfoQuest_TopMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoQuest_Updated.aspx.cs">
+      <DependentUpon>InfoQuest_Updated.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoQuest_Updated.aspx.designer.cs">
+      <DependentUpon>InfoQuest_Updated.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Print\Form_Alert.rdlc" />
+    <Content Include="App_Print\Form_AMSPI.rdlc" />
+    <Content Include="App_Print\Form_AntimicrobialStewardshipIntervention.rdlc" />
+    <Content Include="App_Print\Form_AntimicrobialStewardshipIntervention_All.rdlc" />
+    <Content Include="App_Print\Form_BundleCompliance.rdlc" />
+    <Content Include="App_Print\Form_BundleCompliance_All.rdlc" />
+    <Content Include="App_Print\Form_ClinicalPracticeAudit.rdlc" />
+    <Content Include="App_Print\Form_ClinicalPracticeAudit_All.rdlc" />
+    <Content Include="App_Print\Form_CollegeLearningAudit_Findings.rdlc" />
+    <Content Include="App_Print\Form_CRM.rdlc" />
+    <Content Include="App_Print\Form_ECM.rdlc" />
+    <Content Include="App_Print\Form_EquipmentClassifiedSystem_Available.rdlc" />
+    <Content Include="App_Print\Form_EquipmentClassifiedSystem_Request.rdlc" />
+    <Content Include="App_Print\Form_FIMFAM.rdlc" />
+    <Content Include="App_Print\Form_HAI.rdlc" />
+    <Content Include="App_Print\Form_HAI_Investigation.rdlc" />
+    <Content Include="App_Print\Form_HAI_Patient.rdlc" />
+    <Content Include="App_Print\Form_HAI_Patient_Extra.rdlc" />
+    <Content Include="App_Print\Form_HAI_Site.rdlc" />
+    <Content Include="App_Print\Form_HeadOfficeQualityAudit.rdlc" />
+    <Content Include="App_Print\Form_Incident.rdlc" />
+    <Content Include="App_Print\Form_IPS.rdlc" />
+    <Content Include="App_Print\Form_IPS_InfectionDetail.rdlc" />
+    <Content Include="App_Print\Form_IPS_InfectionDetail_Extra.rdlc" />
+    <Content Include="App_Print\Form_IPS_Investigation.rdlc" />
+    <Content Include="App_Print\Form_Isidima.rdlc" />
+    <Content Include="App_Print\Form_MedicationBundleCompliance.rdlc" />
+    <Content Include="App_Print\Form_MedicationBundleCompliance_All.rdlc" />
+    <Content Include="App_Print\Form_MHQ14.rdlc" />
+    <Content Include="App_Print\Form_MonthlyHospitalStatistics.rdlc" />
+    <Content Include="App_Print\Form_MonthlyOccupationalHealthStatistics.rdlc" />
+    <Content Include="App_Print\Form_MonthlyPharmacyStatistics.rdlc" />
+    <Content Include="App_Print\Form_OccupationalHealthAudit_Findings.rdlc" />
+    <Content Include="App_Print\Form_PharmacyClinicalMetrics_PharmacistTime.rdlc" />
+    <Content Include="App_Print\Form_PharmacyClinicalMetrics_PharmacistTime_All.rdlc" />
+    <Content Include="App_Print\Form_PharmacyClinicalMetrics_TherapeuticIntervention.rdlc" />
+    <Content Include="App_Print\Form_PharmacyClinicalMetrics_TherapeuticIntervention_All.rdlc" />
+    <Content Include="App_Print\Form_PharmacySurveys.rdlc" />
+    <Content Include="App_Print\Form_Pharmacy_DeadStock.rdlc" />
+    <Content Include="App_Print\Form_Pharmacy_Formulary.rdlc" />
+    <Content Include="App_Print\Form_Pharmacy_Hotline.rdlc" />
+    <Content Include="App_Print\Form_Pharmacy_NewProduct.rdlc" />
+    <Content Include="App_Print\Form_Pharmacy_Product.rdlc" />
+    <Content Include="App_Print\Form_Pharmacy_ProductComplaint.rdlc" />
+    <Content Include="App_Print\Form_Pharmacy_UPD.rdlc" />
+    <Content Include="App_Print\Form_Pharmacy_Vendor.rdlc" />
+    <Content Include="App_Print\Form_PROMS.rdlc" />
+    <Content Include="App_Print\Form_QMSReview_Findings.rdlc" />
+    <Content Include="App_Print\Form_RehabBundleCompliance.rdlc" />
+    <Content Include="App_Print\Form_RehabBundleCompliance_All.rdlc" />
+    <Content Include="App_Print\Form_SustainabilityManagement.rdlc" />
+    <Content Include="App_Print\Form_TransparencyRegister.rdlc" />
+    <Content Include="App_Print\Form_VTE.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.51116.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.3.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InfoQuestWCF\InfoQuestWCF.csproj">
+      <Project>{e1c77371-9475-4ab0-98d3-3b51975a6643}</Project>
+      <Name>InfoQuestWCF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>InfoQuestFormProject.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7225</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:7225/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

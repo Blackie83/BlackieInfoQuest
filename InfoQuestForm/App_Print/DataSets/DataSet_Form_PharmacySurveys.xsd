@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_PharmacySurveys" targetNamespace="http://tempuri.org/DataSet_Form_PharmacySurveys.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_PharmacySurveys.xsd" xmlns="http://tempuri.org/DataSet_Form_PharmacySurveys.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_PharmacySurveysTableAdapter" GeneratorDataComponentClassName="Form_PharmacySurveysTableAdapter" Name="Form_PharmacySurveys" UserDataComponentName="Form_PharmacySurveysTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Facility_FacilityDisplayName ,
+vForm_PharmacySurveys_CreatedSurveys.LoadedSurveys_Name ,
+vForm_PharmacySurveys_CreatedSurveys.LoadedSurveys_FY ,
+CreatedSurveys_Name , 
+Unit_Name , 
+CreatedSurveys_Designation ,
+LoadedSections_Name ,
+LoadedQuestions_Name , 
+LoadedAnswers_Name ,
+CreatedSurveys_Comments , 
+CreatedSurveys_Compliment
+FROM vForm_PharmacySurveys_CreatedSurveys
+LEFT JOIN Form_PharmacySurveys_CreatedSurveyAnswers ON vForm_PharmacySurveys_CreatedSurveys.CreatedSurveys_Id = Form_PharmacySurveys_CreatedSurveyAnswers.CreatedSurveys_Id
+LEFT JOIN Form_PharmacySurveys_LoadedSurveys ON vForm_PharmacySurveys_CreatedSurveys.LoadedSurveys_Id = Form_PharmacySurveys_LoadedSurveys.LoadedSurveys_Id
+LEFT JOIN Form_PharmacySurveys_LoadedSections ON Form_PharmacySurveys_LoadedSurveys.LoadedSurveys_Id = Form_PharmacySurveys_LoadedSections.LoadedSurveys_Id
+LEFT JOIN Form_PharmacySurveys_LoadedQuestions ON Form_PharmacySurveys_LoadedSections.LoadedSections_Id = Form_PharmacySurveys_LoadedQuestions.LoadedSections_Id
+LEFT JOIN Form_PharmacySurveys_LoadedAnswers AS DependencyShowHide ON Form_PharmacySurveys_LoadedQuestions.LoadedQuestions_Dependency_ShowHide_LoadedAnswersId = DependencyShowHide.LoadedAnswers_Id
+WHERE vForm_PharmacySurveys_CreatedSurveys.CreatedSurveys_Id = 1
+AND Form_PharmacySurveys_CreatedSurveyAnswers.CreatedSurveys_Id IS NULL
+AND Form_PharmacySurveys_LoadedSurveys.LoadedSurveys_IsActive = 1
+AND Form_PharmacySurveys_LoadedSections.LoadedSections_IsActive = 1
+AND Form_PharmacySurveys_LoadedQuestions.LoadedQuestions_IsActive = 1
+UNION
+SELECT Facility_FacilityDisplayName , 
+LoadedSurveys_Name , 
+LoadedSurveys_FY ,
+CreatedSurveys_Name , 
+Unit_Name , 
+CreatedSurveys_Designation ,
+LoadedSections_Name , 
+LoadedQuestions_Name , 
+LoadedAnswers_Name ,
+CreatedSurveys_Comments , 
+CreatedSurveys_Compliment
+FROM vForm_PharmacySurveys_CreatedSurveys
+LEFT JOIN Form_PharmacySurveys_CreatedSurveyAnswers ON vForm_PharmacySurveys_CreatedSurveys.CreatedSurveys_Id = Form_PharmacySurveys_CreatedSurveyAnswers.CreatedSurveys_Id
+LEFT JOIN Form_PharmacySurveys_LoadedAnswers ON Form_PharmacySurveys_CreatedSurveyAnswers.LoadedAnswers_Id = Form_PharmacySurveys_LoadedAnswers.LoadedAnswers_Id
+LEFT JOIN Form_PharmacySurveys_LoadedQuestions ON Form_PharmacySurveys_LoadedAnswers.LoadedQuestions_Id = Form_PharmacySurveys_LoadedQuestions.LoadedQuestions_Id
+LEFT JOIN Form_PharmacySurveys_LoadedSections ON Form_PharmacySurveys_LoadedQuestions.LoadedSections_Id = Form_PharmacySurveys_LoadedSections.LoadedSections_Id
+WHERE vForm_PharmacySurveys_CreatedSurveys.CreatedSurveys_Id = 1
+ORDER BY	LoadedSections_Name , 
+LoadedQuestions_Name</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Facility_FacilityDisplayName" DataSetColumn="Facility_FacilityDisplayName" />
+              <Mapping SourceColumn="LoadedSurveys_Name" DataSetColumn="LoadedSurveys_Name" />
+              <Mapping SourceColumn="LoadedSurveys_FY" DataSetColumn="LoadedSurveys_FY" />
+              <Mapping SourceColumn="CreatedSurveys_Name" DataSetColumn="CreatedSurveys_Name" />
+              <Mapping SourceColumn="Unit_Name" DataSetColumn="Unit_Name" />
+              <Mapping SourceColumn="CreatedSurveys_Designation" DataSetColumn="CreatedSurveys_Designation" />
+              <Mapping SourceColumn="LoadedSections_Name" DataSetColumn="LoadedSections_Name" />
+              <Mapping SourceColumn="LoadedQuestions_Name" DataSetColumn="LoadedQuestions_Name" />
+              <Mapping SourceColumn="LoadedAnswers_Name" DataSetColumn="LoadedAnswers_Name" />
+              <Mapping SourceColumn="CreatedSurveys_Comments" DataSetColumn="CreatedSurveys_Comments" />
+              <Mapping SourceColumn="CreatedSurveys_Compliment" DataSetColumn="CreatedSurveys_Compliment" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_PharmacySurveys" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_Form_PharmacySurveys" msprop:Generator_UserDSName="DataSet_Form_PharmacySurveys">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Form_PharmacySurveys" msprop:Generator_TableClassName="Form_PharmacySurveysDataTable" msprop:Generator_TableVarName="tableForm_PharmacySurveys" msprop:Generator_RowChangedName="Form_PharmacySurveysRowChanged" msprop:Generator_TablePropName="Form_PharmacySurveys" msprop:Generator_RowDeletingName="Form_PharmacySurveysRowDeleting" msprop:Generator_RowChangingName="Form_PharmacySurveysRowChanging" msprop:Generator_RowEvHandlerName="Form_PharmacySurveysRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_PharmacySurveysRowDeleted" msprop:Generator_RowClassName="Form_PharmacySurveysRow" msprop:Generator_UserTableName="Form_PharmacySurveys" msprop:Generator_RowEvArgName="Form_PharmacySurveysRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Facility_FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityDisplayName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityDisplayNameColumn" msprop:Generator_UserColumnName="Facility_FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LoadedSurveys_Name" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLoadedSurveys_Name" msprop:Generator_ColumnPropNameInRow="LoadedSurveys_Name" msprop:Generator_ColumnPropNameInTable="LoadedSurveys_NameColumn" msprop:Generator_UserColumnName="LoadedSurveys_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LoadedSurveys_FY" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLoadedSurveys_FY" msprop:Generator_ColumnPropNameInRow="LoadedSurveys_FY" msprop:Generator_ColumnPropNameInTable="LoadedSurveys_FYColumn" msprop:Generator_UserColumnName="LoadedSurveys_FY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedSurveys_Name" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCreatedSurveys_Name" msprop:Generator_ColumnPropNameInRow="CreatedSurveys_Name" msprop:Generator_ColumnPropNameInTable="CreatedSurveys_NameColumn" msprop:Generator_UserColumnName="CreatedSurveys_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Unit_Name" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnUnit_Name" msprop:Generator_ColumnPropNameInRow="Unit_Name" msprop:Generator_ColumnPropNameInTable="Unit_NameColumn" msprop:Generator_UserColumnName="Unit_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedSurveys_Designation" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCreatedSurveys_Designation" msprop:Generator_ColumnPropNameInRow="CreatedSurveys_Designation" msprop:Generator_ColumnPropNameInTable="CreatedSurveys_DesignationColumn" msprop:Generator_UserColumnName="CreatedSurveys_Designation" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LoadedSections_Name" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLoadedSections_Name" msprop:Generator_ColumnPropNameInRow="LoadedSections_Name" msprop:Generator_ColumnPropNameInTable="LoadedSections_NameColumn" msprop:Generator_UserColumnName="LoadedSections_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LoadedQuestions_Name" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLoadedQuestions_Name" msprop:Generator_ColumnPropNameInRow="LoadedQuestions_Name" msprop:Generator_ColumnPropNameInTable="LoadedQuestions_NameColumn" msprop:Generator_UserColumnName="LoadedQuestions_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LoadedAnswers_Name" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLoadedAnswers_Name" msprop:Generator_ColumnPropNameInRow="LoadedAnswers_Name" msprop:Generator_ColumnPropNameInTable="LoadedAnswers_NameColumn" msprop:Generator_UserColumnName="LoadedAnswers_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedSurveys_Comments" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCreatedSurveys_Comments" msprop:Generator_ColumnPropNameInRow="CreatedSurveys_Comments" msprop:Generator_ColumnPropNameInTable="CreatedSurveys_CommentsColumn" msprop:Generator_UserColumnName="CreatedSurveys_Comments" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedSurveys_Compliment" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCreatedSurveys_Compliment" msprop:Generator_ColumnPropNameInRow="CreatedSurveys_Compliment" msprop:Generator_ColumnPropNameInTable="CreatedSurveys_ComplimentColumn" msprop:Generator_UserColumnName="CreatedSurveys_Compliment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

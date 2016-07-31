@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_OccupationalHealthAudit_Findings" targetNamespace="http://tempuri.org/DataSet_Form_OccupationalHealthAudit_Findings.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_OccupationalHealthAudit_Findings.xsd" xmlns="http://tempuri.org/DataSet_Form_OccupationalHealthAudit_Findings.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vForm_OccupationalHealthAudit_FindingsTableAdapter" GeneratorDataComponentClassName="vForm_OccupationalHealthAudit_FindingsTableAdapter" Name="vForm_OccupationalHealthAudit_Findings" UserDataComponentName="vForm_OccupationalHealthAudit_FindingsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vForm_OccupationalHealthAudit_Findings" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM vForm_OccupationalHealthAudit_Findings WHERE OHA_Findings_Id = 75</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OHA_Id" DataSetColumn="OHA_Id" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facility_FacilityName" DataSetColumn="Facility_FacilityName" />
+              <Mapping SourceColumn="Facility_FacilityCode" DataSetColumn="Facility_FacilityCode" />
+              <Mapping SourceColumn="Facility_FacilityDisplayName" DataSetColumn="Facility_FacilityDisplayName" />
+              <Mapping SourceColumn="Unit_Id" DataSetColumn="Unit_Id" />
+              <Mapping SourceColumn="Unit_Name" DataSetColumn="Unit_Name" />
+              <Mapping SourceColumn="OHA_Date" DataSetColumn="OHA_Date" />
+              <Mapping SourceColumn="OHA_ZipFileName" DataSetColumn="OHA_ZipFileName" />
+              <Mapping SourceColumn="OHA_ContentType" DataSetColumn="OHA_ContentType" />
+              <Mapping SourceColumn="OHA_Data" DataSetColumn="OHA_Data" />
+              <Mapping SourceColumn="OHA_Completed" DataSetColumn="OHA_Completed" />
+              <Mapping SourceColumn="OHA_CompletedDate" DataSetColumn="OHA_CompletedDate" />
+              <Mapping SourceColumn="OHA_CreatedDate" DataSetColumn="OHA_CreatedDate" />
+              <Mapping SourceColumn="OHA_CreatedBy" DataSetColumn="OHA_CreatedBy" />
+              <Mapping SourceColumn="OHA_ModifiedDate" DataSetColumn="OHA_ModifiedDate" />
+              <Mapping SourceColumn="OHA_ModifiedBy" DataSetColumn="OHA_ModifiedBy" />
+              <Mapping SourceColumn="OHA_History" DataSetColumn="OHA_History" />
+              <Mapping SourceColumn="OHA_IsActive" DataSetColumn="OHA_IsActive" />
+              <Mapping SourceColumn="OHA_Archived" DataSetColumn="OHA_Archived" />
+              <Mapping SourceColumn="OHA_Findings_Id" DataSetColumn="OHA_Findings_Id" />
+              <Mapping SourceColumn="OHA_Findings_System" DataSetColumn="OHA_Findings_System" />
+              <Mapping SourceColumn="OHA_Findings_Element" DataSetColumn="OHA_Findings_Element" />
+              <Mapping SourceColumn="OHA_Findings_CriteriaNo" DataSetColumn="OHA_Findings_CriteriaNo" />
+              <Mapping SourceColumn="OHA_Findings_MeasurementCriteria" DataSetColumn="OHA_Findings_MeasurementCriteria" />
+              <Mapping SourceColumn="OHA_Findings_Category" DataSetColumn="OHA_Findings_Category" />
+              <Mapping SourceColumn="OHA_Findings_Comments" DataSetColumn="OHA_Findings_Comments" />
+              <Mapping SourceColumn="OHA_Findings_RootCause" DataSetColumn="OHA_Findings_RootCause" />
+              <Mapping SourceColumn="OHA_Findings_Actions" DataSetColumn="OHA_Findings_Actions" />
+              <Mapping SourceColumn="OHA_Findings_ResponsiblePerson" DataSetColumn="OHA_Findings_ResponsiblePerson" />
+              <Mapping SourceColumn="OHA_Findings_DueDate" DataSetColumn="OHA_Findings_DueDate" />
+              <Mapping SourceColumn="OHA_Findings_ActionsEffective" DataSetColumn="OHA_Findings_ActionsEffective" />
+              <Mapping SourceColumn="OHA_Findings_Tracking_List" DataSetColumn="OHA_Findings_Tracking_List" />
+              <Mapping SourceColumn="OHA_Findings_Tracking_Name" DataSetColumn="OHA_Findings_Tracking_Name" />
+              <Mapping SourceColumn="OHA_Findings_TrackingDate" DataSetColumn="OHA_Findings_TrackingDate" />
+              <Mapping SourceColumn="OHA_Findings_LateClosingOutCNC_List" DataSetColumn="OHA_Findings_LateClosingOutCNC_List" />
+              <Mapping SourceColumn="OHA_Findings_LateClosingOutCNC_Name" DataSetColumn="OHA_Findings_LateClosingOutCNC_Name" />
+              <Mapping SourceColumn="OHA_Findings_LateClosingOutCNC_List_Other" DataSetColumn="OHA_Findings_LateClosingOutCNC_List_Other" />
+              <Mapping SourceColumn="OHA_Findings_Score" DataSetColumn="OHA_Findings_Score" />
+              <Mapping SourceColumn="OHA_Findings_CoreStandard" DataSetColumn="OHA_Findings_CoreStandard" />
+              <Mapping SourceColumn="OHA_Findings_CreatedDate" DataSetColumn="OHA_Findings_CreatedDate" />
+              <Mapping SourceColumn="OHA_Findings_CreatedBy" DataSetColumn="OHA_Findings_CreatedBy" />
+              <Mapping SourceColumn="OHA_Findings_ModifiedDate" DataSetColumn="OHA_Findings_ModifiedDate" />
+              <Mapping SourceColumn="OHA_Findings_ModifiedBy" DataSetColumn="OHA_Findings_ModifiedBy" />
+              <Mapping SourceColumn="OHA_Findings_History" DataSetColumn="OHA_Findings_History" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_OccupationalHealthAudit_Findings" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet_Form_OccupationalHealthAudit_Findings" msprop:Generator_UserDSName="DataSet_Form_OccupationalHealthAudit_Findings">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vForm_OccupationalHealthAudit_Findings" msprop:Generator_TableClassName="vForm_OccupationalHealthAudit_FindingsDataTable" msprop:Generator_TableVarName="tablevForm_OccupationalHealthAudit_Findings" msprop:Generator_TablePropName="vForm_OccupationalHealthAudit_Findings" msprop:Generator_RowDeletingName="vForm_OccupationalHealthAudit_FindingsRowDeleting" msprop:Generator_RowChangingName="vForm_OccupationalHealthAudit_FindingsRowChanging" msprop:Generator_RowEvHandlerName="vForm_OccupationalHealthAudit_FindingsRowChangeEventHandler" msprop:Generator_RowDeletedName="vForm_OccupationalHealthAudit_FindingsRowDeleted" msprop:Generator_UserTableName="vForm_OccupationalHealthAudit_Findings" msprop:Generator_RowChangedName="vForm_OccupationalHealthAudit_FindingsRowChanged" msprop:Generator_RowEvArgName="vForm_OccupationalHealthAudit_FindingsRowChangeEvent" msprop:Generator_RowClassName="vForm_OccupationalHealthAudit_FindingsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OHA_Id" msprop:Generator_ColumnVarNameInTable="columnOHA_Id" msprop:Generator_ColumnPropNameInRow="OHA_Id" msprop:Generator_ColumnPropNameInTable="OHA_IdColumn" msprop:Generator_UserColumnName="OHA_Id" type="xs:int" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facility_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityNameColumn" msprop:Generator_UserColumnName="Facility_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facility_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facility_FacilityCodeColumn" msprop:Generator_UserColumnName="Facility_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityDisplayName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityDisplayNameColumn" msprop:Generator_UserColumnName="Facility_FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Unit_Id" msprop:Generator_ColumnVarNameInTable="columnUnit_Id" msprop:Generator_ColumnPropNameInRow="Unit_Id" msprop:Generator_ColumnPropNameInTable="Unit_IdColumn" msprop:Generator_UserColumnName="Unit_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Unit_Name" msprop:Generator_ColumnVarNameInTable="columnUnit_Name" msprop:Generator_ColumnPropNameInRow="Unit_Name" msprop:Generator_ColumnPropNameInTable="Unit_NameColumn" msprop:Generator_UserColumnName="Unit_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_Date" msprop:Generator_ColumnVarNameInTable="columnOHA_Date" msprop:Generator_ColumnPropNameInRow="OHA_Date" msprop:Generator_ColumnPropNameInTable="OHA_DateColumn" msprop:Generator_UserColumnName="OHA_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OHA_ZipFileName" msprop:Generator_ColumnVarNameInTable="columnOHA_ZipFileName" msprop:Generator_ColumnPropNameInRow="OHA_ZipFileName" msprop:Generator_ColumnPropNameInTable="OHA_ZipFileNameColumn" msprop:Generator_UserColumnName="OHA_ZipFileName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_ContentType" msprop:Generator_ColumnVarNameInTable="columnOHA_ContentType" msprop:Generator_ColumnPropNameInRow="OHA_ContentType" msprop:Generator_ColumnPropNameInTable="OHA_ContentTypeColumn" msprop:Generator_UserColumnName="OHA_ContentType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_Data" msprop:Generator_ColumnVarNameInTable="columnOHA_Data" msprop:Generator_ColumnPropNameInRow="OHA_Data" msprop:Generator_ColumnPropNameInTable="OHA_DataColumn" msprop:Generator_UserColumnName="OHA_Data" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="OHA_Completed" msprop:Generator_ColumnVarNameInTable="columnOHA_Completed" msprop:Generator_ColumnPropNameInRow="OHA_Completed" msprop:Generator_ColumnPropNameInTable="OHA_CompletedColumn" msprop:Generator_UserColumnName="OHA_Completed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="OHA_CompletedDate" msprop:Generator_ColumnVarNameInTable="columnOHA_CompletedDate" msprop:Generator_ColumnPropNameInRow="OHA_CompletedDate" msprop:Generator_ColumnPropNameInTable="OHA_CompletedDateColumn" msprop:Generator_UserColumnName="OHA_CompletedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OHA_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnOHA_CreatedDate" msprop:Generator_ColumnPropNameInRow="OHA_CreatedDate" msprop:Generator_ColumnPropNameInTable="OHA_CreatedDateColumn" msprop:Generator_UserColumnName="OHA_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OHA_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnOHA_CreatedBy" msprop:Generator_ColumnPropNameInRow="OHA_CreatedBy" msprop:Generator_ColumnPropNameInTable="OHA_CreatedByColumn" msprop:Generator_UserColumnName="OHA_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnOHA_ModifiedDate" msprop:Generator_ColumnPropNameInRow="OHA_ModifiedDate" msprop:Generator_ColumnPropNameInTable="OHA_ModifiedDateColumn" msprop:Generator_UserColumnName="OHA_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OHA_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnOHA_ModifiedBy" msprop:Generator_ColumnPropNameInRow="OHA_ModifiedBy" msprop:Generator_ColumnPropNameInTable="OHA_ModifiedByColumn" msprop:Generator_UserColumnName="OHA_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_History" msprop:Generator_ColumnVarNameInTable="columnOHA_History" msprop:Generator_ColumnPropNameInRow="OHA_History" msprop:Generator_ColumnPropNameInTable="OHA_HistoryColumn" msprop:Generator_UserColumnName="OHA_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_IsActive" msprop:Generator_ColumnVarNameInTable="columnOHA_IsActive" msprop:Generator_ColumnPropNameInRow="OHA_IsActive" msprop:Generator_ColumnPropNameInTable="OHA_IsActiveColumn" msprop:Generator_UserColumnName="OHA_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="OHA_Archived" msprop:Generator_ColumnVarNameInTable="columnOHA_Archived" msprop:Generator_ColumnPropNameInRow="OHA_Archived" msprop:Generator_ColumnPropNameInTable="OHA_ArchivedColumn" msprop:Generator_UserColumnName="OHA_Archived" type="xs:boolean" minOccurs="0" />
+              <xs:element name="OHA_Findings_Id" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_Id" msprop:Generator_ColumnPropNameInRow="OHA_Findings_Id" msprop:Generator_ColumnPropNameInTable="OHA_Findings_IdColumn" msprop:Generator_UserColumnName="OHA_Findings_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="OHA_Findings_System" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_System" msprop:Generator_ColumnPropNameInRow="OHA_Findings_System" msprop:Generator_ColumnPropNameInTable="OHA_Findings_SystemColumn" msprop:Generator_UserColumnName="OHA_Findings_System" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_Findings_Element" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_Element" msprop:Generator_ColumnPropNameInRow="OHA_Findings_Element" msprop:Generator_ColumnPropNameInTable="OHA_Findings_ElementColumn" msprop:Generator_UserColumnName="OHA_Findings_Element" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_Findings_CriteriaNo" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_CriteriaNo" msprop:Generator_ColumnPropNameInRow="OHA_Findings_CriteriaNo" msprop:Generator_ColumnPropNameInTable="OHA_Findings_CriteriaNoColumn" msprop:Generator_UserColumnName="OHA_Findings_CriteriaNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_Findings_MeasurementCriteria" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_MeasurementCriteria" msprop:Generator_ColumnPropNameInRow="OHA_Findings_MeasurementCriteria" msprop:Generator_ColumnPropNameInTable="OHA_Findings_MeasurementCriteriaColumn" msprop:Generator_UserColumnName="OHA_Findings_MeasurementCriteria" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_Findings_Category" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_Category" msprop:Generator_ColumnPropNameInRow="OHA_Findings_Category" msprop:Generator_ColumnPropNameInTable="OHA_Findings_CategoryColumn" msprop:Generator_UserColumnName="OHA_Findings_Category" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_Findings_Comments" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_Comments" msprop:Generator_ColumnPropNameInRow="OHA_Findings_Comments" msprop:Generator_ColumnPropNameInTable="OHA_Findings_CommentsColumn" msprop:Generator_UserColumnName="OHA_Findings_Comments" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_Findings_RootCause" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_RootCause" msprop:Generator_ColumnPropNameInRow="OHA_Findings_RootCause" msprop:Generator_ColumnPropNameInTable="OHA_Findings_RootCauseColumn" msprop:Generator_UserColumnName="OHA_Findings_RootCause" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_Findings_Actions" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_Actions" msprop:Generator_ColumnPropNameInRow="OHA_Findings_Actions" msprop:Generator_ColumnPropNameInTable="OHA_Findings_ActionsColumn" msprop:Generator_UserColumnName="OHA_Findings_Actions" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_Findings_ResponsiblePerson" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_ResponsiblePerson" msprop:Generator_ColumnPropNameInRow="OHA_Findings_ResponsiblePerson" msprop:Generator_ColumnPropNameInTable="OHA_Findings_ResponsiblePersonColumn" msprop:Generator_UserColumnName="OHA_Findings_ResponsiblePerson" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_Findings_DueDate" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_DueDate" msprop:Generator_ColumnPropNameInRow="OHA_Findings_DueDate" msprop:Generator_ColumnPropNameInTable="OHA_Findings_DueDateColumn" msprop:Generator_UserColumnName="OHA_Findings_DueDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OHA_Findings_ActionsEffective" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_ActionsEffective" msprop:Generator_ColumnPropNameInRow="OHA_Findings_ActionsEffective" msprop:Generator_ColumnPropNameInTable="OHA_Findings_ActionsEffectiveColumn" msprop:Generator_UserColumnName="OHA_Findings_ActionsEffective" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_Findings_Tracking_List" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_Tracking_List" msprop:Generator_ColumnPropNameInRow="OHA_Findings_Tracking_List" msprop:Generator_ColumnPropNameInTable="OHA_Findings_Tracking_ListColumn" msprop:Generator_UserColumnName="OHA_Findings_Tracking_List" type="xs:int" minOccurs="0" />
+              <xs:element name="OHA_Findings_Tracking_Name" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_Tracking_Name" msprop:Generator_ColumnPropNameInRow="OHA_Findings_Tracking_Name" msprop:Generator_ColumnPropNameInTable="OHA_Findings_Tracking_NameColumn" msprop:Generator_UserColumnName="OHA_Findings_Tracking_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_Findings_TrackingDate" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_TrackingDate" msprop:Generator_ColumnPropNameInRow="OHA_Findings_TrackingDate" msprop:Generator_ColumnPropNameInTable="OHA_Findings_TrackingDateColumn" msprop:Generator_UserColumnName="OHA_Findings_TrackingDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OHA_Findings_LateClosingOutCNC_List" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_LateClosingOutCNC_List" msprop:Generator_ColumnPropNameInRow="OHA_Findings_LateClosingOutCNC_List" msprop:Generator_ColumnPropNameInTable="OHA_Findings_LateClosingOutCNC_ListColumn" msprop:Generator_UserColumnName="OHA_Findings_LateClosingOutCNC_List" type="xs:int" minOccurs="0" />
+              <xs:element name="OHA_Findings_LateClosingOutCNC_Name" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_LateClosingOutCNC_Name" msprop:Generator_ColumnPropNameInRow="OHA_Findings_LateClosingOutCNC_Name" msprop:Generator_ColumnPropNameInTable="OHA_Findings_LateClosingOutCNC_NameColumn" msprop:Generator_UserColumnName="OHA_Findings_LateClosingOutCNC_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_Findings_LateClosingOutCNC_List_Other" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_LateClosingOutCNC_List_Other" msprop:Generator_ColumnPropNameInRow="OHA_Findings_LateClosingOutCNC_List_Other" msprop:Generator_ColumnPropNameInTable="OHA_Findings_LateClosingOutCNC_List_OtherColumn" msprop:Generator_UserColumnName="OHA_Findings_LateClosingOutCNC_List_Other" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_Findings_Score" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_Score" msprop:Generator_ColumnPropNameInRow="OHA_Findings_Score" msprop:Generator_ColumnPropNameInTable="OHA_Findings_ScoreColumn" msprop:Generator_UserColumnName="OHA_Findings_Score" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_Findings_CoreStandard" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_CoreStandard" msprop:Generator_ColumnPropNameInRow="OHA_Findings_CoreStandard" msprop:Generator_ColumnPropNameInTable="OHA_Findings_CoreStandardColumn" msprop:Generator_UserColumnName="OHA_Findings_CoreStandard" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_Findings_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_CreatedDate" msprop:Generator_ColumnPropNameInRow="OHA_Findings_CreatedDate" msprop:Generator_ColumnPropNameInTable="OHA_Findings_CreatedDateColumn" msprop:Generator_UserColumnName="OHA_Findings_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OHA_Findings_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_CreatedBy" msprop:Generator_ColumnPropNameInRow="OHA_Findings_CreatedBy" msprop:Generator_ColumnPropNameInTable="OHA_Findings_CreatedByColumn" msprop:Generator_UserColumnName="OHA_Findings_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_Findings_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_ModifiedDate" msprop:Generator_ColumnPropNameInRow="OHA_Findings_ModifiedDate" msprop:Generator_ColumnPropNameInTable="OHA_Findings_ModifiedDateColumn" msprop:Generator_UserColumnName="OHA_Findings_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OHA_Findings_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_ModifiedBy" msprop:Generator_ColumnPropNameInRow="OHA_Findings_ModifiedBy" msprop:Generator_ColumnPropNameInTable="OHA_Findings_ModifiedByColumn" msprop:Generator_UserColumnName="OHA_Findings_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OHA_Findings_History" msprop:Generator_ColumnVarNameInTable="columnOHA_Findings_History" msprop:Generator_ColumnPropNameInRow="OHA_Findings_History" msprop:Generator_ColumnPropNameInTable="OHA_Findings_HistoryColumn" msprop:Generator_UserColumnName="OHA_Findings_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

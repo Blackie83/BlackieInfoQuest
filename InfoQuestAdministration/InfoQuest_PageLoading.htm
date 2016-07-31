@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>InfoQuest Administration - Page Loading</title>
+  <link rel="stylesheet" type="text/css" href="App_Themes/LifeHealthcare/LifeHealthcare.css" />
+  <script src="App_Javascripts/InfoQuest_Loader.js" type="text/javascript"></script>
+  <script src="App_Javascripts/InfoQuest_LoaderSettings.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    function QueryStringValue(FindName)
+    {
+      var QueryString = window.location.search.substring(1);
+      var QueryStringSplit = QueryString.split("&");
+      for (var a = 0; a < QueryStringSplit.length; a++)
+      {
+        var QueryStringValue = QueryStringSplit[a].split("=");
+        if (QueryStringValue[0] == FindName)
+        {
+          return QueryStringValue[1];
+        }
+      }
+      return null;
+    }
+
+    function Show(Id)
+    {
+      document.getElementById(Id).style.display = '';
+    }
+
+    function Hide(Id)
+    {
+      document.getElementById(Id).style.display = 'none';
+    }
+
+    function StopPageLoad()
+    {
+      document.execCommand('Stop');
+      Hide('Div_Load');
+      Show('Div_Cancel');
+
+      if (document.referrer != "")
+      {
+        Show('Button_Back');
+      }
+      else
+      {
+        Hide('Button_Back');
+      }
+    }
+
+    function StartPageLoad()
+    {
+      Hide('Div_Cancel');
+      if (QueryStringValue("PageLoadingPage") == null || QueryStringValue("PageLoadingURL") == null)
+      {
+        document.execCommand('Stop');
+        Hide('Div_Load');
+      }
+      else
+      {
+        Show('Div_Load');
+        var PageURL = "";
+
+        var PageIndex = window.location.search.indexOf("PageLoadingPage=") + 16;
+        var URLIndex = window.location.search.indexOf("PageLoadingURL=") + 15;
+
+        if (PageIndex < URLIndex)
+        {
+          PageURL = window.location.search.substring(window.location.search.indexOf("PageLoadingURL=") + 15);
+        }
+        else
+        {
+          PageURL = window.location.search.substring(window.location.search.indexOf("PageLoadingURL=") + 15, window.location.search.indexOf("PageLoadingPage=") - 1)
+        }
+
+        PageURL = PageURL + window.location.hash;
+
+        location.replace(PageURL);
+      }
+    }
+
+    function BackPageLoad()
+    {
+      if (document.referrer != "")
+      {
+        window.history.back()
+      }
+    }
+
+    function PageName()
+    {
+      if (QueryStringValue("PageLoadingPage") != null && QueryStringValue("PageLoadingURL") != null)
+      {
+        var PageName = "";
+
+        var PageIndex = window.location.search.indexOf("PageLoadingPage=") + 16;
+        var URLIndex = window.location.search.indexOf("PageLoadingURL=") + 15;
+
+        if (PageIndex < URLIndex)
+        {
+          PageName = window.location.search.substring(window.location.search.indexOf("PageLoadingPage=") + 16, window.location.search.indexOf("PageLoadingURL=") - 1)
+        }
+        else
+        {
+          PageName = window.location.search.substring(window.location.search.indexOf("PageLoadingPage=") + 16);
+        }
+
+        document.writeln("" + PageName + "");
+      }
+    }
+  </script>
+</head>
+<body>
+  <!--<table cellspacing="0" cellpadding="0" border="0" width="100%">
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">
+        <img src="App_Images/Logos/Life Healthcare/14_logo_2_col_blue_red.jpg" height="75px" alt="" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">
+        <strong style='color: #003768; font-size: 30px;'>Info</strong><strong style='color: #b0262e; font-size: 30px;'>Q</strong><strong style='color: #003768; font-size: 30px;'>uest</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">
+        <div id="Div1" runat="server" style="visibility: visible; vertical-align: middle; background-color: #ffffff;">
+          <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+              <td style="color: #b0262e; font-size: 18px; font-weight: bold; vertical-align: middle; text-align:center;">
+                Loading                
+              </td>
+            </tr>
+            <tr>
+              <td>
+                &nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td style="color: #b0262e; font-size: 18px; font-weight: bold; vertical-align: middle; text-align:center;">
+                <script language="javascript" type="text/javascript">
+                  PageName()
+                </script>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                &nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">
+                <img id="Img1" alt="" src="App_Images/Loader/Frame0.jpg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                &nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">
+                <input id="Button1" class="Button" type="button" value="Cancel Loading" onclick="StopPageLoad();" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div id="Div2" runat="server" style="visibility: visible; vertical-align: middle; background-color: #ffffff;">
+          <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+              <td style="color: #b0262e; font-size: 18px; font-weight: bold; vertical-align: middle; text-align:center;">
+                Loading Cancelled
+              </td>
+            </tr>
+            <tr>
+              <td>
+                &nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td style="color: #b0262e; font-size: 18px; font-weight: bold; vertical-align: middle; text-align:center;">
+                <script language="javascript" type="text/javascript">
+                  PageName()
+                </script>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                &nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">
+                <input id="Button2" class="Button" type="button" value="Try Again" onclick="StartPageLoad();" />
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">
+        <strong style='color: #003768; font-size: 10px;'>Powered by Info</strong><strong style='color: #b0262e; font-size: 10px;'>Q</strong><strong style='color: #003768; font-size: 10px;'>uest</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+    </tr>
+  </table>-->
+
+  <div id="Div_Load" style="position: absolute; left: 35%; top: 40%; visibility: visible; vertical-align: middle; border-style: solid; border-color: #b0262e; border-width: 10px; background-color: #f7f7f7; width: 30%;">
+    <table border="0" style="width: 100%; border-color: #003768; border-style: solid; border-width: 10px; background-color: #ffffff;">
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="color: #003768; font-size: 18px; font-weight: bold; vertical-align: middle; text-align: center;">Loading Page</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <!--<tr>
+        <td style="color: #b0262e; font-size: 18px; font-weight: bold; vertical-align: middle; text-align:center;">
+          <script language="javascript" type="text/javascript">
+            PageName()
+          </script>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>-->
+      <tr>
+        <td style="text-align: center;">
+          <div id="LoaderDiv" style="position:absolute;top:50%;left:50%">
+            <script type="text/javascript">Loader()</script>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">
+          <input id="Button_Stop" class="Button" type="button" value="Cancel Loading" onclick="StopPageLoad();" />
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="Div_Cancel" style="position: absolute; left: 35%; top: 40%; visibility: visible; vertical-align: middle; border-style: solid; border-color: #b0262e; border-width: 10px; background-color: #f7f7f7; width: 30%;">
+    <table border="0" style="width: 100%; border-color: #003768; border-style: solid; border-width: 10px; background-color: #ffffff;">
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="color: #003768; font-size: 18px; font-weight: bold; vertical-align: middle; text-align: center;">Loading Cancelled
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <!--<tr>
+        <td style="color: #b0262e; font-size: 18px; font-weight: bold; vertical-align: middle; text-align:center;">
+          <script language="javascript" type="text/javascript">
+            PageName()
+          </script>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>-->
+      <tr>
+        <td style="text-align: center;">
+          <input id="Button_Start" class="Button" type="button" value="Try Again" onclick="StartPageLoad();" />
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">
+          <input id="Button_Back" class="Button" type="button" value="Go To Previous Page" onclick="BackPageLoad();" />
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+  </div>
+
+  <script type="text/javascript">
+    StartPageLoad()
+  </script>
+</body>
+</html>

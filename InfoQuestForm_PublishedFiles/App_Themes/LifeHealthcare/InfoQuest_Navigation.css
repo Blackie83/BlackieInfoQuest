@@ -1,0 +1,104 @@
+﻿/*----------------------------------------------------------------------------------------------------*/
+
+/*--BEGIN-- --Navigation CSS-- --BEGIN--*/
+#Navigation
+{
+  font-family: Arial, Verdana;
+  font-size: 12px;
+  font-weight: bold;
+  list-style: none;
+  width: 98%;
+  float: left;
+  margin: 3px 0px 0px 0px;
+  padding: 3px 10px 3px 10px;
+  background: #003768;  
+}
+
+.NavigationDropDown
+{
+  margin: 3px auto;
+  float: left;
+  position: absolute;
+  left: -999em; 
+  text-align: left;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #003768;
+  border-top: none; 
+  background: #ebf2f8;
+  
+  max-height: 600px; 
+  max-width: 525px;
+  width: 525px;
+  overflow: auto;
+}
+
+.NavigationHeading
+{
+  display: block;
+}
+
+.NavigationDropDown table
+{
+  width: 500px; 
+  max-width: 500px;
+  border-bottom: 1px solid #003768; 
+  border-right: 1px solid #003768;
+  background: #f7f7f7;
+}
+
+.NavigationDropDown td
+{
+  border-top: 1px solid #003768;
+  border-left: 1px solid #003768;
+  vertical-align: top; 
+  padding: 3px;
+}
+
+#Navigation li
+{
+  float: left;
+  display: block;
+  text-align: center;
+  position: relative;
+  padding: 3px 10px 3px 10px;
+  margin-right: 20px;
+  color: #ffffff;
+}
+
+#Navigation li a
+{
+  color: #ffffff;
+  outline: 0;
+  text-decoration: none;
+}
+
+#Navigation li:hover
+{
+  padding: 3px 10px 3px 10px;
+  background: #ebf2f8;
+  color: #003768;
+  border: 0px solid #777777;
+}
+
+#Navigation li:hover a
+{
+  color: #b0262e;
+  outline: 0;
+  text-decoration: none;
+}
+
+#Navigation li:hover a:hover
+{
+  color: #003768;
+  outline: 0;
+  text-decoration: none;
+}
+
+#Navigation li:hover .NavigationDropDown
+{
+  left: -1px;
+  top: auto;
+}
+/*---END--- --Navigation CSS-- ---END---*/
+
+/*----------------------------------------------------------------------------------------------------*/

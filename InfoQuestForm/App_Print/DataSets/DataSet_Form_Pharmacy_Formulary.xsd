@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_Pharmacy_Formulary" targetNamespace="http://tempuri.org/DataSet_Form_Pharmacy_Formulary.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_Pharmacy_Formulary.xsd" xmlns="http://tempuri.org/DataSet_Form_Pharmacy_Formulary.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vInfoQuest_Form_Pharmacy_FormularyTableAdapter" GeneratorDataComponentClassName="vInfoQuest_Form_Pharmacy_FormularyTableAdapter" Name="vInfoQuest_Form_Pharmacy_Formulary" UserDataComponentName="vInfoQuest_Form_Pharmacy_FormularyTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vInfoQuest_Form_Pharmacy_Formulary" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM vInfoQuest_Form_Pharmacy_Formulary WHERE Formulary_Id = 73</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Formulary_Id" DataSetColumn="Formulary_Id" />
+              <Mapping SourceColumn="Formulary_Date" DataSetColumn="Formulary_Date" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facilities_FacilityName" DataSetColumn="Facilities_FacilityName" />
+              <Mapping SourceColumn="Facilities_FacilityCode" DataSetColumn="Facilities_FacilityCode" />
+              <Mapping SourceColumn="FacilityDisplayName" DataSetColumn="FacilityDisplayName" />
+              <Mapping SourceColumn="Formulary_ReportNumber" DataSetColumn="Formulary_ReportNumber" />
+              <Mapping SourceColumn="Formulary_ContactPerson" DataSetColumn="Formulary_ContactPerson" />
+              <Mapping SourceColumn="Formulary_ProductClassification_Lists" DataSetColumn="Formulary_ProductClassification_Lists" />
+              <Mapping SourceColumn="Formulary_ProductClassification_Name" DataSetColumn="Formulary_ProductClassification_Name" />
+              <Mapping SourceColumn="Formulary_ProductCode" DataSetColumn="Formulary_ProductCode" />
+              <Mapping SourceColumn="Formulary_ProductDescription" DataSetColumn="Formulary_ProductDescription" />
+              <Mapping SourceColumn="Formulary_ProductStrengthSize" DataSetColumn="Formulary_ProductStrengthSize" />
+              <Mapping SourceColumn="Formulary_ProductPackSize" DataSetColumn="Formulary_ProductPackSize" />
+              <Mapping SourceColumn="Formulary_OrderDate" DataSetColumn="Formulary_OrderDate" />
+              <Mapping SourceColumn="Formulary_OrderTimeHours" DataSetColumn="Formulary_OrderTimeHours" />
+              <Mapping SourceColumn="Formulary_OrderTimeMin" DataSetColumn="Formulary_OrderTimeMin" />
+              <Mapping SourceColumn="Formulary_MethodOrderPlacement_Lists" DataSetColumn="Formulary_MethodOrderPlacement_Lists" />
+              <Mapping SourceColumn="Formulary_MethodOrderPlacement_Name" DataSetColumn="Formulary_MethodOrderPlacement_Name" />
+              <Mapping SourceColumn="Formulary_SupplierName" DataSetColumn="Formulary_SupplierName" />
+              <Mapping SourceColumn="Formulary_SupplierInformation" DataSetColumn="Formulary_SupplierInformation" />
+              <Mapping SourceColumn="Formulary_ForSurgicals" DataSetColumn="Formulary_ForSurgicals" />
+              <Mapping SourceColumn="Formulary_ForEthicals" DataSetColumn="Formulary_ForEthicals" />
+              <Mapping SourceColumn="Formulary_PharmacyComments" DataSetColumn="Formulary_PharmacyComments" />
+              <Mapping SourceColumn="Formulary_StockProblem" DataSetColumn="Formulary_StockProblem" />
+              <Mapping SourceColumn="Formulary_StockAvailabilityDate" DataSetColumn="Formulary_StockAvailabilityDate" />
+              <Mapping SourceColumn="Formulary_LetterReceived" DataSetColumn="Formulary_LetterReceived" />
+              <Mapping SourceColumn="Formulary_Letter_Name" DataSetColumn="Formulary_Letter_Name" />
+              <Mapping SourceColumn="Formulary_Letter_ContentType" DataSetColumn="Formulary_Letter_ContentType" />
+              <Mapping SourceColumn="Formulary_Letter_Data" DataSetColumn="Formulary_Letter_Data" />
+              <Mapping SourceColumn="Formulary_AlternativeProduct" DataSetColumn="Formulary_AlternativeProduct" />
+              <Mapping SourceColumn="Formulary_Feedback_Completed" DataSetColumn="Formulary_Feedback_Completed" />
+              <Mapping SourceColumn="Formulary_Feedback_Date" DataSetColumn="Formulary_Feedback_Date" />
+              <Mapping SourceColumn="Formulary_CreatedDate" DataSetColumn="Formulary_CreatedDate" />
+              <Mapping SourceColumn="Formulary_CreatedBy" DataSetColumn="Formulary_CreatedBy" />
+              <Mapping SourceColumn="Formulary_ModifiedDate" DataSetColumn="Formulary_ModifiedDate" />
+              <Mapping SourceColumn="Formulary_ModifiedBy" DataSetColumn="Formulary_ModifiedBy" />
+              <Mapping SourceColumn="Formulary_History" DataSetColumn="Formulary_History" />
+              <Mapping SourceColumn="Formulary_IsActive" DataSetColumn="Formulary_IsActive" />
+              <Mapping SourceColumn="Form_Emailed" DataSetColumn="Form_Emailed" />
+              <Mapping SourceColumn="Completed" DataSetColumn="Completed" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_Pharmacy_Formulary" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet_Form_Pharmacy_Formulary" msprop:Generator_UserDSName="DataSet_Form_Pharmacy_Formulary">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vInfoQuest_Form_Pharmacy_Formulary" msprop:Generator_TableClassName="vInfoQuest_Form_Pharmacy_FormularyDataTable" msprop:Generator_TableVarName="tablevInfoQuest_Form_Pharmacy_Formulary" msprop:Generator_TablePropName="vInfoQuest_Form_Pharmacy_Formulary" msprop:Generator_RowDeletingName="vInfoQuest_Form_Pharmacy_FormularyRowDeleting" msprop:Generator_UserTableName="vInfoQuest_Form_Pharmacy_Formulary" msprop:Generator_RowChangingName="vInfoQuest_Form_Pharmacy_FormularyRowChanging" msprop:Generator_RowEvHandlerName="vInfoQuest_Form_Pharmacy_FormularyRowChangeEventHandler" msprop:Generator_RowDeletedName="vInfoQuest_Form_Pharmacy_FormularyRowDeleted" msprop:Generator_RowEvArgName="vInfoQuest_Form_Pharmacy_FormularyRowChangeEvent" msprop:Generator_RowChangedName="vInfoQuest_Form_Pharmacy_FormularyRowChanged" msprop:Generator_RowClassName="vInfoQuest_Form_Pharmacy_FormularyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Formulary_Id" msprop:Generator_ColumnVarNameInTable="columnFormulary_Id" msprop:Generator_ColumnPropNameInRow="Formulary_Id" msprop:Generator_ColumnPropNameInTable="Formulary_IdColumn" msprop:Generator_UserColumnName="Formulary_Id" type="xs:int" />
+              <xs:element name="Formulary_Date" msprop:Generator_ColumnVarNameInTable="columnFormulary_Date" msprop:Generator_ColumnPropNameInRow="Formulary_Date" msprop:Generator_ColumnPropNameInTable="Formulary_DateColumn" msprop:Generator_UserColumnName="Formulary_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facilities_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityName" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityName" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityNameColumn" msprop:Generator_UserColumnName="Facilities_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facilities_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityCodeColumn" msprop:Generator_UserColumnName="Facilities_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacilityDisplayName" msprop:Generator_ColumnPropNameInRow="FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="FacilityDisplayNameColumn" msprop:Generator_UserColumnName="FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="253" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Formulary_ReportNumber" msprop:Generator_ColumnVarNameInTable="columnFormulary_ReportNumber" msprop:Generator_ColumnPropNameInRow="Formulary_ReportNumber" msprop:Generator_ColumnPropNameInTable="Formulary_ReportNumberColumn" msprop:Generator_UserColumnName="Formulary_ReportNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Formulary_ContactPerson" msprop:Generator_ColumnVarNameInTable="columnFormulary_ContactPerson" msprop:Generator_ColumnPropNameInRow="Formulary_ContactPerson" msprop:Generator_ColumnPropNameInTable="Formulary_ContactPersonColumn" msprop:Generator_UserColumnName="Formulary_ContactPerson" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Formulary_ProductClassification_Lists" msprop:Generator_ColumnVarNameInTable="columnFormulary_ProductClassification_Lists" msprop:Generator_ColumnPropNameInRow="Formulary_ProductClassification_Lists" msprop:Generator_ColumnPropNameInTable="Formulary_ProductClassification_ListsColumn" msprop:Generator_UserColumnName="Formulary_ProductClassification_Lists" type="xs:int" minOccurs="0" />
+              <xs:element name="Formulary_ProductClassification_Name" msprop:Generator_ColumnVarNameInTable="columnFormulary_ProductClassification_Name" msprop:Generator_ColumnPropNameInRow="Formulary_ProductClassification_Name" msprop:Generator_ColumnPropNameInTable="Formulary_ProductClassification_NameColumn" msprop:Generator_UserColumnName="Formulary_ProductClassification_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Formulary_ProductCode" msprop:Generator_ColumnVarNameInTable="columnFormulary_ProductCode" msprop:Generator_ColumnPropNameInRow="Formulary_ProductCode" msprop:Generator_ColumnPropNameInTable="Formulary_ProductCodeColumn" msprop:Generator_UserColumnName="Formulary_ProductCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Formulary_ProductDescription" msprop:Generator_ColumnVarNameInTable="columnFormulary_ProductDescription" msprop:Generator_ColumnPropNameInRow="Formulary_ProductDescription" msprop:Generator_ColumnPropNameInTable="Formulary_ProductDescriptionColumn" msprop:Generator_UserColumnName="Formulary_ProductDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Formulary_ProductStrengthSize" msprop:Generator_ColumnVarNameInTable="columnFormulary_ProductStrengthSize" msprop:Generator_ColumnPropNameInRow="Formulary_ProductStrengthSize" msprop:Generator_ColumnPropNameInTable="Formulary_ProductStrengthSizeColumn" msprop:Generator_UserColumnName="Formulary_ProductStrengthSize" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Formulary_ProductPackSize" msprop:Generator_ColumnVarNameInTable="columnFormulary_ProductPackSize" msprop:Generator_ColumnPropNameInRow="Formulary_ProductPackSize" msprop:Generator_ColumnPropNameInTable="Formulary_ProductPackSizeColumn" msprop:Generator_UserColumnName="Formulary_ProductPackSize" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Formulary_OrderDate" msprop:Generator_ColumnVarNameInTable="columnFormulary_OrderDate" msprop:Generator_ColumnPropNameInRow="Formulary_OrderDate" msprop:Generator_ColumnPropNameInTable="Formulary_OrderDateColumn" msprop:Generator_UserColumnName="Formulary_OrderDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Formulary_OrderTimeHours" msprop:Generator_ColumnVarNameInTable="columnFormulary_OrderTimeHours" msprop:Generator_ColumnPropNameInRow="Formulary_OrderTimeHours" msprop:Generator_ColumnPropNameInTable="Formulary_OrderTimeHoursColumn" msprop:Generator_UserColumnName="Formulary_OrderTimeHours" type="xs:int" minOccurs="0" />
+              <xs:element name="Formulary_OrderTimeMin" msprop:Generator_ColumnVarNameInTable="columnFormulary_OrderTimeMin" msprop:Generator_ColumnPropNameInRow="Formulary_OrderTimeMin" msprop:Generator_ColumnPropNameInTable="Formulary_OrderTimeMinColumn" msprop:Generator_UserColumnName="Formulary_OrderTimeMin" type="xs:int" minOccurs="0" />
+              <xs:element name="Formulary_MethodOrderPlacement_Lists" msprop:Generator_ColumnVarNameInTable="columnFormulary_MethodOrderPlacement_Lists" msprop:Generator_ColumnPropNameInRow="Formulary_MethodOrderPlacement_Lists" msprop:Generator_ColumnPropNameInTable="Formulary_MethodOrderPlacement_ListsColumn" msprop:Generator_UserColumnName="Formulary_MethodOrderPlacement_Lists" type="xs:int" minOccurs="0" />
+              <xs:element name="Formulary_MethodOrderPlacement_Name" msprop:Generator_ColumnVarNameInTable="columnFormulary_MethodOrderPlacement_Name" msprop:Generator_ColumnPropNameInRow="Formulary_MethodOrderPlacement_Name" msprop:Generator_ColumnPropNameInTable="Formulary_MethodOrderPlacement_NameColumn" msprop:Generator_UserColumnName="Formulary_MethodOrderPlacement_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Formulary_SupplierName" msprop:Generator_ColumnVarNameInTable="columnFormulary_SupplierName" msprop:Generator_ColumnPropNameInRow="Formulary_SupplierName" msprop:Generator_ColumnPropNameInTable="Formulary_SupplierNameColumn" msprop:Generator_UserColumnName="Formulary_SupplierName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Formulary_SupplierInformation" msprop:Generator_ColumnVarNameInTable="columnFormulary_SupplierInformation" msprop:Generator_ColumnPropNameInRow="Formulary_SupplierInformation" msprop:Generator_ColumnPropNameInTable="Formulary_SupplierInformationColumn" msprop:Generator_UserColumnName="Formulary_SupplierInformation" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Formulary_ForSurgicals" msprop:Generator_ColumnVarNameInTable="columnFormulary_ForSurgicals" msprop:Generator_ColumnPropNameInRow="Formulary_ForSurgicals" msprop:Generator_ColumnPropNameInTable="Formulary_ForSurgicalsColumn" msprop:Generator_UserColumnName="Formulary_ForSurgicals" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Formulary_ForEthicals" msprop:Generator_ColumnVarNameInTable="columnFormulary_ForEthicals" msprop:Generator_ColumnPropNameInRow="Formulary_ForEthicals" msprop:Generator_ColumnPropNameInTable="Formulary_ForEthicalsColumn" msprop:Generator_UserColumnName="Formulary_ForEthicals" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Formulary_PharmacyComments" msprop:Generator_ColumnVarNameInTable="columnFormulary_PharmacyComments" msprop:Generator_ColumnPropNameInRow="Formulary_PharmacyComments" msprop:Generator_ColumnPropNameInTable="Formulary_PharmacyCommentsColumn" msprop:Generator_UserColumnName="Formulary_PharmacyComments" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Formulary_StockProblem" msprop:Generator_ColumnVarNameInTable="columnFormulary_StockProblem" msprop:Generator_ColumnPropNameInRow="Formulary_StockProblem" msprop:Generator_ColumnPropNameInTable="Formulary_StockProblemColumn" msprop:Generator_UserColumnName="Formulary_StockProblem" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Formulary_StockAvailabilityDate" msprop:Generator_ColumnVarNameInTable="columnFormulary_StockAvailabilityDate" msprop:Generator_ColumnPropNameInRow="Formulary_StockAvailabilityDate" msprop:Generator_ColumnPropNameInTable="Formulary_StockAvailabilityDateColumn" msprop:Generator_UserColumnName="Formulary_StockAvailabilityDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Formulary_LetterReceived" msprop:Generator_ColumnVarNameInTable="columnFormulary_LetterReceived" msprop:Generator_ColumnPropNameInRow="Formulary_LetterReceived" msprop:Generator_ColumnPropNameInTable="Formulary_LetterReceivedColumn" msprop:Generator_UserColumnName="Formulary_LetterReceived" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Formulary_Letter_Name" msprop:Generator_ColumnVarNameInTable="columnFormulary_Letter_Name" msprop:Generator_ColumnPropNameInRow="Formulary_Letter_Name" msprop:Generator_ColumnPropNameInTable="Formulary_Letter_NameColumn" msprop:Generator_UserColumnName="Formulary_Letter_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Formulary_Letter_ContentType" msprop:Generator_ColumnVarNameInTable="columnFormulary_Letter_ContentType" msprop:Generator_ColumnPropNameInRow="Formulary_Letter_ContentType" msprop:Generator_ColumnPropNameInTable="Formulary_Letter_ContentTypeColumn" msprop:Generator_UserColumnName="Formulary_Letter_ContentType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Formulary_Letter_Data" msprop:Generator_ColumnVarNameInTable="columnFormulary_Letter_Data" msprop:Generator_ColumnPropNameInRow="Formulary_Letter_Data" msprop:Generator_ColumnPropNameInTable="Formulary_Letter_DataColumn" msprop:Generator_UserColumnName="Formulary_Letter_Data" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Formulary_AlternativeProduct" msprop:Generator_ColumnVarNameInTable="columnFormulary_AlternativeProduct" msprop:Generator_ColumnPropNameInRow="Formulary_AlternativeProduct" msprop:Generator_ColumnPropNameInTable="Formulary_AlternativeProductColumn" msprop:Generator_UserColumnName="Formulary_AlternativeProduct" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Formulary_Feedback_Completed" msprop:Generator_ColumnVarNameInTable="columnFormulary_Feedback_Completed" msprop:Generator_ColumnPropNameInRow="Formulary_Feedback_Completed" msprop:Generator_ColumnPropNameInTable="Formulary_Feedback_CompletedColumn" msprop:Generator_UserColumnName="Formulary_Feedback_Completed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Formulary_Feedback_Date" msprop:Generator_ColumnVarNameInTable="columnFormulary_Feedback_Date" msprop:Generator_ColumnPropNameInRow="Formulary_Feedback_Date" msprop:Generator_ColumnPropNameInTable="Formulary_Feedback_DateColumn" msprop:Generator_UserColumnName="Formulary_Feedback_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Formulary_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnFormulary_CreatedDate" msprop:Generator_ColumnPropNameInRow="Formulary_CreatedDate" msprop:Generator_ColumnPropNameInTable="Formulary_CreatedDateColumn" msprop:Generator_UserColumnName="Formulary_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Formulary_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnFormulary_CreatedBy" msprop:Generator_ColumnPropNameInRow="Formulary_CreatedBy" msprop:Generator_ColumnPropNameInTable="Formulary_CreatedByColumn" msprop:Generator_UserColumnName="Formulary_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Formulary_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnFormulary_ModifiedDate" msprop:Generator_ColumnPropNameInRow="Formulary_ModifiedDate" msprop:Generator_ColumnPropNameInTable="Formulary_ModifiedDateColumn" msprop:Generator_UserColumnName="Formulary_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Formulary_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnFormulary_ModifiedBy" msprop:Generator_ColumnPropNameInRow="Formulary_ModifiedBy" msprop:Generator_ColumnPropNameInTable="Formulary_ModifiedByColumn" msprop:Generator_UserColumnName="Formulary_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Formulary_History" msprop:Generator_ColumnVarNameInTable="columnFormulary_History" msprop:Generator_ColumnPropNameInRow="Formulary_History" msprop:Generator_ColumnPropNameInTable="Formulary_HistoryColumn" msprop:Generator_UserColumnName="Formulary_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Formulary_IsActive" msprop:Generator_ColumnVarNameInTable="columnFormulary_IsActive" msprop:Generator_ColumnPropNameInRow="Formulary_IsActive" msprop:Generator_ColumnPropNameInTable="Formulary_IsActiveColumn" msprop:Generator_UserColumnName="Formulary_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Form_Emailed" msprop:Generator_ColumnVarNameInTable="columnForm_Emailed" msprop:Generator_ColumnPropNameInRow="Form_Emailed" msprop:Generator_ColumnPropNameInTable="Form_EmailedColumn" msprop:Generator_UserColumnName="Form_Emailed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Completed" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCompleted" msprop:Generator_ColumnPropNameInRow="Completed" msprop:Generator_ColumnPropNameInTable="CompletedColumn" msprop:Generator_UserColumnName="Completed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="39" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vInfoQuest_Form_Pharmacy_Formulary" />
+      <xs:field xpath="mstns:Formulary_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoQuestForm", "InfoQuestForm\InfoQuestForm.csproj", "{A679B2AD-81D7-4159-A6B0-6D690F34340D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoQuestAdministration", "InfoQuestAdministration\InfoQuestAdministration.csproj", "{DEDC143B-3E27-4BA1-B343-0B6A8F621DA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoQuestWCF", "InfoQuestWCF\InfoQuestWCF.csproj", "{E1C77371-9475-4AB0-98D3-3B51975A6643}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoQuestWindowsService", "InfoQuestWindowsService\InfoQuestWindowsService.csproj", "{21C875EC-E245-435C-975F-8DBE69A65C6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoQuestUnitTest", "InfoQuestUnitTest\InfoQuestUnitTest.csproj", "{26873ABE-1022-44CA-997C-EAE631107B2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A679B2AD-81D7-4159-A6B0-6D690F34340D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A679B2AD-81D7-4159-A6B0-6D690F34340D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A679B2AD-81D7-4159-A6B0-6D690F34340D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A679B2AD-81D7-4159-A6B0-6D690F34340D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEDC143B-3E27-4BA1-B343-0B6A8F621DA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEDC143B-3E27-4BA1-B343-0B6A8F621DA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEDC143B-3E27-4BA1-B343-0B6A8F621DA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEDC143B-3E27-4BA1-B343-0B6A8F621DA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1C77371-9475-4AB0-98D3-3B51975A6643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1C77371-9475-4AB0-98D3-3B51975A6643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1C77371-9475-4AB0-98D3-3B51975A6643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1C77371-9475-4AB0-98D3-3B51975A6643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21C875EC-E245-435C-975F-8DBE69A65C6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21C875EC-E245-435C-975F-8DBE69A65C6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21C875EC-E245-435C-975F-8DBE69A65C6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21C875EC-E245-435C-975F-8DBE69A65C6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26873ABE-1022-44CA-997C-EAE631107B2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26873ABE-1022-44CA-997C-EAE631107B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26873ABE-1022-44CA-997C-EAE631107B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26873ABE-1022-44CA-997C-EAE631107B2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs2010:8080/tfs/healthcareservices.collection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = InfoQuestForm\\InfoQuestForm.csproj
+		SccProjectName1 = InfoQuestForm
+		SccLocalPath1 = InfoQuestForm
+		SccProjectUniqueName2 = InfoQuestAdministration\\InfoQuestAdministration.csproj
+		SccProjectName2 = InfoQuestAdministration
+		SccLocalPath2 = InfoQuestAdministration
+		SccProjectUniqueName3 = InfoQuestWCF\\InfoQuestWCF.csproj
+		SccProjectName3 = InfoQuestWCF
+		SccLocalPath3 = InfoQuestWCF
+		SccProjectUniqueName4 = InfoQuestWindowsService\\InfoQuestWindowsService.csproj
+		SccProjectName4 = InfoQuestWindowsService
+		SccLocalPath4 = InfoQuestWindowsService
+		SccProjectUniqueName5 = InfoQuestUnitTest\\InfoQuestUnitTest.csproj
+		SccProjectName5 = InfoQuestUnitTest
+		SccLocalPath5 = InfoQuestUnitTest
+	EndGlobalSection
+EndGlobal

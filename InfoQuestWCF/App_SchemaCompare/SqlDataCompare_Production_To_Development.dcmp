@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DataComparison>
+  <Version>10</Version>
+  <ConnectionProperties1>
+    <ConnectionString>Data Source=OTH2_HOST.lhc.local\OTH2_INS;Initial Catalog=InfoQuestMOSS;Integrated Security=False;Persist Security Info=True;User ID=InfoQuestUser;Pooling=False</ConnectionString>
+    <FullDisplayName>OTH2_HOST.lhc.local\OTH2_INS.InfoQuestMOSS (InfoQuestUser)</FullDisplayName>
+  </ConnectionProperties1>
+  <ConnectionProperties2>
+    <ConnectionString>Data Source=DSQLOTH01\OTH_INS;Initial Catalog=InfoQuestMOSS;Integrated Security=False;Persist Security Info=True;User ID=InfoQuestUser;Pooling=False</ConnectionString>
+    <FullDisplayName>DSQLOTH01\OTH_INS.InfoQuestMOSS (InfoQuestUser)</FullDisplayName>
+  </ConnectionProperties2>
+  <SessionSettings>IncludeDifferentRecords, IncludeRecordsInOne, IncludeRecordsInTwo</SessionSettings>
+</DataComparison>

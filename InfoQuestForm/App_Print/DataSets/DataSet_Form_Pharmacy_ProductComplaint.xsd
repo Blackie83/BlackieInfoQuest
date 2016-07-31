@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_Pharmacy_ProductComplaint" targetNamespace="http://tempuri.org/DataSet_Form_Pharmacy_ProductComplaint.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_Pharmacy_ProductComplaint.xsd" xmlns="http://tempuri.org/DataSet_Form_Pharmacy_ProductComplaint.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vInfoQuest_Form_Pharmacy_ProductComplaintTableAdapter" GeneratorDataComponentClassName="vInfoQuest_Form_Pharmacy_ProductComplaintTableAdapter" Name="vInfoQuest_Form_Pharmacy_ProductComplaint" UserDataComponentName="vInfoQuest_Form_Pharmacy_ProductComplaintTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vInfoQuest_Form_Pharmacy_ProductComplaint" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM vInfoQuest_Form_Pharmacy_ProductComplaint WHERE ProductComplaint_Id = 2</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ProductComplaint_Id" DataSetColumn="ProductComplaint_Id" />
+              <Mapping SourceColumn="ProductComplaint_Date" DataSetColumn="ProductComplaint_Date" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facilities_FacilityName" DataSetColumn="Facilities_FacilityName" />
+              <Mapping SourceColumn="Facilities_FacilityCode" DataSetColumn="Facilities_FacilityCode" />
+              <Mapping SourceColumn="FacilityDisplayName" DataSetColumn="FacilityDisplayName" />
+              <Mapping SourceColumn="ProductComplaint_ReportNumber" DataSetColumn="ProductComplaint_ReportNumber" />
+              <Mapping SourceColumn="ProductComplaint_PharmacyContactPerson" DataSetColumn="ProductComplaint_PharmacyContactPerson" />
+              <Mapping SourceColumn="ProductComplaint_Complainant_Name" DataSetColumn="ProductComplaint_Complainant_Name" />
+              <Mapping SourceColumn="ProductComplaint_Complainant_ContactDetails" DataSetColumn="ProductComplaint_Complainant_ContactDetails" />
+              <Mapping SourceColumn="ProductComplaint_LPMS_ProductCode" DataSetColumn="ProductComplaint_LPMS_ProductCode" />
+              <Mapping SourceColumn="ProductComplaint_ProductClassification_Lists" DataSetColumn="ProductComplaint_ProductClassification_Lists" />
+              <Mapping SourceColumn="ProductComplaint_ProductClassification_Name" DataSetColumn="ProductComplaint_ProductClassification_Name" />
+              <Mapping SourceColumn="ProductComplaint_Formulary" DataSetColumn="ProductComplaint_Formulary" />
+              <Mapping SourceColumn="ProductComplaint_ProductDescription" DataSetColumn="ProductComplaint_ProductDescription" />
+              <Mapping SourceColumn="ProductComplaint_Problem" DataSetColumn="ProductComplaint_Problem" />
+              <Mapping SourceColumn="ProductComplaint_BatchNumber" DataSetColumn="ProductComplaint_BatchNumber" />
+              <Mapping SourceColumn="ProductComplaint_ExpiryDate" DataSetColumn="ProductComplaint_ExpiryDate" />
+              <Mapping SourceColumn="ProductComplaint_Supplier" DataSetColumn="ProductComplaint_Supplier" />
+              <Mapping SourceColumn="ProductComplaint_SupplierRepresentative" DataSetColumn="ProductComplaint_SupplierRepresentative" />
+              <Mapping SourceColumn="ProductComplaint_SupplierContactDetails" DataSetColumn="ProductComplaint_SupplierContactDetails" />
+              <Mapping SourceColumn="ProductComplaint_ActionsUndertaken" DataSetColumn="ProductComplaint_ActionsUndertaken" />
+              <Mapping SourceColumn="ProductComplaint_SuppliersResponse" DataSetColumn="ProductComplaint_SuppliersResponse" />
+              <Mapping SourceColumn="ProductComplaint_ComplaintResolved" DataSetColumn="ProductComplaint_ComplaintResolved" />
+              <Mapping SourceColumn="ProductComplaint_ComplaintResolvedNoDescription" DataSetColumn="ProductComplaint_ComplaintResolvedNoDescription" />
+              <Mapping SourceColumn="ProductComplaint_Feedback_Completed" DataSetColumn="ProductComplaint_Feedback_Completed" />
+              <Mapping SourceColumn="ProductComplaint_SupplyManager" DataSetColumn="ProductComplaint_SupplyManager" />
+              <Mapping SourceColumn="ProductComplaint_Feedback_Description" DataSetColumn="ProductComplaint_Feedback_Description" />
+              <Mapping SourceColumn="ProductComplaint_Feedback_Letter_Name" DataSetColumn="ProductComplaint_Feedback_Letter_Name" />
+              <Mapping SourceColumn="ProductComplaint_Feedback_Letter_ContentType" DataSetColumn="ProductComplaint_Feedback_Letter_ContentType" />
+              <Mapping SourceColumn="ProductComplaint_Feedback_Letter_Data" DataSetColumn="ProductComplaint_Feedback_Letter_Data" />
+              <Mapping SourceColumn="ProductComplaint_Feedback_Date" DataSetColumn="ProductComplaint_Feedback_Date" />
+              <Mapping SourceColumn="ProductComplaint_CreatedDate" DataSetColumn="ProductComplaint_CreatedDate" />
+              <Mapping SourceColumn="ProductComplaint_CreatedBy" DataSetColumn="ProductComplaint_CreatedBy" />
+              <Mapping SourceColumn="ProductComplaint_ModifiedDate" DataSetColumn="ProductComplaint_ModifiedDate" />
+              <Mapping SourceColumn="ProductComplaint_ModifiedBy" DataSetColumn="ProductComplaint_ModifiedBy" />
+              <Mapping SourceColumn="ProductComplaint_History" DataSetColumn="ProductComplaint_History" />
+              <Mapping SourceColumn="ProductComplaint_IsActive" DataSetColumn="ProductComplaint_IsActive" />
+              <Mapping SourceColumn="Form_Emailed" DataSetColumn="Form_Emailed" />
+              <Mapping SourceColumn="Completed" DataSetColumn="Completed" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_Pharmacy_ProductComplaint" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet_Form_Pharmacy_ProductComplaint" msprop:Generator_DataSetName="DataSet_Form_Pharmacy_ProductComplaint">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vInfoQuest_Form_Pharmacy_ProductComplaint" msprop:Generator_TableClassName="vInfoQuest_Form_Pharmacy_ProductComplaintDataTable" msprop:Generator_TableVarName="tablevInfoQuest_Form_Pharmacy_ProductComplaint" msprop:Generator_TablePropName="vInfoQuest_Form_Pharmacy_ProductComplaint" msprop:Generator_RowDeletingName="vInfoQuest_Form_Pharmacy_ProductComplaintRowDeleting" msprop:Generator_UserTableName="vInfoQuest_Form_Pharmacy_ProductComplaint" msprop:Generator_RowChangingName="vInfoQuest_Form_Pharmacy_ProductComplaintRowChanging" msprop:Generator_RowEvHandlerName="vInfoQuest_Form_Pharmacy_ProductComplaintRowChangeEventHandler" msprop:Generator_RowDeletedName="vInfoQuest_Form_Pharmacy_ProductComplaintRowDeleted" msprop:Generator_RowEvArgName="vInfoQuest_Form_Pharmacy_ProductComplaintRowChangeEvent" msprop:Generator_RowChangedName="vInfoQuest_Form_Pharmacy_ProductComplaintRowChanged" msprop:Generator_RowClassName="vInfoQuest_Form_Pharmacy_ProductComplaintRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProductComplaint_Id" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_Id" msprop:Generator_ColumnPropNameInRow="ProductComplaint_Id" msprop:Generator_ColumnPropNameInTable="ProductComplaint_IdColumn" msprop:Generator_UserColumnName="ProductComplaint_Id" type="xs:int" />
+              <xs:element name="ProductComplaint_Date" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_Date" msprop:Generator_ColumnPropNameInRow="ProductComplaint_Date" msprop:Generator_ColumnPropNameInTable="ProductComplaint_DateColumn" msprop:Generator_UserColumnName="ProductComplaint_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facilities_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityName" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityName" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityNameColumn" msprop:Generator_UserColumnName="Facilities_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facilities_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityCodeColumn" msprop:Generator_UserColumnName="Facilities_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacilityDisplayName" msprop:Generator_ColumnPropNameInRow="FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="FacilityDisplayNameColumn" msprop:Generator_UserColumnName="FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="253" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_ReportNumber" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_ReportNumber" msprop:Generator_ColumnPropNameInRow="ProductComplaint_ReportNumber" msprop:Generator_ColumnPropNameInTable="ProductComplaint_ReportNumberColumn" msprop:Generator_UserColumnName="ProductComplaint_ReportNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_PharmacyContactPerson" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_PharmacyContactPerson" msprop:Generator_ColumnPropNameInRow="ProductComplaint_PharmacyContactPerson" msprop:Generator_ColumnPropNameInTable="ProductComplaint_PharmacyContactPersonColumn" msprop:Generator_UserColumnName="ProductComplaint_PharmacyContactPerson" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_Complainant_Name" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_Complainant_Name" msprop:Generator_ColumnPropNameInRow="ProductComplaint_Complainant_Name" msprop:Generator_ColumnPropNameInTable="ProductComplaint_Complainant_NameColumn" msprop:Generator_UserColumnName="ProductComplaint_Complainant_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_Complainant_ContactDetails" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_Complainant_ContactDetails" msprop:Generator_ColumnPropNameInRow="ProductComplaint_Complainant_ContactDetails" msprop:Generator_ColumnPropNameInTable="ProductComplaint_Complainant_ContactDetailsColumn" msprop:Generator_UserColumnName="ProductComplaint_Complainant_ContactDetails" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_LPMS_ProductCode" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_LPMS_ProductCode" msprop:Generator_ColumnPropNameInRow="ProductComplaint_LPMS_ProductCode" msprop:Generator_ColumnPropNameInTable="ProductComplaint_LPMS_ProductCodeColumn" msprop:Generator_UserColumnName="ProductComplaint_LPMS_ProductCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_ProductClassification_Lists" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_ProductClassification_Lists" msprop:Generator_ColumnPropNameInRow="ProductComplaint_ProductClassification_Lists" msprop:Generator_ColumnPropNameInTable="ProductComplaint_ProductClassification_ListsColumn" msprop:Generator_UserColumnName="ProductComplaint_ProductClassification_Lists" type="xs:int" minOccurs="0" />
+              <xs:element name="ProductComplaint_ProductClassification_Name" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_ProductClassification_Name" msprop:Generator_ColumnPropNameInRow="ProductComplaint_ProductClassification_Name" msprop:Generator_ColumnPropNameInTable="ProductComplaint_ProductClassification_NameColumn" msprop:Generator_UserColumnName="ProductComplaint_ProductClassification_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_Formulary" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_Formulary" msprop:Generator_ColumnPropNameInRow="ProductComplaint_Formulary" msprop:Generator_ColumnPropNameInTable="ProductComplaint_FormularyColumn" msprop:Generator_UserColumnName="ProductComplaint_Formulary" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ProductComplaint_ProductDescription" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_ProductDescription" msprop:Generator_ColumnPropNameInRow="ProductComplaint_ProductDescription" msprop:Generator_ColumnPropNameInTable="ProductComplaint_ProductDescriptionColumn" msprop:Generator_UserColumnName="ProductComplaint_ProductDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_Problem" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_Problem" msprop:Generator_ColumnPropNameInRow="ProductComplaint_Problem" msprop:Generator_ColumnPropNameInTable="ProductComplaint_ProblemColumn" msprop:Generator_UserColumnName="ProductComplaint_Problem" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_BatchNumber" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_BatchNumber" msprop:Generator_ColumnPropNameInRow="ProductComplaint_BatchNumber" msprop:Generator_ColumnPropNameInTable="ProductComplaint_BatchNumberColumn" msprop:Generator_UserColumnName="ProductComplaint_BatchNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_ExpiryDate" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_ExpiryDate" msprop:Generator_ColumnPropNameInRow="ProductComplaint_ExpiryDate" msprop:Generator_ColumnPropNameInTable="ProductComplaint_ExpiryDateColumn" msprop:Generator_UserColumnName="ProductComplaint_ExpiryDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ProductComplaint_Supplier" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_Supplier" msprop:Generator_ColumnPropNameInRow="ProductComplaint_Supplier" msprop:Generator_ColumnPropNameInTable="ProductComplaint_SupplierColumn" msprop:Generator_UserColumnName="ProductComplaint_Supplier" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_SupplierRepresentative" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_SupplierRepresentative" msprop:Generator_ColumnPropNameInRow="ProductComplaint_SupplierRepresentative" msprop:Generator_ColumnPropNameInTable="ProductComplaint_SupplierRepresentativeColumn" msprop:Generator_UserColumnName="ProductComplaint_SupplierRepresentative" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_SupplierContactDetails" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_SupplierContactDetails" msprop:Generator_ColumnPropNameInRow="ProductComplaint_SupplierContactDetails" msprop:Generator_ColumnPropNameInTable="ProductComplaint_SupplierContactDetailsColumn" msprop:Generator_UserColumnName="ProductComplaint_SupplierContactDetails" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_ActionsUndertaken" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_ActionsUndertaken" msprop:Generator_ColumnPropNameInRow="ProductComplaint_ActionsUndertaken" msprop:Generator_ColumnPropNameInTable="ProductComplaint_ActionsUndertakenColumn" msprop:Generator_UserColumnName="ProductComplaint_ActionsUndertaken" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_SuppliersResponse" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_SuppliersResponse" msprop:Generator_ColumnPropNameInRow="ProductComplaint_SuppliersResponse" msprop:Generator_ColumnPropNameInTable="ProductComplaint_SuppliersResponseColumn" msprop:Generator_UserColumnName="ProductComplaint_SuppliersResponse" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_ComplaintResolved" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_ComplaintResolved" msprop:Generator_ColumnPropNameInRow="ProductComplaint_ComplaintResolved" msprop:Generator_ColumnPropNameInTable="ProductComplaint_ComplaintResolvedColumn" msprop:Generator_UserColumnName="ProductComplaint_ComplaintResolved" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ProductComplaint_ComplaintResolvedNoDescription" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_ComplaintResolvedNoDescription" msprop:Generator_ColumnPropNameInRow="ProductComplaint_ComplaintResolvedNoDescription" msprop:Generator_ColumnPropNameInTable="ProductComplaint_ComplaintResolvedNoDescriptionColumn" msprop:Generator_UserColumnName="ProductComplaint_ComplaintResolvedNoDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_Feedback_Completed" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_Feedback_Completed" msprop:Generator_ColumnPropNameInRow="ProductComplaint_Feedback_Completed" msprop:Generator_ColumnPropNameInTable="ProductComplaint_Feedback_CompletedColumn" msprop:Generator_UserColumnName="ProductComplaint_Feedback_Completed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ProductComplaint_SupplyManager" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_SupplyManager" msprop:Generator_ColumnPropNameInRow="ProductComplaint_SupplyManager" msprop:Generator_ColumnPropNameInTable="ProductComplaint_SupplyManagerColumn" msprop:Generator_UserColumnName="ProductComplaint_SupplyManager" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_Feedback_Description" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_Feedback_Description" msprop:Generator_ColumnPropNameInRow="ProductComplaint_Feedback_Description" msprop:Generator_ColumnPropNameInTable="ProductComplaint_Feedback_DescriptionColumn" msprop:Generator_UserColumnName="ProductComplaint_Feedback_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_Feedback_Letter_Name" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_Feedback_Letter_Name" msprop:Generator_ColumnPropNameInRow="ProductComplaint_Feedback_Letter_Name" msprop:Generator_ColumnPropNameInTable="ProductComplaint_Feedback_Letter_NameColumn" msprop:Generator_UserColumnName="ProductComplaint_Feedback_Letter_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_Feedback_Letter_ContentType" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_Feedback_Letter_ContentType" msprop:Generator_ColumnPropNameInRow="ProductComplaint_Feedback_Letter_ContentType" msprop:Generator_ColumnPropNameInTable="ProductComplaint_Feedback_Letter_ContentTypeColumn" msprop:Generator_UserColumnName="ProductComplaint_Feedback_Letter_ContentType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_Feedback_Letter_Data" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_Feedback_Letter_Data" msprop:Generator_ColumnPropNameInRow="ProductComplaint_Feedback_Letter_Data" msprop:Generator_ColumnPropNameInTable="ProductComplaint_Feedback_Letter_DataColumn" msprop:Generator_UserColumnName="ProductComplaint_Feedback_Letter_Data" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="ProductComplaint_Feedback_Date" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_Feedback_Date" msprop:Generator_ColumnPropNameInRow="ProductComplaint_Feedback_Date" msprop:Generator_ColumnPropNameInTable="ProductComplaint_Feedback_DateColumn" msprop:Generator_UserColumnName="ProductComplaint_Feedback_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ProductComplaint_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_CreatedDate" msprop:Generator_ColumnPropNameInRow="ProductComplaint_CreatedDate" msprop:Generator_ColumnPropNameInTable="ProductComplaint_CreatedDateColumn" msprop:Generator_UserColumnName="ProductComplaint_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ProductComplaint_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_CreatedBy" msprop:Generator_ColumnPropNameInRow="ProductComplaint_CreatedBy" msprop:Generator_ColumnPropNameInTable="ProductComplaint_CreatedByColumn" msprop:Generator_UserColumnName="ProductComplaint_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_ModifiedDate" msprop:Generator_ColumnPropNameInRow="ProductComplaint_ModifiedDate" msprop:Generator_ColumnPropNameInTable="ProductComplaint_ModifiedDateColumn" msprop:Generator_UserColumnName="ProductComplaint_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ProductComplaint_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_ModifiedBy" msprop:Generator_ColumnPropNameInRow="ProductComplaint_ModifiedBy" msprop:Generator_ColumnPropNameInTable="ProductComplaint_ModifiedByColumn" msprop:Generator_UserColumnName="ProductComplaint_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_History" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_History" msprop:Generator_ColumnPropNameInRow="ProductComplaint_History" msprop:Generator_ColumnPropNameInTable="ProductComplaint_HistoryColumn" msprop:Generator_UserColumnName="ProductComplaint_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductComplaint_IsActive" msprop:Generator_ColumnVarNameInTable="columnProductComplaint_IsActive" msprop:Generator_ColumnPropNameInRow="ProductComplaint_IsActive" msprop:Generator_ColumnPropNameInTable="ProductComplaint_IsActiveColumn" msprop:Generator_UserColumnName="ProductComplaint_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Form_Emailed" msprop:Generator_ColumnVarNameInTable="columnForm_Emailed" msprop:Generator_ColumnPropNameInRow="Form_Emailed" msprop:Generator_ColumnPropNameInTable="Form_EmailedColumn" msprop:Generator_UserColumnName="Form_Emailed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Completed" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCompleted" msprop:Generator_ColumnPropNameInRow="Completed" msprop:Generator_ColumnPropNameInTable="CompletedColumn" msprop:Generator_UserColumnName="Completed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="39" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vInfoQuest_Form_Pharmacy_ProductComplaint" />
+      <xs:field xpath="mstns:ProductComplaint_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

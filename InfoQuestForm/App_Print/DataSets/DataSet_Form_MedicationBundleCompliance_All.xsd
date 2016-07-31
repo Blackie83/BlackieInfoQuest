@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_MedicationBundleCompliance_All" targetNamespace="http://tempuri.org/DataSet_Form_MedicationBundleCompliance_All.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_MedicationBundleCompliance_All.xsd" xmlns="http://tempuri.org/DataSet_Form_MedicationBundleCompliance_All.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vForm_MedicationBundleCompliance_BundlesTableAdapter" GeneratorDataComponentClassName="vForm_MedicationBundleCompliance_BundlesTableAdapter" Name="vForm_MedicationBundleCompliance_Bundles" UserDataComponentName="vForm_MedicationBundleCompliance_BundlesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vForm_MedicationBundleCompliance_Bundles" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM vForm_MedicationBundleCompliance_Bundles WHERE MBC_VisitInformation_Id IN (SELECT MBC_VisitInformation_Id FROM vForm_MedicationBundleCompliance_Bundles WHERE MBC_Bundles_Id = 1) ORDER BY vForm_MedicationBundleCompliance_Bundles.MBC_Bundles_Date DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MBC_Bundles_Id" DataSetColumn="MBC_Bundles_Id" />
+              <Mapping SourceColumn="MBC_VisitInformation_Id" DataSetColumn="MBC_VisitInformation_Id" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facility_FacilityName" DataSetColumn="Facility_FacilityName" />
+              <Mapping SourceColumn="Facility_FacilityCode" DataSetColumn="Facility_FacilityCode" />
+              <Mapping SourceColumn="Facility_FacilityDisplayName" DataSetColumn="Facility_FacilityDisplayName" />
+              <Mapping SourceColumn="MBC_VisitInformation_VisitNumber" DataSetColumn="MBC_VisitInformation_VisitNumber" />
+              <Mapping SourceColumn="PatientInformation_Id" DataSetColumn="PatientInformation_Id" />
+              <Mapping SourceColumn="PatientInformation_LifeNumber" DataSetColumn="PatientInformation_LifeNumber" />
+              <Mapping SourceColumn="PatientInformation_Name" DataSetColumn="PatientInformation_Name" />
+              <Mapping SourceColumn="PatientInformation_Surname" DataSetColumn="PatientInformation_Surname" />
+              <Mapping SourceColumn="PatientInformation_IDNumber" DataSetColumn="PatientInformation_IDNumber" />
+              <Mapping SourceColumn="PatientInformation_DateOfBirth" DataSetColumn="PatientInformation_DateOfBirth" />
+              <Mapping SourceColumn="PatientInformation_Gender" DataSetColumn="PatientInformation_Gender" />
+              <Mapping SourceColumn="PatientInformation_Email" DataSetColumn="PatientInformation_Email" />
+              <Mapping SourceColumn="PatientInformation_ContactNumber" DataSetColumn="PatientInformation_ContactNumber" />
+              <Mapping SourceColumn="MBC_VisitInformation_PatientName" DataSetColumn="MBC_VisitInformation_PatientName" />
+              <Mapping SourceColumn="MBC_VisitInformation_PatientAge" DataSetColumn="MBC_VisitInformation_PatientAge" />
+              <Mapping SourceColumn="MBC_VisitInformation_DateOfAdmission" DataSetColumn="MBC_VisitInformation_DateOfAdmission" />
+              <Mapping SourceColumn="MBC_VisitInformation_DateOfDischarge" DataSetColumn="MBC_VisitInformation_DateOfDischarge" />
+              <Mapping SourceColumn="MBC_VisitInformation_Archived" DataSetColumn="MBC_VisitInformation_Archived" />
+              <Mapping SourceColumn="MBC_Bundles_ReportNumber" DataSetColumn="MBC_Bundles_ReportNumber" />
+              <Mapping SourceColumn="MBC_Bundles_Assessed_LMA" DataSetColumn="MBC_Bundles_Assessed_LMA" />
+              <Mapping SourceColumn="MBC_Bundles_Assessed_CMA" DataSetColumn="MBC_Bundles_Assessed_CMA" />
+              <Mapping SourceColumn="MBC_Bundles_Assessed_RMA" DataSetColumn="MBC_Bundles_Assessed_RMA" />
+              <Mapping SourceColumn="MBC_Bundles_Assessed_ESM" DataSetColumn="MBC_Bundles_Assessed_ESM" />
+              <Mapping SourceColumn="MBC_Bundles_Date" DataSetColumn="MBC_Bundles_Date" />
+              <Mapping SourceColumn="Unit_Id" DataSetColumn="Unit_Id" />
+              <Mapping SourceColumn="Unit_Name" DataSetColumn="Unit_Name" />
+              <Mapping SourceColumn="MBC_Bundles_LMA_SelectAll" DataSetColumn="MBC_Bundles_LMA_SelectAll" />
+              <Mapping SourceColumn="MBC_Bundles_LMA_1" DataSetColumn="MBC_Bundles_LMA_1" />
+              <Mapping SourceColumn="MBC_Bundles_LMA_2" DataSetColumn="MBC_Bundles_LMA_2" />
+              <Mapping SourceColumn="MBC_Bundles_LMA_3" DataSetColumn="MBC_Bundles_LMA_3" />
+              <Mapping SourceColumn="MBC_Bundles_LMA_4" DataSetColumn="MBC_Bundles_LMA_4" />
+              <Mapping SourceColumn="MBC_Bundles_LMA_Cal" DataSetColumn="MBC_Bundles_LMA_Cal" />
+              <Mapping SourceColumn="MBC_Bundles_LMA_1_NA" DataSetColumn="MBC_Bundles_LMA_1_NA" />
+              <Mapping SourceColumn="MBC_Bundles_LMA_2_NA" DataSetColumn="MBC_Bundles_LMA_2_NA" />
+              <Mapping SourceColumn="MBC_Bundles_LMA_3_NA" DataSetColumn="MBC_Bundles_LMA_3_NA" />
+              <Mapping SourceColumn="MBC_Bundles_LMA_4_NA" DataSetColumn="MBC_Bundles_LMA_4_NA" />
+              <Mapping SourceColumn="MBC_Bundles_CMA_SelectAll" DataSetColumn="MBC_Bundles_CMA_SelectAll" />
+              <Mapping SourceColumn="MBC_Bundles_CMA_1" DataSetColumn="MBC_Bundles_CMA_1" />
+              <Mapping SourceColumn="MBC_Bundles_CMA_2" DataSetColumn="MBC_Bundles_CMA_2" />
+              <Mapping SourceColumn="MBC_Bundles_CMA_3" DataSetColumn="MBC_Bundles_CMA_3" />
+              <Mapping SourceColumn="MBC_Bundles_CMA_4" DataSetColumn="MBC_Bundles_CMA_4" />
+              <Mapping SourceColumn="MBC_Bundles_CMA_5" DataSetColumn="MBC_Bundles_CMA_5" />
+              <Mapping SourceColumn="MBC_Bundles_CMA_Cal" DataSetColumn="MBC_Bundles_CMA_Cal" />
+              <Mapping SourceColumn="MBC_Bundles_CMA_1_NA" DataSetColumn="MBC_Bundles_CMA_1_NA" />
+              <Mapping SourceColumn="MBC_Bundles_CMA_2_NA" DataSetColumn="MBC_Bundles_CMA_2_NA" />
+              <Mapping SourceColumn="MBC_Bundles_CMA_3_NA" DataSetColumn="MBC_Bundles_CMA_3_NA" />
+              <Mapping SourceColumn="MBC_Bundles_CMA_4_NA" DataSetColumn="MBC_Bundles_CMA_4_NA" />
+              <Mapping SourceColumn="MBC_Bundles_CMA_5_NA" DataSetColumn="MBC_Bundles_CMA_5_NA" />
+              <Mapping SourceColumn="MBC_Bundles_RMA_SelectAll" DataSetColumn="MBC_Bundles_RMA_SelectAll" />
+              <Mapping SourceColumn="MBC_Bundles_RMA_1" DataSetColumn="MBC_Bundles_RMA_1" />
+              <Mapping SourceColumn="MBC_Bundles_RMA_2" DataSetColumn="MBC_Bundles_RMA_2" />
+              <Mapping SourceColumn="MBC_Bundles_RMA_3" DataSetColumn="MBC_Bundles_RMA_3" />
+              <Mapping SourceColumn="MBC_Bundles_RMA_Cal" DataSetColumn="MBC_Bundles_RMA_Cal" />
+              <Mapping SourceColumn="MBC_Bundles_RMA_1_NA" DataSetColumn="MBC_Bundles_RMA_1_NA" />
+              <Mapping SourceColumn="MBC_Bundles_RMA_2_NA" DataSetColumn="MBC_Bundles_RMA_2_NA" />
+              <Mapping SourceColumn="MBC_Bundles_RMA_3_NA" DataSetColumn="MBC_Bundles_RMA_3_NA" />
+              <Mapping SourceColumn="MBC_Bundles_ESM_SelectAll" DataSetColumn="MBC_Bundles_ESM_SelectAll" />
+              <Mapping SourceColumn="MBC_Bundles_ESM_1" DataSetColumn="MBC_Bundles_ESM_1" />
+              <Mapping SourceColumn="MBC_Bundles_ESM_2" DataSetColumn="MBC_Bundles_ESM_2" />
+              <Mapping SourceColumn="MBC_Bundles_ESM_3" DataSetColumn="MBC_Bundles_ESM_3" />
+              <Mapping SourceColumn="MBC_Bundles_ESM_4" DataSetColumn="MBC_Bundles_ESM_4" />
+              <Mapping SourceColumn="MBC_Bundles_ESM_5" DataSetColumn="MBC_Bundles_ESM_5" />
+              <Mapping SourceColumn="MBC_Bundles_ESM_Cal" DataSetColumn="MBC_Bundles_ESM_Cal" />
+              <Mapping SourceColumn="MBC_Bundles_ESM_1_NA" DataSetColumn="MBC_Bundles_ESM_1_NA" />
+              <Mapping SourceColumn="MBC_Bundles_ESM_2_NA" DataSetColumn="MBC_Bundles_ESM_2_NA" />
+              <Mapping SourceColumn="MBC_Bundles_ESM_3_NA" DataSetColumn="MBC_Bundles_ESM_3_NA" />
+              <Mapping SourceColumn="MBC_Bundles_ESM_4_NA" DataSetColumn="MBC_Bundles_ESM_4_NA" />
+              <Mapping SourceColumn="MBC_Bundles_ESM_5_NA" DataSetColumn="MBC_Bundles_ESM_5_NA" />
+              <Mapping SourceColumn="MBC_Bundles_CreatedDate" DataSetColumn="MBC_Bundles_CreatedDate" />
+              <Mapping SourceColumn="MBC_Bundles_CreatedBy" DataSetColumn="MBC_Bundles_CreatedBy" />
+              <Mapping SourceColumn="MBC_Bundles_ModifiedDate" DataSetColumn="MBC_Bundles_ModifiedDate" />
+              <Mapping SourceColumn="MBC_Bundles_ModifiedBy" DataSetColumn="MBC_Bundles_ModifiedBy" />
+              <Mapping SourceColumn="MBC_Bundles_History" DataSetColumn="MBC_Bundles_History" />
+              <Mapping SourceColumn="MBC_Bundles_IsActive" DataSetColumn="MBC_Bundles_IsActive" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_MedicationBundleCompliance_All" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_Form_MedicationBundleCompliance_All" msprop:Generator_UserDSName="DataSet_Form_MedicationBundleCompliance_All">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vForm_MedicationBundleCompliance_Bundles" msprop:Generator_TableClassName="vForm_MedicationBundleCompliance_BundlesDataTable" msprop:Generator_TableVarName="tablevForm_MedicationBundleCompliance_Bundles" msprop:Generator_TablePropName="vForm_MedicationBundleCompliance_Bundles" msprop:Generator_RowDeletingName="vForm_MedicationBundleCompliance_BundlesRowDeleting" msprop:Generator_RowChangingName="vForm_MedicationBundleCompliance_BundlesRowChanging" msprop:Generator_RowEvHandlerName="vForm_MedicationBundleCompliance_BundlesRowChangeEventHandler" msprop:Generator_RowDeletedName="vForm_MedicationBundleCompliance_BundlesRowDeleted" msprop:Generator_UserTableName="vForm_MedicationBundleCompliance_Bundles" msprop:Generator_RowChangedName="vForm_MedicationBundleCompliance_BundlesRowChanged" msprop:Generator_RowEvArgName="vForm_MedicationBundleCompliance_BundlesRowChangeEvent" msprop:Generator_RowClassName="vForm_MedicationBundleCompliance_BundlesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MBC_Bundles_Id" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_Id" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_Id" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_IdColumn" msprop:Generator_UserColumnName="MBC_Bundles_Id" type="xs:int" />
+              <xs:element name="MBC_VisitInformation_Id" msprop:Generator_ColumnVarNameInTable="columnMBC_VisitInformation_Id" msprop:Generator_ColumnPropNameInRow="MBC_VisitInformation_Id" msprop:Generator_ColumnPropNameInTable="MBC_VisitInformation_IdColumn" msprop:Generator_UserColumnName="MBC_VisitInformation_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facility_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityNameColumn" msprop:Generator_UserColumnName="Facility_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facility_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facility_FacilityCodeColumn" msprop:Generator_UserColumnName="Facility_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityDisplayName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityDisplayNameColumn" msprop:Generator_UserColumnName="Facility_FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MBC_VisitInformation_VisitNumber" msprop:Generator_ColumnVarNameInTable="columnMBC_VisitInformation_VisitNumber" msprop:Generator_ColumnPropNameInRow="MBC_VisitInformation_VisitNumber" msprop:Generator_ColumnPropNameInTable="MBC_VisitInformation_VisitNumberColumn" msprop:Generator_UserColumnName="MBC_VisitInformation_VisitNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Id" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Id" msprop:Generator_ColumnPropNameInRow="PatientInformation_Id" msprop:Generator_ColumnPropNameInTable="PatientInformation_IdColumn" msprop:Generator_UserColumnName="PatientInformation_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="PatientInformation_LifeNumber" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_LifeNumber" msprop:Generator_ColumnPropNameInRow="PatientInformation_LifeNumber" msprop:Generator_ColumnPropNameInTable="PatientInformation_LifeNumberColumn" msprop:Generator_UserColumnName="PatientInformation_LifeNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Name" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Name" msprop:Generator_ColumnPropNameInRow="PatientInformation_Name" msprop:Generator_ColumnPropNameInTable="PatientInformation_NameColumn" msprop:Generator_UserColumnName="PatientInformation_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Surname" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Surname" msprop:Generator_ColumnPropNameInRow="PatientInformation_Surname" msprop:Generator_ColumnPropNameInTable="PatientInformation_SurnameColumn" msprop:Generator_UserColumnName="PatientInformation_Surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_IDNumber" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_IDNumber" msprop:Generator_ColumnPropNameInRow="PatientInformation_IDNumber" msprop:Generator_ColumnPropNameInTable="PatientInformation_IDNumberColumn" msprop:Generator_UserColumnName="PatientInformation_IDNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_DateOfBirth" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_DateOfBirth" msprop:Generator_ColumnPropNameInRow="PatientInformation_DateOfBirth" msprop:Generator_ColumnPropNameInTable="PatientInformation_DateOfBirthColumn" msprop:Generator_UserColumnName="PatientInformation_DateOfBirth" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Gender" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Gender" msprop:Generator_ColumnPropNameInRow="PatientInformation_Gender" msprop:Generator_ColumnPropNameInTable="PatientInformation_GenderColumn" msprop:Generator_UserColumnName="PatientInformation_Gender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Email" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Email" msprop:Generator_ColumnPropNameInRow="PatientInformation_Email" msprop:Generator_ColumnPropNameInTable="PatientInformation_EmailColumn" msprop:Generator_UserColumnName="PatientInformation_Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_ContactNumber" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_ContactNumber" msprop:Generator_ColumnPropNameInRow="PatientInformation_ContactNumber" msprop:Generator_ColumnPropNameInTable="PatientInformation_ContactNumberColumn" msprop:Generator_UserColumnName="PatientInformation_ContactNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MBC_VisitInformation_PatientName" msprop:Generator_ColumnVarNameInTable="columnMBC_VisitInformation_PatientName" msprop:Generator_ColumnPropNameInRow="MBC_VisitInformation_PatientName" msprop:Generator_ColumnPropNameInTable="MBC_VisitInformation_PatientNameColumn" msprop:Generator_UserColumnName="MBC_VisitInformation_PatientName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MBC_VisitInformation_PatientAge" msprop:Generator_ColumnVarNameInTable="columnMBC_VisitInformation_PatientAge" msprop:Generator_ColumnPropNameInRow="MBC_VisitInformation_PatientAge" msprop:Generator_ColumnPropNameInTable="MBC_VisitInformation_PatientAgeColumn" msprop:Generator_UserColumnName="MBC_VisitInformation_PatientAge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MBC_VisitInformation_DateOfAdmission" msprop:Generator_ColumnVarNameInTable="columnMBC_VisitInformation_DateOfAdmission" msprop:Generator_ColumnPropNameInRow="MBC_VisitInformation_DateOfAdmission" msprop:Generator_ColumnPropNameInTable="MBC_VisitInformation_DateOfAdmissionColumn" msprop:Generator_UserColumnName="MBC_VisitInformation_DateOfAdmission" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MBC_VisitInformation_DateOfDischarge" msprop:Generator_ColumnVarNameInTable="columnMBC_VisitInformation_DateOfDischarge" msprop:Generator_ColumnPropNameInRow="MBC_VisitInformation_DateOfDischarge" msprop:Generator_ColumnPropNameInTable="MBC_VisitInformation_DateOfDischargeColumn" msprop:Generator_UserColumnName="MBC_VisitInformation_DateOfDischarge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MBC_VisitInformation_Archived" msprop:Generator_ColumnVarNameInTable="columnMBC_VisitInformation_Archived" msprop:Generator_ColumnPropNameInRow="MBC_VisitInformation_Archived" msprop:Generator_ColumnPropNameInTable="MBC_VisitInformation_ArchivedColumn" msprop:Generator_UserColumnName="MBC_VisitInformation_Archived" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_ReportNumber" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_ReportNumber" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_ReportNumber" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_ReportNumberColumn" msprop:Generator_UserColumnName="MBC_Bundles_ReportNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MBC_Bundles_Assessed_LMA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_Assessed_LMA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_Assessed_LMA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_Assessed_LMAColumn" msprop:Generator_UserColumnName="MBC_Bundles_Assessed_LMA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_Assessed_CMA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_Assessed_CMA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_Assessed_CMA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_Assessed_CMAColumn" msprop:Generator_UserColumnName="MBC_Bundles_Assessed_CMA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_Assessed_RMA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_Assessed_RMA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_Assessed_RMA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_Assessed_RMAColumn" msprop:Generator_UserColumnName="MBC_Bundles_Assessed_RMA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_Assessed_ESM" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_Assessed_ESM" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_Assessed_ESM" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_Assessed_ESMColumn" msprop:Generator_UserColumnName="MBC_Bundles_Assessed_ESM" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_Date" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_Date" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_Date" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_DateColumn" msprop:Generator_UserColumnName="MBC_Bundles_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Unit_Id" msprop:Generator_ColumnVarNameInTable="columnUnit_Id" msprop:Generator_ColumnPropNameInRow="Unit_Id" msprop:Generator_ColumnPropNameInTable="Unit_IdColumn" msprop:Generator_UserColumnName="Unit_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Unit_Name" msprop:Generator_ColumnVarNameInTable="columnUnit_Name" msprop:Generator_ColumnPropNameInRow="Unit_Name" msprop:Generator_ColumnPropNameInTable="Unit_NameColumn" msprop:Generator_UserColumnName="Unit_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MBC_Bundles_LMA_SelectAll" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_LMA_SelectAll" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_LMA_SelectAll" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_LMA_SelectAllColumn" msprop:Generator_UserColumnName="MBC_Bundles_LMA_SelectAll" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_LMA_1" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_LMA_1" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_LMA_1" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_LMA_1Column" msprop:Generator_UserColumnName="MBC_Bundles_LMA_1" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_LMA_2" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_LMA_2" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_LMA_2" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_LMA_2Column" msprop:Generator_UserColumnName="MBC_Bundles_LMA_2" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_LMA_3" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_LMA_3" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_LMA_3" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_LMA_3Column" msprop:Generator_UserColumnName="MBC_Bundles_LMA_3" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_LMA_4" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_LMA_4" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_LMA_4" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_LMA_4Column" msprop:Generator_UserColumnName="MBC_Bundles_LMA_4" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_LMA_Cal" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_LMA_Cal" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_LMA_Cal" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_LMA_CalColumn" msprop:Generator_UserColumnName="MBC_Bundles_LMA_Cal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MBC_Bundles_LMA_1_NA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_LMA_1_NA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_LMA_1_NA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_LMA_1_NAColumn" msprop:Generator_UserColumnName="MBC_Bundles_LMA_1_NA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_LMA_2_NA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_LMA_2_NA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_LMA_2_NA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_LMA_2_NAColumn" msprop:Generator_UserColumnName="MBC_Bundles_LMA_2_NA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_LMA_3_NA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_LMA_3_NA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_LMA_3_NA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_LMA_3_NAColumn" msprop:Generator_UserColumnName="MBC_Bundles_LMA_3_NA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_LMA_4_NA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_LMA_4_NA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_LMA_4_NA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_LMA_4_NAColumn" msprop:Generator_UserColumnName="MBC_Bundles_LMA_4_NA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_CMA_SelectAll" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_CMA_SelectAll" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_CMA_SelectAll" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_CMA_SelectAllColumn" msprop:Generator_UserColumnName="MBC_Bundles_CMA_SelectAll" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_CMA_1" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_CMA_1" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_CMA_1" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_CMA_1Column" msprop:Generator_UserColumnName="MBC_Bundles_CMA_1" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_CMA_2" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_CMA_2" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_CMA_2" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_CMA_2Column" msprop:Generator_UserColumnName="MBC_Bundles_CMA_2" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_CMA_3" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_CMA_3" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_CMA_3" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_CMA_3Column" msprop:Generator_UserColumnName="MBC_Bundles_CMA_3" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_CMA_4" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_CMA_4" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_CMA_4" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_CMA_4Column" msprop:Generator_UserColumnName="MBC_Bundles_CMA_4" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_CMA_5" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_CMA_5" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_CMA_5" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_CMA_5Column" msprop:Generator_UserColumnName="MBC_Bundles_CMA_5" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_CMA_Cal" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_CMA_Cal" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_CMA_Cal" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_CMA_CalColumn" msprop:Generator_UserColumnName="MBC_Bundles_CMA_Cal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MBC_Bundles_CMA_1_NA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_CMA_1_NA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_CMA_1_NA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_CMA_1_NAColumn" msprop:Generator_UserColumnName="MBC_Bundles_CMA_1_NA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_CMA_2_NA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_CMA_2_NA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_CMA_2_NA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_CMA_2_NAColumn" msprop:Generator_UserColumnName="MBC_Bundles_CMA_2_NA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_CMA_3_NA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_CMA_3_NA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_CMA_3_NA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_CMA_3_NAColumn" msprop:Generator_UserColumnName="MBC_Bundles_CMA_3_NA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_CMA_4_NA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_CMA_4_NA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_CMA_4_NA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_CMA_4_NAColumn" msprop:Generator_UserColumnName="MBC_Bundles_CMA_4_NA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_CMA_5_NA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_CMA_5_NA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_CMA_5_NA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_CMA_5_NAColumn" msprop:Generator_UserColumnName="MBC_Bundles_CMA_5_NA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_RMA_SelectAll" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_RMA_SelectAll" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_RMA_SelectAll" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_RMA_SelectAllColumn" msprop:Generator_UserColumnName="MBC_Bundles_RMA_SelectAll" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_RMA_1" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_RMA_1" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_RMA_1" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_RMA_1Column" msprop:Generator_UserColumnName="MBC_Bundles_RMA_1" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_RMA_2" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_RMA_2" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_RMA_2" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_RMA_2Column" msprop:Generator_UserColumnName="MBC_Bundles_RMA_2" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_RMA_3" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_RMA_3" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_RMA_3" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_RMA_3Column" msprop:Generator_UserColumnName="MBC_Bundles_RMA_3" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_RMA_Cal" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_RMA_Cal" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_RMA_Cal" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_RMA_CalColumn" msprop:Generator_UserColumnName="MBC_Bundles_RMA_Cal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MBC_Bundles_RMA_1_NA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_RMA_1_NA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_RMA_1_NA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_RMA_1_NAColumn" msprop:Generator_UserColumnName="MBC_Bundles_RMA_1_NA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_RMA_2_NA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_RMA_2_NA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_RMA_2_NA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_RMA_2_NAColumn" msprop:Generator_UserColumnName="MBC_Bundles_RMA_2_NA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_RMA_3_NA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_RMA_3_NA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_RMA_3_NA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_RMA_3_NAColumn" msprop:Generator_UserColumnName="MBC_Bundles_RMA_3_NA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_ESM_SelectAll" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_ESM_SelectAll" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_ESM_SelectAll" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_ESM_SelectAllColumn" msprop:Generator_UserColumnName="MBC_Bundles_ESM_SelectAll" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_ESM_1" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_ESM_1" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_ESM_1" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_ESM_1Column" msprop:Generator_UserColumnName="MBC_Bundles_ESM_1" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_ESM_2" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_ESM_2" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_ESM_2" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_ESM_2Column" msprop:Generator_UserColumnName="MBC_Bundles_ESM_2" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_ESM_3" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_ESM_3" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_ESM_3" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_ESM_3Column" msprop:Generator_UserColumnName="MBC_Bundles_ESM_3" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_ESM_4" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_ESM_4" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_ESM_4" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_ESM_4Column" msprop:Generator_UserColumnName="MBC_Bundles_ESM_4" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_ESM_5" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_ESM_5" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_ESM_5" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_ESM_5Column" msprop:Generator_UserColumnName="MBC_Bundles_ESM_5" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_ESM_Cal" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_ESM_Cal" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_ESM_Cal" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_ESM_CalColumn" msprop:Generator_UserColumnName="MBC_Bundles_ESM_Cal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MBC_Bundles_ESM_1_NA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_ESM_1_NA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_ESM_1_NA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_ESM_1_NAColumn" msprop:Generator_UserColumnName="MBC_Bundles_ESM_1_NA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_ESM_2_NA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_ESM_2_NA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_ESM_2_NA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_ESM_2_NAColumn" msprop:Generator_UserColumnName="MBC_Bundles_ESM_2_NA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_ESM_3_NA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_ESM_3_NA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_ESM_3_NA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_ESM_3_NAColumn" msprop:Generator_UserColumnName="MBC_Bundles_ESM_3_NA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_ESM_4_NA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_ESM_4_NA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_ESM_4_NA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_ESM_4_NAColumn" msprop:Generator_UserColumnName="MBC_Bundles_ESM_4_NA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_ESM_5_NA" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_ESM_5_NA" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_ESM_5_NA" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_ESM_5_NAColumn" msprop:Generator_UserColumnName="MBC_Bundles_ESM_5_NA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MBC_Bundles_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_CreatedDate" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_CreatedDate" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_CreatedDateColumn" msprop:Generator_UserColumnName="MBC_Bundles_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MBC_Bundles_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_CreatedBy" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_CreatedBy" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_CreatedByColumn" msprop:Generator_UserColumnName="MBC_Bundles_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MBC_Bundles_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_ModifiedDate" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_ModifiedDate" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_ModifiedDateColumn" msprop:Generator_UserColumnName="MBC_Bundles_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MBC_Bundles_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_ModifiedBy" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_ModifiedBy" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_ModifiedByColumn" msprop:Generator_UserColumnName="MBC_Bundles_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MBC_Bundles_History" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_History" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_History" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_HistoryColumn" msprop:Generator_UserColumnName="MBC_Bundles_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MBC_Bundles_IsActive" msprop:Generator_ColumnVarNameInTable="columnMBC_Bundles_IsActive" msprop:Generator_ColumnPropNameInRow="MBC_Bundles_IsActive" msprop:Generator_ColumnPropNameInTable="MBC_Bundles_IsActiveColumn" msprop:Generator_UserColumnName="MBC_Bundles_IsActive" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vForm_MedicationBundleCompliance_Bundles" />
+      <xs:field xpath="mstns:MBC_Bundles_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

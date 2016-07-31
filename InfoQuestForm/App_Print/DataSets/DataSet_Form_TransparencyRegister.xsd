@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_TransparencyRegister" targetNamespace="http://tempuri.org/DataSet_Form_TransparencyRegister.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_TransparencyRegister.xsd" xmlns="http://tempuri.org/DataSet_Form_TransparencyRegister.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vForm_TransparencyRegister_ClassificationTableAdapter" GeneratorDataComponentClassName="vForm_TransparencyRegister_ClassificationTableAdapter" Name="vForm_TransparencyRegister_Classification" UserDataComponentName="vForm_TransparencyRegister_ClassificationTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vForm_TransparencyRegister_Classification" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT *
+                      FROM vForm_TransparencyRegister_Classification
+                      WHERE TransparencyRegister_Id = 8
+                      ORDER BY TransparencyRegister_Classification_Item_Name</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TransparencyRegister_Id" DataSetColumn="TransparencyRegister_Id" />
+              <Mapping SourceColumn="TransparencyRegister_EmployeeNumber" DataSetColumn="TransparencyRegister_EmployeeNumber" />
+              <Mapping SourceColumn="TransparencyRegister_FirstName" DataSetColumn="TransparencyRegister_FirstName" />
+              <Mapping SourceColumn="TransparencyRegister_LastName" DataSetColumn="TransparencyRegister_LastName" />
+              <Mapping SourceColumn="TransparencyRegister_JobTitle" DataSetColumn="TransparencyRegister_JobTitle" />
+              <Mapping SourceColumn="TransparencyRegister_Department" DataSetColumn="TransparencyRegister_Department" />
+              <Mapping SourceColumn="TransparencyRegister_ManagerEmployeeNumber" DataSetColumn="TransparencyRegister_ManagerEmployeeNumber" />
+              <Mapping SourceColumn="TransparencyRegister_ManagerFirstName" DataSetColumn="TransparencyRegister_ManagerFirstName" />
+              <Mapping SourceColumn="TransparencyRegister_ManagerLastName" DataSetColumn="TransparencyRegister_ManagerLastName" />
+              <Mapping SourceColumn="TransparencyRegister_DeclarationDate" DataSetColumn="TransparencyRegister_DeclarationDate" />
+              <Mapping SourceColumn="TransparencyRegister_Description" DataSetColumn="TransparencyRegister_Description" />
+              <Mapping SourceColumn="TransparencyRegister_Value" DataSetColumn="TransparencyRegister_Value" />
+              <Mapping SourceColumn="TransparencyRegister_Purpose" DataSetColumn="TransparencyRegister_Purpose" />
+              <Mapping SourceColumn="TransparencyRegister_PersonOrganisation" DataSetColumn="TransparencyRegister_PersonOrganisation" />
+              <Mapping SourceColumn="TransparencyRegister_Relationship" DataSetColumn="TransparencyRegister_Relationship" />
+              <Mapping SourceColumn="TransparencyRegister_Status" DataSetColumn="TransparencyRegister_Status" />
+              <Mapping SourceColumn="TransparencyRegister_StatusDate" DataSetColumn="TransparencyRegister_StatusDate" />
+              <Mapping SourceColumn="TransparencyRegister_StatusApprovedRejectedBy" DataSetColumn="TransparencyRegister_StatusApprovedRejectedBy" />
+              <Mapping SourceColumn="TransparencyRegister_StatusMessage" DataSetColumn="TransparencyRegister_StatusMessage" />
+              <Mapping SourceColumn="TransparencyRegister_CreatedDate" DataSetColumn="TransparencyRegister_CreatedDate" />
+              <Mapping SourceColumn="TransparencyRegister_CreatedBy" DataSetColumn="TransparencyRegister_CreatedBy" />
+              <Mapping SourceColumn="TransparencyRegister_ModifiedDate" DataSetColumn="TransparencyRegister_ModifiedDate" />
+              <Mapping SourceColumn="TransparencyRegister_ModifiedBy" DataSetColumn="TransparencyRegister_ModifiedBy" />
+              <Mapping SourceColumn="TransparencyRegister_History" DataSetColumn="TransparencyRegister_History" />
+              <Mapping SourceColumn="TransparencyRegister_Archived" DataSetColumn="TransparencyRegister_Archived" />
+              <Mapping SourceColumn="TransparencyRegister_Classification_Id" DataSetColumn="TransparencyRegister_Classification_Id" />
+              <Mapping SourceColumn="TransparencyRegister_Classification_Item_List" DataSetColumn="TransparencyRegister_Classification_Item_List" />
+              <Mapping SourceColumn="TransparencyRegister_Classification_Item_Name" DataSetColumn="TransparencyRegister_Classification_Item_Name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_TransparencyRegister" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_Form_TransparencyRegister" msprop:Generator_UserDSName="DataSet_Form_TransparencyRegister">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vForm_TransparencyRegister_Classification" msprop:Generator_TableClassName="vForm_TransparencyRegister_ClassificationDataTable" msprop:Generator_TableVarName="tablevForm_TransparencyRegister_Classification" msprop:Generator_RowChangedName="vForm_TransparencyRegister_ClassificationRowChanged" msprop:Generator_TablePropName="vForm_TransparencyRegister_Classification" msprop:Generator_RowDeletingName="vForm_TransparencyRegister_ClassificationRowDeleting" msprop:Generator_RowChangingName="vForm_TransparencyRegister_ClassificationRowChanging" msprop:Generator_RowEvHandlerName="vForm_TransparencyRegister_ClassificationRowChangeEventHandler" msprop:Generator_RowDeletedName="vForm_TransparencyRegister_ClassificationRowDeleted" msprop:Generator_RowClassName="vForm_TransparencyRegister_ClassificationRow" msprop:Generator_UserTableName="vForm_TransparencyRegister_Classification" msprop:Generator_RowEvArgName="vForm_TransparencyRegister_ClassificationRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransparencyRegister_Id" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_Id" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_Id" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_IdColumn" msprop:Generator_UserColumnName="TransparencyRegister_Id" type="xs:int" />
+              <xs:element name="TransparencyRegister_EmployeeNumber" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_EmployeeNumber" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_EmployeeNumber" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_EmployeeNumberColumn" msprop:Generator_UserColumnName="TransparencyRegister_EmployeeNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_FirstName" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_FirstName" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_FirstName" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_FirstNameColumn" msprop:Generator_UserColumnName="TransparencyRegister_FirstName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_LastName" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_LastName" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_LastName" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_LastNameColumn" msprop:Generator_UserColumnName="TransparencyRegister_LastName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_JobTitle" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_JobTitle" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_JobTitle" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_JobTitleColumn" msprop:Generator_UserColumnName="TransparencyRegister_JobTitle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_Department" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_Department" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_Department" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_DepartmentColumn" msprop:Generator_UserColumnName="TransparencyRegister_Department" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_ManagerEmployeeNumber" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_ManagerEmployeeNumber" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_ManagerEmployeeNumber" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_ManagerEmployeeNumberColumn" msprop:Generator_UserColumnName="TransparencyRegister_ManagerEmployeeNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_ManagerFirstName" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_ManagerFirstName" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_ManagerFirstName" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_ManagerFirstNameColumn" msprop:Generator_UserColumnName="TransparencyRegister_ManagerFirstName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_ManagerLastName" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_ManagerLastName" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_ManagerLastName" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_ManagerLastNameColumn" msprop:Generator_UserColumnName="TransparencyRegister_ManagerLastName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_DeclarationDate" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_DeclarationDate" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_DeclarationDate" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_DeclarationDateColumn" msprop:Generator_UserColumnName="TransparencyRegister_DeclarationDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TransparencyRegister_Description" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_Description" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_Description" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_DescriptionColumn" msprop:Generator_UserColumnName="TransparencyRegister_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_Value" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_Value" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_Value" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_ValueColumn" msprop:Generator_UserColumnName="TransparencyRegister_Value" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_Purpose" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_Purpose" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_Purpose" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_PurposeColumn" msprop:Generator_UserColumnName="TransparencyRegister_Purpose" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_PersonOrganisation" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_PersonOrganisation" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_PersonOrganisation" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_PersonOrganisationColumn" msprop:Generator_UserColumnName="TransparencyRegister_PersonOrganisation" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_Relationship" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_Relationship" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_Relationship" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_RelationshipColumn" msprop:Generator_UserColumnName="TransparencyRegister_Relationship" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_Status" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_Status" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_Status" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_StatusColumn" msprop:Generator_UserColumnName="TransparencyRegister_Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_StatusDate" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_StatusDate" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_StatusDate" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_StatusDateColumn" msprop:Generator_UserColumnName="TransparencyRegister_StatusDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TransparencyRegister_StatusApprovedRejectedBy" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_StatusApprovedRejectedBy" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_StatusApprovedRejectedBy" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_StatusApprovedRejectedByColumn" msprop:Generator_UserColumnName="TransparencyRegister_StatusApprovedRejectedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_StatusMessage" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_StatusMessage" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_StatusMessage" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_StatusMessageColumn" msprop:Generator_UserColumnName="TransparencyRegister_StatusMessage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_CreatedDate" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_CreatedDate" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_CreatedDateColumn" msprop:Generator_UserColumnName="TransparencyRegister_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TransparencyRegister_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_CreatedBy" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_CreatedBy" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_CreatedByColumn" msprop:Generator_UserColumnName="TransparencyRegister_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_ModifiedDate" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_ModifiedDate" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_ModifiedDateColumn" msprop:Generator_UserColumnName="TransparencyRegister_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TransparencyRegister_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_ModifiedBy" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_ModifiedBy" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_ModifiedByColumn" msprop:Generator_UserColumnName="TransparencyRegister_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_History" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_History" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_History" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_HistoryColumn" msprop:Generator_UserColumnName="TransparencyRegister_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_Archived" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_Archived" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_Archived" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_ArchivedColumn" msprop:Generator_UserColumnName="TransparencyRegister_Archived" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TransparencyRegister_Classification_Id" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_Classification_Id" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_Classification_Id" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_Classification_IdColumn" msprop:Generator_UserColumnName="TransparencyRegister_Classification_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="TransparencyRegister_Classification_Item_List" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_Classification_Item_List" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_Classification_Item_List" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_Classification_Item_ListColumn" msprop:Generator_UserColumnName="TransparencyRegister_Classification_Item_List" type="xs:int" minOccurs="0" />
+              <xs:element name="TransparencyRegister_Classification_Item_Name" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_Classification_Item_Name" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_Classification_Item_Name" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_Classification_Item_NameColumn" msprop:Generator_UserColumnName="TransparencyRegister_Classification_Item_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransparencyRegister_Classification_Value" msprop:Generator_ColumnVarNameInTable="columnTransparencyRegister_Classification_Value" msprop:Generator_ColumnPropNameInRow="TransparencyRegister_Classification_Value" msprop:Generator_ColumnPropNameInTable="TransparencyRegister_Classification_ValueColumn" msprop:Generator_UserColumnName="TransparencyRegister_Classification_Value" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

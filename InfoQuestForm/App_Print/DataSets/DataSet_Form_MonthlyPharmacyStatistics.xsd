@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_MonthlyPharmacyStatistics" targetNamespace="http://tempuri.org/DataSet_Form_MonthlyPharmacyStatistics.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_MonthlyPharmacyStatistics.xsd" xmlns="http://tempuri.org/DataSet_Form_MonthlyPharmacyStatistics.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vForm_MonthlyPharmacyStatisticsTableAdapter" GeneratorDataComponentClassName="vForm_MonthlyPharmacyStatisticsTableAdapter" Name="vForm_MonthlyPharmacyStatistics" UserDataComponentName="vForm_MonthlyPharmacyStatisticsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vForm_MonthlyPharmacyStatistics" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM vForm_MonthlyPharmacyStatistics WHERE MPS_Id = 19</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MPS_Id" DataSetColumn="MPS_Id" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="MPS_Period" DataSetColumn="MPS_Period" />
+              <Mapping SourceColumn="MPS_FYPeriod" DataSetColumn="MPS_FYPeriod" />
+              <Mapping SourceColumn="MPS_Pharmacy_RevenueActual" DataSetColumn="MPS_Pharmacy_RevenueActual" />
+              <Mapping SourceColumn="MPS_Pharmacy_RevenueBudget" DataSetColumn="MPS_Pharmacy_RevenueBudget" />
+              <Mapping SourceColumn="MPS_Pharmacy_COSDrugsEthical" DataSetColumn="MPS_Pharmacy_COSDrugsEthical" />
+              <Mapping SourceColumn="MPS_Pharmacy_COSDrugsSurgical" DataSetColumn="MPS_Pharmacy_COSDrugsSurgical" />
+              <Mapping SourceColumn="MPS_Pharmacy_NegativeStock" DataSetColumn="MPS_Pharmacy_NegativeStock" />
+              <Mapping SourceColumn="MPS_Pharmacy_CostReductionOpportunitiesRealized" DataSetColumn="MPS_Pharmacy_CostReductionOpportunitiesRealized" />
+              <Mapping SourceColumn="MPS_ModifiedDate" DataSetColumn="MPS_ModifiedDate" />
+              <Mapping SourceColumn="MPS_ModifiedBy" DataSetColumn="MPS_ModifiedBy" />
+              <Mapping SourceColumn="MPS_BeingModified" DataSetColumn="MPS_BeingModified" />
+              <Mapping SourceColumn="MPS_BeingModifiedDate" DataSetColumn="MPS_BeingModifiedDate" />
+              <Mapping SourceColumn="MPS_BeingModifiedBy" DataSetColumn="MPS_BeingModifiedBy" />
+              <Mapping SourceColumn="MPS_History" DataSetColumn="MPS_History" />
+              <Mapping SourceColumn="MPS_Archived" DataSetColumn="MPS_Archived" />
+              <Mapping SourceColumn="Facility_FacilityName" DataSetColumn="Facility_FacilityName" />
+              <Mapping SourceColumn="Facility_FacilityCode" DataSetColumn="Facility_FacilityCode" />
+              <Mapping SourceColumn="Facility_FacilityDisplayName" DataSetColumn="Facility_FacilityDisplayName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_MonthlyPharmacyStatistics" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet_Form_MonthlyPharmacyStatistics" msprop:Generator_UserDSName="DataSet_Form_MonthlyPharmacyStatistics">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vForm_MonthlyPharmacyStatistics" msprop:Generator_TableClassName="vForm_MonthlyPharmacyStatisticsDataTable" msprop:Generator_TableVarName="tablevForm_MonthlyPharmacyStatistics" msprop:Generator_RowChangedName="vForm_MonthlyPharmacyStatisticsRowChanged" msprop:Generator_TablePropName="vForm_MonthlyPharmacyStatistics" msprop:Generator_RowDeletingName="vForm_MonthlyPharmacyStatisticsRowDeleting" msprop:Generator_RowChangingName="vForm_MonthlyPharmacyStatisticsRowChanging" msprop:Generator_RowEvHandlerName="vForm_MonthlyPharmacyStatisticsRowChangeEventHandler" msprop:Generator_RowDeletedName="vForm_MonthlyPharmacyStatisticsRowDeleted" msprop:Generator_RowClassName="vForm_MonthlyPharmacyStatisticsRow" msprop:Generator_UserTableName="vForm_MonthlyPharmacyStatistics" msprop:Generator_RowEvArgName="vForm_MonthlyPharmacyStatisticsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MPS_Id" msprop:Generator_ColumnVarNameInTable="columnMPS_Id" msprop:Generator_ColumnPropNameInRow="MPS_Id" msprop:Generator_ColumnPropNameInTable="MPS_IdColumn" msprop:Generator_UserColumnName="MPS_Id" type="xs:int" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="MPS_Period" msprop:Generator_ColumnVarNameInTable="columnMPS_Period" msprop:Generator_ColumnPropNameInRow="MPS_Period" msprop:Generator_ColumnPropNameInTable="MPS_PeriodColumn" msprop:Generator_UserColumnName="MPS_Period" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MPS_FYPeriod" msprop:Generator_ColumnVarNameInTable="columnMPS_FYPeriod" msprop:Generator_ColumnPropNameInRow="MPS_FYPeriod" msprop:Generator_ColumnPropNameInTable="MPS_FYPeriodColumn" msprop:Generator_UserColumnName="MPS_FYPeriod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MPS_Pharmacy_RevenueActual" msprop:Generator_ColumnVarNameInTable="columnMPS_Pharmacy_RevenueActual" msprop:Generator_ColumnPropNameInRow="MPS_Pharmacy_RevenueActual" msprop:Generator_ColumnPropNameInTable="MPS_Pharmacy_RevenueActualColumn" msprop:Generator_UserColumnName="MPS_Pharmacy_RevenueActual" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MPS_Pharmacy_RevenueBudget" msprop:Generator_ColumnVarNameInTable="columnMPS_Pharmacy_RevenueBudget" msprop:Generator_ColumnPropNameInRow="MPS_Pharmacy_RevenueBudget" msprop:Generator_ColumnPropNameInTable="MPS_Pharmacy_RevenueBudgetColumn" msprop:Generator_UserColumnName="MPS_Pharmacy_RevenueBudget" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MPS_Pharmacy_COSDrugsEthical" msprop:Generator_ColumnVarNameInTable="columnMPS_Pharmacy_COSDrugsEthical" msprop:Generator_ColumnPropNameInRow="MPS_Pharmacy_COSDrugsEthical" msprop:Generator_ColumnPropNameInTable="MPS_Pharmacy_COSDrugsEthicalColumn" msprop:Generator_UserColumnName="MPS_Pharmacy_COSDrugsEthical" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MPS_Pharmacy_COSDrugsSurgical" msprop:Generator_ColumnVarNameInTable="columnMPS_Pharmacy_COSDrugsSurgical" msprop:Generator_ColumnPropNameInRow="MPS_Pharmacy_COSDrugsSurgical" msprop:Generator_ColumnPropNameInTable="MPS_Pharmacy_COSDrugsSurgicalColumn" msprop:Generator_UserColumnName="MPS_Pharmacy_COSDrugsSurgical" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MPS_Pharmacy_NegativeStock" msprop:Generator_ColumnVarNameInTable="columnMPS_Pharmacy_NegativeStock" msprop:Generator_ColumnPropNameInRow="MPS_Pharmacy_NegativeStock" msprop:Generator_ColumnPropNameInTable="MPS_Pharmacy_NegativeStockColumn" msprop:Generator_UserColumnName="MPS_Pharmacy_NegativeStock" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MPS_Pharmacy_CostReductionOpportunitiesRealized" msprop:Generator_ColumnVarNameInTable="columnMPS_Pharmacy_CostReductionOpportunitiesRealized" msprop:Generator_ColumnPropNameInRow="MPS_Pharmacy_CostReductionOpportunitiesRealized" msprop:Generator_ColumnPropNameInTable="MPS_Pharmacy_CostReductionOpportunitiesRealizedColumn" msprop:Generator_UserColumnName="MPS_Pharmacy_CostReductionOpportunitiesRealized" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MPS_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnMPS_ModifiedDate" msprop:Generator_ColumnPropNameInRow="MPS_ModifiedDate" msprop:Generator_ColumnPropNameInTable="MPS_ModifiedDateColumn" msprop:Generator_UserColumnName="MPS_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MPS_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnMPS_ModifiedBy" msprop:Generator_ColumnPropNameInRow="MPS_ModifiedBy" msprop:Generator_ColumnPropNameInTable="MPS_ModifiedByColumn" msprop:Generator_UserColumnName="MPS_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MPS_BeingModified" msprop:Generator_ColumnVarNameInTable="columnMPS_BeingModified" msprop:Generator_ColumnPropNameInRow="MPS_BeingModified" msprop:Generator_ColumnPropNameInTable="MPS_BeingModifiedColumn" msprop:Generator_UserColumnName="MPS_BeingModified" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MPS_BeingModifiedDate" msprop:Generator_ColumnVarNameInTable="columnMPS_BeingModifiedDate" msprop:Generator_ColumnPropNameInRow="MPS_BeingModifiedDate" msprop:Generator_ColumnPropNameInTable="MPS_BeingModifiedDateColumn" msprop:Generator_UserColumnName="MPS_BeingModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MPS_BeingModifiedBy" msprop:Generator_ColumnVarNameInTable="columnMPS_BeingModifiedBy" msprop:Generator_ColumnPropNameInRow="MPS_BeingModifiedBy" msprop:Generator_ColumnPropNameInTable="MPS_BeingModifiedByColumn" msprop:Generator_UserColumnName="MPS_BeingModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MPS_History" msprop:Generator_ColumnVarNameInTable="columnMPS_History" msprop:Generator_ColumnPropNameInRow="MPS_History" msprop:Generator_ColumnPropNameInTable="MPS_HistoryColumn" msprop:Generator_UserColumnName="MPS_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MPS_Archived" msprop:Generator_ColumnVarNameInTable="columnMPS_Archived" msprop:Generator_ColumnPropNameInRow="MPS_Archived" msprop:Generator_ColumnPropNameInTable="MPS_ArchivedColumn" msprop:Generator_UserColumnName="MPS_Archived" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Facility_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityNameColumn" msprop:Generator_UserColumnName="Facility_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facility_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facility_FacilityCodeColumn" msprop:Generator_UserColumnName="Facility_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityDisplayName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityDisplayNameColumn" msprop:Generator_UserColumnName="Facility_FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vForm_MonthlyPharmacyStatistics" />
+      <xs:field xpath="mstns:MPS_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

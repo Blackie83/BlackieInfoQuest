@@ -1,0 +1,1138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_Incident" targetNamespace="http://tempuri.org/DataSet_Form_Incident.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_Incident.xsd" xmlns="http://tempuri.org/DataSet_Form_Incident.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vForm_IncidentTableAdapter" GeneratorDataComponentClassName="vForm_IncidentTableAdapter" Name="vForm_Incident" UserDataComponentName="vForm_IncidentTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vForm_Incident" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM vForm_Incident WHERE Incident_Id = 3</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Incident_Id" DataSetColumn="Incident_Id" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facility_FacilityName" DataSetColumn="Facility_FacilityName" />
+              <Mapping SourceColumn="Facility_FacilityCode" DataSetColumn="Facility_FacilityCode" />
+              <Mapping SourceColumn="Facility_FacilityDisplayName" DataSetColumn="Facility_FacilityDisplayName" />
+              <Mapping SourceColumn="Facility_Type_Lookup" DataSetColumn="Facility_Type_Lookup" />
+              <Mapping SourceColumn="Incident_FacilityFrom_Facility" DataSetColumn="Incident_FacilityFrom_Facility" />
+              <Mapping SourceColumn="Incident_FacilityFrom_Facility_FacilityName" DataSetColumn="Incident_FacilityFrom_Facility_FacilityName" />
+              <Mapping SourceColumn="Incident_FacilityFrom_Facility_FacilityCode" DataSetColumn="Incident_FacilityFrom_Facility_FacilityCode" />
+              <Mapping SourceColumn="Incident_FacilityFrom_Facility_FacilityDisplayName" DataSetColumn="Incident_FacilityFrom_Facility_FacilityDisplayName" />
+              <Mapping SourceColumn="Incident_ReportNumber" DataSetColumn="Incident_ReportNumber" />
+              <Mapping SourceColumn="Incident_Date" DataSetColumn="Incident_Date" />
+              <Mapping SourceColumn="Incident_Time_Hours" DataSetColumn="Incident_Time_Hours" />
+              <Mapping SourceColumn="Incident_Time_Min" DataSetColumn="Incident_Time_Min" />
+              <Mapping SourceColumn="Incident_ReportingPerson" DataSetColumn="Incident_ReportingPerson" />
+              <Mapping SourceColumn="Incident_UnitFrom_Unit" DataSetColumn="Incident_UnitFrom_Unit" />
+              <Mapping SourceColumn="Incident_UnitFrom_Name" DataSetColumn="Incident_UnitFrom_Name" />
+              <Mapping SourceColumn="Incident_UnitTo_Unit" DataSetColumn="Incident_UnitTo_Unit" />
+              <Mapping SourceColumn="Incident_UnitTo_Name" DataSetColumn="Incident_UnitTo_Name" />
+              <Mapping SourceColumn="Incident_IncidentCategory_List" DataSetColumn="Incident_IncidentCategory_List" />
+              <Mapping SourceColumn="Incident_IncidentCategory_Name" DataSetColumn="Incident_IncidentCategory_Name" />
+              <Mapping SourceColumn="Incident_CVR_Name" DataSetColumn="Incident_CVR_Name" />
+              <Mapping SourceColumn="Incident_CVR_ContactNumber" DataSetColumn="Incident_CVR_ContactNumber" />
+              <Mapping SourceColumn="Incident_E_EmployeeNumber" DataSetColumn="Incident_E_EmployeeNumber" />
+              <Mapping SourceColumn="Incident_E_EmployeeName" DataSetColumn="Incident_E_EmployeeName" />
+              <Mapping SourceColumn="Incident_E_EmployeeUnit_Unit" DataSetColumn="Incident_E_EmployeeUnit_Unit" />
+              <Mapping SourceColumn="Incident_E_EmployeeUnit_Name" DataSetColumn="Incident_E_EmployeeUnit_Name" />
+              <Mapping SourceColumn="Incident_E_EmployeeStatus_List" DataSetColumn="Incident_E_EmployeeStatus_List" />
+              <Mapping SourceColumn="Incident_E_EmployeeStatus_Name" DataSetColumn="Incident_E_EmployeeStatus_Name" />
+              <Mapping SourceColumn="Incident_E_StaffCategory_List" DataSetColumn="Incident_E_StaffCategory_List" />
+              <Mapping SourceColumn="Incident_E_StaffCategory_Name" DataSetColumn="Incident_E_StaffCategory_Name" />
+              <Mapping SourceColumn="Incident_E_BodyPartAffected_List" DataSetColumn="Incident_E_BodyPartAffected_List" />
+              <Mapping SourceColumn="Incident_E_BodyPartAffected_Name" DataSetColumn="Incident_E_BodyPartAffected_Name" />
+              <Mapping SourceColumn="Incident_E_TreatmentRequired_List" DataSetColumn="Incident_E_TreatmentRequired_List" />
+              <Mapping SourceColumn="Incident_E_TreatmentRequired_Name" DataSetColumn="Incident_E_TreatmentRequired_Name" />
+              <Mapping SourceColumn="Incident_E_DaysOff" DataSetColumn="Incident_E_DaysOff" />
+              <Mapping SourceColumn="Incident_E_MainContributor_List" DataSetColumn="Incident_E_MainContributor_List" />
+              <Mapping SourceColumn="Incident_E_MainContributor_Name" DataSetColumn="Incident_E_MainContributor_Name" />
+              <Mapping SourceColumn="Incident_E_MainContributor_Staff_List" DataSetColumn="Incident_E_MainContributor_Staff_List" />
+              <Mapping SourceColumn="Incident_E_MainContributor_Staff_Name" DataSetColumn="Incident_E_MainContributor_Staff_Name" />
+              <Mapping SourceColumn="Incident_MMDT_Name" DataSetColumn="Incident_MMDT_Name" />
+              <Mapping SourceColumn="Incident_MMDT_ContactNumber" DataSetColumn="Incident_MMDT_ContactNumber" />
+              <Mapping SourceColumn="Incident_MMDT_Discipline_List" DataSetColumn="Incident_MMDT_Discipline_List" />
+              <Mapping SourceColumn="Incident_MMDT_Discipline_Name" DataSetColumn="Incident_MMDT_Discipline_Name" />
+              <Mapping SourceColumn="Incident_P_VisitNumber" DataSetColumn="Incident_P_VisitNumber" />
+              <Mapping SourceColumn="Incident_P_Name" DataSetColumn="Incident_P_Name" />
+              <Mapping SourceColumn="Incident_P_MainContributor_List" DataSetColumn="Incident_P_MainContributor_List" />
+              <Mapping SourceColumn="Incident_P_MainContributor_Name" DataSetColumn="Incident_P_MainContributor_Name" />
+              <Mapping SourceColumn="Incident_P_MainContributor_Staff_List" DataSetColumn="Incident_P_MainContributor_Staff_List" />
+              <Mapping SourceColumn="Incident_P_MainContributor_Staff_Name" DataSetColumn="Incident_P_MainContributor_Staff_Name" />
+              <Mapping SourceColumn="Incident_Prop_MainContributor_List" DataSetColumn="Incident_Prop_MainContributor_List" />
+              <Mapping SourceColumn="Incident_Prop_MainContributor_Name" DataSetColumn="Incident_Prop_MainContributor_Name" />
+              <Mapping SourceColumn="Incident_Prop_MainContributor_Staff_List" DataSetColumn="Incident_Prop_MainContributor_Staff_List" />
+              <Mapping SourceColumn="Incident_Prop_MainContributor_Staff_Name" DataSetColumn="Incident_Prop_MainContributor_Staff_Name" />
+              <Mapping SourceColumn="Incident_SS_Name" DataSetColumn="Incident_SS_Name" />
+              <Mapping SourceColumn="Incident_SS_ContactNumber" DataSetColumn="Incident_SS_ContactNumber" />
+              <Mapping SourceColumn="Incident_Description" DataSetColumn="Incident_Description" />
+              <Mapping SourceColumn="Incident_Level1_List" DataSetColumn="Incident_Level1_List" />
+              <Mapping SourceColumn="Incident_Level1_Name" DataSetColumn="Incident_Level1_Name" />
+              <Mapping SourceColumn="Incident_Level2_List" DataSetColumn="Incident_Level2_List" />
+              <Mapping SourceColumn="Incident_Level2_Name" DataSetColumn="Incident_Level2_Name" />
+              <Mapping SourceColumn="Incident_Level3_List" DataSetColumn="Incident_Level3_List" />
+              <Mapping SourceColumn="Incident_Level3_Name" DataSetColumn="Incident_Level3_Name" />
+              <Mapping SourceColumn="Incident_Severity_List" DataSetColumn="Incident_Severity_List" />
+              <Mapping SourceColumn="Incident_Severity_Name" DataSetColumn="Incident_Severity_Name" />
+              <Mapping SourceColumn="Incident_Reportable" DataSetColumn="Incident_Reportable" />
+              <Mapping SourceColumn="Incident_Report_COID" DataSetColumn="Incident_Report_COID" />
+              <Mapping SourceColumn="Incident_Report_COID_Date" DataSetColumn="Incident_Report_COID_Date" />
+              <Mapping SourceColumn="Incident_Report_COID_Number" DataSetColumn="Incident_Report_COID_Number" />
+              <Mapping SourceColumn="Incident_Report_DEAT" DataSetColumn="Incident_Report_DEAT" />
+              <Mapping SourceColumn="Incident_Report_DEAT_Date" DataSetColumn="Incident_Report_DEAT_Date" />
+              <Mapping SourceColumn="Incident_Report_DEAT_Number" DataSetColumn="Incident_Report_DEAT_Number" />
+              <Mapping SourceColumn="Incident_Report_DepartmentOfHealth" DataSetColumn="Incident_Report_DepartmentOfHealth" />
+              <Mapping SourceColumn="Incident_Report_DepartmentOfHealth_Date" DataSetColumn="Incident_Report_DepartmentOfHealth_Date" />
+              <Mapping SourceColumn="Incident_Report_DepartmentOfHealth_Number" DataSetColumn="Incident_Report_DepartmentOfHealth_Number" />
+              <Mapping SourceColumn="Incident_Report_DepartmentOfLabour" DataSetColumn="Incident_Report_DepartmentOfLabour" />
+              <Mapping SourceColumn="Incident_Report_DepartmentOfLabour_Date" DataSetColumn="Incident_Report_DepartmentOfLabour_Date" />
+              <Mapping SourceColumn="Incident_Report_DepartmentOfLabour_Number" DataSetColumn="Incident_Report_DepartmentOfLabour_Number" />
+              <Mapping SourceColumn="Incident_Report_HospitalManager" DataSetColumn="Incident_Report_HospitalManager" />
+              <Mapping SourceColumn="Incident_Report_HospitalManager_Date" DataSetColumn="Incident_Report_HospitalManager_Date" />
+              <Mapping SourceColumn="Incident_Report_HospitalManager_Number" DataSetColumn="Incident_Report_HospitalManager_Number" />
+              <Mapping SourceColumn="Incident_Report_HPCSA" DataSetColumn="Incident_Report_HPCSA" />
+              <Mapping SourceColumn="Incident_Report_HPCSA_Date" DataSetColumn="Incident_Report_HPCSA_Date" />
+              <Mapping SourceColumn="Incident_Report_HPCSA_Number" DataSetColumn="Incident_Report_HPCSA_Number" />
+              <Mapping SourceColumn="Incident_Report_LegalDepartment" DataSetColumn="Incident_Report_LegalDepartment" />
+              <Mapping SourceColumn="Incident_Report_LegalDepartment_Date" DataSetColumn="Incident_Report_LegalDepartment_Date" />
+              <Mapping SourceColumn="Incident_Report_LegalDepartment_Number" DataSetColumn="Incident_Report_LegalDepartment_Number" />
+              <Mapping SourceColumn="Incident_Report_CEO" DataSetColumn="Incident_Report_CEO" />
+              <Mapping SourceColumn="Incident_Report_CEO_Date" DataSetColumn="Incident_Report_CEO_Date" />
+              <Mapping SourceColumn="Incident_Report_CEO_Number" DataSetColumn="Incident_Report_CEO_Number" />
+              <Mapping SourceColumn="Incident_Report_PharmacyCouncil" DataSetColumn="Incident_Report_PharmacyCouncil" />
+              <Mapping SourceColumn="Incident_Report_PharmacyCouncil_Date" DataSetColumn="Incident_Report_PharmacyCouncil_Date" />
+              <Mapping SourceColumn="Incident_Report_PharmacyCouncil_Number" DataSetColumn="Incident_Report_PharmacyCouncil_Number" />
+              <Mapping SourceColumn="Incident_Report_Quality" DataSetColumn="Incident_Report_Quality" />
+              <Mapping SourceColumn="Incident_Report_Quality_Date" DataSetColumn="Incident_Report_Quality_Date" />
+              <Mapping SourceColumn="Incident_Report_Quality_Number" DataSetColumn="Incident_Report_Quality_Number" />
+              <Mapping SourceColumn="Incident_Report_RM" DataSetColumn="Incident_Report_RM" />
+              <Mapping SourceColumn="Incident_Report_RM_Date" DataSetColumn="Incident_Report_RM_Date" />
+              <Mapping SourceColumn="Incident_Report_RM_Number" DataSetColumn="Incident_Report_RM_Number" />
+              <Mapping SourceColumn="Incident_Report_SANC" DataSetColumn="Incident_Report_SANC" />
+              <Mapping SourceColumn="Incident_Report_SANC_Date" DataSetColumn="Incident_Report_SANC_Date" />
+              <Mapping SourceColumn="Incident_Report_SANC_Number" DataSetColumn="Incident_Report_SANC_Number" />
+              <Mapping SourceColumn="Incident_Report_SAPS" DataSetColumn="Incident_Report_SAPS" />
+              <Mapping SourceColumn="Incident_Report_SAPS_Date" DataSetColumn="Incident_Report_SAPS_Date" />
+              <Mapping SourceColumn="Incident_Report_SAPS_Number" DataSetColumn="Incident_Report_SAPS_Number" />
+              <Mapping SourceColumn="Incident_Report_InternalAudit" DataSetColumn="Incident_Report_InternalAudit" />
+              <Mapping SourceColumn="Incident_Report_InternalAudit_Date" DataSetColumn="Incident_Report_InternalAudit_Date" />
+              <Mapping SourceColumn="Incident_Report_InternalAudit_Number" DataSetColumn="Incident_Report_InternalAudit_Number" />
+              <Mapping SourceColumn="Incident_Reportable_CEO_AcknowledgedHM" DataSetColumn="Incident_Reportable_CEO_AcknowledgedHM" />
+              <Mapping SourceColumn="Incident_Reportable_CEO_DoctorRelated" DataSetColumn="Incident_Reportable_CEO_DoctorRelated" />
+              <Mapping SourceColumn="Incident_Reportable_CEO_CEONotifiedWithin24Hours" DataSetColumn="Incident_Reportable_CEO_CEONotifiedWithin24Hours" />
+              <Mapping SourceColumn="Incident_Reportable_CEO_ProgressUpdateSent" DataSetColumn="Incident_Reportable_CEO_ProgressUpdateSent" />
+              <Mapping SourceColumn="Incident_Reportable_CEO_ActionsTakenHM" DataSetColumn="Incident_Reportable_CEO_ActionsTakenHM" />
+              <Mapping SourceColumn="Incident_Reportable_CEO_Date" DataSetColumn="Incident_Reportable_CEO_Date" />
+              <Mapping SourceColumn="Incident_Reportable_CEO_ActionsAgainstEmployee" DataSetColumn="Incident_Reportable_CEO_ActionsAgainstEmployee" />
+              <Mapping SourceColumn="Incident_Reportable_CEO_EmployeeNumber" DataSetColumn="Incident_Reportable_CEO_EmployeeNumber" />
+              <Mapping SourceColumn="Incident_Reportable_CEO_EmployeeName" DataSetColumn="Incident_Reportable_CEO_EmployeeName" />
+              <Mapping SourceColumn="Incident_Reportable_CEO_Outcome" DataSetColumn="Incident_Reportable_CEO_Outcome" />
+              <Mapping SourceColumn="Incident_Reportable_CEO_FileScanned" DataSetColumn="Incident_Reportable_CEO_FileScanned" />
+              <Mapping SourceColumn="Incident_Reportable_CEO_CloseOffHM" DataSetColumn="Incident_Reportable_CEO_CloseOffHM" />
+              <Mapping SourceColumn="Incident_Reportable_CEO_CloseOutEmailSend" DataSetColumn="Incident_Reportable_CEO_CloseOutEmailSend" />
+              <Mapping SourceColumn="Incident_Reportable_SAPS_PoliceStation" DataSetColumn="Incident_Reportable_SAPS_PoliceStation" />
+              <Mapping SourceColumn="Incident_Reportable_SAPS_InvestigationOfficersName" DataSetColumn="Incident_Reportable_SAPS_InvestigationOfficersName" />
+              <Mapping SourceColumn="Incident_Reportable_SAPS_TelephoneNumber" DataSetColumn="Incident_Reportable_SAPS_TelephoneNumber" />
+              <Mapping SourceColumn="Incident_Reportable_SAPS_CaseNumber" DataSetColumn="Incident_Reportable_SAPS_CaseNumber" />
+              <Mapping SourceColumn="Incident_Reportable_InternalAudit_DateDetected" DataSetColumn="Incident_Reportable_InternalAudit_DateDetected" />
+              <Mapping SourceColumn="Incident_Reportable_InternalAudit_ByWhom" DataSetColumn="Incident_Reportable_InternalAudit_ByWhom" />
+              <Mapping SourceColumn="Incident_Reportable_InternalAudit_TotalLossValue" DataSetColumn="Incident_Reportable_InternalAudit_TotalLossValue" />
+              <Mapping SourceColumn="Incident_Reportable_InternalAudit_TotalRecovery" DataSetColumn="Incident_Reportable_InternalAudit_TotalRecovery" />
+              <Mapping SourceColumn="Incident_Reportable_InternalAudit_RecoveryPlan" DataSetColumn="Incident_Reportable_InternalAudit_RecoveryPlan" />
+              <Mapping SourceColumn="Incident_Reportable_InternalAudit_StatusOfInvestigation" DataSetColumn="Incident_Reportable_InternalAudit_StatusOfInvestigation" />
+              <Mapping SourceColumn="Incident_Reportable_InternalAudit_SAPSNotReported" DataSetColumn="Incident_Reportable_InternalAudit_SAPSNotReported" />
+              <Mapping SourceColumn="Incident_PatientDetail_VisitNumber" DataSetColumn="Incident_PatientDetail_VisitNumber" />
+              <Mapping SourceColumn="Incident_PatientDetail_Name" DataSetColumn="Incident_PatientDetail_Name" />
+              <Mapping SourceColumn="Incident_Pharmacy_Initials" DataSetColumn="Incident_Pharmacy_Initials" />
+              <Mapping SourceColumn="Incident_Pharmacy_StaffInvolved_List" DataSetColumn="Incident_Pharmacy_StaffInvolved_List" />
+              <Mapping SourceColumn="Incident_Pharmacy_StaffInvolved_Name" DataSetColumn="Incident_Pharmacy_StaffInvolved_Name" />
+              <Mapping SourceColumn="Incident_Pharmacy_Checking_List" DataSetColumn="Incident_Pharmacy_Checking_List" />
+              <Mapping SourceColumn="Incident_Pharmacy_Checking_Name" DataSetColumn="Incident_Pharmacy_Checking_Name" />
+              <Mapping SourceColumn="Incident_Pharmacy_LocumOrPermanent" DataSetColumn="Incident_Pharmacy_LocumOrPermanent" />
+              <Mapping SourceColumn="Incident_Pharmacy_StaffOnDuty_List" DataSetColumn="Incident_Pharmacy_StaffOnDuty_List" />
+              <Mapping SourceColumn="Incident_Pharmacy_StaffOnDuty_Name" DataSetColumn="Incident_Pharmacy_StaffOnDuty_Name" />
+              <Mapping SourceColumn="Incident_Pharmacy_ChangeInWorkProcedure" DataSetColumn="Incident_Pharmacy_ChangeInWorkProcedure" />
+              <Mapping SourceColumn="Incident_Pharmacy_TypeOfPrescription_List" DataSetColumn="Incident_Pharmacy_TypeOfPrescription_List" />
+              <Mapping SourceColumn="Incident_Pharmacy_TypeOfPrescription_Name" DataSetColumn="Incident_Pharmacy_TypeOfPrescription_Name" />
+              <Mapping SourceColumn="Incident_Pharmacy_NumberOfRxOnDay" DataSetColumn="Incident_Pharmacy_NumberOfRxOnDay" />
+              <Mapping SourceColumn="Incident_Pharmacy_NumberOfItemsDispensedOnDay" DataSetColumn="Incident_Pharmacy_NumberOfItemsDispensedOnDay" />
+              <Mapping SourceColumn="Incident_Pharmacy_NumberOfRxDayBefore" DataSetColumn="Incident_Pharmacy_NumberOfRxDayBefore" />
+              <Mapping SourceColumn="Incident_Pharmacy_NumberOfItemsDispensedDayBefore" DataSetColumn="Incident_Pharmacy_NumberOfItemsDispensedDayBefore" />
+              <Mapping SourceColumn="Incident_Pharmacy_DrugPrescribed" DataSetColumn="Incident_Pharmacy_DrugPrescribed" />
+              <Mapping SourceColumn="Incident_Pharmacy_DrugDispensed" DataSetColumn="Incident_Pharmacy_DrugDispensed" />
+              <Mapping SourceColumn="Incident_Pharmacy_DrugPacked" DataSetColumn="Incident_Pharmacy_DrugPacked" />
+              <Mapping SourceColumn="Incident_Pharmacy_StrengthDrugPrescribed" DataSetColumn="Incident_Pharmacy_StrengthDrugPrescribed" />
+              <Mapping SourceColumn="Incident_Pharmacy_StrengthDrugDispensed" DataSetColumn="Incident_Pharmacy_StrengthDrugDispensed" />
+              <Mapping SourceColumn="Incident_Pharmacy_DrugPrescribedNewOnMarket" DataSetColumn="Incident_Pharmacy_DrugPrescribedNewOnMarket" />
+              <Mapping SourceColumn="Incident_Pharmacy_LegislativeInformationOnPrescription" DataSetColumn="Incident_Pharmacy_LegislativeInformationOnPrescription" />
+              <Mapping SourceColumn="Incident_Pharmacy_LegislativeInformationNotOnPrescription" DataSetColumn="Incident_Pharmacy_LegislativeInformationNotOnPrescription" />
+              <Mapping SourceColumn="Incident_Pharmacy_DoctorName" DataSetColumn="Incident_Pharmacy_DoctorName" />
+              <Mapping SourceColumn="Incident_Pharmacy_Factors_List" DataSetColumn="Incident_Pharmacy_Factors_List" />
+              <Mapping SourceColumn="Incident_Pharmacy_Factors_Name" DataSetColumn="Incident_Pharmacy_Factors_Name" />
+              <Mapping SourceColumn="Incident_Pharmacy_SystemRelatedIssues_List" DataSetColumn="Incident_Pharmacy_SystemRelatedIssues_List" />
+              <Mapping SourceColumn="Incident_Pharmacy_SystemRelatedIssues_Name" DataSetColumn="Incident_Pharmacy_SystemRelatedIssues_Name" />
+              <Mapping SourceColumn="Incident_Pharmacy_ErgonomicProblems_List" DataSetColumn="Incident_Pharmacy_ErgonomicProblems_List" />
+              <Mapping SourceColumn="Incident_Pharmacy_ErgonomicProblems_Name" DataSetColumn="Incident_Pharmacy_ErgonomicProblems_Name" />
+              <Mapping SourceColumn="Incident_Pharmacy_PatientCounselled" DataSetColumn="Incident_Pharmacy_PatientCounselled" />
+              <Mapping SourceColumn="Incident_Pharmacy_SimilarIncident" DataSetColumn="Incident_Pharmacy_SimilarIncident" />
+              <Mapping SourceColumn="Incident_Pharmacy_Location_List" DataSetColumn="Incident_Pharmacy_Location_List" />
+              <Mapping SourceColumn="Incident_Pharmacy_Location_Name" DataSetColumn="Incident_Pharmacy_Location_Name" />
+              <Mapping SourceColumn="Incident_Pharmacy_PatientOutcomeAffected" DataSetColumn="Incident_Pharmacy_PatientOutcomeAffected" />
+              <Mapping SourceColumn="Incident_DegreeOfHarm_DegreeOfHarm_List" DataSetColumn="Incident_DegreeOfHarm_DegreeOfHarm_List" />
+              <Mapping SourceColumn="Incident_DegreeOfHarm_DegreeOfHarm_Name" DataSetColumn="Incident_DegreeOfHarm_DegreeOfHarm_Name" />
+              <Mapping SourceColumn="Incident_DegreeOfHarm_Cost" DataSetColumn="Incident_DegreeOfHarm_Cost" />
+              <Mapping SourceColumn="Incident_DegreeOfHarm_Implications" DataSetColumn="Incident_DegreeOfHarm_Implications" />
+              <Mapping SourceColumn="Incident_RootCategory_List" DataSetColumn="Incident_RootCategory_List" />
+              <Mapping SourceColumn="Incident_RootCategory_Name" DataSetColumn="Incident_RootCategory_Name" />
+              <Mapping SourceColumn="Incident_RootDescription" DataSetColumn="Incident_RootDescription" />
+              <Mapping SourceColumn="Incident_Discipline_List" DataSetColumn="Incident_Discipline_List" />
+              <Mapping SourceColumn="Incident_Discipline_Name" DataSetColumn="Incident_Discipline_Name" />
+              <Mapping SourceColumn="Incident_Investigator" DataSetColumn="Incident_Investigator" />
+              <Mapping SourceColumn="Incident_InvestigatorContactNumber" DataSetColumn="Incident_InvestigatorContactNumber" />
+              <Mapping SourceColumn="Incident_InvestigatorDesignation" DataSetColumn="Incident_InvestigatorDesignation" />
+              <Mapping SourceColumn="Incident_InvestigationCompleted" DataSetColumn="Incident_InvestigationCompleted" />
+              <Mapping SourceColumn="Incident_InvestigationCompletedDate" DataSetColumn="Incident_InvestigationCompletedDate" />
+              <Mapping SourceColumn="Incident_Status" DataSetColumn="Incident_Status" />
+              <Mapping SourceColumn="Incident_StatusDate" DataSetColumn="Incident_StatusDate" />
+              <Mapping SourceColumn="Incident_StatusRejectedReason" DataSetColumn="Incident_StatusRejectedReason" />
+              <Mapping SourceColumn="Incident_CreatedDate" DataSetColumn="Incident_CreatedDate" />
+              <Mapping SourceColumn="Incident_CreatedBy" DataSetColumn="Incident_CreatedBy" />
+              <Mapping SourceColumn="Incident_ModifiedDate" DataSetColumn="Incident_ModifiedDate" />
+              <Mapping SourceColumn="Incident_ModifiedBy" DataSetColumn="Incident_ModifiedBy" />
+              <Mapping SourceColumn="Incident_History" DataSetColumn="Incident_History" />
+              <Mapping SourceColumn="Incident_Archived" DataSetColumn="Incident_Archived" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_Incident" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet_Form_Incident" msprop:Generator_UserDSName="DataSet_Form_Incident">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vForm_Incident" msprop:Generator_TableClassName="vForm_IncidentDataTable" msprop:Generator_TableVarName="tablevForm_Incident" msprop:Generator_TablePropName="vForm_Incident" msprop:Generator_RowDeletingName="vForm_IncidentRowDeleting" msprop:Generator_RowChangingName="vForm_IncidentRowChanging" msprop:Generator_RowEvHandlerName="vForm_IncidentRowChangeEventHandler" msprop:Generator_RowDeletedName="vForm_IncidentRowDeleted" msprop:Generator_UserTableName="vForm_Incident" msprop:Generator_RowChangedName="vForm_IncidentRowChanged" msprop:Generator_RowEvArgName="vForm_IncidentRowChangeEvent" msprop:Generator_RowClassName="vForm_IncidentRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Incident_Id" msprop:Generator_ColumnVarNameInTable="columnIncident_Id" msprop:Generator_ColumnPropNameInRow="Incident_Id" msprop:Generator_ColumnPropNameInTable="Incident_IdColumn" msprop:Generator_UserColumnName="Incident_Id" type="xs:int" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facility_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityNameColumn" msprop:Generator_UserColumnName="Facility_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facility_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facility_FacilityCodeColumn" msprop:Generator_UserColumnName="Facility_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityDisplayName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityDisplayNameColumn" msprop:Generator_UserColumnName="Facility_FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_Type_Lookup" msprop:Generator_ColumnVarNameInTable="columnFacility_Type_Lookup" msprop:Generator_ColumnPropNameInRow="Facility_Type_Lookup" msprop:Generator_ColumnPropNameInTable="Facility_Type_LookupColumn" msprop:Generator_UserColumnName="Facility_Type_Lookup" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_FacilityFrom_Facility" msprop:Generator_ColumnVarNameInTable="columnIncident_FacilityFrom_Facility" msprop:Generator_ColumnPropNameInRow="Incident_FacilityFrom_Facility" msprop:Generator_ColumnPropNameInTable="Incident_FacilityFrom_FacilityColumn" msprop:Generator_UserColumnName="Incident_FacilityFrom_Facility" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_FacilityFrom_Facility_FacilityName" msprop:Generator_ColumnVarNameInTable="columnIncident_FacilityFrom_Facility_FacilityName" msprop:Generator_ColumnPropNameInRow="Incident_FacilityFrom_Facility_FacilityName" msprop:Generator_ColumnPropNameInTable="Incident_FacilityFrom_Facility_FacilityNameColumn" msprop:Generator_UserColumnName="Incident_FacilityFrom_Facility_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_FacilityFrom_Facility_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnIncident_FacilityFrom_Facility_FacilityCode" msprop:Generator_ColumnPropNameInRow="Incident_FacilityFrom_Facility_FacilityCode" msprop:Generator_ColumnPropNameInTable="Incident_FacilityFrom_Facility_FacilityCodeColumn" msprop:Generator_UserColumnName="Incident_FacilityFrom_Facility_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_FacilityFrom_Facility_FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIncident_FacilityFrom_Facility_FacilityDisplayName" msprop:Generator_ColumnPropNameInRow="Incident_FacilityFrom_Facility_FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="Incident_FacilityFrom_Facility_FacilityDisplayNameColumn" msprop:Generator_UserColumnName="Incident_FacilityFrom_Facility_FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_ReportNumber" msprop:Generator_ColumnVarNameInTable="columnIncident_ReportNumber" msprop:Generator_ColumnPropNameInRow="Incident_ReportNumber" msprop:Generator_ColumnPropNameInTable="Incident_ReportNumberColumn" msprop:Generator_UserColumnName="Incident_ReportNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Date" msprop:Generator_ColumnVarNameInTable="columnIncident_Date" msprop:Generator_ColumnPropNameInRow="Incident_Date" msprop:Generator_ColumnPropNameInTable="Incident_DateColumn" msprop:Generator_UserColumnName="Incident_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_Time_Hours" msprop:Generator_ColumnVarNameInTable="columnIncident_Time_Hours" msprop:Generator_ColumnPropNameInRow="Incident_Time_Hours" msprop:Generator_ColumnPropNameInTable="Incident_Time_HoursColumn" msprop:Generator_UserColumnName="Incident_Time_Hours" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Time_Min" msprop:Generator_ColumnVarNameInTable="columnIncident_Time_Min" msprop:Generator_ColumnPropNameInRow="Incident_Time_Min" msprop:Generator_ColumnPropNameInTable="Incident_Time_MinColumn" msprop:Generator_UserColumnName="Incident_Time_Min" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_ReportingPerson" msprop:Generator_ColumnVarNameInTable="columnIncident_ReportingPerson" msprop:Generator_ColumnPropNameInRow="Incident_ReportingPerson" msprop:Generator_ColumnPropNameInTable="Incident_ReportingPersonColumn" msprop:Generator_UserColumnName="Incident_ReportingPerson" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_UnitFrom_Unit" msprop:Generator_ColumnVarNameInTable="columnIncident_UnitFrom_Unit" msprop:Generator_ColumnPropNameInRow="Incident_UnitFrom_Unit" msprop:Generator_ColumnPropNameInTable="Incident_UnitFrom_UnitColumn" msprop:Generator_UserColumnName="Incident_UnitFrom_Unit" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_UnitFrom_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_UnitFrom_Name" msprop:Generator_ColumnPropNameInRow="Incident_UnitFrom_Name" msprop:Generator_ColumnPropNameInTable="Incident_UnitFrom_NameColumn" msprop:Generator_UserColumnName="Incident_UnitFrom_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_UnitTo_Unit" msprop:Generator_ColumnVarNameInTable="columnIncident_UnitTo_Unit" msprop:Generator_ColumnPropNameInRow="Incident_UnitTo_Unit" msprop:Generator_ColumnPropNameInTable="Incident_UnitTo_UnitColumn" msprop:Generator_UserColumnName="Incident_UnitTo_Unit" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_UnitTo_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_UnitTo_Name" msprop:Generator_ColumnPropNameInRow="Incident_UnitTo_Name" msprop:Generator_ColumnPropNameInTable="Incident_UnitTo_NameColumn" msprop:Generator_UserColumnName="Incident_UnitTo_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_IncidentCategory_List" msprop:Generator_ColumnVarNameInTable="columnIncident_IncidentCategory_List" msprop:Generator_ColumnPropNameInRow="Incident_IncidentCategory_List" msprop:Generator_ColumnPropNameInTable="Incident_IncidentCategory_ListColumn" msprop:Generator_UserColumnName="Incident_IncidentCategory_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_IncidentCategory_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_IncidentCategory_Name" msprop:Generator_ColumnPropNameInRow="Incident_IncidentCategory_Name" msprop:Generator_ColumnPropNameInTable="Incident_IncidentCategory_NameColumn" msprop:Generator_UserColumnName="Incident_IncidentCategory_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_CVR_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_CVR_Name" msprop:Generator_ColumnPropNameInRow="Incident_CVR_Name" msprop:Generator_ColumnPropNameInTable="Incident_CVR_NameColumn" msprop:Generator_UserColumnName="Incident_CVR_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_CVR_ContactNumber" msprop:Generator_ColumnVarNameInTable="columnIncident_CVR_ContactNumber" msprop:Generator_ColumnPropNameInRow="Incident_CVR_ContactNumber" msprop:Generator_ColumnPropNameInTable="Incident_CVR_ContactNumberColumn" msprop:Generator_UserColumnName="Incident_CVR_ContactNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_E_EmployeeNumber" msprop:Generator_ColumnVarNameInTable="columnIncident_E_EmployeeNumber" msprop:Generator_ColumnPropNameInRow="Incident_E_EmployeeNumber" msprop:Generator_ColumnPropNameInTable="Incident_E_EmployeeNumberColumn" msprop:Generator_UserColumnName="Incident_E_EmployeeNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_E_EmployeeName" msprop:Generator_ColumnVarNameInTable="columnIncident_E_EmployeeName" msprop:Generator_ColumnPropNameInRow="Incident_E_EmployeeName" msprop:Generator_ColumnPropNameInTable="Incident_E_EmployeeNameColumn" msprop:Generator_UserColumnName="Incident_E_EmployeeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_E_EmployeeUnit_Unit" msprop:Generator_ColumnVarNameInTable="columnIncident_E_EmployeeUnit_Unit" msprop:Generator_ColumnPropNameInRow="Incident_E_EmployeeUnit_Unit" msprop:Generator_ColumnPropNameInTable="Incident_E_EmployeeUnit_UnitColumn" msprop:Generator_UserColumnName="Incident_E_EmployeeUnit_Unit" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_E_EmployeeUnit_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_E_EmployeeUnit_Name" msprop:Generator_ColumnPropNameInRow="Incident_E_EmployeeUnit_Name" msprop:Generator_ColumnPropNameInTable="Incident_E_EmployeeUnit_NameColumn" msprop:Generator_UserColumnName="Incident_E_EmployeeUnit_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_E_EmployeeStatus_List" msprop:Generator_ColumnVarNameInTable="columnIncident_E_EmployeeStatus_List" msprop:Generator_ColumnPropNameInRow="Incident_E_EmployeeStatus_List" msprop:Generator_ColumnPropNameInTable="Incident_E_EmployeeStatus_ListColumn" msprop:Generator_UserColumnName="Incident_E_EmployeeStatus_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_E_EmployeeStatus_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_E_EmployeeStatus_Name" msprop:Generator_ColumnPropNameInRow="Incident_E_EmployeeStatus_Name" msprop:Generator_ColumnPropNameInTable="Incident_E_EmployeeStatus_NameColumn" msprop:Generator_UserColumnName="Incident_E_EmployeeStatus_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_E_StaffCategory_List" msprop:Generator_ColumnVarNameInTable="columnIncident_E_StaffCategory_List" msprop:Generator_ColumnPropNameInRow="Incident_E_StaffCategory_List" msprop:Generator_ColumnPropNameInTable="Incident_E_StaffCategory_ListColumn" msprop:Generator_UserColumnName="Incident_E_StaffCategory_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_E_StaffCategory_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_E_StaffCategory_Name" msprop:Generator_ColumnPropNameInRow="Incident_E_StaffCategory_Name" msprop:Generator_ColumnPropNameInTable="Incident_E_StaffCategory_NameColumn" msprop:Generator_UserColumnName="Incident_E_StaffCategory_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_E_BodyPartAffected_List" msprop:Generator_ColumnVarNameInTable="columnIncident_E_BodyPartAffected_List" msprop:Generator_ColumnPropNameInRow="Incident_E_BodyPartAffected_List" msprop:Generator_ColumnPropNameInTable="Incident_E_BodyPartAffected_ListColumn" msprop:Generator_UserColumnName="Incident_E_BodyPartAffected_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_E_BodyPartAffected_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_E_BodyPartAffected_Name" msprop:Generator_ColumnPropNameInRow="Incident_E_BodyPartAffected_Name" msprop:Generator_ColumnPropNameInTable="Incident_E_BodyPartAffected_NameColumn" msprop:Generator_UserColumnName="Incident_E_BodyPartAffected_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_E_TreatmentRequired_List" msprop:Generator_ColumnVarNameInTable="columnIncident_E_TreatmentRequired_List" msprop:Generator_ColumnPropNameInRow="Incident_E_TreatmentRequired_List" msprop:Generator_ColumnPropNameInTable="Incident_E_TreatmentRequired_ListColumn" msprop:Generator_UserColumnName="Incident_E_TreatmentRequired_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_E_TreatmentRequired_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_E_TreatmentRequired_Name" msprop:Generator_ColumnPropNameInRow="Incident_E_TreatmentRequired_Name" msprop:Generator_ColumnPropNameInTable="Incident_E_TreatmentRequired_NameColumn" msprop:Generator_UserColumnName="Incident_E_TreatmentRequired_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_E_DaysOff" msprop:Generator_ColumnVarNameInTable="columnIncident_E_DaysOff" msprop:Generator_ColumnPropNameInRow="Incident_E_DaysOff" msprop:Generator_ColumnPropNameInTable="Incident_E_DaysOffColumn" msprop:Generator_UserColumnName="Incident_E_DaysOff" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_E_MainContributor_List" msprop:Generator_ColumnVarNameInTable="columnIncident_E_MainContributor_List" msprop:Generator_ColumnPropNameInRow="Incident_E_MainContributor_List" msprop:Generator_ColumnPropNameInTable="Incident_E_MainContributor_ListColumn" msprop:Generator_UserColumnName="Incident_E_MainContributor_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_E_MainContributor_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_E_MainContributor_Name" msprop:Generator_ColumnPropNameInRow="Incident_E_MainContributor_Name" msprop:Generator_ColumnPropNameInTable="Incident_E_MainContributor_NameColumn" msprop:Generator_UserColumnName="Incident_E_MainContributor_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_E_MainContributor_Staff_List" msprop:Generator_ColumnVarNameInTable="columnIncident_E_MainContributor_Staff_List" msprop:Generator_ColumnPropNameInRow="Incident_E_MainContributor_Staff_List" msprop:Generator_ColumnPropNameInTable="Incident_E_MainContributor_Staff_ListColumn" msprop:Generator_UserColumnName="Incident_E_MainContributor_Staff_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_E_MainContributor_Staff_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_E_MainContributor_Staff_Name" msprop:Generator_ColumnPropNameInRow="Incident_E_MainContributor_Staff_Name" msprop:Generator_ColumnPropNameInTable="Incident_E_MainContributor_Staff_NameColumn" msprop:Generator_UserColumnName="Incident_E_MainContributor_Staff_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_MMDT_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_MMDT_Name" msprop:Generator_ColumnPropNameInRow="Incident_MMDT_Name" msprop:Generator_ColumnPropNameInTable="Incident_MMDT_NameColumn" msprop:Generator_UserColumnName="Incident_MMDT_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_MMDT_ContactNumber" msprop:Generator_ColumnVarNameInTable="columnIncident_MMDT_ContactNumber" msprop:Generator_ColumnPropNameInRow="Incident_MMDT_ContactNumber" msprop:Generator_ColumnPropNameInTable="Incident_MMDT_ContactNumberColumn" msprop:Generator_UserColumnName="Incident_MMDT_ContactNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_MMDT_Discipline_List" msprop:Generator_ColumnVarNameInTable="columnIncident_MMDT_Discipline_List" msprop:Generator_ColumnPropNameInRow="Incident_MMDT_Discipline_List" msprop:Generator_ColumnPropNameInTable="Incident_MMDT_Discipline_ListColumn" msprop:Generator_UserColumnName="Incident_MMDT_Discipline_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_MMDT_Discipline_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_MMDT_Discipline_Name" msprop:Generator_ColumnPropNameInRow="Incident_MMDT_Discipline_Name" msprop:Generator_ColumnPropNameInTable="Incident_MMDT_Discipline_NameColumn" msprop:Generator_UserColumnName="Incident_MMDT_Discipline_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_P_VisitNumber" msprop:Generator_ColumnVarNameInTable="columnIncident_P_VisitNumber" msprop:Generator_ColumnPropNameInRow="Incident_P_VisitNumber" msprop:Generator_ColumnPropNameInTable="Incident_P_VisitNumberColumn" msprop:Generator_UserColumnName="Incident_P_VisitNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_P_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_P_Name" msprop:Generator_ColumnPropNameInRow="Incident_P_Name" msprop:Generator_ColumnPropNameInTable="Incident_P_NameColumn" msprop:Generator_UserColumnName="Incident_P_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_P_MainContributor_List" msprop:Generator_ColumnVarNameInTable="columnIncident_P_MainContributor_List" msprop:Generator_ColumnPropNameInRow="Incident_P_MainContributor_List" msprop:Generator_ColumnPropNameInTable="Incident_P_MainContributor_ListColumn" msprop:Generator_UserColumnName="Incident_P_MainContributor_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_P_MainContributor_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_P_MainContributor_Name" msprop:Generator_ColumnPropNameInRow="Incident_P_MainContributor_Name" msprop:Generator_ColumnPropNameInTable="Incident_P_MainContributor_NameColumn" msprop:Generator_UserColumnName="Incident_P_MainContributor_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_P_MainContributor_Staff_List" msprop:Generator_ColumnVarNameInTable="columnIncident_P_MainContributor_Staff_List" msprop:Generator_ColumnPropNameInRow="Incident_P_MainContributor_Staff_List" msprop:Generator_ColumnPropNameInTable="Incident_P_MainContributor_Staff_ListColumn" msprop:Generator_UserColumnName="Incident_P_MainContributor_Staff_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_P_MainContributor_Staff_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_P_MainContributor_Staff_Name" msprop:Generator_ColumnPropNameInRow="Incident_P_MainContributor_Staff_Name" msprop:Generator_ColumnPropNameInTable="Incident_P_MainContributor_Staff_NameColumn" msprop:Generator_UserColumnName="Incident_P_MainContributor_Staff_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Prop_MainContributor_List" msprop:Generator_ColumnVarNameInTable="columnIncident_Prop_MainContributor_List" msprop:Generator_ColumnPropNameInRow="Incident_Prop_MainContributor_List" msprop:Generator_ColumnPropNameInTable="Incident_Prop_MainContributor_ListColumn" msprop:Generator_UserColumnName="Incident_Prop_MainContributor_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_Prop_MainContributor_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_Prop_MainContributor_Name" msprop:Generator_ColumnPropNameInRow="Incident_Prop_MainContributor_Name" msprop:Generator_ColumnPropNameInTable="Incident_Prop_MainContributor_NameColumn" msprop:Generator_UserColumnName="Incident_Prop_MainContributor_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Prop_MainContributor_Staff_List" msprop:Generator_ColumnVarNameInTable="columnIncident_Prop_MainContributor_Staff_List" msprop:Generator_ColumnPropNameInRow="Incident_Prop_MainContributor_Staff_List" msprop:Generator_ColumnPropNameInTable="Incident_Prop_MainContributor_Staff_ListColumn" msprop:Generator_UserColumnName="Incident_Prop_MainContributor_Staff_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_Prop_MainContributor_Staff_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_Prop_MainContributor_Staff_Name" msprop:Generator_ColumnPropNameInRow="Incident_Prop_MainContributor_Staff_Name" msprop:Generator_ColumnPropNameInTable="Incident_Prop_MainContributor_Staff_NameColumn" msprop:Generator_UserColumnName="Incident_Prop_MainContributor_Staff_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_SS_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_SS_Name" msprop:Generator_ColumnPropNameInRow="Incident_SS_Name" msprop:Generator_ColumnPropNameInTable="Incident_SS_NameColumn" msprop:Generator_UserColumnName="Incident_SS_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_SS_ContactNumber" msprop:Generator_ColumnVarNameInTable="columnIncident_SS_ContactNumber" msprop:Generator_ColumnPropNameInRow="Incident_SS_ContactNumber" msprop:Generator_ColumnPropNameInTable="Incident_SS_ContactNumberColumn" msprop:Generator_UserColumnName="Incident_SS_ContactNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Description" msprop:Generator_ColumnVarNameInTable="columnIncident_Description" msprop:Generator_ColumnPropNameInRow="Incident_Description" msprop:Generator_ColumnPropNameInTable="Incident_DescriptionColumn" msprop:Generator_UserColumnName="Incident_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Level1_List" msprop:Generator_ColumnVarNameInTable="columnIncident_Level1_List" msprop:Generator_ColumnPropNameInRow="Incident_Level1_List" msprop:Generator_ColumnPropNameInTable="Incident_Level1_ListColumn" msprop:Generator_UserColumnName="Incident_Level1_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_Level1_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_Level1_Name" msprop:Generator_ColumnPropNameInRow="Incident_Level1_Name" msprop:Generator_ColumnPropNameInTable="Incident_Level1_NameColumn" msprop:Generator_UserColumnName="Incident_Level1_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Level2_List" msprop:Generator_ColumnVarNameInTable="columnIncident_Level2_List" msprop:Generator_ColumnPropNameInRow="Incident_Level2_List" msprop:Generator_ColumnPropNameInTable="Incident_Level2_ListColumn" msprop:Generator_UserColumnName="Incident_Level2_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_Level2_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_Level2_Name" msprop:Generator_ColumnPropNameInRow="Incident_Level2_Name" msprop:Generator_ColumnPropNameInTable="Incident_Level2_NameColumn" msprop:Generator_UserColumnName="Incident_Level2_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Level3_List" msprop:Generator_ColumnVarNameInTable="columnIncident_Level3_List" msprop:Generator_ColumnPropNameInRow="Incident_Level3_List" msprop:Generator_ColumnPropNameInTable="Incident_Level3_ListColumn" msprop:Generator_UserColumnName="Incident_Level3_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_Level3_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_Level3_Name" msprop:Generator_ColumnPropNameInRow="Incident_Level3_Name" msprop:Generator_ColumnPropNameInTable="Incident_Level3_NameColumn" msprop:Generator_UserColumnName="Incident_Level3_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Severity_List" msprop:Generator_ColumnVarNameInTable="columnIncident_Severity_List" msprop:Generator_ColumnPropNameInRow="Incident_Severity_List" msprop:Generator_ColumnPropNameInTable="Incident_Severity_ListColumn" msprop:Generator_UserColumnName="Incident_Severity_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_Severity_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_Severity_Name" msprop:Generator_ColumnPropNameInRow="Incident_Severity_Name" msprop:Generator_ColumnPropNameInTable="Incident_Severity_NameColumn" msprop:Generator_UserColumnName="Incident_Severity_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable" msprop:Generator_ColumnPropNameInRow="Incident_Reportable" msprop:Generator_ColumnPropNameInTable="Incident_ReportableColumn" msprop:Generator_UserColumnName="Incident_Reportable" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Incident_Report_COID" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_COID" msprop:Generator_ColumnPropNameInRow="Incident_Report_COID" msprop:Generator_ColumnPropNameInTable="Incident_Report_COIDColumn" msprop:Generator_UserColumnName="Incident_Report_COID" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Incident_Report_COID_Date" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_COID_Date" msprop:Generator_ColumnPropNameInRow="Incident_Report_COID_Date" msprop:Generator_ColumnPropNameInTable="Incident_Report_COID_DateColumn" msprop:Generator_UserColumnName="Incident_Report_COID_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_Report_COID_Number" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_COID_Number" msprop:Generator_ColumnPropNameInRow="Incident_Report_COID_Number" msprop:Generator_ColumnPropNameInTable="Incident_Report_COID_NumberColumn" msprop:Generator_UserColumnName="Incident_Report_COID_Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Report_DEAT" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_DEAT" msprop:Generator_ColumnPropNameInRow="Incident_Report_DEAT" msprop:Generator_ColumnPropNameInTable="Incident_Report_DEATColumn" msprop:Generator_UserColumnName="Incident_Report_DEAT" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Incident_Report_DEAT_Date" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_DEAT_Date" msprop:Generator_ColumnPropNameInRow="Incident_Report_DEAT_Date" msprop:Generator_ColumnPropNameInTable="Incident_Report_DEAT_DateColumn" msprop:Generator_UserColumnName="Incident_Report_DEAT_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_Report_DEAT_Number" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_DEAT_Number" msprop:Generator_ColumnPropNameInRow="Incident_Report_DEAT_Number" msprop:Generator_ColumnPropNameInTable="Incident_Report_DEAT_NumberColumn" msprop:Generator_UserColumnName="Incident_Report_DEAT_Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Report_DepartmentOfHealth" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_DepartmentOfHealth" msprop:Generator_ColumnPropNameInRow="Incident_Report_DepartmentOfHealth" msprop:Generator_ColumnPropNameInTable="Incident_Report_DepartmentOfHealthColumn" msprop:Generator_UserColumnName="Incident_Report_DepartmentOfHealth" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Incident_Report_DepartmentOfHealth_Date" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_DepartmentOfHealth_Date" msprop:Generator_ColumnPropNameInRow="Incident_Report_DepartmentOfHealth_Date" msprop:Generator_ColumnPropNameInTable="Incident_Report_DepartmentOfHealth_DateColumn" msprop:Generator_UserColumnName="Incident_Report_DepartmentOfHealth_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_Report_DepartmentOfHealth_Number" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_DepartmentOfHealth_Number" msprop:Generator_ColumnPropNameInRow="Incident_Report_DepartmentOfHealth_Number" msprop:Generator_ColumnPropNameInTable="Incident_Report_DepartmentOfHealth_NumberColumn" msprop:Generator_UserColumnName="Incident_Report_DepartmentOfHealth_Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Report_DepartmentOfLabour" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_DepartmentOfLabour" msprop:Generator_ColumnPropNameInRow="Incident_Report_DepartmentOfLabour" msprop:Generator_ColumnPropNameInTable="Incident_Report_DepartmentOfLabourColumn" msprop:Generator_UserColumnName="Incident_Report_DepartmentOfLabour" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Incident_Report_DepartmentOfLabour_Date" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_DepartmentOfLabour_Date" msprop:Generator_ColumnPropNameInRow="Incident_Report_DepartmentOfLabour_Date" msprop:Generator_ColumnPropNameInTable="Incident_Report_DepartmentOfLabour_DateColumn" msprop:Generator_UserColumnName="Incident_Report_DepartmentOfLabour_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_Report_DepartmentOfLabour_Number" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_DepartmentOfLabour_Number" msprop:Generator_ColumnPropNameInRow="Incident_Report_DepartmentOfLabour_Number" msprop:Generator_ColumnPropNameInTable="Incident_Report_DepartmentOfLabour_NumberColumn" msprop:Generator_UserColumnName="Incident_Report_DepartmentOfLabour_Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Report_HospitalManager" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_HospitalManager" msprop:Generator_ColumnPropNameInRow="Incident_Report_HospitalManager" msprop:Generator_ColumnPropNameInTable="Incident_Report_HospitalManagerColumn" msprop:Generator_UserColumnName="Incident_Report_HospitalManager" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Incident_Report_HospitalManager_Date" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_HospitalManager_Date" msprop:Generator_ColumnPropNameInRow="Incident_Report_HospitalManager_Date" msprop:Generator_ColumnPropNameInTable="Incident_Report_HospitalManager_DateColumn" msprop:Generator_UserColumnName="Incident_Report_HospitalManager_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_Report_HospitalManager_Number" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_HospitalManager_Number" msprop:Generator_ColumnPropNameInRow="Incident_Report_HospitalManager_Number" msprop:Generator_ColumnPropNameInTable="Incident_Report_HospitalManager_NumberColumn" msprop:Generator_UserColumnName="Incident_Report_HospitalManager_Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Report_HPCSA" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_HPCSA" msprop:Generator_ColumnPropNameInRow="Incident_Report_HPCSA" msprop:Generator_ColumnPropNameInTable="Incident_Report_HPCSAColumn" msprop:Generator_UserColumnName="Incident_Report_HPCSA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Incident_Report_HPCSA_Date" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_HPCSA_Date" msprop:Generator_ColumnPropNameInRow="Incident_Report_HPCSA_Date" msprop:Generator_ColumnPropNameInTable="Incident_Report_HPCSA_DateColumn" msprop:Generator_UserColumnName="Incident_Report_HPCSA_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_Report_HPCSA_Number" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_HPCSA_Number" msprop:Generator_ColumnPropNameInRow="Incident_Report_HPCSA_Number" msprop:Generator_ColumnPropNameInTable="Incident_Report_HPCSA_NumberColumn" msprop:Generator_UserColumnName="Incident_Report_HPCSA_Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Report_LegalDepartment" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_LegalDepartment" msprop:Generator_ColumnPropNameInRow="Incident_Report_LegalDepartment" msprop:Generator_ColumnPropNameInTable="Incident_Report_LegalDepartmentColumn" msprop:Generator_UserColumnName="Incident_Report_LegalDepartment" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Incident_Report_LegalDepartment_Date" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_LegalDepartment_Date" msprop:Generator_ColumnPropNameInRow="Incident_Report_LegalDepartment_Date" msprop:Generator_ColumnPropNameInTable="Incident_Report_LegalDepartment_DateColumn" msprop:Generator_UserColumnName="Incident_Report_LegalDepartment_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_Report_LegalDepartment_Number" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_LegalDepartment_Number" msprop:Generator_ColumnPropNameInRow="Incident_Report_LegalDepartment_Number" msprop:Generator_ColumnPropNameInTable="Incident_Report_LegalDepartment_NumberColumn" msprop:Generator_UserColumnName="Incident_Report_LegalDepartment_Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Report_CEO" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_CEO" msprop:Generator_ColumnPropNameInRow="Incident_Report_CEO" msprop:Generator_ColumnPropNameInTable="Incident_Report_CEOColumn" msprop:Generator_UserColumnName="Incident_Report_CEO" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Incident_Report_CEO_Date" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_CEO_Date" msprop:Generator_ColumnPropNameInRow="Incident_Report_CEO_Date" msprop:Generator_ColumnPropNameInTable="Incident_Report_CEO_DateColumn" msprop:Generator_UserColumnName="Incident_Report_CEO_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_Report_CEO_Number" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_CEO_Number" msprop:Generator_ColumnPropNameInRow="Incident_Report_CEO_Number" msprop:Generator_ColumnPropNameInTable="Incident_Report_CEO_NumberColumn" msprop:Generator_UserColumnName="Incident_Report_CEO_Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Report_PharmacyCouncil" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_PharmacyCouncil" msprop:Generator_ColumnPropNameInRow="Incident_Report_PharmacyCouncil" msprop:Generator_ColumnPropNameInTable="Incident_Report_PharmacyCouncilColumn" msprop:Generator_UserColumnName="Incident_Report_PharmacyCouncil" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Incident_Report_PharmacyCouncil_Date" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_PharmacyCouncil_Date" msprop:Generator_ColumnPropNameInRow="Incident_Report_PharmacyCouncil_Date" msprop:Generator_ColumnPropNameInTable="Incident_Report_PharmacyCouncil_DateColumn" msprop:Generator_UserColumnName="Incident_Report_PharmacyCouncil_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_Report_PharmacyCouncil_Number" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_PharmacyCouncil_Number" msprop:Generator_ColumnPropNameInRow="Incident_Report_PharmacyCouncil_Number" msprop:Generator_ColumnPropNameInTable="Incident_Report_PharmacyCouncil_NumberColumn" msprop:Generator_UserColumnName="Incident_Report_PharmacyCouncil_Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Report_Quality" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_Quality" msprop:Generator_ColumnPropNameInRow="Incident_Report_Quality" msprop:Generator_ColumnPropNameInTable="Incident_Report_QualityColumn" msprop:Generator_UserColumnName="Incident_Report_Quality" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Incident_Report_Quality_Date" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_Quality_Date" msprop:Generator_ColumnPropNameInRow="Incident_Report_Quality_Date" msprop:Generator_ColumnPropNameInTable="Incident_Report_Quality_DateColumn" msprop:Generator_UserColumnName="Incident_Report_Quality_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_Report_Quality_Number" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_Quality_Number" msprop:Generator_ColumnPropNameInRow="Incident_Report_Quality_Number" msprop:Generator_ColumnPropNameInTable="Incident_Report_Quality_NumberColumn" msprop:Generator_UserColumnName="Incident_Report_Quality_Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Report_RM" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_RM" msprop:Generator_ColumnPropNameInRow="Incident_Report_RM" msprop:Generator_ColumnPropNameInTable="Incident_Report_RMColumn" msprop:Generator_UserColumnName="Incident_Report_RM" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Incident_Report_RM_Date" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_RM_Date" msprop:Generator_ColumnPropNameInRow="Incident_Report_RM_Date" msprop:Generator_ColumnPropNameInTable="Incident_Report_RM_DateColumn" msprop:Generator_UserColumnName="Incident_Report_RM_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_Report_RM_Number" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_RM_Number" msprop:Generator_ColumnPropNameInRow="Incident_Report_RM_Number" msprop:Generator_ColumnPropNameInTable="Incident_Report_RM_NumberColumn" msprop:Generator_UserColumnName="Incident_Report_RM_Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Report_SANC" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_SANC" msprop:Generator_ColumnPropNameInRow="Incident_Report_SANC" msprop:Generator_ColumnPropNameInTable="Incident_Report_SANCColumn" msprop:Generator_UserColumnName="Incident_Report_SANC" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Incident_Report_SANC_Date" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_SANC_Date" msprop:Generator_ColumnPropNameInRow="Incident_Report_SANC_Date" msprop:Generator_ColumnPropNameInTable="Incident_Report_SANC_DateColumn" msprop:Generator_UserColumnName="Incident_Report_SANC_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_Report_SANC_Number" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_SANC_Number" msprop:Generator_ColumnPropNameInRow="Incident_Report_SANC_Number" msprop:Generator_ColumnPropNameInTable="Incident_Report_SANC_NumberColumn" msprop:Generator_UserColumnName="Incident_Report_SANC_Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Report_SAPS" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_SAPS" msprop:Generator_ColumnPropNameInRow="Incident_Report_SAPS" msprop:Generator_ColumnPropNameInTable="Incident_Report_SAPSColumn" msprop:Generator_UserColumnName="Incident_Report_SAPS" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Incident_Report_SAPS_Date" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_SAPS_Date" msprop:Generator_ColumnPropNameInRow="Incident_Report_SAPS_Date" msprop:Generator_ColumnPropNameInTable="Incident_Report_SAPS_DateColumn" msprop:Generator_UserColumnName="Incident_Report_SAPS_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_Report_SAPS_Number" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_SAPS_Number" msprop:Generator_ColumnPropNameInRow="Incident_Report_SAPS_Number" msprop:Generator_ColumnPropNameInTable="Incident_Report_SAPS_NumberColumn" msprop:Generator_UserColumnName="Incident_Report_SAPS_Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Report_InternalAudit" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_InternalAudit" msprop:Generator_ColumnPropNameInRow="Incident_Report_InternalAudit" msprop:Generator_ColumnPropNameInTable="Incident_Report_InternalAuditColumn" msprop:Generator_UserColumnName="Incident_Report_InternalAudit" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Incident_Report_InternalAudit_Date" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_InternalAudit_Date" msprop:Generator_ColumnPropNameInRow="Incident_Report_InternalAudit_Date" msprop:Generator_ColumnPropNameInTable="Incident_Report_InternalAudit_DateColumn" msprop:Generator_UserColumnName="Incident_Report_InternalAudit_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_Report_InternalAudit_Number" msprop:Generator_ColumnVarNameInTable="columnIncident_Report_InternalAudit_Number" msprop:Generator_ColumnPropNameInRow="Incident_Report_InternalAudit_Number" msprop:Generator_ColumnPropNameInTable="Incident_Report_InternalAudit_NumberColumn" msprop:Generator_UserColumnName="Incident_Report_InternalAudit_Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_CEO_AcknowledgedHM" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_CEO_AcknowledgedHM" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_CEO_AcknowledgedHM" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_CEO_AcknowledgedHMColumn" msprop:Generator_UserColumnName="Incident_Reportable_CEO_AcknowledgedHM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_CEO_DoctorRelated" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_CEO_DoctorRelated" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_CEO_DoctorRelated" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_CEO_DoctorRelatedColumn" msprop:Generator_UserColumnName="Incident_Reportable_CEO_DoctorRelated" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_CEO_CEONotifiedWithin24Hours" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_CEO_CEONotifiedWithin24Hours" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_CEO_CEONotifiedWithin24Hours" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_CEO_CEONotifiedWithin24HoursColumn" msprop:Generator_UserColumnName="Incident_Reportable_CEO_CEONotifiedWithin24Hours" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_CEO_ProgressUpdateSent" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_CEO_ProgressUpdateSent" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_CEO_ProgressUpdateSent" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_CEO_ProgressUpdateSentColumn" msprop:Generator_UserColumnName="Incident_Reportable_CEO_ProgressUpdateSent" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_CEO_ActionsTakenHM" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_CEO_ActionsTakenHM" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_CEO_ActionsTakenHM" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_CEO_ActionsTakenHMColumn" msprop:Generator_UserColumnName="Incident_Reportable_CEO_ActionsTakenHM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_CEO_Date" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_CEO_Date" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_CEO_Date" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_CEO_DateColumn" msprop:Generator_UserColumnName="Incident_Reportable_CEO_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_Reportable_CEO_ActionsAgainstEmployee" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_CEO_ActionsAgainstEmployee" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_CEO_ActionsAgainstEmployee" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_CEO_ActionsAgainstEmployeeColumn" msprop:Generator_UserColumnName="Incident_Reportable_CEO_ActionsAgainstEmployee" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Incident_Reportable_CEO_EmployeeNumber" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_CEO_EmployeeNumber" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_CEO_EmployeeNumber" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_CEO_EmployeeNumberColumn" msprop:Generator_UserColumnName="Incident_Reportable_CEO_EmployeeNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_CEO_EmployeeName" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_CEO_EmployeeName" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_CEO_EmployeeName" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_CEO_EmployeeNameColumn" msprop:Generator_UserColumnName="Incident_Reportable_CEO_EmployeeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_CEO_Outcome" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_CEO_Outcome" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_CEO_Outcome" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_CEO_OutcomeColumn" msprop:Generator_UserColumnName="Incident_Reportable_CEO_Outcome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_CEO_FileScanned" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_CEO_FileScanned" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_CEO_FileScanned" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_CEO_FileScannedColumn" msprop:Generator_UserColumnName="Incident_Reportable_CEO_FileScanned" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Incident_Reportable_CEO_CloseOffHM" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_CEO_CloseOffHM" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_CEO_CloseOffHM" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_CEO_CloseOffHMColumn" msprop:Generator_UserColumnName="Incident_Reportable_CEO_CloseOffHM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_CEO_CloseOutEmailSend" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_CEO_CloseOutEmailSend" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_CEO_CloseOutEmailSend" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_CEO_CloseOutEmailSendColumn" msprop:Generator_UserColumnName="Incident_Reportable_CEO_CloseOutEmailSend" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_SAPS_PoliceStation" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_SAPS_PoliceStation" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_SAPS_PoliceStation" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_SAPS_PoliceStationColumn" msprop:Generator_UserColumnName="Incident_Reportable_SAPS_PoliceStation" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_SAPS_InvestigationOfficersName" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_SAPS_InvestigationOfficersName" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_SAPS_InvestigationOfficersName" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_SAPS_InvestigationOfficersNameColumn" msprop:Generator_UserColumnName="Incident_Reportable_SAPS_InvestigationOfficersName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_SAPS_TelephoneNumber" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_SAPS_TelephoneNumber" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_SAPS_TelephoneNumber" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_SAPS_TelephoneNumberColumn" msprop:Generator_UserColumnName="Incident_Reportable_SAPS_TelephoneNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_SAPS_CaseNumber" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_SAPS_CaseNumber" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_SAPS_CaseNumber" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_SAPS_CaseNumberColumn" msprop:Generator_UserColumnName="Incident_Reportable_SAPS_CaseNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_InternalAudit_DateDetected" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_InternalAudit_DateDetected" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_InternalAudit_DateDetected" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_InternalAudit_DateDetectedColumn" msprop:Generator_UserColumnName="Incident_Reportable_InternalAudit_DateDetected" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_Reportable_InternalAudit_ByWhom" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_InternalAudit_ByWhom" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_InternalAudit_ByWhom" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_InternalAudit_ByWhomColumn" msprop:Generator_UserColumnName="Incident_Reportable_InternalAudit_ByWhom" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_InternalAudit_TotalLossValue" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_InternalAudit_TotalLossValue" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_InternalAudit_TotalLossValue" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_InternalAudit_TotalLossValueColumn" msprop:Generator_UserColumnName="Incident_Reportable_InternalAudit_TotalLossValue" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_InternalAudit_TotalRecovery" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_InternalAudit_TotalRecovery" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_InternalAudit_TotalRecovery" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_InternalAudit_TotalRecoveryColumn" msprop:Generator_UserColumnName="Incident_Reportable_InternalAudit_TotalRecovery" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_InternalAudit_RecoveryPlan" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_InternalAudit_RecoveryPlan" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_InternalAudit_RecoveryPlan" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_InternalAudit_RecoveryPlanColumn" msprop:Generator_UserColumnName="Incident_Reportable_InternalAudit_RecoveryPlan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_InternalAudit_StatusOfInvestigation" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_InternalAudit_StatusOfInvestigation" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_InternalAudit_StatusOfInvestigation" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_InternalAudit_StatusOfInvestigationColumn" msprop:Generator_UserColumnName="Incident_Reportable_InternalAudit_StatusOfInvestigation" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Reportable_InternalAudit_SAPSNotReported" msprop:Generator_ColumnVarNameInTable="columnIncident_Reportable_InternalAudit_SAPSNotReported" msprop:Generator_ColumnPropNameInRow="Incident_Reportable_InternalAudit_SAPSNotReported" msprop:Generator_ColumnPropNameInTable="Incident_Reportable_InternalAudit_SAPSNotReportedColumn" msprop:Generator_UserColumnName="Incident_Reportable_InternalAudit_SAPSNotReported" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_PatientDetail_VisitNumber" msprop:Generator_ColumnVarNameInTable="columnIncident_PatientDetail_VisitNumber" msprop:Generator_ColumnPropNameInRow="Incident_PatientDetail_VisitNumber" msprop:Generator_ColumnPropNameInTable="Incident_PatientDetail_VisitNumberColumn" msprop:Generator_UserColumnName="Incident_PatientDetail_VisitNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_PatientDetail_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_PatientDetail_Name" msprop:Generator_ColumnPropNameInRow="Incident_PatientDetail_Name" msprop:Generator_ColumnPropNameInTable="Incident_PatientDetail_NameColumn" msprop:Generator_UserColumnName="Incident_PatientDetail_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_Initials" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_Initials" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_Initials" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_InitialsColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_Initials" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_StaffInvolved_List" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_StaffInvolved_List" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_StaffInvolved_List" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_StaffInvolved_ListColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_StaffInvolved_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_Pharmacy_StaffInvolved_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_StaffInvolved_Name" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_StaffInvolved_Name" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_StaffInvolved_NameColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_StaffInvolved_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_Checking_List" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_Checking_List" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_Checking_List" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_Checking_ListColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_Checking_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_Pharmacy_Checking_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_Checking_Name" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_Checking_Name" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_Checking_NameColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_Checking_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_LocumOrPermanent" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_LocumOrPermanent" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_LocumOrPermanent" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_LocumOrPermanentColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_LocumOrPermanent" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_StaffOnDuty_List" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_StaffOnDuty_List" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_StaffOnDuty_List" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_StaffOnDuty_ListColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_StaffOnDuty_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_Pharmacy_StaffOnDuty_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_StaffOnDuty_Name" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_StaffOnDuty_Name" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_StaffOnDuty_NameColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_StaffOnDuty_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_ChangeInWorkProcedure" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_ChangeInWorkProcedure" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_ChangeInWorkProcedure" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_ChangeInWorkProcedureColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_ChangeInWorkProcedure" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_TypeOfPrescription_List" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_TypeOfPrescription_List" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_TypeOfPrescription_List" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_TypeOfPrescription_ListColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_TypeOfPrescription_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_Pharmacy_TypeOfPrescription_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_TypeOfPrescription_Name" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_TypeOfPrescription_Name" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_TypeOfPrescription_NameColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_TypeOfPrescription_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_NumberOfRxOnDay" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_NumberOfRxOnDay" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_NumberOfRxOnDay" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_NumberOfRxOnDayColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_NumberOfRxOnDay" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_NumberOfItemsDispensedOnDay" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_NumberOfItemsDispensedOnDay" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_NumberOfItemsDispensedOnDay" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_NumberOfItemsDispensedOnDayColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_NumberOfItemsDispensedOnDay" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_NumberOfRxDayBefore" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_NumberOfRxDayBefore" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_NumberOfRxDayBefore" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_NumberOfRxDayBeforeColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_NumberOfRxDayBefore" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_NumberOfItemsDispensedDayBefore" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_NumberOfItemsDispensedDayBefore" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_NumberOfItemsDispensedDayBefore" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_NumberOfItemsDispensedDayBeforeColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_NumberOfItemsDispensedDayBefore" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_DrugPrescribed" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_DrugPrescribed" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_DrugPrescribed" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_DrugPrescribedColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_DrugPrescribed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_DrugDispensed" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_DrugDispensed" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_DrugDispensed" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_DrugDispensedColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_DrugDispensed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_DrugPacked" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_DrugPacked" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_DrugPacked" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_DrugPackedColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_DrugPacked" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_StrengthDrugPrescribed" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_StrengthDrugPrescribed" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_StrengthDrugPrescribed" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_StrengthDrugPrescribedColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_StrengthDrugPrescribed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_StrengthDrugDispensed" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_StrengthDrugDispensed" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_StrengthDrugDispensed" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_StrengthDrugDispensedColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_StrengthDrugDispensed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_DrugPrescribedNewOnMarket" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_DrugPrescribedNewOnMarket" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_DrugPrescribedNewOnMarket" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_DrugPrescribedNewOnMarketColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_DrugPrescribedNewOnMarket" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_LegislativeInformationOnPrescription" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_LegislativeInformationOnPrescription" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_LegislativeInformationOnPrescription" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_LegislativeInformationOnPrescriptionColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_LegislativeInformationOnPrescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_LegislativeInformationNotOnPrescription" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_LegislativeInformationNotOnPrescription" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_LegislativeInformationNotOnPrescription" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_LegislativeInformationNotOnPrescriptionColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_LegislativeInformationNotOnPrescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_DoctorName" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_DoctorName" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_DoctorName" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_DoctorNameColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_DoctorName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_Factors_List" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_Factors_List" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_Factors_List" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_Factors_ListColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_Factors_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_Pharmacy_Factors_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_Factors_Name" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_Factors_Name" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_Factors_NameColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_Factors_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_SystemRelatedIssues_List" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_SystemRelatedIssues_List" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_SystemRelatedIssues_List" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_SystemRelatedIssues_ListColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_SystemRelatedIssues_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_Pharmacy_SystemRelatedIssues_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_SystemRelatedIssues_Name" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_SystemRelatedIssues_Name" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_SystemRelatedIssues_NameColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_SystemRelatedIssues_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_ErgonomicProblems_List" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_ErgonomicProblems_List" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_ErgonomicProblems_List" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_ErgonomicProblems_ListColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_ErgonomicProblems_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_Pharmacy_ErgonomicProblems_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_ErgonomicProblems_Name" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_ErgonomicProblems_Name" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_ErgonomicProblems_NameColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_ErgonomicProblems_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_PatientCounselled" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_PatientCounselled" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_PatientCounselled" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_PatientCounselledColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_PatientCounselled" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_SimilarIncident" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_SimilarIncident" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_SimilarIncident" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_SimilarIncidentColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_SimilarIncident" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_Location_List" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_Location_List" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_Location_List" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_Location_ListColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_Location_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_Pharmacy_Location_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_Location_Name" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_Location_Name" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_Location_NameColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_Location_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Pharmacy_PatientOutcomeAffected" msprop:Generator_ColumnVarNameInTable="columnIncident_Pharmacy_PatientOutcomeAffected" msprop:Generator_ColumnPropNameInRow="Incident_Pharmacy_PatientOutcomeAffected" msprop:Generator_ColumnPropNameInTable="Incident_Pharmacy_PatientOutcomeAffectedColumn" msprop:Generator_UserColumnName="Incident_Pharmacy_PatientOutcomeAffected" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_DegreeOfHarm_DegreeOfHarm_List" msprop:Generator_ColumnVarNameInTable="columnIncident_DegreeOfHarm_DegreeOfHarm_List" msprop:Generator_ColumnPropNameInRow="Incident_DegreeOfHarm_DegreeOfHarm_List" msprop:Generator_ColumnPropNameInTable="Incident_DegreeOfHarm_DegreeOfHarm_ListColumn" msprop:Generator_UserColumnName="Incident_DegreeOfHarm_DegreeOfHarm_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_DegreeOfHarm_DegreeOfHarm_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_DegreeOfHarm_DegreeOfHarm_Name" msprop:Generator_ColumnPropNameInRow="Incident_DegreeOfHarm_DegreeOfHarm_Name" msprop:Generator_ColumnPropNameInTable="Incident_DegreeOfHarm_DegreeOfHarm_NameColumn" msprop:Generator_UserColumnName="Incident_DegreeOfHarm_DegreeOfHarm_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_DegreeOfHarm_Cost" msprop:Generator_ColumnVarNameInTable="columnIncident_DegreeOfHarm_Cost" msprop:Generator_ColumnPropNameInRow="Incident_DegreeOfHarm_Cost" msprop:Generator_ColumnPropNameInTable="Incident_DegreeOfHarm_CostColumn" msprop:Generator_UserColumnName="Incident_DegreeOfHarm_Cost" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_DegreeOfHarm_Implications" msprop:Generator_ColumnVarNameInTable="columnIncident_DegreeOfHarm_Implications" msprop:Generator_ColumnPropNameInRow="Incident_DegreeOfHarm_Implications" msprop:Generator_ColumnPropNameInTable="Incident_DegreeOfHarm_ImplicationsColumn" msprop:Generator_UserColumnName="Incident_DegreeOfHarm_Implications" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_RootCategory_List" msprop:Generator_ColumnVarNameInTable="columnIncident_RootCategory_List" msprop:Generator_ColumnPropNameInRow="Incident_RootCategory_List" msprop:Generator_ColumnPropNameInTable="Incident_RootCategory_ListColumn" msprop:Generator_UserColumnName="Incident_RootCategory_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_RootCategory_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_RootCategory_Name" msprop:Generator_ColumnPropNameInRow="Incident_RootCategory_Name" msprop:Generator_ColumnPropNameInTable="Incident_RootCategory_NameColumn" msprop:Generator_UserColumnName="Incident_RootCategory_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_RootDescription" msprop:Generator_ColumnVarNameInTable="columnIncident_RootDescription" msprop:Generator_ColumnPropNameInRow="Incident_RootDescription" msprop:Generator_ColumnPropNameInTable="Incident_RootDescriptionColumn" msprop:Generator_UserColumnName="Incident_RootDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Discipline_List" msprop:Generator_ColumnVarNameInTable="columnIncident_Discipline_List" msprop:Generator_ColumnPropNameInRow="Incident_Discipline_List" msprop:Generator_ColumnPropNameInTable="Incident_Discipline_ListColumn" msprop:Generator_UserColumnName="Incident_Discipline_List" type="xs:int" minOccurs="0" />
+              <xs:element name="Incident_Discipline_Name" msprop:Generator_ColumnVarNameInTable="columnIncident_Discipline_Name" msprop:Generator_ColumnPropNameInRow="Incident_Discipline_Name" msprop:Generator_ColumnPropNameInTable="Incident_Discipline_NameColumn" msprop:Generator_UserColumnName="Incident_Discipline_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Investigator" msprop:Generator_ColumnVarNameInTable="columnIncident_Investigator" msprop:Generator_ColumnPropNameInRow="Incident_Investigator" msprop:Generator_ColumnPropNameInTable="Incident_InvestigatorColumn" msprop:Generator_UserColumnName="Incident_Investigator" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_InvestigatorContactNumber" msprop:Generator_ColumnVarNameInTable="columnIncident_InvestigatorContactNumber" msprop:Generator_ColumnPropNameInRow="Incident_InvestigatorContactNumber" msprop:Generator_ColumnPropNameInTable="Incident_InvestigatorContactNumberColumn" msprop:Generator_UserColumnName="Incident_InvestigatorContactNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_InvestigatorDesignation" msprop:Generator_ColumnVarNameInTable="columnIncident_InvestigatorDesignation" msprop:Generator_ColumnPropNameInRow="Incident_InvestigatorDesignation" msprop:Generator_ColumnPropNameInTable="Incident_InvestigatorDesignationColumn" msprop:Generator_UserColumnName="Incident_InvestigatorDesignation" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_InvestigationCompleted" msprop:Generator_ColumnVarNameInTable="columnIncident_InvestigationCompleted" msprop:Generator_ColumnPropNameInRow="Incident_InvestigationCompleted" msprop:Generator_ColumnPropNameInTable="Incident_InvestigationCompletedColumn" msprop:Generator_UserColumnName="Incident_InvestigationCompleted" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Incident_InvestigationCompletedDate" msprop:Generator_ColumnVarNameInTable="columnIncident_InvestigationCompletedDate" msprop:Generator_ColumnPropNameInRow="Incident_InvestigationCompletedDate" msprop:Generator_ColumnPropNameInTable="Incident_InvestigationCompletedDateColumn" msprop:Generator_UserColumnName="Incident_InvestigationCompletedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_Status" msprop:Generator_ColumnVarNameInTable="columnIncident_Status" msprop:Generator_ColumnPropNameInRow="Incident_Status" msprop:Generator_ColumnPropNameInTable="Incident_StatusColumn" msprop:Generator_UserColumnName="Incident_Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_StatusDate" msprop:Generator_ColumnVarNameInTable="columnIncident_StatusDate" msprop:Generator_ColumnPropNameInRow="Incident_StatusDate" msprop:Generator_ColumnPropNameInTable="Incident_StatusDateColumn" msprop:Generator_UserColumnName="Incident_StatusDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_StatusRejectedReason" msprop:Generator_ColumnVarNameInTable="columnIncident_StatusRejectedReason" msprop:Generator_ColumnPropNameInRow="Incident_StatusRejectedReason" msprop:Generator_ColumnPropNameInTable="Incident_StatusRejectedReasonColumn" msprop:Generator_UserColumnName="Incident_StatusRejectedReason" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnIncident_CreatedDate" msprop:Generator_ColumnPropNameInRow="Incident_CreatedDate" msprop:Generator_ColumnPropNameInTable="Incident_CreatedDateColumn" msprop:Generator_UserColumnName="Incident_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnIncident_CreatedBy" msprop:Generator_ColumnPropNameInRow="Incident_CreatedBy" msprop:Generator_ColumnPropNameInTable="Incident_CreatedByColumn" msprop:Generator_UserColumnName="Incident_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnIncident_ModifiedDate" msprop:Generator_ColumnPropNameInRow="Incident_ModifiedDate" msprop:Generator_ColumnPropNameInTable="Incident_ModifiedDateColumn" msprop:Generator_UserColumnName="Incident_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Incident_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnIncident_ModifiedBy" msprop:Generator_ColumnPropNameInRow="Incident_ModifiedBy" msprop:Generator_ColumnPropNameInTable="Incident_ModifiedByColumn" msprop:Generator_UserColumnName="Incident_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_History" msprop:Generator_ColumnVarNameInTable="columnIncident_History" msprop:Generator_ColumnPropNameInRow="Incident_History" msprop:Generator_ColumnPropNameInTable="Incident_HistoryColumn" msprop:Generator_UserColumnName="Incident_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incident_Archived" msprop:Generator_ColumnVarNameInTable="columnIncident_Archived" msprop:Generator_ColumnPropNameInRow="Incident_Archived" msprop:Generator_ColumnPropNameInTable="Incident_ArchivedColumn" msprop:Generator_UserColumnName="Incident_Archived" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vForm_Incident" />
+      <xs:field xpath="mstns:Incident_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

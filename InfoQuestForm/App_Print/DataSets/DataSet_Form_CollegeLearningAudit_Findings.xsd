@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_CollegeLearningAudit_Findings" targetNamespace="http://tempuri.org/DataSet_Form_CollegeLearningAudit_Findings.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_CollegeLearningAudit_Findings.xsd" xmlns="http://tempuri.org/DataSet_Form_CollegeLearningAudit_Findings.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vForm_CollegeLearningAudit_FindingsTableAdapter" GeneratorDataComponentClassName="vForm_CollegeLearningAudit_FindingsTableAdapter" Name="vForm_CollegeLearningAudit_Findings" UserDataComponentName="vForm_CollegeLearningAudit_FindingsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vForm_CollegeLearningAudit_Findings" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM vForm_CollegeLearningAudit_Findings WHERE CLA_Findings_Id = 1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CLA_Id" DataSetColumn="CLA_Id" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facility_FacilityName" DataSetColumn="Facility_FacilityName" />
+              <Mapping SourceColumn="Facility_FacilityCode" DataSetColumn="Facility_FacilityCode" />
+              <Mapping SourceColumn="Facility_FacilityDisplayName" DataSetColumn="Facility_FacilityDisplayName" />
+              <Mapping SourceColumn="CLA_Date" DataSetColumn="CLA_Date" />
+              <Mapping SourceColumn="CLA_ZipFileName" DataSetColumn="CLA_ZipFileName" />
+              <Mapping SourceColumn="CLA_ContentType" DataSetColumn="CLA_ContentType" />
+              <Mapping SourceColumn="CLA_Data" DataSetColumn="CLA_Data" />
+              <Mapping SourceColumn="CLA_Completed" DataSetColumn="CLA_Completed" />
+              <Mapping SourceColumn="CLA_CompletedDate" DataSetColumn="CLA_CompletedDate" />
+              <Mapping SourceColumn="CLA_CreatedDate" DataSetColumn="CLA_CreatedDate" />
+              <Mapping SourceColumn="CLA_CreatedBy" DataSetColumn="CLA_CreatedBy" />
+              <Mapping SourceColumn="CLA_ModifiedDate" DataSetColumn="CLA_ModifiedDate" />
+              <Mapping SourceColumn="CLA_ModifiedBy" DataSetColumn="CLA_ModifiedBy" />
+              <Mapping SourceColumn="CLA_History" DataSetColumn="CLA_History" />
+              <Mapping SourceColumn="CLA_IsActive" DataSetColumn="CLA_IsActive" />
+              <Mapping SourceColumn="CLA_Archived" DataSetColumn="CLA_Archived" />
+              <Mapping SourceColumn="CLA_Findings_Id" DataSetColumn="CLA_Findings_Id" />
+              <Mapping SourceColumn="CLA_Findings_System" DataSetColumn="CLA_Findings_System" />
+              <Mapping SourceColumn="CLA_Findings_Element" DataSetColumn="CLA_Findings_Element" />
+              <Mapping SourceColumn="CLA_Findings_CriteriaNo" DataSetColumn="CLA_Findings_CriteriaNo" />
+              <Mapping SourceColumn="CLA_Findings_MeasurementCriteria" DataSetColumn="CLA_Findings_MeasurementCriteria" />
+              <Mapping SourceColumn="CLA_Findings_Category" DataSetColumn="CLA_Findings_Category" />
+              <Mapping SourceColumn="CLA_Findings_Comments" DataSetColumn="CLA_Findings_Comments" />
+              <Mapping SourceColumn="CLA_Findings_RootCause" DataSetColumn="CLA_Findings_RootCause" />
+              <Mapping SourceColumn="CLA_Findings_Actions" DataSetColumn="CLA_Findings_Actions" />
+              <Mapping SourceColumn="CLA_Findings_ResponsiblePerson" DataSetColumn="CLA_Findings_ResponsiblePerson" />
+              <Mapping SourceColumn="CLA_Findings_DueDate" DataSetColumn="CLA_Findings_DueDate" />
+              <Mapping SourceColumn="CLA_Findings_ActionsEffective" DataSetColumn="CLA_Findings_ActionsEffective" />
+              <Mapping SourceColumn="CLA_Findings_Tracking_List" DataSetColumn="CLA_Findings_Tracking_List" />
+              <Mapping SourceColumn="CLA_Findings_Tracking_Name" DataSetColumn="CLA_Findings_Tracking_Name" />
+              <Mapping SourceColumn="CLA_Findings_TrackingDate" DataSetColumn="CLA_Findings_TrackingDate" />
+              <Mapping SourceColumn="CLA_Findings_LateClosingOutCNC_List" DataSetColumn="CLA_Findings_LateClosingOutCNC_List" />
+              <Mapping SourceColumn="CLA_Findings_LateClosingOutCNC_Name" DataSetColumn="CLA_Findings_LateClosingOutCNC_Name" />
+              <Mapping SourceColumn="CLA_Findings_LateClosingOutCNC_List_Other" DataSetColumn="CLA_Findings_LateClosingOutCNC_List_Other" />
+              <Mapping SourceColumn="CLA_Findings_Score" DataSetColumn="CLA_Findings_Score" />
+              <Mapping SourceColumn="CLA_Findings_CoreStandard" DataSetColumn="CLA_Findings_CoreStandard" />
+              <Mapping SourceColumn="CLA_Findings_CreatedDate" DataSetColumn="CLA_Findings_CreatedDate" />
+              <Mapping SourceColumn="CLA_Findings_CreatedBy" DataSetColumn="CLA_Findings_CreatedBy" />
+              <Mapping SourceColumn="CLA_Findings_ModifiedDate" DataSetColumn="CLA_Findings_ModifiedDate" />
+              <Mapping SourceColumn="CLA_Findings_ModifiedBy" DataSetColumn="CLA_Findings_ModifiedBy" />
+              <Mapping SourceColumn="CLA_Findings_History" DataSetColumn="CLA_Findings_History" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_CollegeLearningAudit_Findings" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_Form_CollegeLearningAudit_Findings" msprop:Generator_UserDSName="DataSet_Form_CollegeLearningAudit_Findings">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vForm_CollegeLearningAudit_Findings" msprop:Generator_TableClassName="vForm_CollegeLearningAudit_FindingsDataTable" msprop:Generator_TableVarName="tablevForm_CollegeLearningAudit_Findings" msprop:Generator_TablePropName="vForm_CollegeLearningAudit_Findings" msprop:Generator_RowDeletingName="vForm_CollegeLearningAudit_FindingsRowDeleting" msprop:Generator_RowChangingName="vForm_CollegeLearningAudit_FindingsRowChanging" msprop:Generator_RowEvHandlerName="vForm_CollegeLearningAudit_FindingsRowChangeEventHandler" msprop:Generator_RowDeletedName="vForm_CollegeLearningAudit_FindingsRowDeleted" msprop:Generator_UserTableName="vForm_CollegeLearningAudit_Findings" msprop:Generator_RowChangedName="vForm_CollegeLearningAudit_FindingsRowChanged" msprop:Generator_RowEvArgName="vForm_CollegeLearningAudit_FindingsRowChangeEvent" msprop:Generator_RowClassName="vForm_CollegeLearningAudit_FindingsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CLA_Id" msprop:Generator_ColumnVarNameInTable="columnCLA_Id" msprop:Generator_ColumnPropNameInRow="CLA_Id" msprop:Generator_ColumnPropNameInTable="CLA_IdColumn" msprop:Generator_UserColumnName="CLA_Id" type="xs:int" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facility_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityNameColumn" msprop:Generator_UserColumnName="Facility_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facility_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facility_FacilityCodeColumn" msprop:Generator_UserColumnName="Facility_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityDisplayName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityDisplayNameColumn" msprop:Generator_UserColumnName="Facility_FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_Date" msprop:Generator_ColumnVarNameInTable="columnCLA_Date" msprop:Generator_ColumnPropNameInRow="CLA_Date" msprop:Generator_ColumnPropNameInTable="CLA_DateColumn" msprop:Generator_UserColumnName="CLA_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CLA_ZipFileName" msprop:Generator_ColumnVarNameInTable="columnCLA_ZipFileName" msprop:Generator_ColumnPropNameInRow="CLA_ZipFileName" msprop:Generator_ColumnPropNameInTable="CLA_ZipFileNameColumn" msprop:Generator_UserColumnName="CLA_ZipFileName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_ContentType" msprop:Generator_ColumnVarNameInTable="columnCLA_ContentType" msprop:Generator_ColumnPropNameInRow="CLA_ContentType" msprop:Generator_ColumnPropNameInTable="CLA_ContentTypeColumn" msprop:Generator_UserColumnName="CLA_ContentType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_Data" msprop:Generator_ColumnVarNameInTable="columnCLA_Data" msprop:Generator_ColumnPropNameInRow="CLA_Data" msprop:Generator_ColumnPropNameInTable="CLA_DataColumn" msprop:Generator_UserColumnName="CLA_Data" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="CLA_Completed" msprop:Generator_ColumnVarNameInTable="columnCLA_Completed" msprop:Generator_ColumnPropNameInRow="CLA_Completed" msprop:Generator_ColumnPropNameInTable="CLA_CompletedColumn" msprop:Generator_UserColumnName="CLA_Completed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CLA_CompletedDate" msprop:Generator_ColumnVarNameInTable="columnCLA_CompletedDate" msprop:Generator_ColumnPropNameInRow="CLA_CompletedDate" msprop:Generator_ColumnPropNameInTable="CLA_CompletedDateColumn" msprop:Generator_UserColumnName="CLA_CompletedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CLA_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCLA_CreatedDate" msprop:Generator_ColumnPropNameInRow="CLA_CreatedDate" msprop:Generator_ColumnPropNameInTable="CLA_CreatedDateColumn" msprop:Generator_UserColumnName="CLA_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CLA_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCLA_CreatedBy" msprop:Generator_ColumnPropNameInRow="CLA_CreatedBy" msprop:Generator_ColumnPropNameInTable="CLA_CreatedByColumn" msprop:Generator_UserColumnName="CLA_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnCLA_ModifiedDate" msprop:Generator_ColumnPropNameInRow="CLA_ModifiedDate" msprop:Generator_ColumnPropNameInTable="CLA_ModifiedDateColumn" msprop:Generator_UserColumnName="CLA_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CLA_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnCLA_ModifiedBy" msprop:Generator_ColumnPropNameInRow="CLA_ModifiedBy" msprop:Generator_ColumnPropNameInTable="CLA_ModifiedByColumn" msprop:Generator_UserColumnName="CLA_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_History" msprop:Generator_ColumnVarNameInTable="columnCLA_History" msprop:Generator_ColumnPropNameInRow="CLA_History" msprop:Generator_ColumnPropNameInTable="CLA_HistoryColumn" msprop:Generator_UserColumnName="CLA_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_IsActive" msprop:Generator_ColumnVarNameInTable="columnCLA_IsActive" msprop:Generator_ColumnPropNameInRow="CLA_IsActive" msprop:Generator_ColumnPropNameInTable="CLA_IsActiveColumn" msprop:Generator_UserColumnName="CLA_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CLA_Archived" msprop:Generator_ColumnVarNameInTable="columnCLA_Archived" msprop:Generator_ColumnPropNameInRow="CLA_Archived" msprop:Generator_ColumnPropNameInTable="CLA_ArchivedColumn" msprop:Generator_UserColumnName="CLA_Archived" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CLA_Findings_Id" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_Id" msprop:Generator_ColumnPropNameInRow="CLA_Findings_Id" msprop:Generator_ColumnPropNameInTable="CLA_Findings_IdColumn" msprop:Generator_UserColumnName="CLA_Findings_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="CLA_Findings_System" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_System" msprop:Generator_ColumnPropNameInRow="CLA_Findings_System" msprop:Generator_ColumnPropNameInTable="CLA_Findings_SystemColumn" msprop:Generator_UserColumnName="CLA_Findings_System" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_Findings_Element" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_Element" msprop:Generator_ColumnPropNameInRow="CLA_Findings_Element" msprop:Generator_ColumnPropNameInTable="CLA_Findings_ElementColumn" msprop:Generator_UserColumnName="CLA_Findings_Element" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_Findings_CriteriaNo" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_CriteriaNo" msprop:Generator_ColumnPropNameInRow="CLA_Findings_CriteriaNo" msprop:Generator_ColumnPropNameInTable="CLA_Findings_CriteriaNoColumn" msprop:Generator_UserColumnName="CLA_Findings_CriteriaNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_Findings_MeasurementCriteria" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_MeasurementCriteria" msprop:Generator_ColumnPropNameInRow="CLA_Findings_MeasurementCriteria" msprop:Generator_ColumnPropNameInTable="CLA_Findings_MeasurementCriteriaColumn" msprop:Generator_UserColumnName="CLA_Findings_MeasurementCriteria" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_Findings_Category" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_Category" msprop:Generator_ColumnPropNameInRow="CLA_Findings_Category" msprop:Generator_ColumnPropNameInTable="CLA_Findings_CategoryColumn" msprop:Generator_UserColumnName="CLA_Findings_Category" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_Findings_Comments" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_Comments" msprop:Generator_ColumnPropNameInRow="CLA_Findings_Comments" msprop:Generator_ColumnPropNameInTable="CLA_Findings_CommentsColumn" msprop:Generator_UserColumnName="CLA_Findings_Comments" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_Findings_RootCause" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_RootCause" msprop:Generator_ColumnPropNameInRow="CLA_Findings_RootCause" msprop:Generator_ColumnPropNameInTable="CLA_Findings_RootCauseColumn" msprop:Generator_UserColumnName="CLA_Findings_RootCause" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_Findings_Actions" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_Actions" msprop:Generator_ColumnPropNameInRow="CLA_Findings_Actions" msprop:Generator_ColumnPropNameInTable="CLA_Findings_ActionsColumn" msprop:Generator_UserColumnName="CLA_Findings_Actions" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_Findings_ResponsiblePerson" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_ResponsiblePerson" msprop:Generator_ColumnPropNameInRow="CLA_Findings_ResponsiblePerson" msprop:Generator_ColumnPropNameInTable="CLA_Findings_ResponsiblePersonColumn" msprop:Generator_UserColumnName="CLA_Findings_ResponsiblePerson" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_Findings_DueDate" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_DueDate" msprop:Generator_ColumnPropNameInRow="CLA_Findings_DueDate" msprop:Generator_ColumnPropNameInTable="CLA_Findings_DueDateColumn" msprop:Generator_UserColumnName="CLA_Findings_DueDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CLA_Findings_ActionsEffective" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_ActionsEffective" msprop:Generator_ColumnPropNameInRow="CLA_Findings_ActionsEffective" msprop:Generator_ColumnPropNameInTable="CLA_Findings_ActionsEffectiveColumn" msprop:Generator_UserColumnName="CLA_Findings_ActionsEffective" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_Findings_Tracking_List" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_Tracking_List" msprop:Generator_ColumnPropNameInRow="CLA_Findings_Tracking_List" msprop:Generator_ColumnPropNameInTable="CLA_Findings_Tracking_ListColumn" msprop:Generator_UserColumnName="CLA_Findings_Tracking_List" type="xs:int" minOccurs="0" />
+              <xs:element name="CLA_Findings_Tracking_Name" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_Tracking_Name" msprop:Generator_ColumnPropNameInRow="CLA_Findings_Tracking_Name" msprop:Generator_ColumnPropNameInTable="CLA_Findings_Tracking_NameColumn" msprop:Generator_UserColumnName="CLA_Findings_Tracking_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_Findings_TrackingDate" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_TrackingDate" msprop:Generator_ColumnPropNameInRow="CLA_Findings_TrackingDate" msprop:Generator_ColumnPropNameInTable="CLA_Findings_TrackingDateColumn" msprop:Generator_UserColumnName="CLA_Findings_TrackingDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CLA_Findings_LateClosingOutCNC_List" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_LateClosingOutCNC_List" msprop:Generator_ColumnPropNameInRow="CLA_Findings_LateClosingOutCNC_List" msprop:Generator_ColumnPropNameInTable="CLA_Findings_LateClosingOutCNC_ListColumn" msprop:Generator_UserColumnName="CLA_Findings_LateClosingOutCNC_List" type="xs:int" minOccurs="0" />
+              <xs:element name="CLA_Findings_LateClosingOutCNC_Name" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_LateClosingOutCNC_Name" msprop:Generator_ColumnPropNameInRow="CLA_Findings_LateClosingOutCNC_Name" msprop:Generator_ColumnPropNameInTable="CLA_Findings_LateClosingOutCNC_NameColumn" msprop:Generator_UserColumnName="CLA_Findings_LateClosingOutCNC_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_Findings_LateClosingOutCNC_List_Other" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_LateClosingOutCNC_List_Other" msprop:Generator_ColumnPropNameInRow="CLA_Findings_LateClosingOutCNC_List_Other" msprop:Generator_ColumnPropNameInTable="CLA_Findings_LateClosingOutCNC_List_OtherColumn" msprop:Generator_UserColumnName="CLA_Findings_LateClosingOutCNC_List_Other" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_Findings_Score" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_Score" msprop:Generator_ColumnPropNameInRow="CLA_Findings_Score" msprop:Generator_ColumnPropNameInTable="CLA_Findings_ScoreColumn" msprop:Generator_UserColumnName="CLA_Findings_Score" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_Findings_CoreStandard" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_CoreStandard" msprop:Generator_ColumnPropNameInRow="CLA_Findings_CoreStandard" msprop:Generator_ColumnPropNameInTable="CLA_Findings_CoreStandardColumn" msprop:Generator_UserColumnName="CLA_Findings_CoreStandard" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_Findings_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_CreatedDate" msprop:Generator_ColumnPropNameInRow="CLA_Findings_CreatedDate" msprop:Generator_ColumnPropNameInTable="CLA_Findings_CreatedDateColumn" msprop:Generator_UserColumnName="CLA_Findings_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CLA_Findings_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_CreatedBy" msprop:Generator_ColumnPropNameInRow="CLA_Findings_CreatedBy" msprop:Generator_ColumnPropNameInTable="CLA_Findings_CreatedByColumn" msprop:Generator_UserColumnName="CLA_Findings_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_Findings_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_ModifiedDate" msprop:Generator_ColumnPropNameInRow="CLA_Findings_ModifiedDate" msprop:Generator_ColumnPropNameInTable="CLA_Findings_ModifiedDateColumn" msprop:Generator_UserColumnName="CLA_Findings_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CLA_Findings_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_ModifiedBy" msprop:Generator_ColumnPropNameInRow="CLA_Findings_ModifiedBy" msprop:Generator_ColumnPropNameInTable="CLA_Findings_ModifiedByColumn" msprop:Generator_UserColumnName="CLA_Findings_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLA_Findings_History" msprop:Generator_ColumnVarNameInTable="columnCLA_Findings_History" msprop:Generator_ColumnPropNameInRow="CLA_Findings_History" msprop:Generator_ColumnPropNameInTable="CLA_Findings_HistoryColumn" msprop:Generator_UserColumnName="CLA_Findings_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_VTE" targetNamespace="http://tempuri.org/DataSet_Form_VTE.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_VTE.xsd" xmlns="http://tempuri.org/DataSet_Form_VTE.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vForm_VTE_AssesmentsTableAdapter" GeneratorDataComponentClassName="vForm_VTE_AssesmentsTableAdapter" Name="vForm_VTE_Assesments" UserDataComponentName="vForm_VTE_AssesmentsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vForm_VTE_Assesments" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM vForm_VTE_Assesments WHERE VTE_Assesments_Id = 4 ORDER BY vForm_VTE_Assesments.VTE_Assesments_Date DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="VTE_Assesments_Id" DataSetColumn="VTE_Assesments_Id" />
+              <Mapping SourceColumn="VTE_VisitInformation_Id" DataSetColumn="VTE_VisitInformation_Id" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facility_FacilityName" DataSetColumn="Facility_FacilityName" />
+              <Mapping SourceColumn="Facility_FacilityCode" DataSetColumn="Facility_FacilityCode" />
+              <Mapping SourceColumn="Facility_FacilityDisplayName" DataSetColumn="Facility_FacilityDisplayName" />
+              <Mapping SourceColumn="VTE_VisitInformation_VisitNumber" DataSetColumn="VTE_VisitInformation_VisitNumber" />
+              <Mapping SourceColumn="PatientInformation_Id" DataSetColumn="PatientInformation_Id" />
+              <Mapping SourceColumn="PatientInformation_LifeCountry" DataSetColumn="PatientInformation_LifeCountry" />
+              <Mapping SourceColumn="PatientInformation_LifeNumber" DataSetColumn="PatientInformation_LifeNumber" />
+              <Mapping SourceColumn="PatientInformation_Name" DataSetColumn="PatientInformation_Name" />
+              <Mapping SourceColumn="PatientInformation_Surname" DataSetColumn="PatientInformation_Surname" />
+              <Mapping SourceColumn="PatientInformation_IDNumber" DataSetColumn="PatientInformation_IDNumber" />
+              <Mapping SourceColumn="PatientInformation_DateOfBirth" DataSetColumn="PatientInformation_DateOfBirth" />
+              <Mapping SourceColumn="PatientInformation_Gender" DataSetColumn="PatientInformation_Gender" />
+              <Mapping SourceColumn="PatientInformation_Email" DataSetColumn="PatientInformation_Email" />
+              <Mapping SourceColumn="PatientInformation_ContactNumber" DataSetColumn="PatientInformation_ContactNumber" />
+              <Mapping SourceColumn="VTE_VisitInformation_PatientName" DataSetColumn="VTE_VisitInformation_PatientName" />
+              <Mapping SourceColumn="VTE_VisitInformation_PatientAge" DataSetColumn="VTE_VisitInformation_PatientAge" />
+              <Mapping SourceColumn="VTE_VisitInformation_DateOfAdmission" DataSetColumn="VTE_VisitInformation_DateOfAdmission" />
+              <Mapping SourceColumn="VTE_VisitInformation_DateOfDischarge" DataSetColumn="VTE_VisitInformation_DateOfDischarge" />
+              <Mapping SourceColumn="VTE_VisitInformation_Archived" DataSetColumn="VTE_VisitInformation_Archived" />
+              <Mapping SourceColumn="VTE_Assesments_ReportNumber" DataSetColumn="VTE_Assesments_ReportNumber" />
+              <Mapping SourceColumn="VTE_Assesments_Date" DataSetColumn="VTE_Assesments_Date" />
+              <Mapping SourceColumn="VTE_Assesments_By" DataSetColumn="VTE_Assesments_By" />
+              <Mapping SourceColumn="Unit_Id" DataSetColumn="Unit_Id" />
+              <Mapping SourceColumn="Unit_Name" DataSetColumn="Unit_Name" />
+              <Mapping SourceColumn="VTE_Assesments_Weight" DataSetColumn="VTE_Assesments_Weight" />
+              <Mapping SourceColumn="VTE_Assesments_Height" DataSetColumn="VTE_Assesments_Height" />
+              <Mapping SourceColumn="VTE_Assesments_BMI" DataSetColumn="VTE_Assesments_BMI" />
+              <Mapping SourceColumn="VTE_Assesments_BRF_Medical_Stroke" DataSetColumn="VTE_Assesments_BRF_Medical_Stroke" />
+              <Mapping SourceColumn="VTE_Assesments_BRF_Medical_HeartAttack" DataSetColumn="VTE_Assesments_BRF_Medical_HeartAttack" />
+              <Mapping SourceColumn="VTE_Assesments_BRF_Medical_HeartFailure" DataSetColumn="VTE_Assesments_BRF_Medical_HeartFailure" />
+              <Mapping SourceColumn="VTE_Assesments_BRF_Medical_Infection" DataSetColumn="VTE_Assesments_BRF_Medical_Infection" />
+              <Mapping SourceColumn="VTE_Assesments_BRF_Medical_Thrombolytic" DataSetColumn="VTE_Assesments_BRF_Medical_Thrombolytic" />
+              <Mapping SourceColumn="VTE_Assesments_BRF_Medical_CVA" DataSetColumn="VTE_Assesments_BRF_Medical_CVA" />
+              <Mapping SourceColumn="VTE_Assesments_BRF_Surgical_SurgeryOfPelvis" DataSetColumn="VTE_Assesments_BRF_Surgical_SurgeryOfPelvis" />
+              <Mapping SourceColumn="VTE_Assesments_BRF_Surgical_FractureOfPelvis" DataSetColumn="VTE_Assesments_BRF_Surgical_FractureOfPelvis" />
+              <Mapping SourceColumn="VTE_Assesments_BRF_Surgical_MultipleTrauma" DataSetColumn="VTE_Assesments_BRF_Surgical_MultipleTrauma" />
+              <Mapping SourceColumn="VTE_Assesments_BRF_Surgical_SpinalCordInjury" DataSetColumn="VTE_Assesments_BRF_Surgical_SpinalCordInjury" />
+              <Mapping SourceColumn="VTE_Assesments_BRF_Surgical_Plaster" DataSetColumn="VTE_Assesments_BRF_Surgical_Plaster" />
+              <Mapping SourceColumn="VTE_Assesments_BRF_Surgical_SurgeryAbove45Min" DataSetColumn="VTE_Assesments_BRF_Surgical_SurgeryAbove45Min" />
+              <Mapping SourceColumn="VTE_Assesments_BRF_Surgical_SurgeryBelow45Min" DataSetColumn="VTE_Assesments_BRF_Surgical_SurgeryBelow45Min" />
+              <Mapping SourceColumn="VTE_Assesments_BRF_Both_PatientInBed" DataSetColumn="VTE_Assesments_BRF_Both_PatientInBed" />
+              <Mapping SourceColumn="VTE_Assesments_BRF_Score" DataSetColumn="VTE_Assesments_BRF_Score" />
+              <Mapping SourceColumn="VTE_Assesments_PRF_Morbidities_History" DataSetColumn="VTE_Assesments_PRF_Morbidities_History" />
+              <Mapping SourceColumn="VTE_Assesments_PRF_Morbidities_Cancer" DataSetColumn="VTE_Assesments_PRF_Morbidities_Cancer" />
+              <Mapping SourceColumn="VTE_Assesments_PRF_Morbidities_Obesity" DataSetColumn="VTE_Assesments_PRF_Morbidities_Obesity" />
+              <Mapping SourceColumn="VTE_Assesments_PRF_Morbidities_VaricoseVeins" DataSetColumn="VTE_Assesments_PRF_Morbidities_VaricoseVeins" />
+              <Mapping SourceColumn="VTE_Assesments_PRF_Morbidities_InflammatoryBowel" DataSetColumn="VTE_Assesments_PRF_Morbidities_InflammatoryBowel" />
+              <Mapping SourceColumn="VTE_Assesments_PRF_Age_Years" DataSetColumn="VTE_Assesments_PRF_Age_Years" />
+              <Mapping SourceColumn="VTE_Assesments_PRF_Gender_OralContraceptive" DataSetColumn="VTE_Assesments_PRF_Gender_OralContraceptive" />
+              <Mapping SourceColumn="VTE_Assesments_PRF_Gender_HormoneReplacementTherapy" DataSetColumn="VTE_Assesments_PRF_Gender_HormoneReplacementTherapy" />
+              <Mapping SourceColumn="VTE_Assesments_PRF_Gender_Pregnancy" DataSetColumn="VTE_Assesments_PRF_Gender_Pregnancy" />
+              <Mapping SourceColumn="VTE_Assesments_PRF_Score" DataSetColumn="VTE_Assesments_PRF_Score" />
+              <Mapping SourceColumn="VTE_Assesments_RFS_Score" DataSetColumn="VTE_Assesments_RFS_Score" />
+              <Mapping SourceColumn="VTE_Assesments_RFS_Level" DataSetColumn="VTE_Assesments_RFS_Level" />
+              <Mapping SourceColumn="VTE_Assesments_Relative_SystolicHypertension" DataSetColumn="VTE_Assesments_Relative_SystolicHypertension" />
+              <Mapping SourceColumn="VTE_Assesments_Relative_HaemorrhagicStroke" DataSetColumn="VTE_Assesments_Relative_HaemorrhagicStroke" />
+              <Mapping SourceColumn="VTE_Assesments_Relative_ActiveBleeding" DataSetColumn="VTE_Assesments_Relative_ActiveBleeding" />
+              <Mapping SourceColumn="VTE_Assesments_Relative_AntiCoagulants" DataSetColumn="VTE_Assesments_Relative_AntiCoagulants" />
+              <Mapping SourceColumn="VTE_Assesments_Relative_LowPlatelets" DataSetColumn="VTE_Assesments_Relative_LowPlatelets" />
+              <Mapping SourceColumn="VTE_Assesments_Relative_BleedingDisorder" DataSetColumn="VTE_Assesments_Relative_BleedingDisorder" />
+              <Mapping SourceColumn="VTE_Assesments_Doctor_DoctorNotified" DataSetColumn="VTE_Assesments_Doctor_DoctorNotified" />
+              <Mapping SourceColumn="VTE_Assesments_Doctor_ReasonNotNotified" DataSetColumn="VTE_Assesments_Doctor_ReasonNotNotified" />
+              <Mapping SourceColumn="VTE_Assesments_Doctor_TreatmentInitiated" DataSetColumn="VTE_Assesments_Doctor_TreatmentInitiated" />
+              <Mapping SourceColumn="VTE_Assesments_Doctor_ReasonNotInitiated" DataSetColumn="VTE_Assesments_Doctor_ReasonNotInitiated" />
+              <Mapping SourceColumn="VTE_Assesments_CreatedDate" DataSetColumn="VTE_Assesments_CreatedDate" />
+              <Mapping SourceColumn="VTE_Assesments_CreatedBy" DataSetColumn="VTE_Assesments_CreatedBy" />
+              <Mapping SourceColumn="VTE_Assesments_ModifiedDate" DataSetColumn="VTE_Assesments_ModifiedDate" />
+              <Mapping SourceColumn="VTE_Assesments_ModifiedBy" DataSetColumn="VTE_Assesments_ModifiedBy" />
+              <Mapping SourceColumn="VTE_Assesments_History" DataSetColumn="VTE_Assesments_History" />
+              <Mapping SourceColumn="VTE_Assesments_IsActive" DataSetColumn="VTE_Assesments_IsActive" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_VTE" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_Form_VTE" msprop:Generator_UserDSName="DataSet_Form_VTE">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vForm_VTE_Assesments" msprop:Generator_TableClassName="vForm_VTE_AssesmentsDataTable" msprop:Generator_TableVarName="tablevForm_VTE_Assesments" msprop:Generator_TablePropName="vForm_VTE_Assesments" msprop:Generator_RowDeletingName="vForm_VTE_AssesmentsRowDeleting" msprop:Generator_RowChangingName="vForm_VTE_AssesmentsRowChanging" msprop:Generator_RowEvHandlerName="vForm_VTE_AssesmentsRowChangeEventHandler" msprop:Generator_RowDeletedName="vForm_VTE_AssesmentsRowDeleted" msprop:Generator_UserTableName="vForm_VTE_Assesments" msprop:Generator_RowChangedName="vForm_VTE_AssesmentsRowChanged" msprop:Generator_RowEvArgName="vForm_VTE_AssesmentsRowChangeEvent" msprop:Generator_RowClassName="vForm_VTE_AssesmentsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="VTE_Assesments_Id" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_Id" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_Id" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_IdColumn" msprop:Generator_UserColumnName="VTE_Assesments_Id" type="xs:int" />
+              <xs:element name="VTE_VisitInformation_Id" msprop:Generator_ColumnVarNameInTable="columnVTE_VisitInformation_Id" msprop:Generator_ColumnPropNameInRow="VTE_VisitInformation_Id" msprop:Generator_ColumnPropNameInTable="VTE_VisitInformation_IdColumn" msprop:Generator_UserColumnName="VTE_VisitInformation_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facility_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityNameColumn" msprop:Generator_UserColumnName="Facility_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facility_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facility_FacilityCodeColumn" msprop:Generator_UserColumnName="Facility_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility_FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityDisplayName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityDisplayNameColumn" msprop:Generator_UserColumnName="Facility_FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_VisitInformation_VisitNumber" msprop:Generator_ColumnVarNameInTable="columnVTE_VisitInformation_VisitNumber" msprop:Generator_ColumnPropNameInRow="VTE_VisitInformation_VisitNumber" msprop:Generator_ColumnPropNameInTable="VTE_VisitInformation_VisitNumberColumn" msprop:Generator_UserColumnName="VTE_VisitInformation_VisitNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Id" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Id" msprop:Generator_ColumnPropNameInRow="PatientInformation_Id" msprop:Generator_ColumnPropNameInTable="PatientInformation_IdColumn" msprop:Generator_UserColumnName="PatientInformation_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="PatientInformation_LifeCountry" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_LifeCountry" msprop:Generator_ColumnPropNameInRow="PatientInformation_LifeCountry" msprop:Generator_ColumnPropNameInTable="PatientInformation_LifeCountryColumn" msprop:Generator_UserColumnName="PatientInformation_LifeCountry" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_LifeNumber" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_LifeNumber" msprop:Generator_ColumnPropNameInRow="PatientInformation_LifeNumber" msprop:Generator_ColumnPropNameInTable="PatientInformation_LifeNumberColumn" msprop:Generator_UserColumnName="PatientInformation_LifeNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Name" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Name" msprop:Generator_ColumnPropNameInRow="PatientInformation_Name" msprop:Generator_ColumnPropNameInTable="PatientInformation_NameColumn" msprop:Generator_UserColumnName="PatientInformation_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Surname" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Surname" msprop:Generator_ColumnPropNameInRow="PatientInformation_Surname" msprop:Generator_ColumnPropNameInTable="PatientInformation_SurnameColumn" msprop:Generator_UserColumnName="PatientInformation_Surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_IDNumber" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_IDNumber" msprop:Generator_ColumnPropNameInRow="PatientInformation_IDNumber" msprop:Generator_ColumnPropNameInTable="PatientInformation_IDNumberColumn" msprop:Generator_UserColumnName="PatientInformation_IDNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_DateOfBirth" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_DateOfBirth" msprop:Generator_ColumnPropNameInRow="PatientInformation_DateOfBirth" msprop:Generator_ColumnPropNameInTable="PatientInformation_DateOfBirthColumn" msprop:Generator_UserColumnName="PatientInformation_DateOfBirth" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Gender" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Gender" msprop:Generator_ColumnPropNameInRow="PatientInformation_Gender" msprop:Generator_ColumnPropNameInTable="PatientInformation_GenderColumn" msprop:Generator_UserColumnName="PatientInformation_Gender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Email" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Email" msprop:Generator_ColumnPropNameInRow="PatientInformation_Email" msprop:Generator_ColumnPropNameInTable="PatientInformation_EmailColumn" msprop:Generator_UserColumnName="PatientInformation_Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_ContactNumber" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_ContactNumber" msprop:Generator_ColumnPropNameInRow="PatientInformation_ContactNumber" msprop:Generator_ColumnPropNameInTable="PatientInformation_ContactNumberColumn" msprop:Generator_UserColumnName="PatientInformation_ContactNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_VisitInformation_PatientName" msprop:Generator_ColumnVarNameInTable="columnVTE_VisitInformation_PatientName" msprop:Generator_ColumnPropNameInRow="VTE_VisitInformation_PatientName" msprop:Generator_ColumnPropNameInTable="VTE_VisitInformation_PatientNameColumn" msprop:Generator_UserColumnName="VTE_VisitInformation_PatientName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_VisitInformation_PatientAge" msprop:Generator_ColumnVarNameInTable="columnVTE_VisitInformation_PatientAge" msprop:Generator_ColumnPropNameInRow="VTE_VisitInformation_PatientAge" msprop:Generator_ColumnPropNameInTable="VTE_VisitInformation_PatientAgeColumn" msprop:Generator_UserColumnName="VTE_VisitInformation_PatientAge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_VisitInformation_DateOfAdmission" msprop:Generator_ColumnVarNameInTable="columnVTE_VisitInformation_DateOfAdmission" msprop:Generator_ColumnPropNameInRow="VTE_VisitInformation_DateOfAdmission" msprop:Generator_ColumnPropNameInTable="VTE_VisitInformation_DateOfAdmissionColumn" msprop:Generator_UserColumnName="VTE_VisitInformation_DateOfAdmission" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_VisitInformation_DateOfDischarge" msprop:Generator_ColumnVarNameInTable="columnVTE_VisitInformation_DateOfDischarge" msprop:Generator_ColumnPropNameInRow="VTE_VisitInformation_DateOfDischarge" msprop:Generator_ColumnPropNameInTable="VTE_VisitInformation_DateOfDischargeColumn" msprop:Generator_UserColumnName="VTE_VisitInformation_DateOfDischarge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_VisitInformation_Archived" msprop:Generator_ColumnVarNameInTable="columnVTE_VisitInformation_Archived" msprop:Generator_ColumnPropNameInRow="VTE_VisitInformation_Archived" msprop:Generator_ColumnPropNameInTable="VTE_VisitInformation_ArchivedColumn" msprop:Generator_UserColumnName="VTE_VisitInformation_Archived" type="xs:boolean" minOccurs="0" />
+              <xs:element name="VTE_Assesments_ReportNumber" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_ReportNumber" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_ReportNumber" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_ReportNumberColumn" msprop:Generator_UserColumnName="VTE_Assesments_ReportNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_Date" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_Date" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_Date" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_DateColumn" msprop:Generator_UserColumnName="VTE_Assesments_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="VTE_Assesments_By" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_By" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_By" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_ByColumn" msprop:Generator_UserColumnName="VTE_Assesments_By" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Unit_Id" msprop:Generator_ColumnVarNameInTable="columnUnit_Id" msprop:Generator_ColumnPropNameInRow="Unit_Id" msprop:Generator_ColumnPropNameInTable="Unit_IdColumn" msprop:Generator_UserColumnName="Unit_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Unit_Name" msprop:Generator_ColumnVarNameInTable="columnUnit_Name" msprop:Generator_ColumnPropNameInRow="Unit_Name" msprop:Generator_ColumnPropNameInTable="Unit_NameColumn" msprop:Generator_UserColumnName="Unit_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_Weight" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_Weight" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_Weight" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_WeightColumn" msprop:Generator_UserColumnName="VTE_Assesments_Weight" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VTE_Assesments_Height" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_Height" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_Height" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_HeightColumn" msprop:Generator_UserColumnName="VTE_Assesments_Height" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VTE_Assesments_BMI" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_BMI" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_BMI" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_BMIColumn" msprop:Generator_UserColumnName="VTE_Assesments_BMI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VTE_Assesments_BRF_Medical_Stroke" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_BRF_Medical_Stroke" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_BRF_Medical_Stroke" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_BRF_Medical_StrokeColumn" msprop:Generator_UserColumnName="VTE_Assesments_BRF_Medical_Stroke" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_BRF_Medical_HeartAttack" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_BRF_Medical_HeartAttack" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_BRF_Medical_HeartAttack" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_BRF_Medical_HeartAttackColumn" msprop:Generator_UserColumnName="VTE_Assesments_BRF_Medical_HeartAttack" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_BRF_Medical_HeartFailure" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_BRF_Medical_HeartFailure" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_BRF_Medical_HeartFailure" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_BRF_Medical_HeartFailureColumn" msprop:Generator_UserColumnName="VTE_Assesments_BRF_Medical_HeartFailure" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_BRF_Medical_Infection" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_BRF_Medical_Infection" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_BRF_Medical_Infection" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_BRF_Medical_InfectionColumn" msprop:Generator_UserColumnName="VTE_Assesments_BRF_Medical_Infection" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_BRF_Medical_Thrombolytic" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_BRF_Medical_Thrombolytic" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_BRF_Medical_Thrombolytic" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_BRF_Medical_ThrombolyticColumn" msprop:Generator_UserColumnName="VTE_Assesments_BRF_Medical_Thrombolytic" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_BRF_Medical_CVA" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_BRF_Medical_CVA" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_BRF_Medical_CVA" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_BRF_Medical_CVAColumn" msprop:Generator_UserColumnName="VTE_Assesments_BRF_Medical_CVA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_BRF_Surgical_SurgeryOfPelvis" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_BRF_Surgical_SurgeryOfPelvis" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_BRF_Surgical_SurgeryOfPelvis" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_BRF_Surgical_SurgeryOfPelvisColumn" msprop:Generator_UserColumnName="VTE_Assesments_BRF_Surgical_SurgeryOfPelvis" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_BRF_Surgical_FractureOfPelvis" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_BRF_Surgical_FractureOfPelvis" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_BRF_Surgical_FractureOfPelvis" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_BRF_Surgical_FractureOfPelvisColumn" msprop:Generator_UserColumnName="VTE_Assesments_BRF_Surgical_FractureOfPelvis" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_BRF_Surgical_MultipleTrauma" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_BRF_Surgical_MultipleTrauma" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_BRF_Surgical_MultipleTrauma" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_BRF_Surgical_MultipleTraumaColumn" msprop:Generator_UserColumnName="VTE_Assesments_BRF_Surgical_MultipleTrauma" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_BRF_Surgical_SpinalCordInjury" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_BRF_Surgical_SpinalCordInjury" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_BRF_Surgical_SpinalCordInjury" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_BRF_Surgical_SpinalCordInjuryColumn" msprop:Generator_UserColumnName="VTE_Assesments_BRF_Surgical_SpinalCordInjury" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_BRF_Surgical_Plaster" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_BRF_Surgical_Plaster" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_BRF_Surgical_Plaster" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_BRF_Surgical_PlasterColumn" msprop:Generator_UserColumnName="VTE_Assesments_BRF_Surgical_Plaster" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_BRF_Surgical_SurgeryAbove45Min" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_BRF_Surgical_SurgeryAbove45Min" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_BRF_Surgical_SurgeryAbove45Min" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_BRF_Surgical_SurgeryAbove45MinColumn" msprop:Generator_UserColumnName="VTE_Assesments_BRF_Surgical_SurgeryAbove45Min" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_BRF_Surgical_SurgeryBelow45Min" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_BRF_Surgical_SurgeryBelow45Min" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_BRF_Surgical_SurgeryBelow45Min" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_BRF_Surgical_SurgeryBelow45MinColumn" msprop:Generator_UserColumnName="VTE_Assesments_BRF_Surgical_SurgeryBelow45Min" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_BRF_Both_PatientInBed" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_BRF_Both_PatientInBed" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_BRF_Both_PatientInBed" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_BRF_Both_PatientInBedColumn" msprop:Generator_UserColumnName="VTE_Assesments_BRF_Both_PatientInBed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_BRF_Score" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_BRF_Score" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_BRF_Score" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_BRF_ScoreColumn" msprop:Generator_UserColumnName="VTE_Assesments_BRF_Score" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VTE_Assesments_PRF_Morbidities_History" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_PRF_Morbidities_History" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_PRF_Morbidities_History" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_PRF_Morbidities_HistoryColumn" msprop:Generator_UserColumnName="VTE_Assesments_PRF_Morbidities_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_PRF_Morbidities_Cancer" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_PRF_Morbidities_Cancer" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_PRF_Morbidities_Cancer" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_PRF_Morbidities_CancerColumn" msprop:Generator_UserColumnName="VTE_Assesments_PRF_Morbidities_Cancer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_PRF_Morbidities_Obesity" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_PRF_Morbidities_Obesity" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_PRF_Morbidities_Obesity" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_PRF_Morbidities_ObesityColumn" msprop:Generator_UserColumnName="VTE_Assesments_PRF_Morbidities_Obesity" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_PRF_Morbidities_VaricoseVeins" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_PRF_Morbidities_VaricoseVeins" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_PRF_Morbidities_VaricoseVeins" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_PRF_Morbidities_VaricoseVeinsColumn" msprop:Generator_UserColumnName="VTE_Assesments_PRF_Morbidities_VaricoseVeins" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_PRF_Morbidities_InflammatoryBowel" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_PRF_Morbidities_InflammatoryBowel" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_PRF_Morbidities_InflammatoryBowel" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_PRF_Morbidities_InflammatoryBowelColumn" msprop:Generator_UserColumnName="VTE_Assesments_PRF_Morbidities_InflammatoryBowel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_PRF_Age_Years" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_PRF_Age_Years" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_PRF_Age_Years" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_PRF_Age_YearsColumn" msprop:Generator_UserColumnName="VTE_Assesments_PRF_Age_Years" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_PRF_Gender_OralContraceptive" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_PRF_Gender_OralContraceptive" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_PRF_Gender_OralContraceptive" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_PRF_Gender_OralContraceptiveColumn" msprop:Generator_UserColumnName="VTE_Assesments_PRF_Gender_OralContraceptive" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_PRF_Gender_HormoneReplacementTherapy" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_PRF_Gender_HormoneReplacementTherapy" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_PRF_Gender_HormoneReplacementTherapy" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_PRF_Gender_HormoneReplacementTherapyColumn" msprop:Generator_UserColumnName="VTE_Assesments_PRF_Gender_HormoneReplacementTherapy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_PRF_Gender_Pregnancy" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_PRF_Gender_Pregnancy" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_PRF_Gender_Pregnancy" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_PRF_Gender_PregnancyColumn" msprop:Generator_UserColumnName="VTE_Assesments_PRF_Gender_Pregnancy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_PRF_Score" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_PRF_Score" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_PRF_Score" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_PRF_ScoreColumn" msprop:Generator_UserColumnName="VTE_Assesments_PRF_Score" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VTE_Assesments_RFS_Score" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_RFS_Score" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_RFS_Score" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_RFS_ScoreColumn" msprop:Generator_UserColumnName="VTE_Assesments_RFS_Score" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VTE_Assesments_RFS_Level" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_RFS_Level" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_RFS_Level" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_RFS_LevelColumn" msprop:Generator_UserColumnName="VTE_Assesments_RFS_Level" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_Relative_SystolicHypertension" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_Relative_SystolicHypertension" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_Relative_SystolicHypertension" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_Relative_SystolicHypertensionColumn" msprop:Generator_UserColumnName="VTE_Assesments_Relative_SystolicHypertension" type="xs:boolean" minOccurs="0" />
+              <xs:element name="VTE_Assesments_Relative_HaemorrhagicStroke" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_Relative_HaemorrhagicStroke" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_Relative_HaemorrhagicStroke" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_Relative_HaemorrhagicStrokeColumn" msprop:Generator_UserColumnName="VTE_Assesments_Relative_HaemorrhagicStroke" type="xs:boolean" minOccurs="0" />
+              <xs:element name="VTE_Assesments_Relative_ActiveBleeding" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_Relative_ActiveBleeding" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_Relative_ActiveBleeding" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_Relative_ActiveBleedingColumn" msprop:Generator_UserColumnName="VTE_Assesments_Relative_ActiveBleeding" type="xs:boolean" minOccurs="0" />
+              <xs:element name="VTE_Assesments_Relative_AntiCoagulants" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_Relative_AntiCoagulants" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_Relative_AntiCoagulants" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_Relative_AntiCoagulantsColumn" msprop:Generator_UserColumnName="VTE_Assesments_Relative_AntiCoagulants" type="xs:boolean" minOccurs="0" />
+              <xs:element name="VTE_Assesments_Relative_LowPlatelets" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_Relative_LowPlatelets" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_Relative_LowPlatelets" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_Relative_LowPlateletsColumn" msprop:Generator_UserColumnName="VTE_Assesments_Relative_LowPlatelets" type="xs:boolean" minOccurs="0" />
+              <xs:element name="VTE_Assesments_Relative_BleedingDisorder" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_Relative_BleedingDisorder" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_Relative_BleedingDisorder" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_Relative_BleedingDisorderColumn" msprop:Generator_UserColumnName="VTE_Assesments_Relative_BleedingDisorder" type="xs:boolean" minOccurs="0" />
+              <xs:element name="VTE_Assesments_Doctor_DoctorNotified" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_Doctor_DoctorNotified" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_Doctor_DoctorNotified" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_Doctor_DoctorNotifiedColumn" msprop:Generator_UserColumnName="VTE_Assesments_Doctor_DoctorNotified" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_Doctor_ReasonNotNotified" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_Doctor_ReasonNotNotified" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_Doctor_ReasonNotNotified" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_Doctor_ReasonNotNotifiedColumn" msprop:Generator_UserColumnName="VTE_Assesments_Doctor_ReasonNotNotified" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_Doctor_TreatmentInitiated" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_Doctor_TreatmentInitiated" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_Doctor_TreatmentInitiated" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_Doctor_TreatmentInitiatedColumn" msprop:Generator_UserColumnName="VTE_Assesments_Doctor_TreatmentInitiated" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_Doctor_ReasonNotInitiated" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_Doctor_ReasonNotInitiated" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_Doctor_ReasonNotInitiated" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_Doctor_ReasonNotInitiatedColumn" msprop:Generator_UserColumnName="VTE_Assesments_Doctor_ReasonNotInitiated" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_CreatedDate" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_CreatedDate" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_CreatedDateColumn" msprop:Generator_UserColumnName="VTE_Assesments_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="VTE_Assesments_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_CreatedBy" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_CreatedBy" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_CreatedByColumn" msprop:Generator_UserColumnName="VTE_Assesments_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_ModifiedDate" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_ModifiedDate" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_ModifiedDateColumn" msprop:Generator_UserColumnName="VTE_Assesments_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="VTE_Assesments_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_ModifiedBy" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_ModifiedBy" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_ModifiedByColumn" msprop:Generator_UserColumnName="VTE_Assesments_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_History" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_History" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_History" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_HistoryColumn" msprop:Generator_UserColumnName="VTE_Assesments_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTE_Assesments_IsActive" msprop:Generator_ColumnVarNameInTable="columnVTE_Assesments_IsActive" msprop:Generator_ColumnPropNameInRow="VTE_Assesments_IsActive" msprop:Generator_ColumnPropNameInTable="VTE_Assesments_IsActiveColumn" msprop:Generator_UserColumnName="VTE_Assesments_IsActive" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vForm_VTE_Assesments" />
+      <xs:field xpath="mstns:VTE_Assesments_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

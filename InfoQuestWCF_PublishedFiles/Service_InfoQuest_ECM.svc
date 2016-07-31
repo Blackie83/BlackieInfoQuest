@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="InfoQuestWCF.Services_InfoQuest" CodeBehind="Service_InfoQuest_ECM.svc.cs" %>

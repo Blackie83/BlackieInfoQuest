@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_ClinicalPracticeAudit" targetNamespace="http://tempuri.org/DataSet_Form_ClinicalPracticeAudit.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_ClinicalPracticeAudit.xsd" xmlns="http://tempuri.org/DataSet_Form_ClinicalPracticeAudit.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vInfoQuest_Form_ClinicalPracticeAuditTableAdapter" GeneratorDataComponentClassName="vInfoQuest_Form_ClinicalPracticeAuditTableAdapter" Name="vInfoQuest_Form_ClinicalPracticeAudit" UserDataComponentName="vInfoQuest_Form_ClinicalPracticeAuditTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vInfoQuest_Form_ClinicalPracticeAudit" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT *
+FROM vInfoQuest_Form_ClinicalPracticeAudit
+WHERE CPA_Elements_Id = 1
+ORDER BY vInfoQuest_Form_ClinicalPracticeAudit.CPA_Elements_Date DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CPA_Elements_Id" DataSetColumn="CPA_Elements_Id" />
+              <Mapping SourceColumn="CPA_PI_Id" DataSetColumn="CPA_PI_Id" />
+              <Mapping SourceColumn="Number" DataSetColumn="Number" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facilities_FacilityName" DataSetColumn="Facilities_FacilityName" />
+              <Mapping SourceColumn="Facilities_FacilityCode" DataSetColumn="Facilities_FacilityCode" />
+              <Mapping SourceColumn="FacilityDisplayName" DataSetColumn="FacilityDisplayName" />
+              <Mapping SourceColumn="CPA_PI_PatientVisitNumber" DataSetColumn="CPA_PI_PatientVisitNumber" />
+              <Mapping SourceColumn="CPA_PI_PatientName" DataSetColumn="CPA_PI_PatientName" />
+              <Mapping SourceColumn="CPA_PI_PatientAge" DataSetColumn="CPA_PI_PatientAge" />
+              <Mapping SourceColumn="CPA_PI_PatientDateOfAdmission" DataSetColumn="CPA_PI_PatientDateOfAdmission" />
+              <Mapping SourceColumn="CPA_PI_PatientDateOfDischarge" DataSetColumn="CPA_PI_PatientDateOfDischarge" />
+              <Mapping SourceColumn="CPA_PI_CreatedDate" DataSetColumn="CPA_PI_CreatedDate" />
+              <Mapping SourceColumn="CPA_PI_CreatedBy" DataSetColumn="CPA_PI_CreatedBy" />
+              <Mapping SourceColumn="CPA_PI_ModifiedDate" DataSetColumn="CPA_PI_ModifiedDate" />
+              <Mapping SourceColumn="CPA_PI_ModifiedBy" DataSetColumn="CPA_PI_ModifiedBy" />
+              <Mapping SourceColumn="CPA_PI_History" DataSetColumn="CPA_PI_History" />
+              <Mapping SourceColumn="CPA_PI_Archived" DataSetColumn="CPA_PI_Archived" />
+              <Mapping SourceColumn="CPA_Elements_PatientVisitNumber" DataSetColumn="CPA_Elements_PatientVisitNumber" />
+              <Mapping SourceColumn="CPA_Elements_ReportNumber" DataSetColumn="CPA_Elements_ReportNumber" />
+              <Mapping SourceColumn="Unit_Id" DataSetColumn="Unit_Id" />
+              <Mapping SourceColumn="Unit_Name" DataSetColumn="Unit_Name" />
+              <Mapping SourceColumn="CPA_Elements_AuditType_List" DataSetColumn="CPA_Elements_AuditType_List" />
+              <Mapping SourceColumn="CPA_Elements_AuditType_Name" DataSetColumn="CPA_Elements_AuditType_Name" />
+              <Mapping SourceColumn="CPA_Elements_Assessed_SectionAll" DataSetColumn="CPA_Elements_Assessed_SectionAll" />
+              <Mapping SourceColumn="CPA_Elements_Assessed_Section1" DataSetColumn="CPA_Elements_Assessed_Section1" />
+              <Mapping SourceColumn="CPA_Elements_Assessed_Section2" DataSetColumn="CPA_Elements_Assessed_Section2" />
+              <Mapping SourceColumn="CPA_Elements_Assessed_Section3" DataSetColumn="CPA_Elements_Assessed_Section3" />
+              <Mapping SourceColumn="CPA_Elements_Assessed_Section4" DataSetColumn="CPA_Elements_Assessed_Section4" />
+              <Mapping SourceColumn="CPA_Elements_Assessed_Section5" DataSetColumn="CPA_Elements_Assessed_Section5" />
+              <Mapping SourceColumn="CPA_Elements_Assessed_Section6" DataSetColumn="CPA_Elements_Assessed_Section6" />
+              <Mapping SourceColumn="CPA_Elements_Assessed_Section7" DataSetColumn="CPA_Elements_Assessed_Section7" />
+              <Mapping SourceColumn="CPA_Elements_Assessed_Section8" DataSetColumn="CPA_Elements_Assessed_Section8" />
+              <Mapping SourceColumn="CPA_Elements_Assessed_Section9" DataSetColumn="CPA_Elements_Assessed_Section9" />
+              <Mapping SourceColumn="CPA_Elements_Date" DataSetColumn="CPA_Elements_Date" />
+              <Mapping SourceColumn="CPA_Elements_Auditor" DataSetColumn="CPA_Elements_Auditor" />
+              <Mapping SourceColumn="CPA_Elements_Section1_1" DataSetColumn="CPA_Elements_Section1_1" />
+              <Mapping SourceColumn="CPA_Elements_Section1_2" DataSetColumn="CPA_Elements_Section1_2" />
+              <Mapping SourceColumn="CPA_Elements_Section1_3" DataSetColumn="CPA_Elements_Section1_3" />
+              <Mapping SourceColumn="CPA_Elements_Section2_1" DataSetColumn="CPA_Elements_Section2_1" />
+              <Mapping SourceColumn="CPA_Elements_Section2_2" DataSetColumn="CPA_Elements_Section2_2" />
+              <Mapping SourceColumn="CPA_Elements_Section2_3" DataSetColumn="CPA_Elements_Section2_3" />
+              <Mapping SourceColumn="CPA_Elements_Section3_1" DataSetColumn="CPA_Elements_Section3_1" />
+              <Mapping SourceColumn="CPA_Elements_Section3_2" DataSetColumn="CPA_Elements_Section3_2" />
+              <Mapping SourceColumn="CPA_Elements_Section3_3" DataSetColumn="CPA_Elements_Section3_3" />
+              <Mapping SourceColumn="CPA_Elements_Section3_4" DataSetColumn="CPA_Elements_Section3_4" />
+              <Mapping SourceColumn="CPA_Elements_Section4_1" DataSetColumn="CPA_Elements_Section4_1" />
+              <Mapping SourceColumn="CPA_Elements_Section4_2" DataSetColumn="CPA_Elements_Section4_2" />
+              <Mapping SourceColumn="CPA_Elements_Section4_3" DataSetColumn="CPA_Elements_Section4_3" />
+              <Mapping SourceColumn="CPA_Elements_Section4_4" DataSetColumn="CPA_Elements_Section4_4" />
+              <Mapping SourceColumn="CPA_Elements_Section4_5" DataSetColumn="CPA_Elements_Section4_5" />
+              <Mapping SourceColumn="CPA_Elements_Section5_1" DataSetColumn="CPA_Elements_Section5_1" />
+              <Mapping SourceColumn="CPA_Elements_Section5_2" DataSetColumn="CPA_Elements_Section5_2" />
+              <Mapping SourceColumn="CPA_Elements_Section6_1" DataSetColumn="CPA_Elements_Section6_1" />
+              <Mapping SourceColumn="CPA_Elements_Section6_2" DataSetColumn="CPA_Elements_Section6_2" />
+              <Mapping SourceColumn="CPA_Elements_Section7_1" DataSetColumn="CPA_Elements_Section7_1" />
+              <Mapping SourceColumn="CPA_Elements_Section7_2" DataSetColumn="CPA_Elements_Section7_2" />
+              <Mapping SourceColumn="CPA_Elements_Section7_3" DataSetColumn="CPA_Elements_Section7_3" />
+              <Mapping SourceColumn="CPA_Elements_Section7_4" DataSetColumn="CPA_Elements_Section7_4" />
+              <Mapping SourceColumn="CPA_Elements_Section8_1" DataSetColumn="CPA_Elements_Section8_1" />
+              <Mapping SourceColumn="CPA_Elements_Section8_2" DataSetColumn="CPA_Elements_Section8_2" />
+              <Mapping SourceColumn="CPA_Elements_Section8_3" DataSetColumn="CPA_Elements_Section8_3" />
+              <Mapping SourceColumn="CPA_Elements_Section8_4" DataSetColumn="CPA_Elements_Section8_4" />
+              <Mapping SourceColumn="CPA_Elements_Section8_5" DataSetColumn="CPA_Elements_Section8_5" />
+              <Mapping SourceColumn="CPA_Elements_Section8_6" DataSetColumn="CPA_Elements_Section8_6" />
+              <Mapping SourceColumn="CPA_Elements_Section9_1" DataSetColumn="CPA_Elements_Section9_1" />
+              <Mapping SourceColumn="CPA_Elements_Section9_2" DataSetColumn="CPA_Elements_Section9_2" />
+              <Mapping SourceColumn="CPA_Elements_Section9_3" DataSetColumn="CPA_Elements_Section9_3" />
+              <Mapping SourceColumn="CPA_Elements_Section9_4" DataSetColumn="CPA_Elements_Section9_4" />
+              <Mapping SourceColumn="CPA_Elements_Section9_5" DataSetColumn="CPA_Elements_Section9_5" />
+              <Mapping SourceColumn="CPA_Elements_Section9_6" DataSetColumn="CPA_Elements_Section9_6" />
+              <Mapping SourceColumn="CPA_Elements_Section9_7" DataSetColumn="CPA_Elements_Section9_7" />
+              <Mapping SourceColumn="CPA_Elements_Section_Total" DataSetColumn="CPA_Elements_Section_Total" />
+              <Mapping SourceColumn="CPA_Elements_Section_Percentage" DataSetColumn="CPA_Elements_Section_Percentage" />
+              <Mapping SourceColumn="CPA_Elements_CreatedDate" DataSetColumn="CPA_Elements_CreatedDate" />
+              <Mapping SourceColumn="CPA_Elements_CreatedBy" DataSetColumn="CPA_Elements_CreatedBy" />
+              <Mapping SourceColumn="CPA_Elements_ModifiedDate" DataSetColumn="CPA_Elements_ModifiedDate" />
+              <Mapping SourceColumn="CPA_Elements_ModifiedBy" DataSetColumn="CPA_Elements_ModifiedBy" />
+              <Mapping SourceColumn="CPA_Elements_History" DataSetColumn="CPA_Elements_History" />
+              <Mapping SourceColumn="CPA_Elements_IsActive" DataSetColumn="CPA_Elements_IsActive" />
+              <Mapping SourceColumn="Link" DataSetColumn="Link" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_ClinicalPracticeAudit" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet_Form_ClinicalPracticeAudit" msprop:Generator_UserDSName="DataSet_Form_ClinicalPracticeAudit">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vInfoQuest_Form_ClinicalPracticeAudit" msprop:Generator_TableClassName="vInfoQuest_Form_ClinicalPracticeAuditDataTable" msprop:Generator_TableVarName="tablevInfoQuest_Form_ClinicalPracticeAudit" msprop:Generator_TablePropName="vInfoQuest_Form_ClinicalPracticeAudit" msprop:Generator_RowDeletingName="vInfoQuest_Form_ClinicalPracticeAuditRowDeleting" msprop:Generator_UserTableName="vInfoQuest_Form_ClinicalPracticeAudit" msprop:Generator_RowChangingName="vInfoQuest_Form_ClinicalPracticeAuditRowChanging" msprop:Generator_RowEvHandlerName="vInfoQuest_Form_ClinicalPracticeAuditRowChangeEventHandler" msprop:Generator_RowDeletedName="vInfoQuest_Form_ClinicalPracticeAuditRowDeleted" msprop:Generator_RowEvArgName="vInfoQuest_Form_ClinicalPracticeAuditRowChangeEvent" msprop:Generator_RowChangedName="vInfoQuest_Form_ClinicalPracticeAuditRowChanged" msprop:Generator_RowClassName="vInfoQuest_Form_ClinicalPracticeAuditRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CPA_Elements_Id" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Id" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Id" msprop:Generator_ColumnPropNameInTable="CPA_Elements_IdColumn" msprop:Generator_UserColumnName="CPA_Elements_Id" type="xs:int" />
+              <xs:element name="CPA_PI_Id" msprop:Generator_ColumnVarNameInTable="columnCPA_PI_Id" msprop:Generator_ColumnPropNameInRow="CPA_PI_Id" msprop:Generator_ColumnPropNameInTable="CPA_PI_IdColumn" msprop:Generator_UserColumnName="CPA_PI_Id" type="xs:int" />
+              <xs:element name="Number" msprop:Generator_ColumnVarNameInTable="columnNumber" msprop:Generator_ColumnPropNameInRow="Number" msprop:Generator_ColumnPropNameInTable="NumberColumn" msprop:Generator_UserColumnName="Number" type="xs:int" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facilities_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityName" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityName" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityNameColumn" msprop:Generator_UserColumnName="Facilities_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facilities_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityCodeColumn" msprop:Generator_UserColumnName="Facilities_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacilityDisplayName" msprop:Generator_ColumnPropNameInRow="FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="FacilityDisplayNameColumn" msprop:Generator_UserColumnName="FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="253" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_PI_PatientVisitNumber" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCPA_PI_PatientVisitNumber" msprop:Generator_ColumnPropNameInRow="CPA_PI_PatientVisitNumber" msprop:Generator_ColumnPropNameInTable="CPA_PI_PatientVisitNumberColumn" msprop:Generator_UserColumnName="CPA_PI_PatientVisitNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_PI_PatientName" msprop:Generator_ColumnVarNameInTable="columnCPA_PI_PatientName" msprop:Generator_ColumnPropNameInRow="CPA_PI_PatientName" msprop:Generator_ColumnPropNameInTable="CPA_PI_PatientNameColumn" msprop:Generator_UserColumnName="CPA_PI_PatientName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_PI_PatientAge" msprop:Generator_ColumnVarNameInTable="columnCPA_PI_PatientAge" msprop:Generator_ColumnPropNameInRow="CPA_PI_PatientAge" msprop:Generator_ColumnPropNameInTable="CPA_PI_PatientAgeColumn" msprop:Generator_UserColumnName="CPA_PI_PatientAge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_PI_PatientDateOfAdmission" msprop:Generator_ColumnVarNameInTable="columnCPA_PI_PatientDateOfAdmission" msprop:Generator_ColumnPropNameInRow="CPA_PI_PatientDateOfAdmission" msprop:Generator_ColumnPropNameInTable="CPA_PI_PatientDateOfAdmissionColumn" msprop:Generator_UserColumnName="CPA_PI_PatientDateOfAdmission" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_PI_PatientDateOfDischarge" msprop:Generator_ColumnVarNameInTable="columnCPA_PI_PatientDateOfDischarge" msprop:Generator_ColumnPropNameInRow="CPA_PI_PatientDateOfDischarge" msprop:Generator_ColumnPropNameInTable="CPA_PI_PatientDateOfDischargeColumn" msprop:Generator_UserColumnName="CPA_PI_PatientDateOfDischarge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_PI_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCPA_PI_CreatedDate" msprop:Generator_ColumnPropNameInRow="CPA_PI_CreatedDate" msprop:Generator_ColumnPropNameInTable="CPA_PI_CreatedDateColumn" msprop:Generator_UserColumnName="CPA_PI_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CPA_PI_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCPA_PI_CreatedBy" msprop:Generator_ColumnPropNameInRow="CPA_PI_CreatedBy" msprop:Generator_ColumnPropNameInTable="CPA_PI_CreatedByColumn" msprop:Generator_UserColumnName="CPA_PI_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_PI_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnCPA_PI_ModifiedDate" msprop:Generator_ColumnPropNameInRow="CPA_PI_ModifiedDate" msprop:Generator_ColumnPropNameInTable="CPA_PI_ModifiedDateColumn" msprop:Generator_UserColumnName="CPA_PI_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CPA_PI_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnCPA_PI_ModifiedBy" msprop:Generator_ColumnPropNameInRow="CPA_PI_ModifiedBy" msprop:Generator_ColumnPropNameInTable="CPA_PI_ModifiedByColumn" msprop:Generator_UserColumnName="CPA_PI_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_PI_History" msprop:Generator_ColumnVarNameInTable="columnCPA_PI_History" msprop:Generator_ColumnPropNameInRow="CPA_PI_History" msprop:Generator_ColumnPropNameInTable="CPA_PI_HistoryColumn" msprop:Generator_UserColumnName="CPA_PI_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_PI_Archived" msprop:Generator_ColumnVarNameInTable="columnCPA_PI_Archived" msprop:Generator_ColumnPropNameInRow="CPA_PI_Archived" msprop:Generator_ColumnPropNameInTable="CPA_PI_ArchivedColumn" msprop:Generator_UserColumnName="CPA_PI_Archived" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CPA_Elements_PatientVisitNumber" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_PatientVisitNumber" msprop:Generator_ColumnPropNameInRow="CPA_Elements_PatientVisitNumber" msprop:Generator_ColumnPropNameInTable="CPA_Elements_PatientVisitNumberColumn" msprop:Generator_UserColumnName="CPA_Elements_PatientVisitNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_ReportNumber" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_ReportNumber" msprop:Generator_ColumnPropNameInRow="CPA_Elements_ReportNumber" msprop:Generator_ColumnPropNameInTable="CPA_Elements_ReportNumberColumn" msprop:Generator_UserColumnName="CPA_Elements_ReportNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Unit_Id" msprop:Generator_ColumnVarNameInTable="columnUnit_Id" msprop:Generator_ColumnPropNameInRow="Unit_Id" msprop:Generator_ColumnPropNameInTable="Unit_IdColumn" msprop:Generator_UserColumnName="Unit_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Unit_Name" msprop:Generator_ColumnVarNameInTable="columnUnit_Name" msprop:Generator_ColumnPropNameInRow="Unit_Name" msprop:Generator_ColumnPropNameInTable="Unit_NameColumn" msprop:Generator_UserColumnName="Unit_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_AuditType_List" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_AuditType_List" msprop:Generator_ColumnPropNameInRow="CPA_Elements_AuditType_List" msprop:Generator_ColumnPropNameInTable="CPA_Elements_AuditType_ListColumn" msprop:Generator_UserColumnName="CPA_Elements_AuditType_List" type="xs:int" minOccurs="0" />
+              <xs:element name="CPA_Elements_AuditType_Name" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_AuditType_Name" msprop:Generator_ColumnPropNameInRow="CPA_Elements_AuditType_Name" msprop:Generator_ColumnPropNameInTable="CPA_Elements_AuditType_NameColumn" msprop:Generator_UserColumnName="CPA_Elements_AuditType_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Assessed_SectionAll" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Assessed_SectionAll" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Assessed_SectionAll" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Assessed_SectionAllColumn" msprop:Generator_UserColumnName="CPA_Elements_Assessed_SectionAll" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CPA_Elements_Assessed_Section1" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Assessed_Section1" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Assessed_Section1" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Assessed_Section1Column" msprop:Generator_UserColumnName="CPA_Elements_Assessed_Section1" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CPA_Elements_Assessed_Section2" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Assessed_Section2" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Assessed_Section2" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Assessed_Section2Column" msprop:Generator_UserColumnName="CPA_Elements_Assessed_Section2" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CPA_Elements_Assessed_Section3" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Assessed_Section3" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Assessed_Section3" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Assessed_Section3Column" msprop:Generator_UserColumnName="CPA_Elements_Assessed_Section3" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CPA_Elements_Assessed_Section4" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Assessed_Section4" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Assessed_Section4" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Assessed_Section4Column" msprop:Generator_UserColumnName="CPA_Elements_Assessed_Section4" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CPA_Elements_Assessed_Section5" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Assessed_Section5" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Assessed_Section5" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Assessed_Section5Column" msprop:Generator_UserColumnName="CPA_Elements_Assessed_Section5" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CPA_Elements_Assessed_Section6" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Assessed_Section6" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Assessed_Section6" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Assessed_Section6Column" msprop:Generator_UserColumnName="CPA_Elements_Assessed_Section6" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CPA_Elements_Assessed_Section7" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Assessed_Section7" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Assessed_Section7" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Assessed_Section7Column" msprop:Generator_UserColumnName="CPA_Elements_Assessed_Section7" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CPA_Elements_Assessed_Section8" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Assessed_Section8" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Assessed_Section8" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Assessed_Section8Column" msprop:Generator_UserColumnName="CPA_Elements_Assessed_Section8" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CPA_Elements_Assessed_Section9" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Assessed_Section9" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Assessed_Section9" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Assessed_Section9Column" msprop:Generator_UserColumnName="CPA_Elements_Assessed_Section9" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CPA_Elements_Date" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Date" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Date" msprop:Generator_ColumnPropNameInTable="CPA_Elements_DateColumn" msprop:Generator_UserColumnName="CPA_Elements_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CPA_Elements_Auditor" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Auditor" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Auditor" msprop:Generator_ColumnPropNameInTable="CPA_Elements_AuditorColumn" msprop:Generator_UserColumnName="CPA_Elements_Auditor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section1_1" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section1_1" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section1_1" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section1_1Column" msprop:Generator_UserColumnName="CPA_Elements_Section1_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section1_2" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section1_2" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section1_2" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section1_2Column" msprop:Generator_UserColumnName="CPA_Elements_Section1_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section1_3" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section1_3" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section1_3" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section1_3Column" msprop:Generator_UserColumnName="CPA_Elements_Section1_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section2_1" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section2_1" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section2_1" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section2_1Column" msprop:Generator_UserColumnName="CPA_Elements_Section2_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section2_2" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section2_2" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section2_2" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section2_2Column" msprop:Generator_UserColumnName="CPA_Elements_Section2_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section2_3" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section2_3" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section2_3" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section2_3Column" msprop:Generator_UserColumnName="CPA_Elements_Section2_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section3_1" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section3_1" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section3_1" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section3_1Column" msprop:Generator_UserColumnName="CPA_Elements_Section3_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section3_2" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section3_2" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section3_2" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section3_2Column" msprop:Generator_UserColumnName="CPA_Elements_Section3_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section3_3" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section3_3" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section3_3" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section3_3Column" msprop:Generator_UserColumnName="CPA_Elements_Section3_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section3_4" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section3_4" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section3_4" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section3_4Column" msprop:Generator_UserColumnName="CPA_Elements_Section3_4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section4_1" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section4_1" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section4_1" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section4_1Column" msprop:Generator_UserColumnName="CPA_Elements_Section4_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section4_2" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section4_2" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section4_2" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section4_2Column" msprop:Generator_UserColumnName="CPA_Elements_Section4_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section4_3" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section4_3" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section4_3" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section4_3Column" msprop:Generator_UserColumnName="CPA_Elements_Section4_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section4_4" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section4_4" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section4_4" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section4_4Column" msprop:Generator_UserColumnName="CPA_Elements_Section4_4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section4_5" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section4_5" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section4_5" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section4_5Column" msprop:Generator_UserColumnName="CPA_Elements_Section4_5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section5_1" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section5_1" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section5_1" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section5_1Column" msprop:Generator_UserColumnName="CPA_Elements_Section5_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section5_2" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section5_2" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section5_2" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section5_2Column" msprop:Generator_UserColumnName="CPA_Elements_Section5_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section6_1" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section6_1" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section6_1" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section6_1Column" msprop:Generator_UserColumnName="CPA_Elements_Section6_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section6_2" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section6_2" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section6_2" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section6_2Column" msprop:Generator_UserColumnName="CPA_Elements_Section6_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section7_1" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section7_1" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section7_1" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section7_1Column" msprop:Generator_UserColumnName="CPA_Elements_Section7_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section7_2" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section7_2" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section7_2" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section7_2Column" msprop:Generator_UserColumnName="CPA_Elements_Section7_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section7_3" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section7_3" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section7_3" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section7_3Column" msprop:Generator_UserColumnName="CPA_Elements_Section7_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section7_4" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section7_4" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section7_4" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section7_4Column" msprop:Generator_UserColumnName="CPA_Elements_Section7_4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section8_1" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section8_1" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section8_1" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section8_1Column" msprop:Generator_UserColumnName="CPA_Elements_Section8_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section8_2" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section8_2" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section8_2" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section8_2Column" msprop:Generator_UserColumnName="CPA_Elements_Section8_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section8_3" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section8_3" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section8_3" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section8_3Column" msprop:Generator_UserColumnName="CPA_Elements_Section8_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section8_4" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section8_4" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section8_4" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section8_4Column" msprop:Generator_UserColumnName="CPA_Elements_Section8_4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section8_5" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section8_5" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section8_5" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section8_5Column" msprop:Generator_UserColumnName="CPA_Elements_Section8_5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section8_6" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section8_6" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section8_6" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section8_6Column" msprop:Generator_UserColumnName="CPA_Elements_Section8_6" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section9_1" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section9_1" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section9_1" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section9_1Column" msprop:Generator_UserColumnName="CPA_Elements_Section9_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section9_2" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section9_2" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section9_2" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section9_2Column" msprop:Generator_UserColumnName="CPA_Elements_Section9_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section9_3" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section9_3" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section9_3" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section9_3Column" msprop:Generator_UserColumnName="CPA_Elements_Section9_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section9_4" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section9_4" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section9_4" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section9_4Column" msprop:Generator_UserColumnName="CPA_Elements_Section9_4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section9_5" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section9_5" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section9_5" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section9_5Column" msprop:Generator_UserColumnName="CPA_Elements_Section9_5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section9_6" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section9_6" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section9_6" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section9_6Column" msprop:Generator_UserColumnName="CPA_Elements_Section9_6" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section9_7" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section9_7" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section9_7" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section9_7Column" msprop:Generator_UserColumnName="CPA_Elements_Section9_7" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section_Total" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section_Total" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section_Total" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section_TotalColumn" msprop:Generator_UserColumnName="CPA_Elements_Section_Total" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_Section_Percentage" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_Section_Percentage" msprop:Generator_ColumnPropNameInRow="CPA_Elements_Section_Percentage" msprop:Generator_ColumnPropNameInTable="CPA_Elements_Section_PercentageColumn" msprop:Generator_UserColumnName="CPA_Elements_Section_Percentage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_CreatedDate" msprop:Generator_ColumnPropNameInRow="CPA_Elements_CreatedDate" msprop:Generator_ColumnPropNameInTable="CPA_Elements_CreatedDateColumn" msprop:Generator_UserColumnName="CPA_Elements_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CPA_Elements_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_CreatedBy" msprop:Generator_ColumnPropNameInRow="CPA_Elements_CreatedBy" msprop:Generator_ColumnPropNameInTable="CPA_Elements_CreatedByColumn" msprop:Generator_UserColumnName="CPA_Elements_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_ModifiedDate" msprop:Generator_ColumnPropNameInRow="CPA_Elements_ModifiedDate" msprop:Generator_ColumnPropNameInTable="CPA_Elements_ModifiedDateColumn" msprop:Generator_UserColumnName="CPA_Elements_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CPA_Elements_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_ModifiedBy" msprop:Generator_ColumnPropNameInRow="CPA_Elements_ModifiedBy" msprop:Generator_ColumnPropNameInTable="CPA_Elements_ModifiedByColumn" msprop:Generator_UserColumnName="CPA_Elements_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_History" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_History" msprop:Generator_ColumnPropNameInRow="CPA_Elements_History" msprop:Generator_ColumnPropNameInTable="CPA_Elements_HistoryColumn" msprop:Generator_UserColumnName="CPA_Elements_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPA_Elements_IsActive" msprop:Generator_ColumnVarNameInTable="columnCPA_Elements_IsActive" msprop:Generator_ColumnPropNameInRow="CPA_Elements_IsActive" msprop:Generator_ColumnPropNameInTable="CPA_Elements_IsActiveColumn" msprop:Generator_UserColumnName="CPA_Elements_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Link" msprop:Generator_ColumnVarNameInTable="columnLink" msprop:Generator_ColumnPropNameInRow="Link" msprop:Generator_ColumnPropNameInTable="LinkColumn" msprop:Generator_UserColumnName="Link" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="717" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

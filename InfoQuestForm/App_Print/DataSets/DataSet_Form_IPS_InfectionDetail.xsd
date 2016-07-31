@@ -1,0 +1,664 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_IPS_InfectionDetail" targetNamespace="http://tempuri.org/DataSet_Form_IPS_InfectionDetail.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_IPS_InfectionDetail.xsd" xmlns="http://tempuri.org/DataSet_Form_IPS_InfectionDetail.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_IPS_Infection_HeaderTableAdapter" GeneratorDataComponentClassName="Form_IPS_Infection_HeaderTableAdapter" Name="Form_IPS_Infection_Header" UserDataComponentName="Form_IPS_Infection_HeaderTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vForm_IPS_Infection" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Facility_FacilityDisplayName , IPS_Infection_ReportNumber
+FROM vForm_IPS_Infection
+WHERE IPS_Infection_Id = 35</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Facility_FacilityDisplayName" DataSetColumn="Facility_FacilityDisplayName" />
+              <Mapping SourceColumn="IPS_Infection_ReportNumber" DataSetColumn="IPS_Infection_ReportNumber" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_IPS_HAI_InvestigationTableAdapter" GeneratorDataComponentClassName="Form_IPS_HAI_InvestigationTableAdapter" Name="Form_IPS_HAI_Investigation" UserDataComponentName="Form_IPS_HAI_InvestigationTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.Form_IPS_HAI" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Form_IPS_HAI.IPS_HAI_Id
+FROM Form_IPS_Infection LEFT JOIN Form_IPS_HAI
+ON Form_IPS_Infection.IPS_Infection_Id = Form_IPS_HAI.IPS_Infection_Id
+WHERE Form_IPS_Infection.IPS_Infection_Id = 45</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IPS_HAI_Id" DataSetColumn="IPS_HAI_Id" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_IPS_VisitInformationTableAdapter" GeneratorDataComponentClassName="Form_IPS_VisitInformationTableAdapter" Name="Form_IPS_VisitInformation" UserDataComponentName="Form_IPS_VisitInformationTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vForm_IPS_VisitInformation" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT IPS_VisitInformation_VisitNumber , PatientInformation_Name , PatientInformation_Surname , PatientInformation_Gender , IPS_VisitInformation_PatientAge , PatientInformation_DateOfBirth , IPS_VisitInformation_DateOfAdmission , IPS_VisitInformation_DateOfDischarge , IPS_VisitInformation_Deceased , IPS_VisitInformation_Ward FROM vForm_IPS_VisitInformation WHERE IPS_VisitInformation_Id IN ( SELECT IPS_VisitInformation_Id FROM Form_IPS_Infection WHERE IPS_Infection_Id = 45 )</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IPS_VisitInformation_VisitNumber" DataSetColumn="IPS_VisitInformation_VisitNumber" />
+              <Mapping SourceColumn="PatientInformation_Name" DataSetColumn="PatientInformation_Name" />
+              <Mapping SourceColumn="PatientInformation_Surname" DataSetColumn="PatientInformation_Surname" />
+              <Mapping SourceColumn="PatientInformation_Gender" DataSetColumn="PatientInformation_Gender" />
+              <Mapping SourceColumn="IPS_VisitInformation_PatientAge" DataSetColumn="IPS_VisitInformation_PatientAge" />
+              <Mapping SourceColumn="PatientInformation_DateOfBirth" DataSetColumn="PatientInformation_DateOfBirth" />
+              <Mapping SourceColumn="IPS_VisitInformation_DateOfAdmission" DataSetColumn="IPS_VisitInformation_DateOfAdmission" />
+              <Mapping SourceColumn="IPS_VisitInformation_DateOfDischarge" DataSetColumn="IPS_VisitInformation_DateOfDischarge" />
+              <Mapping SourceColumn="IPS_VisitInformation_Deceased" DataSetColumn="IPS_VisitInformation_Deceased" />
+              <Mapping SourceColumn="IPS_VisitInformation_Ward" DataSetColumn="IPS_VisitInformation_Ward" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_IPS_TheatreTableAdapter" GeneratorDataComponentClassName="Form_IPS_TheatreTableAdapter" Name="Form_IPS_Theatre" UserDataComponentName="Form_IPS_TheatreTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vForm_IPS_Theatre" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT		IPS_Theatre_FacilityDisplayName ,
+						IPS_Theatre_DateOfAdmission ,
+						IPS_Theatre_DateOfDischarge ,
+						IPS_Theatre_FinalDiagnosisCode ,
+						IPS_Theatre_FinalDiagnosisDescription ,
+						IPS_Theatre_VisitNumber ,
+						IPS_Theatre_ServiceCategory ,					
+						IPS_Theatre_Theatre ,
+						IPS_Theatre_TheatreTime ,
+						IPS_Theatre_ProcedureDate ,
+						IPS_Theatre_ProcedureCode ,
+						IPS_Theatre_ProcedureDescription ,
+						IPS_Theatre_TheatreInvoice ,
+						IPS_Theatre_Surgeon ,
+						IPS_Theatre_Anaesthetist ,
+						IPS_Theatre_Assistant ,
+						IPS_Theatre_WoundCategory ,
+						IPS_Theatre_ScrubNurse
+	FROM			vForm_IPS_Theatre
+	WHERE			IPS_Infection_Id = 42
+	ORDER BY	IPS_Theatre_DateOfAdmission DESC ,
+						IPS_Theatre_ProcedureDate DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IPS_Theatre_FacilityDisplayName" DataSetColumn="IPS_Theatre_FacilityDisplayName" />
+              <Mapping SourceColumn="IPS_Theatre_DateOfAdmission" DataSetColumn="IPS_Theatre_DateOfAdmission" />
+              <Mapping SourceColumn="IPS_Theatre_DateOfDischarge" DataSetColumn="IPS_Theatre_DateOfDischarge" />
+              <Mapping SourceColumn="IPS_Theatre_FinalDiagnosisCode" DataSetColumn="IPS_Theatre_FinalDiagnosisCode" />
+              <Mapping SourceColumn="IPS_Theatre_FinalDiagnosisDescription" DataSetColumn="IPS_Theatre_FinalDiagnosisDescription" />
+              <Mapping SourceColumn="IPS_Theatre_VisitNumber" DataSetColumn="IPS_Theatre_VisitNumber" />
+              <Mapping SourceColumn="IPS_Theatre_ServiceCategory" DataSetColumn="IPS_Theatre_ServiceCategory" />
+              <Mapping SourceColumn="IPS_Theatre_Theatre" DataSetColumn="IPS_Theatre_Theatre" />
+              <Mapping SourceColumn="IPS_Theatre_TheatreTime" DataSetColumn="IPS_Theatre_TheatreTime" />
+              <Mapping SourceColumn="IPS_Theatre_ProcedureDate" DataSetColumn="IPS_Theatre_ProcedureDate" />
+              <Mapping SourceColumn="IPS_Theatre_ProcedureCode" DataSetColumn="IPS_Theatre_ProcedureCode" />
+              <Mapping SourceColumn="IPS_Theatre_ProcedureDescription" DataSetColumn="IPS_Theatre_ProcedureDescription" />
+              <Mapping SourceColumn="IPS_Theatre_TheatreInvoice" DataSetColumn="IPS_Theatre_TheatreInvoice" />
+              <Mapping SourceColumn="IPS_Theatre_Surgeon" DataSetColumn="IPS_Theatre_Surgeon" />
+              <Mapping SourceColumn="IPS_Theatre_Anaesthetist" DataSetColumn="IPS_Theatre_Anaesthetist" />
+              <Mapping SourceColumn="IPS_Theatre_Assistant" DataSetColumn="IPS_Theatre_Assistant" />
+              <Mapping SourceColumn="IPS_Theatre_WoundCategory" DataSetColumn="IPS_Theatre_WoundCategory" />
+              <Mapping SourceColumn="IPS_Theatre_ScrubNurse" DataSetColumn="IPS_Theatre_ScrubNurse" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_IPS_VisitDiagnosisTableAdapter" GeneratorDataComponentClassName="Form_IPS_VisitDiagnosisTableAdapter" Name="Form_IPS_VisitDiagnosis" UserDataComponentName="Form_IPS_VisitDiagnosisTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vForm_IPS_VisitDiagnosis" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT IPS_VisitDiagnosis_CodeType , IPS_VisitDiagnosis_Code , IPS_VisitDiagnosis_Description FROM vForm_IPS_VisitDiagnosis WHERE IPS_Infection_Id = 42 ORDER BY IPS_VisitDiagnosis_Id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IPS_VisitDiagnosis_CodeType" DataSetColumn="IPS_VisitDiagnosis_CodeType" />
+              <Mapping SourceColumn="IPS_VisitDiagnosis_Code" DataSetColumn="IPS_VisitDiagnosis_Code" />
+              <Mapping SourceColumn="IPS_VisitDiagnosis_Description" DataSetColumn="IPS_VisitDiagnosis_Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_IPS_BedHistoryTableAdapter" GeneratorDataComponentClassName="Form_IPS_BedHistoryTableAdapter" Name="Form_IPS_BedHistory" UserDataComponentName="Form_IPS_BedHistoryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vForm_IPS_BedHistory" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT IPS_BedHistory_Department , IPS_BedHistory_Room , IPS_BedHistory_Bed , IPS_BedHistory_Date FROM vForm_IPS_BedHistory WHERE IPS_Infection_Id = 42 ORDER BY IPS_BedHistory_Id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IPS_BedHistory_Department" DataSetColumn="IPS_BedHistory_Department" />
+              <Mapping SourceColumn="IPS_BedHistory_Room" DataSetColumn="IPS_BedHistory_Room" />
+              <Mapping SourceColumn="IPS_BedHistory_Bed" DataSetColumn="IPS_BedHistory_Bed" />
+              <Mapping SourceColumn="IPS_BedHistory_Date" DataSetColumn="IPS_BedHistory_Date" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_IPS_AntibioticPrescriptionTableAdapter" GeneratorDataComponentClassName="Form_IPS_AntibioticPrescriptionTableAdapter" Name="Form_IPS_AntibioticPrescription" UserDataComponentName="Form_IPS_AntibioticPrescriptionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.Form_IPS_AntibioticPrescription" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Form_IPS_AntibioticPrescription] ([IPS_AntibioticPrescription_Description]) VALUES (@IPS_AntibioticPrescription_Description)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@IPS_AntibioticPrescription_Description" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IPS_AntibioticPrescription_Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT IPS_AntibioticPrescription_Description FROM Form_IPS_AntibioticPrescription WHERE IPS_VisitInformation_Id IN ( SELECT IPS_VisitInformation_Id FROM Form_IPS_Infection WHERE IPS_Infection_Id = 53 ) ORDER BY IPS_AntibioticPrescription_Description</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IPS_AntibioticPrescription_Description" DataSetColumn="IPS_AntibioticPrescription_Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_IPS_OrganismTableAdapter" GeneratorDataComponentClassName="Form_IPS_OrganismTableAdapter" Name="Form_IPS_Organism" UserDataComponentName="Form_IPS_OrganismTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vForm_IPS_Organism" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT 'Department of Health' AS Authority , IPS_Organism_Lookup_Description + ' (' + IPS_Organism_Lookup_Code + ')' AS IPS_Organism_Lookup , IPS_Organism_Notifiable_DepartmentOfHealth_Date , IPS_Organism_Notifiable_DepartmentOfHealth_ReferenceNumber FROM vForm_IPS_Organism WHERE IPS_Organism_Lookup_Notifiable = 1 AND IPS_SpecimenResult_Id IN ( SELECT IPS_SpecimenResult_Id FROM Form_IPS_SpecimenResult WHERE IPS_Specimen_Id IN ( SELECT IPS_Specimen_Id FROM Form_IPS_Specimen WHERE IPS_Infection_Id = 42 ) ) ORDER BY IPS_Organism_Lookup_Description</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Authority" DataSetColumn="Authority" />
+              <Mapping SourceColumn="IPS_Organism_Lookup" DataSetColumn="IPS_Organism_Lookup" />
+              <Mapping SourceColumn="IPS_Organism_Notifiable_DepartmentOfHealth_Date" DataSetColumn="IPS_Organism_Notifiable_DepartmentOfHealth_Date" />
+              <Mapping SourceColumn="IPS_Organism_Notifiable_DepartmentOfHealth_ReferenceNumber" DataSetColumn="IPS_Organism_Notifiable_DepartmentOfHealth_ReferenceNumber" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_IPS_InfectionTableAdapter" GeneratorDataComponentClassName="Form_IPS_InfectionTableAdapter" Name="Form_IPS_Infection" UserDataComponentName="Form_IPS_InfectionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT IPS_Infection_Category_List , IPS_Infection_Category_Name , IPS_Infection_Type_List , IPS_Infection_Type_Name , IPS_Infection_SubType_Name , IPS_Infection_SubSubType_Name , CASE WHEN vForm_IPS_Infection.IPS_Infection_Site_List = 4996 THEN vForm_IPS_Infection.IPS_Infection_Site_Name WHEN vForm_IPS_Infection.IPS_Infection_Site_List = 4997 AND (vForm_IPS_Infection.IPS_Infection_Site_Infection_IsActive = 0 OR vForm_IPS_Infection.IPS_Infection_Site_Infection_Category_List != 4799) THEN 'Linked Site Required' WHEN vForm_IPS_Infection.IPS_Infection_Site_List = 4997 AND IPS_Infection_Site_Infection_Site_List NOT LIKE ('4996') THEN 'Linked Site Required' WHEN vForm_IPS_Infection.IPS_Infection_Site_List = 4998 AND (vForm_IPS_Infection.IPS_Infection_Site_Infection_IsActive = 0 OR vForm_IPS_Infection.IPS_Infection_Site_Infection_Category_List != 4799) THEN 'Linked Site Required' WHEN vForm_IPS_Infection.IPS_Infection_Site_List = 4998 AND IPS_Infection_Site_Infection_Site_List NOT LIKE ('4997') THEN 'Linked Site Required' ELSE vForm_IPS_Infection.IPS_Infection_Site_Name + ' (' + vForm_IPS_Infection.IPS_Infection_Site_Infection_ReportNumber + ')' END	AS IPS_Infection_Site_Name , CASE WHEN IPS_Infection_Screening = 1 THEN 'Yes' WHEN IPS_Infection_Screening = 0 THEN 'No' END AS IPS_Infection_Screening , IPS_ScreeningType_Type_Name , IPS_Infection_ScreeningReason_Name , Unit_Name , IPS_Infection_Summary FROM vForm_IPS_Infection LEFT JOIN vForm_IPS_Infection_ScreeningType ON vForm_IPS_Infection.IPS_Infection_Id = vForm_IPS_Infection_ScreeningType.IPS_Infection_Id WHERE vForm_IPS_Infection.IPS_Infection_Id = 42 ORDER BY IPS_ScreeningType_Type_Name</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IPS_Infection_Category_List" DataSetColumn="IPS_Infection_Category_List" />
+              <Mapping SourceColumn="IPS_Infection_Category_Name" DataSetColumn="IPS_Infection_Category_Name" />
+              <Mapping SourceColumn="IPS_Infection_Type_List" DataSetColumn="IPS_Infection_Type_List" />
+              <Mapping SourceColumn="IPS_Infection_Type_Name" DataSetColumn="IPS_Infection_Type_Name" />
+              <Mapping SourceColumn="IPS_Infection_SubType_Name" DataSetColumn="IPS_Infection_SubType_Name" />
+              <Mapping SourceColumn="IPS_Infection_SubSubType_Name" DataSetColumn="IPS_Infection_SubSubType_Name" />
+              <Mapping SourceColumn="IPS_Infection_Site_Name" DataSetColumn="IPS_Infection_Site_Name" />
+              <Mapping SourceColumn="IPS_Infection_Screening" DataSetColumn="IPS_Infection_Screening" />
+              <Mapping SourceColumn="IPS_ScreeningType_Type_Name" DataSetColumn="IPS_ScreeningType_Type_Name" />
+              <Mapping SourceColumn="IPS_Infection_ScreeningReason_Name" DataSetColumn="IPS_Infection_ScreeningReason_Name" />
+              <Mapping SourceColumn="Unit_Name" DataSetColumn="Unit_Name" />
+              <Mapping SourceColumn="IPS_Infection_Summary" DataSetColumn="IPS_Infection_Summary" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_IPS_InfectionDetail" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_Form_IPS_InfectionDetail" msprop:Generator_UserDSName="DataSet_Form_IPS_InfectionDetail">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Form_IPS_Infection_Header" msprop:Generator_TableClassName="Form_IPS_Infection_HeaderDataTable" msprop:Generator_TableVarName="tableForm_IPS_Infection_Header" msprop:Generator_RowChangedName="Form_IPS_Infection_HeaderRowChanged" msprop:Generator_TablePropName="Form_IPS_Infection_Header" msprop:Generator_RowDeletingName="Form_IPS_Infection_HeaderRowDeleting" msprop:Generator_RowChangingName="Form_IPS_Infection_HeaderRowChanging" msprop:Generator_RowEvHandlerName="Form_IPS_Infection_HeaderRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_IPS_Infection_HeaderRowDeleted" msprop:Generator_RowClassName="Form_IPS_Infection_HeaderRow" msprop:Generator_UserTableName="Form_IPS_Infection_Header" msprop:Generator_RowEvArgName="Form_IPS_Infection_HeaderRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Facility_FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacility_FacilityDisplayName" msprop:Generator_ColumnPropNameInRow="Facility_FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="Facility_FacilityDisplayNameColumn" msprop:Generator_UserColumnName="Facility_FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Infection_ReportNumber" msprop:Generator_ColumnVarNameInTable="columnIPS_Infection_ReportNumber" msprop:Generator_ColumnPropNameInRow="IPS_Infection_ReportNumber" msprop:Generator_ColumnPropNameInTable="IPS_Infection_ReportNumberColumn" msprop:Generator_UserColumnName="IPS_Infection_ReportNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_IPS_HAI_Investigation" msprop:Generator_TableClassName="Form_IPS_HAI_InvestigationDataTable" msprop:Generator_TableVarName="tableForm_IPS_HAI_Investigation" msprop:Generator_TablePropName="Form_IPS_HAI_Investigation" msprop:Generator_RowDeletingName="Form_IPS_HAI_InvestigationRowDeleting" msprop:Generator_RowChangingName="Form_IPS_HAI_InvestigationRowChanging" msprop:Generator_RowEvHandlerName="Form_IPS_HAI_InvestigationRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_IPS_HAI_InvestigationRowDeleted" msprop:Generator_UserTableName="Form_IPS_HAI_Investigation" msprop:Generator_RowChangedName="Form_IPS_HAI_InvestigationRowChanged" msprop:Generator_RowEvArgName="Form_IPS_HAI_InvestigationRowChangeEvent" msprop:Generator_RowClassName="Form_IPS_HAI_InvestigationRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IPS_HAI_Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIPS_HAI_Id" msprop:Generator_ColumnPropNameInRow="IPS_HAI_Id" msprop:Generator_ColumnPropNameInTable="IPS_HAI_IdColumn" msprop:Generator_UserColumnName="IPS_HAI_Id" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_IPS_VisitInformation" msprop:Generator_TableClassName="Form_IPS_VisitInformationDataTable" msprop:Generator_TableVarName="tableForm_IPS_VisitInformation" msprop:Generator_RowChangedName="Form_IPS_VisitInformationRowChanged" msprop:Generator_TablePropName="Form_IPS_VisitInformation" msprop:Generator_RowDeletingName="Form_IPS_VisitInformationRowDeleting" msprop:Generator_RowChangingName="Form_IPS_VisitInformationRowChanging" msprop:Generator_RowEvHandlerName="Form_IPS_VisitInformationRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_IPS_VisitInformationRowDeleted" msprop:Generator_RowClassName="Form_IPS_VisitInformationRow" msprop:Generator_UserTableName="Form_IPS_VisitInformation" msprop:Generator_RowEvArgName="Form_IPS_VisitInformationRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IPS_VisitInformation_VisitNumber" msprop:Generator_ColumnVarNameInTable="columnIPS_VisitInformation_VisitNumber" msprop:Generator_ColumnPropNameInRow="IPS_VisitInformation_VisitNumber" msprop:Generator_ColumnPropNameInTable="IPS_VisitInformation_VisitNumberColumn" msprop:Generator_UserColumnName="IPS_VisitInformation_VisitNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Name" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Name" msprop:Generator_ColumnPropNameInRow="PatientInformation_Name" msprop:Generator_ColumnPropNameInTable="PatientInformation_NameColumn" msprop:Generator_UserColumnName="PatientInformation_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Surname" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Surname" msprop:Generator_ColumnPropNameInRow="PatientInformation_Surname" msprop:Generator_ColumnPropNameInTable="PatientInformation_SurnameColumn" msprop:Generator_UserColumnName="PatientInformation_Surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_Gender" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_Gender" msprop:Generator_ColumnPropNameInRow="PatientInformation_Gender" msprop:Generator_ColumnPropNameInTable="PatientInformation_GenderColumn" msprop:Generator_UserColumnName="PatientInformation_Gender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_VisitInformation_PatientAge" msprop:Generator_ColumnVarNameInTable="columnIPS_VisitInformation_PatientAge" msprop:Generator_ColumnPropNameInRow="IPS_VisitInformation_PatientAge" msprop:Generator_ColumnPropNameInTable="IPS_VisitInformation_PatientAgeColumn" msprop:Generator_UserColumnName="IPS_VisitInformation_PatientAge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientInformation_DateOfBirth" msprop:Generator_ColumnVarNameInTable="columnPatientInformation_DateOfBirth" msprop:Generator_ColumnPropNameInRow="PatientInformation_DateOfBirth" msprop:Generator_ColumnPropNameInTable="PatientInformation_DateOfBirthColumn" msprop:Generator_UserColumnName="PatientInformation_DateOfBirth" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_VisitInformation_DateOfAdmission" msprop:Generator_ColumnVarNameInTable="columnIPS_VisitInformation_DateOfAdmission" msprop:Generator_ColumnPropNameInRow="IPS_VisitInformation_DateOfAdmission" msprop:Generator_ColumnPropNameInTable="IPS_VisitInformation_DateOfAdmissionColumn" msprop:Generator_UserColumnName="IPS_VisitInformation_DateOfAdmission" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_VisitInformation_DateOfDischarge" msprop:Generator_ColumnVarNameInTable="columnIPS_VisitInformation_DateOfDischarge" msprop:Generator_ColumnPropNameInRow="IPS_VisitInformation_DateOfDischarge" msprop:Generator_ColumnPropNameInTable="IPS_VisitInformation_DateOfDischargeColumn" msprop:Generator_UserColumnName="IPS_VisitInformation_DateOfDischarge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_VisitInformation_Deceased" msprop:Generator_ColumnVarNameInTable="columnIPS_VisitInformation_Deceased" msprop:Generator_ColumnPropNameInRow="IPS_VisitInformation_Deceased" msprop:Generator_ColumnPropNameInTable="IPS_VisitInformation_DeceasedColumn" msprop:Generator_UserColumnName="IPS_VisitInformation_Deceased" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_VisitInformation_Ward" msprop:Generator_ColumnVarNameInTable="columnIPS_VisitInformation_Ward" msprop:Generator_ColumnPropNameInRow="IPS_VisitInformation_Ward" msprop:Generator_ColumnPropNameInTable="IPS_VisitInformation_WardColumn" msprop:Generator_UserColumnName="IPS_VisitInformation_Ward" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_IPS_Theatre" msprop:Generator_TableClassName="Form_IPS_TheatreDataTable" msprop:Generator_TableVarName="tableForm_IPS_Theatre" msprop:Generator_RowChangedName="Form_IPS_TheatreRowChanged" msprop:Generator_TablePropName="Form_IPS_Theatre" msprop:Generator_RowDeletingName="Form_IPS_TheatreRowDeleting" msprop:Generator_RowChangingName="Form_IPS_TheatreRowChanging" msprop:Generator_RowEvHandlerName="Form_IPS_TheatreRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_IPS_TheatreRowDeleted" msprop:Generator_RowClassName="Form_IPS_TheatreRow" msprop:Generator_UserTableName="Form_IPS_Theatre" msprop:Generator_RowEvArgName="Form_IPS_TheatreRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IPS_Theatre_FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIPS_Theatre_FacilityDisplayName" msprop:Generator_ColumnPropNameInRow="IPS_Theatre_FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="IPS_Theatre_FacilityDisplayNameColumn" msprop:Generator_UserColumnName="IPS_Theatre_FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Theatre_DateOfAdmission" msprop:Generator_ColumnVarNameInTable="columnIPS_Theatre_DateOfAdmission" msprop:Generator_ColumnPropNameInRow="IPS_Theatre_DateOfAdmission" msprop:Generator_ColumnPropNameInTable="IPS_Theatre_DateOfAdmissionColumn" msprop:Generator_UserColumnName="IPS_Theatre_DateOfAdmission" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Theatre_DateOfDischarge" msprop:Generator_ColumnVarNameInTable="columnIPS_Theatre_DateOfDischarge" msprop:Generator_ColumnPropNameInRow="IPS_Theatre_DateOfDischarge" msprop:Generator_ColumnPropNameInTable="IPS_Theatre_DateOfDischargeColumn" msprop:Generator_UserColumnName="IPS_Theatre_DateOfDischarge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Theatre_FinalDiagnosisCode" msprop:Generator_ColumnVarNameInTable="columnIPS_Theatre_FinalDiagnosisCode" msprop:Generator_ColumnPropNameInRow="IPS_Theatre_FinalDiagnosisCode" msprop:Generator_ColumnPropNameInTable="IPS_Theatre_FinalDiagnosisCodeColumn" msprop:Generator_UserColumnName="IPS_Theatre_FinalDiagnosisCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Theatre_FinalDiagnosisDescription" msprop:Generator_ColumnVarNameInTable="columnIPS_Theatre_FinalDiagnosisDescription" msprop:Generator_ColumnPropNameInRow="IPS_Theatre_FinalDiagnosisDescription" msprop:Generator_ColumnPropNameInTable="IPS_Theatre_FinalDiagnosisDescriptionColumn" msprop:Generator_UserColumnName="IPS_Theatre_FinalDiagnosisDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Theatre_VisitNumber" msprop:Generator_ColumnVarNameInTable="columnIPS_Theatre_VisitNumber" msprop:Generator_ColumnPropNameInRow="IPS_Theatre_VisitNumber" msprop:Generator_ColumnPropNameInTable="IPS_Theatre_VisitNumberColumn" msprop:Generator_UserColumnName="IPS_Theatre_VisitNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Theatre_ServiceCategory" msprop:Generator_ColumnVarNameInTable="columnIPS_Theatre_ServiceCategory" msprop:Generator_ColumnPropNameInRow="IPS_Theatre_ServiceCategory" msprop:Generator_ColumnPropNameInTable="IPS_Theatre_ServiceCategoryColumn" msprop:Generator_UserColumnName="IPS_Theatre_ServiceCategory" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Theatre_Theatre" msprop:Generator_ColumnVarNameInTable="columnIPS_Theatre_Theatre" msprop:Generator_ColumnPropNameInRow="IPS_Theatre_Theatre" msprop:Generator_ColumnPropNameInTable="IPS_Theatre_TheatreColumn" msprop:Generator_UserColumnName="IPS_Theatre_Theatre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Theatre_TheatreTime" msprop:Generator_ColumnVarNameInTable="columnIPS_Theatre_TheatreTime" msprop:Generator_ColumnPropNameInRow="IPS_Theatre_TheatreTime" msprop:Generator_ColumnPropNameInTable="IPS_Theatre_TheatreTimeColumn" msprop:Generator_UserColumnName="IPS_Theatre_TheatreTime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Theatre_ProcedureDate" msprop:Generator_ColumnVarNameInTable="columnIPS_Theatre_ProcedureDate" msprop:Generator_ColumnPropNameInRow="IPS_Theatre_ProcedureDate" msprop:Generator_ColumnPropNameInTable="IPS_Theatre_ProcedureDateColumn" msprop:Generator_UserColumnName="IPS_Theatre_ProcedureDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Theatre_ProcedureCode" msprop:Generator_ColumnVarNameInTable="columnIPS_Theatre_ProcedureCode" msprop:Generator_ColumnPropNameInRow="IPS_Theatre_ProcedureCode" msprop:Generator_ColumnPropNameInTable="IPS_Theatre_ProcedureCodeColumn" msprop:Generator_UserColumnName="IPS_Theatre_ProcedureCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Theatre_ProcedureDescription" msprop:Generator_ColumnVarNameInTable="columnIPS_Theatre_ProcedureDescription" msprop:Generator_ColumnPropNameInRow="IPS_Theatre_ProcedureDescription" msprop:Generator_ColumnPropNameInTable="IPS_Theatre_ProcedureDescriptionColumn" msprop:Generator_UserColumnName="IPS_Theatre_ProcedureDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Theatre_TheatreInvoice" msprop:Generator_ColumnVarNameInTable="columnIPS_Theatre_TheatreInvoice" msprop:Generator_ColumnPropNameInRow="IPS_Theatre_TheatreInvoice" msprop:Generator_ColumnPropNameInTable="IPS_Theatre_TheatreInvoiceColumn" msprop:Generator_UserColumnName="IPS_Theatre_TheatreInvoice" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Theatre_Surgeon" msprop:Generator_ColumnVarNameInTable="columnIPS_Theatre_Surgeon" msprop:Generator_ColumnPropNameInRow="IPS_Theatre_Surgeon" msprop:Generator_ColumnPropNameInTable="IPS_Theatre_SurgeonColumn" msprop:Generator_UserColumnName="IPS_Theatre_Surgeon" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Theatre_Anaesthetist" msprop:Generator_ColumnVarNameInTable="columnIPS_Theatre_Anaesthetist" msprop:Generator_ColumnPropNameInRow="IPS_Theatre_Anaesthetist" msprop:Generator_ColumnPropNameInTable="IPS_Theatre_AnaesthetistColumn" msprop:Generator_UserColumnName="IPS_Theatre_Anaesthetist" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Theatre_Assistant" msprop:Generator_ColumnVarNameInTable="columnIPS_Theatre_Assistant" msprop:Generator_ColumnPropNameInRow="IPS_Theatre_Assistant" msprop:Generator_ColumnPropNameInTable="IPS_Theatre_AssistantColumn" msprop:Generator_UserColumnName="IPS_Theatre_Assistant" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Theatre_WoundCategory" msprop:Generator_ColumnVarNameInTable="columnIPS_Theatre_WoundCategory" msprop:Generator_ColumnPropNameInRow="IPS_Theatre_WoundCategory" msprop:Generator_ColumnPropNameInTable="IPS_Theatre_WoundCategoryColumn" msprop:Generator_UserColumnName="IPS_Theatre_WoundCategory" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Theatre_ScrubNurse" msprop:Generator_ColumnVarNameInTable="columnIPS_Theatre_ScrubNurse" msprop:Generator_ColumnPropNameInRow="IPS_Theatre_ScrubNurse" msprop:Generator_ColumnPropNameInTable="IPS_Theatre_ScrubNurseColumn" msprop:Generator_UserColumnName="IPS_Theatre_ScrubNurse" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_IPS_VisitDiagnosis" msprop:Generator_TableClassName="Form_IPS_VisitDiagnosisDataTable" msprop:Generator_TableVarName="tableForm_IPS_VisitDiagnosis" msprop:Generator_RowChangedName="Form_IPS_VisitDiagnosisRowChanged" msprop:Generator_TablePropName="Form_IPS_VisitDiagnosis" msprop:Generator_RowDeletingName="Form_IPS_VisitDiagnosisRowDeleting" msprop:Generator_RowChangingName="Form_IPS_VisitDiagnosisRowChanging" msprop:Generator_RowEvHandlerName="Form_IPS_VisitDiagnosisRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_IPS_VisitDiagnosisRowDeleted" msprop:Generator_RowClassName="Form_IPS_VisitDiagnosisRow" msprop:Generator_UserTableName="Form_IPS_VisitDiagnosis" msprop:Generator_RowEvArgName="Form_IPS_VisitDiagnosisRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IPS_VisitDiagnosis_CodeType" msprop:Generator_ColumnVarNameInTable="columnIPS_VisitDiagnosis_CodeType" msprop:Generator_ColumnPropNameInRow="IPS_VisitDiagnosis_CodeType" msprop:Generator_ColumnPropNameInTable="IPS_VisitDiagnosis_CodeTypeColumn" msprop:Generator_UserColumnName="IPS_VisitDiagnosis_CodeType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_VisitDiagnosis_Code" msprop:Generator_ColumnVarNameInTable="columnIPS_VisitDiagnosis_Code" msprop:Generator_ColumnPropNameInRow="IPS_VisitDiagnosis_Code" msprop:Generator_ColumnPropNameInTable="IPS_VisitDiagnosis_CodeColumn" msprop:Generator_UserColumnName="IPS_VisitDiagnosis_Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_VisitDiagnosis_Description" msprop:Generator_ColumnVarNameInTable="columnIPS_VisitDiagnosis_Description" msprop:Generator_ColumnPropNameInRow="IPS_VisitDiagnosis_Description" msprop:Generator_ColumnPropNameInTable="IPS_VisitDiagnosis_DescriptionColumn" msprop:Generator_UserColumnName="IPS_VisitDiagnosis_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_IPS_BedHistory" msprop:Generator_TableClassName="Form_IPS_BedHistoryDataTable" msprop:Generator_TableVarName="tableForm_IPS_BedHistory" msprop:Generator_RowChangedName="Form_IPS_BedHistoryRowChanged" msprop:Generator_TablePropName="Form_IPS_BedHistory" msprop:Generator_RowDeletingName="Form_IPS_BedHistoryRowDeleting" msprop:Generator_RowChangingName="Form_IPS_BedHistoryRowChanging" msprop:Generator_RowEvHandlerName="Form_IPS_BedHistoryRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_IPS_BedHistoryRowDeleted" msprop:Generator_RowClassName="Form_IPS_BedHistoryRow" msprop:Generator_UserTableName="Form_IPS_BedHistory" msprop:Generator_RowEvArgName="Form_IPS_BedHistoryRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IPS_BedHistory_Department" msprop:Generator_ColumnVarNameInTable="columnIPS_BedHistory_Department" msprop:Generator_ColumnPropNameInRow="IPS_BedHistory_Department" msprop:Generator_ColumnPropNameInTable="IPS_BedHistory_DepartmentColumn" msprop:Generator_UserColumnName="IPS_BedHistory_Department" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_BedHistory_Room" msprop:Generator_ColumnVarNameInTable="columnIPS_BedHistory_Room" msprop:Generator_ColumnPropNameInRow="IPS_BedHistory_Room" msprop:Generator_ColumnPropNameInTable="IPS_BedHistory_RoomColumn" msprop:Generator_UserColumnName="IPS_BedHistory_Room" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_BedHistory_Bed" msprop:Generator_ColumnVarNameInTable="columnIPS_BedHistory_Bed" msprop:Generator_ColumnPropNameInRow="IPS_BedHistory_Bed" msprop:Generator_ColumnPropNameInTable="IPS_BedHistory_BedColumn" msprop:Generator_UserColumnName="IPS_BedHistory_Bed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_BedHistory_Date" msprop:Generator_ColumnVarNameInTable="columnIPS_BedHistory_Date" msprop:Generator_ColumnPropNameInRow="IPS_BedHistory_Date" msprop:Generator_ColumnPropNameInTable="IPS_BedHistory_DateColumn" msprop:Generator_UserColumnName="IPS_BedHistory_Date" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_IPS_AntibioticPrescription" msprop:Generator_TableClassName="Form_IPS_AntibioticPrescriptionDataTable" msprop:Generator_TableVarName="tableForm_IPS_AntibioticPrescription" msprop:Generator_RowChangedName="Form_IPS_AntibioticPrescriptionRowChanged" msprop:Generator_TablePropName="Form_IPS_AntibioticPrescription" msprop:Generator_RowDeletingName="Form_IPS_AntibioticPrescriptionRowDeleting" msprop:Generator_RowChangingName="Form_IPS_AntibioticPrescriptionRowChanging" msprop:Generator_RowEvHandlerName="Form_IPS_AntibioticPrescriptionRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_IPS_AntibioticPrescriptionRowDeleted" msprop:Generator_RowClassName="Form_IPS_AntibioticPrescriptionRow" msprop:Generator_UserTableName="Form_IPS_AntibioticPrescription" msprop:Generator_RowEvArgName="Form_IPS_AntibioticPrescriptionRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IPS_AntibioticPrescription_Description" msprop:Generator_ColumnVarNameInTable="columnIPS_AntibioticPrescription_Description" msprop:Generator_ColumnPropNameInRow="IPS_AntibioticPrescription_Description" msprop:Generator_ColumnPropNameInTable="IPS_AntibioticPrescription_DescriptionColumn" msprop:Generator_UserColumnName="IPS_AntibioticPrescription_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_IPS_Organism" msprop:Generator_TableClassName="Form_IPS_OrganismDataTable" msprop:Generator_TableVarName="tableForm_IPS_Organism" msprop:Generator_RowChangedName="Form_IPS_OrganismRowChanged" msprop:Generator_TablePropName="Form_IPS_Organism" msprop:Generator_RowDeletingName="Form_IPS_OrganismRowDeleting" msprop:Generator_RowChangingName="Form_IPS_OrganismRowChanging" msprop:Generator_RowEvHandlerName="Form_IPS_OrganismRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_IPS_OrganismRowDeleted" msprop:Generator_RowClassName="Form_IPS_OrganismRow" msprop:Generator_UserTableName="Form_IPS_Organism" msprop:Generator_RowEvArgName="Form_IPS_OrganismRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Authority" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAuthority" msprop:Generator_ColumnPropNameInRow="Authority" msprop:Generator_ColumnPropNameInTable="AuthorityColumn" msprop:Generator_UserColumnName="Authority" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Organism_Lookup" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIPS_Organism_Lookup" msprop:Generator_ColumnPropNameInRow="IPS_Organism_Lookup" msprop:Generator_ColumnPropNameInTable="IPS_Organism_LookupColumn" msprop:Generator_UserColumnName="IPS_Organism_Lookup" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Organism_Notifiable_DepartmentOfHealth_Date" msprop:Generator_ColumnVarNameInTable="columnIPS_Organism_Notifiable_DepartmentOfHealth_Date" msprop:Generator_ColumnPropNameInRow="IPS_Organism_Notifiable_DepartmentOfHealth_Date" msprop:Generator_ColumnPropNameInTable="IPS_Organism_Notifiable_DepartmentOfHealth_DateColumn" msprop:Generator_UserColumnName="IPS_Organism_Notifiable_DepartmentOfHealth_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IPS_Organism_Notifiable_DepartmentOfHealth_ReferenceNumber" msprop:Generator_ColumnVarNameInTable="columnIPS_Organism_Notifiable_DepartmentOfHealth_ReferenceNumber" msprop:Generator_ColumnPropNameInRow="IPS_Organism_Notifiable_DepartmentOfHealth_ReferenceNumber" msprop:Generator_ColumnPropNameInTable="IPS_Organism_Notifiable_DepartmentOfHealth_ReferenceNumberColumn" msprop:Generator_UserColumnName="IPS_Organism_Notifiable_DepartmentOfHealth_ReferenceNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_IPS_Infection" msprop:Generator_TableClassName="Form_IPS_InfectionDataTable" msprop:Generator_TableVarName="tableForm_IPS_Infection" msprop:Generator_TablePropName="Form_IPS_Infection" msprop:Generator_RowDeletingName="Form_IPS_InfectionRowDeleting" msprop:Generator_RowChangingName="Form_IPS_InfectionRowChanging" msprop:Generator_RowEvHandlerName="Form_IPS_InfectionRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_IPS_InfectionRowDeleted" msprop:Generator_UserTableName="Form_IPS_Infection" msprop:Generator_RowChangedName="Form_IPS_InfectionRowChanged" msprop:Generator_RowEvArgName="Form_IPS_InfectionRowChangeEvent" msprop:Generator_RowClassName="Form_IPS_InfectionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IPS_Infection_Category_List" msprop:Generator_ColumnVarNameInTable="columnIPS_Infection_Category_List" msprop:Generator_ColumnPropNameInRow="IPS_Infection_Category_List" msprop:Generator_ColumnPropNameInTable="IPS_Infection_Category_ListColumn" msprop:Generator_UserColumnName="IPS_Infection_Category_List" type="xs:int" minOccurs="0" />
+              <xs:element name="IPS_Infection_Category_Name" msprop:Generator_ColumnVarNameInTable="columnIPS_Infection_Category_Name" msprop:Generator_ColumnPropNameInRow="IPS_Infection_Category_Name" msprop:Generator_ColumnPropNameInTable="IPS_Infection_Category_NameColumn" msprop:Generator_UserColumnName="IPS_Infection_Category_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Infection_Type_List" msprop:Generator_ColumnVarNameInTable="columnIPS_Infection_Type_List" msprop:Generator_ColumnPropNameInRow="IPS_Infection_Type_List" msprop:Generator_ColumnPropNameInTable="IPS_Infection_Type_ListColumn" msprop:Generator_UserColumnName="IPS_Infection_Type_List" type="xs:int" minOccurs="0" />
+              <xs:element name="IPS_Infection_Type_Name" msprop:Generator_ColumnVarNameInTable="columnIPS_Infection_Type_Name" msprop:Generator_ColumnPropNameInRow="IPS_Infection_Type_Name" msprop:Generator_ColumnPropNameInTable="IPS_Infection_Type_NameColumn" msprop:Generator_UserColumnName="IPS_Infection_Type_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Infection_SubType_Name" msprop:Generator_ColumnVarNameInTable="columnIPS_Infection_SubType_Name" msprop:Generator_ColumnPropNameInRow="IPS_Infection_SubType_Name" msprop:Generator_ColumnPropNameInTable="IPS_Infection_SubType_NameColumn" msprop:Generator_UserColumnName="IPS_Infection_SubType_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Infection_SubSubType_Name" msprop:Generator_ColumnVarNameInTable="columnIPS_Infection_SubSubType_Name" msprop:Generator_ColumnPropNameInRow="IPS_Infection_SubSubType_Name" msprop:Generator_ColumnPropNameInTable="IPS_Infection_SubSubType_NameColumn" msprop:Generator_UserColumnName="IPS_Infection_SubSubType_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Infection_Site_Name" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIPS_Infection_Site_Name" msprop:Generator_ColumnPropNameInRow="IPS_Infection_Site_Name" msprop:Generator_ColumnPropNameInTable="IPS_Infection_Site_NameColumn" msprop:Generator_UserColumnName="IPS_Infection_Site_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Infection_Screening" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIPS_Infection_Screening" msprop:Generator_ColumnPropNameInRow="IPS_Infection_Screening" msprop:Generator_ColumnPropNameInTable="IPS_Infection_ScreeningColumn" msprop:Generator_UserColumnName="IPS_Infection_Screening" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_ScreeningType_Type_Name" msprop:Generator_ColumnVarNameInTable="columnIPS_ScreeningType_Type_Name" msprop:Generator_ColumnPropNameInRow="IPS_ScreeningType_Type_Name" msprop:Generator_ColumnPropNameInTable="IPS_ScreeningType_Type_NameColumn" msprop:Generator_UserColumnName="IPS_ScreeningType_Type_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Infection_ScreeningReason_Name" msprop:Generator_ColumnVarNameInTable="columnIPS_Infection_ScreeningReason_Name" msprop:Generator_ColumnPropNameInRow="IPS_Infection_ScreeningReason_Name" msprop:Generator_ColumnPropNameInTable="IPS_Infection_ScreeningReason_NameColumn" msprop:Generator_UserColumnName="IPS_Infection_ScreeningReason_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Unit_Name" msprop:Generator_ColumnVarNameInTable="columnUnit_Name" msprop:Generator_ColumnPropNameInRow="Unit_Name" msprop:Generator_ColumnPropNameInTable="Unit_NameColumn" msprop:Generator_UserColumnName="Unit_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPS_Infection_Summary" msprop:Generator_ColumnVarNameInTable="columnIPS_Infection_Summary" msprop:Generator_ColumnPropNameInRow="IPS_Infection_Summary" msprop:Generator_ColumnPropNameInTable="IPS_Infection_SummaryColumn" msprop:Generator_UserColumnName="IPS_Infection_Summary" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:Form_IPS_HAI_Investigation" />
+      <xs:field xpath="mstns:IPS_HAI_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

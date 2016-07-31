@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_HAI_Investigation" targetNamespace="http://tempuri.org/DataSet_Form_HAI_Investigation.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_HAI_Investigation.xsd" xmlns="http://tempuri.org/DataSet_Form_HAI_Investigation.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_HAI_InvestigationSectionTableAdapter" GeneratorDataComponentClassName="Form_HAI_InvestigationSectionTableAdapter" Name="Form_HAI_InvestigationSection" UserDataComponentName="Form_HAI_InvestigationSectionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT DISTINCT
+                      tblInfectionPrevention.dtDateOfInvestigation, tblInfectionPrevention.sInvestigatorName, tblInfectionPrevention.sInvestigatorDesignation,
+                      tblInfectionPrevention.sIPCSName, tblInfectionPrevention.sTeamMembers, vAdministration_ListItem_Active.ListItem_Name AS PrecautionaryMeasureName,
+                      tblInfectionPrevention_PrecautionaryMeasure.bSelected, tblInfectionPrevention.bInvestigationCompleted, tblInfectionPrevention.dtInvestigationCompleted
+                      FROM            vAdministration_ListItem_Active RIGHT OUTER JOIN
+                      tblInfectionPrevention_PrecautionaryMeasure ON
+                      vAdministration_ListItem_Active.ListItem_Id = tblInfectionPrevention_PrecautionaryMeasure.fkiPrecautionaryMeasureID RIGHT OUTER JOIN
+                      tblInfectionPrevention ON tblInfectionPrevention_PrecautionaryMeasure.fkiInfectionFormID = tblInfectionPrevention.pkiInfectionFormID
+                      WHERE        (tblInfectionPrevention.pkiInfectionFormID = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="dtDateOfInvestigation" DataSetColumn="dtDateOfInvestigation" />
+              <Mapping SourceColumn="sInvestigatorName" DataSetColumn="sInvestigatorName" />
+              <Mapping SourceColumn="sInvestigatorDesignation" DataSetColumn="sInvestigatorDesignation" />
+              <Mapping SourceColumn="sIPCSName" DataSetColumn="sIPCSName" />
+              <Mapping SourceColumn="sTeamMembers" DataSetColumn="sTeamMembers" />
+              <Mapping SourceColumn="PrecautionaryMeasureName" DataSetColumn="PrecautionaryMeasureName" />
+              <Mapping SourceColumn="bSelected" DataSetColumn="bSelected" />
+              <Mapping SourceColumn="bInvestigationCompleted" DataSetColumn="bInvestigationCompleted" />
+              <Mapping SourceColumn="dtInvestigationCompleted" DataSetColumn="dtInvestigationCompleted" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Form_HAI_HeaderTableAdapter" GeneratorDataComponentClassName="Form_HAI_HeaderTableAdapter" Name="Form_HAI_Header" UserDataComponentName="Form_HAI_HeaderTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT DISTINCT vAdministration_Facility_All.Facility_FacilityDisplayName AS FacilityDisplayName , tblInfectionPrevention.sReportNumber
+                      FROM tblInfectionPrevention , vAdministration_Facility_All
+                      WHERE
+                      tblInfectionPrevention.fkiFacilityID = vAdministration_Facility_All.Facility_Id
+                      AND (pkiInfectionFormID = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FacilityDisplayName" DataSetColumn="FacilityDisplayName" />
+              <Mapping SourceColumn="sReportNumber" DataSetColumn="sReportNumber" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_HAI_Investigation" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet_Form_HAI_Investigation" msprop:Generator_UserDSName="DataSet_Form_HAI_Investigation">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Form_HAI_InvestigationSection" msprop:Generator_TableClassName="Form_HAI_InvestigationSectionDataTable" msprop:Generator_TableVarName="tableForm_HAI_InvestigationSection" msprop:Generator_TablePropName="Form_HAI_InvestigationSection" msprop:Generator_RowDeletingName="Form_HAI_InvestigationSectionRowDeleting" msprop:Generator_UserTableName="Form_HAI_InvestigationSection" msprop:Generator_RowChangingName="Form_HAI_InvestigationSectionRowChanging" msprop:Generator_RowEvHandlerName="Form_HAI_InvestigationSectionRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_HAI_InvestigationSectionRowDeleted" msprop:Generator_RowEvArgName="Form_HAI_InvestigationSectionRowChangeEvent" msprop:Generator_RowChangedName="Form_HAI_InvestigationSectionRowChanged" msprop:Generator_RowClassName="Form_HAI_InvestigationSectionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dtDateOfInvestigation" msprop:Generator_ColumnVarNameInTable="columndtDateOfInvestigation" msprop:Generator_ColumnPropNameInRow="dtDateOfInvestigation" msprop:Generator_ColumnPropNameInTable="dtDateOfInvestigationColumn" msprop:Generator_UserColumnName="dtDateOfInvestigation" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="sInvestigatorName" msprop:Generator_ColumnVarNameInTable="columnsInvestigatorName" msprop:Generator_ColumnPropNameInRow="sInvestigatorName" msprop:Generator_ColumnPropNameInTable="sInvestigatorNameColumn" msprop:Generator_UserColumnName="sInvestigatorName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sInvestigatorDesignation" msprop:Generator_ColumnVarNameInTable="columnsInvestigatorDesignation" msprop:Generator_ColumnPropNameInRow="sInvestigatorDesignation" msprop:Generator_ColumnPropNameInTable="sInvestigatorDesignationColumn" msprop:Generator_UserColumnName="sInvestigatorDesignation" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sIPCSName" msprop:Generator_ColumnVarNameInTable="columnsIPCSName" msprop:Generator_ColumnPropNameInRow="sIPCSName" msprop:Generator_ColumnPropNameInTable="sIPCSNameColumn" msprop:Generator_UserColumnName="sIPCSName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sTeamMembers" msprop:Generator_ColumnVarNameInTable="columnsTeamMembers" msprop:Generator_ColumnPropNameInRow="sTeamMembers" msprop:Generator_ColumnPropNameInTable="sTeamMembersColumn" msprop:Generator_UserColumnName="sTeamMembers" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PrecautionaryMeasureName" msprop:Generator_ColumnVarNameInTable="columnPrecautionaryMeasureName" msprop:Generator_ColumnPropNameInRow="PrecautionaryMeasureName" msprop:Generator_ColumnPropNameInTable="PrecautionaryMeasureNameColumn" msprop:Generator_UserColumnName="PrecautionaryMeasureName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bSelected" msprop:Generator_ColumnVarNameInTable="columnbSelected" msprop:Generator_ColumnPropNameInRow="bSelected" msprop:Generator_ColumnPropNameInTable="bSelectedColumn" msprop:Generator_UserColumnName="bSelected" type="xs:boolean" minOccurs="0" />
+              <xs:element name="bInvestigationCompleted" msprop:Generator_ColumnVarNameInTable="columnbInvestigationCompleted" msprop:Generator_ColumnPropNameInRow="bInvestigationCompleted" msprop:Generator_ColumnPropNameInTable="bInvestigationCompletedColumn" msprop:Generator_UserColumnName="bInvestigationCompleted" type="xs:boolean" minOccurs="0" />
+              <xs:element name="dtInvestigationCompleted" msprop:Generator_ColumnVarNameInTable="columndtInvestigationCompleted" msprop:Generator_ColumnPropNameInRow="dtInvestigationCompleted" msprop:Generator_ColumnPropNameInTable="dtInvestigationCompletedColumn" msprop:Generator_UserColumnName="dtInvestigationCompleted" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Form_HAI_Header" msprop:Generator_TableClassName="Form_HAI_HeaderDataTable" msprop:Generator_TableVarName="tableForm_HAI_Header" msprop:Generator_TablePropName="Form_HAI_Header" msprop:Generator_RowDeletingName="Form_HAI_HeaderRowDeleting" msprop:Generator_UserTableName="Form_HAI_Header" msprop:Generator_RowChangingName="Form_HAI_HeaderRowChanging" msprop:Generator_RowEvHandlerName="Form_HAI_HeaderRowChangeEventHandler" msprop:Generator_RowDeletedName="Form_HAI_HeaderRowDeleted" msprop:Generator_RowEvArgName="Form_HAI_HeaderRowChangeEvent" msprop:Generator_RowChangedName="Form_HAI_HeaderRowChanged" msprop:Generator_RowClassName="Form_HAI_HeaderRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacilityDisplayName" msprop:Generator_ColumnPropNameInRow="FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="FacilityDisplayNameColumn" msprop:Generator_UserColumnName="FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="253" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sReportNumber" msprop:Generator_ColumnVarNameInTable="columnsReportNumber" msprop:Generator_ColumnPropNameInRow="sReportNumber" msprop:Generator_ColumnPropNameInTable="sReportNumberColumn" msprop:Generator_UserColumnName="sReportNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

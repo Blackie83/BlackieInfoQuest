@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Form_EquipmentClassifiedSystem_Available" targetNamespace="http://tempuri.org/DataSet_Form_EquipmentClassifiedSystem_Available.xsd" xmlns:mstns="http://tempuri.org/DataSet_Form_EquipmentClassifiedSystem_Available.xsd" xmlns="http://tempuri.org/DataSet_Form_EquipmentClassifiedSystem_Available.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="InfoQuestMOSSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InfoQuestMOSSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.InfoQuestMOSSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vInfoQuest_Form_EquipmentClassifiedSystem_AvailableTableAdapter" GeneratorDataComponentClassName="vInfoQuest_Form_EquipmentClassifiedSystem_AvailableTableAdapter" Name="vInfoQuest_Form_EquipmentClassifiedSystem_Available" UserDataComponentName="vInfoQuest_Form_EquipmentClassifiedSystem_AvailableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="InfoQuestMOSS.dbo.vInfoQuest_Form_EquipmentClassifiedSystem_Available" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM vInfoQuest_Form_EquipmentClassifiedSystem_Available WHERE ECS_Available_Id = 1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ECS_Available_Id" DataSetColumn="ECS_Available_Id" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facilities_FacilityName" DataSetColumn="Facilities_FacilityName" />
+              <Mapping SourceColumn="Facilities_FacilityCode" DataSetColumn="Facilities_FacilityCode" />
+              <Mapping SourceColumn="FacilityDisplayName" DataSetColumn="FacilityDisplayName" />
+              <Mapping SourceColumn="ECS_Available_NameSurname" DataSetColumn="ECS_Available_NameSurname" />
+              <Mapping SourceColumn="ECS_Available_TelephoneNumber" DataSetColumn="ECS_Available_TelephoneNumber" />
+              <Mapping SourceColumn="ECS_Available_Email" DataSetColumn="ECS_Available_Email" />
+              <Mapping SourceColumn="ECS_Available_Description" DataSetColumn="ECS_Available_Description" />
+              <Mapping SourceColumn="ECS_Available_Quantity" DataSetColumn="ECS_Available_Quantity" />
+              <Mapping SourceColumn="ECS_Available_QuantityLeft" DataSetColumn="ECS_Available_QuantityLeft" />
+              <Mapping SourceColumn="ECS_Available_Condition_List" DataSetColumn="ECS_Available_Condition_List" />
+              <Mapping SourceColumn="ECS_Available_Condition_Name" DataSetColumn="ECS_Available_Condition_Name" />
+              <Mapping SourceColumn="ECS_Available_IndicativeCost" DataSetColumn="ECS_Available_IndicativeCost" />
+              <Mapping SourceColumn="ECS_Available_DeadlineDate" DataSetColumn="ECS_Available_DeadlineDate" />
+              <Mapping SourceColumn="ECS_Available_CreatedDate" DataSetColumn="ECS_Available_CreatedDate" />
+              <Mapping SourceColumn="ECS_Available_CreatedBy" DataSetColumn="ECS_Available_CreatedBy" />
+              <Mapping SourceColumn="ECS_Available_ModifiedDate" DataSetColumn="ECS_Available_ModifiedDate" />
+              <Mapping SourceColumn="ECS_Available_ModifiedBy" DataSetColumn="ECS_Available_ModifiedBy" />
+              <Mapping SourceColumn="ECS_Available_History" DataSetColumn="ECS_Available_History" />
+              <Mapping SourceColumn="ECS_Available_IsActive" DataSetColumn="ECS_Available_IsActive" />
+              <Mapping SourceColumn="Closed" DataSetColumn="Closed" />
+              <Mapping SourceColumn="ClosedLabel" DataSetColumn="ClosedLabel" />
+              <Mapping SourceColumn="Link" DataSetColumn="Link" />
+              <Mapping SourceColumn="ECS_Available_Archived" DataSetColumn="ECS_Available_Archived" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vInfoQuest_Form_EquipmentClassifiedSystem_Available_ReservedTableAdapter" GeneratorDataComponentClassName="vInfoQuest_Form_EquipmentClassifiedSystem_Available_ReservedTableAdapter" Name="vInfoQuest_Form_EquipmentClassifiedSystem_Available_Reserved" UserDataComponentName="vInfoQuest_Form_EquipmentClassifiedSystem_Available_ReservedTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InfoQuestMOSSConnectionString (Web.config)" DbObjectName="SELECT TempTable1.* FROM ( SELECT * FROM vInfoQuest_Form_EquipmentClassifiedSystem_Available_Reserved ) AS TempTable1, vAdministration_SecurityAccess_Active WHERE vAdministration_SecurityAccess_Active.SecurityRole_Id = '1' AND vAdministration_SecurityAccess_Active.Form_Id = '-1' AND vAdministration_SecurityAccess_Active.SecurityUser_Username = 'lhc\swartj2' UNION SELECT TempTable2.* FROM ( SELECT * FROM vInfoQuest_Form_EquipmentClassifiedSystem_Available_Reserved ) AS TempTable2, vAdministration_SecurityAccess_Active WHERE vAdministration_SecurityAccess_Active.SecurityRole_Id = '77' AND vAdministration_SecurityAccess_Active.Form_Id = '24' AND vAdministration_SecurityAccess_Active.SecurityUser_Username = 'lhc\swartj2' UNION SELECT TempTable3.* FROM ( SELECT * FROM vInfoQuest_Form_EquipmentClassifiedSystem_Available_Reserved ) AS TempTable3, vAdministration_SecurityAccess_Active WHERE vAdministration_SecurityAccess_Active.SecurityRole_Id = '78' AND vAdministration_SecurityAccess_Active.Form_Id = '24' AND vAdministration_SecurityAccess_Active.SecurityUser_Username = 'lhc\swartj2' UNION SELECT TempTable4.* FROM ( SELECT * FROM ( SELECT * FROM vInfoQuest_Form_EquipmentClassifiedSystem_Available_Reserved WHERE Reserved_Facility_Id IN (SELECT Facility_Id FROM vAdministration_SecurityAccess_Active WHERE SecurityUser_Username ='lhc\swartj2' AND Form_Id = 24 AND SecurityRole_Id = 79) ) AS TempTable4 ) AS TempTable4, vAdministration_SecurityAccess_Active WHERE vAdministration_SecurityAccess_Active.SecurityRole_Id = '79' AND vAdministration_SecurityAccess_Active.Form_Id = '24' AND vAdministration_SecurityAccess_Active.SecurityUser_Username = 'lhc\swartj2' UNION SELECT TempTable5.* FROM ( SELECT * FROM vInfoQuest_Form_EquipmentClassifiedSystem_Available_Reserved ) AS TempTable5, vAdministration_SecurityAccess_Active WHERE vAdministration_SecurityAccess_Active.SecurityRole_Id = '80' AND vAdministration_SecurityAccess_Active.Form_Id = '24' AND vAdministration_SecurityAccess_Active.SecurityUser_Username = 'lhc\swartj2' UNION SELECT TempTable6.* FROM ( SELECT * FROM vInfoQuest_Form_EquipmentClassifiedSystem_Available_Reserved ) AS TempTable6, Administration_Form WHERE Administration_Form.Form_Id = '24'" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT *
+                      FROM (
+                      SELECT TempTable1.* FROM (
+                      SELECT *
+                      FROM vInfoQuest_Form_EquipmentClassifiedSystem_Available_Reserved
+                      ) AS TempTable1, vAdministration_SecurityAccess_Active
+                      WHERE vAdministration_SecurityAccess_Active.SecurityRole_Id = '1' AND vAdministration_SecurityAccess_Active.Form_Id = '-1' AND vAdministration_SecurityAccess_Active.SecurityUser_Username = 'lhc\swartj2'
+                      UNION
+                      SELECT TempTable2.* FROM (
+                      SELECT *
+                      FROM vInfoQuest_Form_EquipmentClassifiedSystem_Available_Reserved
+                      ) AS TempTable2, vAdministration_SecurityAccess_Active
+                      WHERE vAdministration_SecurityAccess_Active.SecurityRole_Id = '77' AND vAdministration_SecurityAccess_Active.Form_Id = '24' AND vAdministration_SecurityAccess_Active.SecurityUser_Username = 'lhc\swartj2'
+                      UNION
+                      SELECT TempTable3.* FROM (
+                      SELECT *
+                      FROM vInfoQuest_Form_EquipmentClassifiedSystem_Available_Reserved
+                      ) AS TempTable3, vAdministration_SecurityAccess_Active
+                      WHERE vAdministration_SecurityAccess_Active.SecurityRole_Id = '78' AND vAdministration_SecurityAccess_Active.Form_Id = '24' AND vAdministration_SecurityAccess_Active.SecurityUser_Username = 'lhc\swartj2'
+                      UNION
+                      SELECT TempTable4.* FROM (
+                      SELECT * FROM (
+                      SELECT *
+                      FROM vInfoQuest_Form_EquipmentClassifiedSystem_Available_Reserved
+                      WHERE Reserved_Facility_Id IN (SELECT Facility_Id FROM vAdministration_SecurityAccess_Active WHERE SecurityUser_Username  ='lhc\swartj2' AND Form_Id = 24 AND SecurityRole_Id = 79)
+                      ) AS TempTable4
+                      ) AS TempTable4, vAdministration_SecurityAccess_Active
+                      WHERE vAdministration_SecurityAccess_Active.SecurityRole_Id = '79' AND vAdministration_SecurityAccess_Active.Form_Id = '24' AND vAdministration_SecurityAccess_Active.SecurityUser_Username = 'lhc\swartj2'
+                      UNION
+                      SELECT TempTable5.* FROM (
+                      SELECT *
+                      FROM vInfoQuest_Form_EquipmentClassifiedSystem_Available_Reserved
+                      ) AS TempTable5, vAdministration_SecurityAccess_Active
+                      WHERE vAdministration_SecurityAccess_Active.SecurityRole_Id = '80' AND vAdministration_SecurityAccess_Active.Form_Id = '24' AND vAdministration_SecurityAccess_Active.SecurityUser_Username = 'lhc\swartj2'
+                      UNION
+                      SELECT TempTable6.* FROM (
+                      SELECT *
+                      FROM vInfoQuest_Form_EquipmentClassifiedSystem_Available_Reserved
+                      ) AS TempTable6, Administration_Form
+                      WHERE Administration_Form.Form_Id = '24'
+                      ) AS TempTableAll
+                      WHERE ECS_Available_Id = 1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ECS_Available_Reserved_Id" DataSetColumn="ECS_Available_Reserved_Id" />
+              <Mapping SourceColumn="ECS_Available_Id" DataSetColumn="ECS_Available_Id" />
+              <Mapping SourceColumn="Facility_Id" DataSetColumn="Facility_Id" />
+              <Mapping SourceColumn="Facilities_FacilityName" DataSetColumn="Facilities_FacilityName" />
+              <Mapping SourceColumn="Facilities_FacilityCode" DataSetColumn="Facilities_FacilityCode" />
+              <Mapping SourceColumn="FacilityDisplayName" DataSetColumn="FacilityDisplayName" />
+              <Mapping SourceColumn="ECS_Available_NameSurname" DataSetColumn="ECS_Available_NameSurname" />
+              <Mapping SourceColumn="ECS_Available_TelephoneNumber" DataSetColumn="ECS_Available_TelephoneNumber" />
+              <Mapping SourceColumn="ECS_Available_Email" DataSetColumn="ECS_Available_Email" />
+              <Mapping SourceColumn="ECS_Available_Description" DataSetColumn="ECS_Available_Description" />
+              <Mapping SourceColumn="ECS_Available_Quantity" DataSetColumn="ECS_Available_Quantity" />
+              <Mapping SourceColumn="ECS_Available_QuantityLeft" DataSetColumn="ECS_Available_QuantityLeft" />
+              <Mapping SourceColumn="ECS_Available_Condition_List" DataSetColumn="ECS_Available_Condition_List" />
+              <Mapping SourceColumn="ECS_Available_Condition_Name" DataSetColumn="ECS_Available_Condition_Name" />
+              <Mapping SourceColumn="ECS_Available_IndicativeCost" DataSetColumn="ECS_Available_IndicativeCost" />
+              <Mapping SourceColumn="ECS_Available_DeadlineDate" DataSetColumn="ECS_Available_DeadlineDate" />
+              <Mapping SourceColumn="ECS_Available_CreatedDate" DataSetColumn="ECS_Available_CreatedDate" />
+              <Mapping SourceColumn="ECS_Available_CreatedBy" DataSetColumn="ECS_Available_CreatedBy" />
+              <Mapping SourceColumn="ECS_Available_ModifiedDate" DataSetColumn="ECS_Available_ModifiedDate" />
+              <Mapping SourceColumn="ECS_Available_ModifiedBy" DataSetColumn="ECS_Available_ModifiedBy" />
+              <Mapping SourceColumn="ECS_Available_History" DataSetColumn="ECS_Available_History" />
+              <Mapping SourceColumn="ECS_Available_IsActive" DataSetColumn="ECS_Available_IsActive" />
+              <Mapping SourceColumn="Closed" DataSetColumn="Closed" />
+              <Mapping SourceColumn="ClosedLabel" DataSetColumn="ClosedLabel" />
+              <Mapping SourceColumn="Link" DataSetColumn="Link" />
+              <Mapping SourceColumn="Reserved_Facility_Id" DataSetColumn="Reserved_Facility_Id" />
+              <Mapping SourceColumn="Reserved_FacilityName" DataSetColumn="Reserved_FacilityName" />
+              <Mapping SourceColumn="Reserved_FacilityCode" DataSetColumn="Reserved_FacilityCode" />
+              <Mapping SourceColumn="Reserved_FacilityDisplayName" DataSetColumn="Reserved_FacilityDisplayName" />
+              <Mapping SourceColumn="ECS_Available_Reserved_NameSurname" DataSetColumn="ECS_Available_Reserved_NameSurname" />
+              <Mapping SourceColumn="ECS_Available_Reserved_TelephoneNumber" DataSetColumn="ECS_Available_Reserved_TelephoneNumber" />
+              <Mapping SourceColumn="ECS_Available_Reserved_Email" DataSetColumn="ECS_Available_Reserved_Email" />
+              <Mapping SourceColumn="ECS_Available_Reserved_Quantity" DataSetColumn="ECS_Available_Reserved_Quantity" />
+              <Mapping SourceColumn="ECS_Available_Reserved_CreatedDate" DataSetColumn="ECS_Available_Reserved_CreatedDate" />
+              <Mapping SourceColumn="ECS_Available_Reserved_CreatedBy" DataSetColumn="ECS_Available_Reserved_CreatedBy" />
+              <Mapping SourceColumn="ECS_Available_Reserved_ModifiedDate" DataSetColumn="ECS_Available_Reserved_ModifiedDate" />
+              <Mapping SourceColumn="ECS_Available_Reserved_ModifiedBy" DataSetColumn="ECS_Available_Reserved_ModifiedBy" />
+              <Mapping SourceColumn="ECS_Available_Reserved_History" DataSetColumn="ECS_Available_Reserved_History" />
+              <Mapping SourceColumn="ECS_Available_Reserved_IsActive" DataSetColumn="ECS_Available_Reserved_IsActive" />
+              <Mapping SourceColumn="LinkReserved" DataSetColumn="LinkReserved" />
+              <Mapping SourceColumn="ECS_Available_Archived" DataSetColumn="ECS_Available_Archived" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Form_EquipmentClassifiedSystem_Available" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet_Form_EquipmentClassifiedSystem_Available" msprop:Generator_UserDSName="DataSet_Form_EquipmentClassifiedSystem_Available">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vInfoQuest_Form_EquipmentClassifiedSystem_Available" msprop:Generator_TableClassName="vInfoQuest_Form_EquipmentClassifiedSystem_AvailableDataTable" msprop:Generator_TableVarName="tablevInfoQuest_Form_EquipmentClassifiedSystem_Available" msprop:Generator_TablePropName="vInfoQuest_Form_EquipmentClassifiedSystem_Available" msprop:Generator_RowDeletingName="vInfoQuest_Form_EquipmentClassifiedSystem_AvailableRowDeleting" msprop:Generator_UserTableName="vInfoQuest_Form_EquipmentClassifiedSystem_Available" msprop:Generator_RowChangingName="vInfoQuest_Form_EquipmentClassifiedSystem_AvailableRowChanging" msprop:Generator_RowEvHandlerName="vInfoQuest_Form_EquipmentClassifiedSystem_AvailableRowChangeEventHandler" msprop:Generator_RowDeletedName="vInfoQuest_Form_EquipmentClassifiedSystem_AvailableRowDeleted" msprop:Generator_RowEvArgName="vInfoQuest_Form_EquipmentClassifiedSystem_AvailableRowChangeEvent" msprop:Generator_RowChangedName="vInfoQuest_Form_EquipmentClassifiedSystem_AvailableRowChanged" msprop:Generator_RowClassName="vInfoQuest_Form_EquipmentClassifiedSystem_AvailableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ECS_Available_Id" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Id" msprop:Generator_ColumnPropNameInRow="ECS_Available_Id" msprop:Generator_ColumnPropNameInTable="ECS_Available_IdColumn" msprop:Generator_UserColumnName="ECS_Available_Id" type="xs:int" />
+              <xs:element name="Facility_Id" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facilities_FacilityName" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityName" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityName" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityNameColumn" msprop:Generator_UserColumnName="Facilities_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facilities_FacilityCode" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityCodeColumn" msprop:Generator_UserColumnName="Facilities_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacilityDisplayName" msprop:Generator_ColumnPropNameInRow="FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="FacilityDisplayNameColumn" msprop:Generator_UserColumnName="FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="253" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_NameSurname" msprop:Generator_ColumnVarNameInTable="columnECS_Available_NameSurname" msprop:Generator_ColumnPropNameInRow="ECS_Available_NameSurname" msprop:Generator_ColumnPropNameInTable="ECS_Available_NameSurnameColumn" msprop:Generator_UserColumnName="ECS_Available_NameSurname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_TelephoneNumber" msprop:Generator_ColumnVarNameInTable="columnECS_Available_TelephoneNumber" msprop:Generator_ColumnPropNameInRow="ECS_Available_TelephoneNumber" msprop:Generator_ColumnPropNameInTable="ECS_Available_TelephoneNumberColumn" msprop:Generator_UserColumnName="ECS_Available_TelephoneNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_Email" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Email" msprop:Generator_ColumnPropNameInRow="ECS_Available_Email" msprop:Generator_ColumnPropNameInTable="ECS_Available_EmailColumn" msprop:Generator_UserColumnName="ECS_Available_Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_Description" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Description" msprop:Generator_ColumnPropNameInRow="ECS_Available_Description" msprop:Generator_ColumnPropNameInTable="ECS_Available_DescriptionColumn" msprop:Generator_UserColumnName="ECS_Available_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_Quantity" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Quantity" msprop:Generator_ColumnPropNameInRow="ECS_Available_Quantity" msprop:Generator_ColumnPropNameInTable="ECS_Available_QuantityColumn" msprop:Generator_UserColumnName="ECS_Available_Quantity" type="xs:int" minOccurs="0" />
+              <xs:element name="ECS_Available_QuantityLeft" msprop:Generator_ColumnVarNameInTable="columnECS_Available_QuantityLeft" msprop:Generator_ColumnPropNameInRow="ECS_Available_QuantityLeft" msprop:Generator_ColumnPropNameInTable="ECS_Available_QuantityLeftColumn" msprop:Generator_UserColumnName="ECS_Available_QuantityLeft" type="xs:int" minOccurs="0" />
+              <xs:element name="ECS_Available_Condition_List" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Condition_List" msprop:Generator_ColumnPropNameInRow="ECS_Available_Condition_List" msprop:Generator_ColumnPropNameInTable="ECS_Available_Condition_ListColumn" msprop:Generator_UserColumnName="ECS_Available_Condition_List" type="xs:int" minOccurs="0" />
+              <xs:element name="ECS_Available_Condition_Name" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Condition_Name" msprop:Generator_ColumnPropNameInRow="ECS_Available_Condition_Name" msprop:Generator_ColumnPropNameInTable="ECS_Available_Condition_NameColumn" msprop:Generator_UserColumnName="ECS_Available_Condition_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_IndicativeCost" msprop:Generator_ColumnVarNameInTable="columnECS_Available_IndicativeCost" msprop:Generator_ColumnPropNameInRow="ECS_Available_IndicativeCost" msprop:Generator_ColumnPropNameInTable="ECS_Available_IndicativeCostColumn" msprop:Generator_UserColumnName="ECS_Available_IndicativeCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECS_Available_DeadlineDate" msprop:Generator_ColumnVarNameInTable="columnECS_Available_DeadlineDate" msprop:Generator_ColumnPropNameInRow="ECS_Available_DeadlineDate" msprop:Generator_ColumnPropNameInTable="ECS_Available_DeadlineDateColumn" msprop:Generator_UserColumnName="ECS_Available_DeadlineDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ECS_Available_CreatedDate" msprop:Generator_ColumnVarNameInTable="columnECS_Available_CreatedDate" msprop:Generator_ColumnPropNameInRow="ECS_Available_CreatedDate" msprop:Generator_ColumnPropNameInTable="ECS_Available_CreatedDateColumn" msprop:Generator_UserColumnName="ECS_Available_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ECS_Available_CreatedBy" msprop:Generator_ColumnVarNameInTable="columnECS_Available_CreatedBy" msprop:Generator_ColumnPropNameInRow="ECS_Available_CreatedBy" msprop:Generator_ColumnPropNameInTable="ECS_Available_CreatedByColumn" msprop:Generator_UserColumnName="ECS_Available_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_ModifiedDate" msprop:Generator_ColumnVarNameInTable="columnECS_Available_ModifiedDate" msprop:Generator_ColumnPropNameInRow="ECS_Available_ModifiedDate" msprop:Generator_ColumnPropNameInTable="ECS_Available_ModifiedDateColumn" msprop:Generator_UserColumnName="ECS_Available_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ECS_Available_ModifiedBy" msprop:Generator_ColumnVarNameInTable="columnECS_Available_ModifiedBy" msprop:Generator_ColumnPropNameInRow="ECS_Available_ModifiedBy" msprop:Generator_ColumnPropNameInTable="ECS_Available_ModifiedByColumn" msprop:Generator_UserColumnName="ECS_Available_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_History" msprop:Generator_ColumnVarNameInTable="columnECS_Available_History" msprop:Generator_ColumnPropNameInRow="ECS_Available_History" msprop:Generator_ColumnPropNameInTable="ECS_Available_HistoryColumn" msprop:Generator_UserColumnName="ECS_Available_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_IsActive" msprop:Generator_ColumnVarNameInTable="columnECS_Available_IsActive" msprop:Generator_ColumnPropNameInRow="ECS_Available_IsActive" msprop:Generator_ColumnPropNameInTable="ECS_Available_IsActiveColumn" msprop:Generator_UserColumnName="ECS_Available_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Closed" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnClosed" msprop:Generator_ColumnPropNameInRow="Closed" msprop:Generator_ColumnPropNameInTable="ClosedColumn" msprop:Generator_UserColumnName="Closed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClosedLabel" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnClosedLabel" msprop:Generator_ColumnPropNameInRow="ClosedLabel" msprop:Generator_ColumnPropNameInTable="ClosedLabelColumn" msprop:Generator_UserColumnName="ClosedLabel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="49" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Link" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLink" msprop:Generator_ColumnPropNameInRow="Link" msprop:Generator_ColumnPropNameInTable="LinkColumn" msprop:Generator_UserColumnName="Link" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="146" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_Archived" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Archived" msprop:Generator_ColumnPropNameInRow="ECS_Available_Archived" msprop:Generator_ColumnPropNameInTable="ECS_Available_ArchivedColumn" msprop:Generator_UserColumnName="ECS_Available_Archived" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vInfoQuest_Form_EquipmentClassifiedSystem_Available_Reserved" msprop:Generator_TableClassName="vInfoQuest_Form_EquipmentClassifiedSystem_Available_ReservedDataTable" msprop:Generator_TableVarName="tablevInfoQuest_Form_EquipmentClassifiedSystem_Available_Reserved" msprop:Generator_TablePropName="vInfoQuest_Form_EquipmentClassifiedSystem_Available_Reserved" msprop:Generator_RowDeletingName="vInfoQuest_Form_EquipmentClassifiedSystem_Available_ReservedRowDeleting" msprop:Generator_UserTableName="vInfoQuest_Form_EquipmentClassifiedSystem_Available_Reserved" msprop:Generator_RowChangingName="vInfoQuest_Form_EquipmentClassifiedSystem_Available_ReservedRowChanging" msprop:Generator_RowEvHandlerName="vInfoQuest_Form_EquipmentClassifiedSystem_Available_ReservedRowChangeEventHandler" msprop:Generator_RowDeletedName="vInfoQuest_Form_EquipmentClassifiedSystem_Available_ReservedRowDeleted" msprop:Generator_RowEvArgName="vInfoQuest_Form_EquipmentClassifiedSystem_Available_ReservedRowChangeEvent" msprop:Generator_RowChangedName="vInfoQuest_Form_EquipmentClassifiedSystem_Available_ReservedRowChanged" msprop:Generator_RowClassName="vInfoQuest_Form_EquipmentClassifiedSystem_Available_ReservedRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ECS_Available_Reserved_Id" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Reserved_Id" msprop:Generator_ColumnPropNameInRow="ECS_Available_Reserved_Id" msprop:Generator_ColumnPropNameInTable="ECS_Available_Reserved_IdColumn" msprop:Generator_UserColumnName="ECS_Available_Reserved_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="ECS_Available_Id" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Id" msprop:Generator_ColumnPropNameInRow="ECS_Available_Id" msprop:Generator_ColumnPropNameInTable="ECS_Available_IdColumn" msprop:Generator_UserColumnName="ECS_Available_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facility_Id" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacility_Id" msprop:Generator_ColumnPropNameInRow="Facility_Id" msprop:Generator_ColumnPropNameInTable="Facility_IdColumn" msprop:Generator_UserColumnName="Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Facilities_FacilityName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityName" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityName" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityNameColumn" msprop:Generator_UserColumnName="Facilities_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facilities_FacilityCode" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacilities_FacilityCode" msprop:Generator_ColumnPropNameInRow="Facilities_FacilityCode" msprop:Generator_ColumnPropNameInTable="Facilities_FacilityCodeColumn" msprop:Generator_UserColumnName="Facilities_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFacilityDisplayName" msprop:Generator_ColumnPropNameInRow="FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="FacilityDisplayNameColumn" msprop:Generator_UserColumnName="FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="253" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_NameSurname" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_NameSurname" msprop:Generator_ColumnPropNameInRow="ECS_Available_NameSurname" msprop:Generator_ColumnPropNameInTable="ECS_Available_NameSurnameColumn" msprop:Generator_UserColumnName="ECS_Available_NameSurname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_TelephoneNumber" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_TelephoneNumber" msprop:Generator_ColumnPropNameInRow="ECS_Available_TelephoneNumber" msprop:Generator_ColumnPropNameInTable="ECS_Available_TelephoneNumberColumn" msprop:Generator_UserColumnName="ECS_Available_TelephoneNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_Email" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Email" msprop:Generator_ColumnPropNameInRow="ECS_Available_Email" msprop:Generator_ColumnPropNameInTable="ECS_Available_EmailColumn" msprop:Generator_UserColumnName="ECS_Available_Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_Description" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Description" msprop:Generator_ColumnPropNameInRow="ECS_Available_Description" msprop:Generator_ColumnPropNameInTable="ECS_Available_DescriptionColumn" msprop:Generator_UserColumnName="ECS_Available_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_Quantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Quantity" msprop:Generator_ColumnPropNameInRow="ECS_Available_Quantity" msprop:Generator_ColumnPropNameInTable="ECS_Available_QuantityColumn" msprop:Generator_UserColumnName="ECS_Available_Quantity" type="xs:int" minOccurs="0" />
+              <xs:element name="ECS_Available_QuantityLeft" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_QuantityLeft" msprop:Generator_ColumnPropNameInRow="ECS_Available_QuantityLeft" msprop:Generator_ColumnPropNameInTable="ECS_Available_QuantityLeftColumn" msprop:Generator_UserColumnName="ECS_Available_QuantityLeft" type="xs:int" minOccurs="0" />
+              <xs:element name="ECS_Available_Condition_List" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Condition_List" msprop:Generator_ColumnPropNameInRow="ECS_Available_Condition_List" msprop:Generator_ColumnPropNameInTable="ECS_Available_Condition_ListColumn" msprop:Generator_UserColumnName="ECS_Available_Condition_List" type="xs:int" minOccurs="0" />
+              <xs:element name="ECS_Available_Condition_Name" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Condition_Name" msprop:Generator_ColumnPropNameInRow="ECS_Available_Condition_Name" msprop:Generator_ColumnPropNameInTable="ECS_Available_Condition_NameColumn" msprop:Generator_UserColumnName="ECS_Available_Condition_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_IndicativeCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_IndicativeCost" msprop:Generator_ColumnPropNameInRow="ECS_Available_IndicativeCost" msprop:Generator_ColumnPropNameInTable="ECS_Available_IndicativeCostColumn" msprop:Generator_UserColumnName="ECS_Available_IndicativeCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECS_Available_DeadlineDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_DeadlineDate" msprop:Generator_ColumnPropNameInRow="ECS_Available_DeadlineDate" msprop:Generator_ColumnPropNameInTable="ECS_Available_DeadlineDateColumn" msprop:Generator_UserColumnName="ECS_Available_DeadlineDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ECS_Available_CreatedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_CreatedDate" msprop:Generator_ColumnPropNameInRow="ECS_Available_CreatedDate" msprop:Generator_ColumnPropNameInTable="ECS_Available_CreatedDateColumn" msprop:Generator_UserColumnName="ECS_Available_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ECS_Available_CreatedBy" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_CreatedBy" msprop:Generator_ColumnPropNameInRow="ECS_Available_CreatedBy" msprop:Generator_ColumnPropNameInTable="ECS_Available_CreatedByColumn" msprop:Generator_UserColumnName="ECS_Available_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_ModifiedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_ModifiedDate" msprop:Generator_ColumnPropNameInRow="ECS_Available_ModifiedDate" msprop:Generator_ColumnPropNameInTable="ECS_Available_ModifiedDateColumn" msprop:Generator_UserColumnName="ECS_Available_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ECS_Available_ModifiedBy" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_ModifiedBy" msprop:Generator_ColumnPropNameInRow="ECS_Available_ModifiedBy" msprop:Generator_ColumnPropNameInTable="ECS_Available_ModifiedByColumn" msprop:Generator_UserColumnName="ECS_Available_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_History" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_History" msprop:Generator_ColumnPropNameInRow="ECS_Available_History" msprop:Generator_ColumnPropNameInTable="ECS_Available_HistoryColumn" msprop:Generator_UserColumnName="ECS_Available_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_IsActive" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_IsActive" msprop:Generator_ColumnPropNameInRow="ECS_Available_IsActive" msprop:Generator_ColumnPropNameInTable="ECS_Available_IsActiveColumn" msprop:Generator_UserColumnName="ECS_Available_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Closed" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnClosed" msprop:Generator_ColumnPropNameInRow="Closed" msprop:Generator_ColumnPropNameInTable="ClosedColumn" msprop:Generator_UserColumnName="Closed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClosedLabel" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnClosedLabel" msprop:Generator_ColumnPropNameInRow="ClosedLabel" msprop:Generator_ColumnPropNameInTable="ClosedLabelColumn" msprop:Generator_UserColumnName="ClosedLabel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="49" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Link" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLink" msprop:Generator_ColumnPropNameInRow="Link" msprop:Generator_ColumnPropNameInTable="LinkColumn" msprop:Generator_UserColumnName="Link" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="146" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Reserved_Facility_Id" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnReserved_Facility_Id" msprop:Generator_ColumnPropNameInRow="Reserved_Facility_Id" msprop:Generator_ColumnPropNameInTable="Reserved_Facility_IdColumn" msprop:Generator_UserColumnName="Reserved_Facility_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Reserved_FacilityName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnReserved_FacilityName" msprop:Generator_ColumnPropNameInRow="Reserved_FacilityName" msprop:Generator_ColumnPropNameInTable="Reserved_FacilityNameColumn" msprop:Generator_UserColumnName="Reserved_FacilityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Reserved_FacilityCode" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnReserved_FacilityCode" msprop:Generator_ColumnPropNameInRow="Reserved_FacilityCode" msprop:Generator_ColumnPropNameInTable="Reserved_FacilityCodeColumn" msprop:Generator_UserColumnName="Reserved_FacilityCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Reserved_FacilityDisplayName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnReserved_FacilityDisplayName" msprop:Generator_ColumnPropNameInRow="Reserved_FacilityDisplayName" msprop:Generator_ColumnPropNameInTable="Reserved_FacilityDisplayNameColumn" msprop:Generator_UserColumnName="Reserved_FacilityDisplayName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="253" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_Reserved_NameSurname" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Reserved_NameSurname" msprop:Generator_ColumnPropNameInRow="ECS_Available_Reserved_NameSurname" msprop:Generator_ColumnPropNameInTable="ECS_Available_Reserved_NameSurnameColumn" msprop:Generator_UserColumnName="ECS_Available_Reserved_NameSurname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_Reserved_TelephoneNumber" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Reserved_TelephoneNumber" msprop:Generator_ColumnPropNameInRow="ECS_Available_Reserved_TelephoneNumber" msprop:Generator_ColumnPropNameInTable="ECS_Available_Reserved_TelephoneNumberColumn" msprop:Generator_UserColumnName="ECS_Available_Reserved_TelephoneNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_Reserved_Email" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Reserved_Email" msprop:Generator_ColumnPropNameInRow="ECS_Available_Reserved_Email" msprop:Generator_ColumnPropNameInTable="ECS_Available_Reserved_EmailColumn" msprop:Generator_UserColumnName="ECS_Available_Reserved_Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_Reserved_Quantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Reserved_Quantity" msprop:Generator_ColumnPropNameInRow="ECS_Available_Reserved_Quantity" msprop:Generator_ColumnPropNameInTable="ECS_Available_Reserved_QuantityColumn" msprop:Generator_UserColumnName="ECS_Available_Reserved_Quantity" type="xs:int" minOccurs="0" />
+              <xs:element name="ECS_Available_Reserved_CreatedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Reserved_CreatedDate" msprop:Generator_ColumnPropNameInRow="ECS_Available_Reserved_CreatedDate" msprop:Generator_ColumnPropNameInTable="ECS_Available_Reserved_CreatedDateColumn" msprop:Generator_UserColumnName="ECS_Available_Reserved_CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ECS_Available_Reserved_CreatedBy" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Reserved_CreatedBy" msprop:Generator_ColumnPropNameInRow="ECS_Available_Reserved_CreatedBy" msprop:Generator_ColumnPropNameInTable="ECS_Available_Reserved_CreatedByColumn" msprop:Generator_UserColumnName="ECS_Available_Reserved_CreatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_Reserved_ModifiedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Reserved_ModifiedDate" msprop:Generator_ColumnPropNameInRow="ECS_Available_Reserved_ModifiedDate" msprop:Generator_ColumnPropNameInTable="ECS_Available_Reserved_ModifiedDateColumn" msprop:Generator_UserColumnName="ECS_Available_Reserved_ModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ECS_Available_Reserved_ModifiedBy" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Reserved_ModifiedBy" msprop:Generator_ColumnPropNameInRow="ECS_Available_Reserved_ModifiedBy" msprop:Generator_ColumnPropNameInTable="ECS_Available_Reserved_ModifiedByColumn" msprop:Generator_UserColumnName="ECS_Available_Reserved_ModifiedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_Reserved_History" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Reserved_History" msprop:Generator_ColumnPropNameInRow="ECS_Available_Reserved_History" msprop:Generator_ColumnPropNameInTable="ECS_Available_Reserved_HistoryColumn" msprop:Generator_UserColumnName="ECS_Available_Reserved_History" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_Reserved_IsActive" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Reserved_IsActive" msprop:Generator_ColumnPropNameInRow="ECS_Available_Reserved_IsActive" msprop:Generator_ColumnPropNameInTable="ECS_Available_Reserved_IsActiveColumn" msprop:Generator_UserColumnName="ECS_Available_Reserved_IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LinkReserved" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLinkReserved" msprop:Generator_ColumnPropNameInRow="LinkReserved" msprop:Generator_ColumnPropNameInTable="LinkReservedColumn" msprop:Generator_UserColumnName="LinkReserved" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="240" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECS_Available_Archived" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnECS_Available_Archived" msprop:Generator_ColumnPropNameInRow="ECS_Available_Archived" msprop:Generator_ColumnPropNameInTable="ECS_Available_ArchivedColumn" msprop:Generator_UserColumnName="ECS_Available_Archived" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vInfoQuest_Form_EquipmentClassifiedSystem_Available" />
+      <xs:field xpath="mstns:ECS_Available_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
